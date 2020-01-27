@@ -1,0 +1,57 @@
+<Window 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:local="clr-namespace:NSAtlasCopcoBreech"
+	x:Name="window1"
+	x:Class="NSAtlasCopcoBreech.MainWindow"
+	Title="MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+    <Grid  >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="5*"/>
+			<RowDefinition Height="5*"/>
+			<RowDefinition Height="5*"/>
+			<RowDefinition Height="5*"/>
+			<RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="5*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Button Name="btnStart" Grid.Row="1" Grid.Column="1" Content="Start"  IsEnabled="{Binding startButtonEnabled}" Click="btnStart_Click"/>
+        <Button Name="btnStop" Grid.Row="1" Grid.Column="2" Content="Stop"  IsEnabled="{Binding stopButtonEnabled}" Click="btnStop_Click"/>
+        <!--<TextbButton Grid.Row="1" Grid.Column="1" Content="Start"/>-->
+        <!--
+        <ComboBox 
+            Name="cbControllers"
+            Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" 
+            ItemBindingGroup="{Binding atlasCopcoControllers}"
+            DisplayMemberPath="controllerDescription"
+            SelectedValuePath="controllerDescription"
+            SelectedValue="{Binding selectedController}"
+                  />
+        -->
+        <ComboBox 
+            Name="cbControllers"
+            Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" 
+            ItemsSource="{Binding atlasCopcoControllers}"
+            DisplayMemberPath="controllerDescription"
+            SelectedValue="{Binding selectedController}"
+                  />
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="IP Address"/>
+        <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding ipAddress}" IsReadOnly="True"/> 
+        
+        <TextBlock Grid.Row="4" Grid.Column="1" Text="Port"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Text="{Binding portNumber}" IsReadOnly="True"/>
+
+		<Button Name="btnTest" Click="BtnTest_Click" Grid.Row="5" Grid.Column="1" Content="Test"/>
+	</Grid>
+
+</Window>
