@@ -30,9 +30,9 @@ namespace NSAtlasCopcoBreech {
 		KeepAlive,
 		LastTighteningResult
 	}
-	public static class Events {
-		public class FlushLoggerEventArgs : EventArgs { }
-	}
+	//public static class Events {
+	//	public class FlushLoggerEventArgs : EventArgs { }
+	//}
 	//public class MyController { }
 	public delegate void DisplayStatusDelegate(string msg);
 	public delegate void ProcessCommStatusDelegate(CommStatus commStatus);
@@ -45,12 +45,12 @@ namespace NSAtlasCopcoBreech {
 	}
 
 	public class MyController : IDisposable {
-		enum Subscriptions {
-			LastTighteningResult,
-			Alarm,
-			Relay,
-			DigitalInput
-		}
+		//enum Subscriptions {
+		//	LastTighteningResult,
+		//	Alarm,
+		//	Relay,
+		//	DigitalInput
+		//}
 
 
 		#region constants
@@ -66,10 +66,11 @@ namespace NSAtlasCopcoBreech {
 		readonly object _dictLock = new object();
 		int _port;
 		readonly byte[] _clientBuff = new byte[CLIENT_BUFF_SIZE];
-		bool _relaySubscribe = false;
+		//bool _relaySubscribe = false;
 		bool _lastTcpConnectionIsOkForRead = false;
-		bool _digitalInputSubscribe = false;
-		bool _alarmSubscribe = false;
+		//bool _digitalInputSubscribe = false;
+		//[Obsolete("remove this", true)]
+		//bool _alarmSubscribe = false;
 		TcpClient _tcpClient = null;
 		readonly DateTime _TimeOfLastLogicalConnectedToController = new DateTime(1948, 8, 24);
 		ProcessMidDelegate _processMidDelegate = null;
@@ -82,8 +83,8 @@ namespace NSAtlasCopcoBreech {
 		NetworkStream _clientStream = null;
 		//[Obsolete("find references to this field", true)]
 		//Logger _logger;
-		[Obsolete("remove this", true)]
-		List<Subscriptions> _subscriptions = new List<Subscriptions>();
+		//[Obsolete("remove this", true)]
+		//List<Subscriptions> _subscriptions = new List<Subscriptions>();
 		//IDictionary<string, string> _subscriptionsToBeAcked = new Dictionary<string, string>();
 		DisplayStatusDelegate _displayStatusDelegate = null;
 		//DateTime _dastMessage = new DateTime(1900, 1, 1);
@@ -161,7 +162,7 @@ namespace NSAtlasCopcoBreech {
 
 		static int _nextFileNumber=-1;
 		static string findNextLogFileName() {
-			string  logName,asmName = Assembly.GetEntryAssembly().GetName().Name,tmp;
+			string  logName,asmName = Assembly.GetEntryAssembly().GetName().Name;
 			//int fileno;
 
 			if (_nextFileNumber<0)
@@ -188,67 +189,67 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		#region properties
-		public bool DisplayKeepAliveMessage { get; set; }
+		//public bool DisplayKeepAliveMessage { get; set; }
 
 		public static bool veryVerbose { get { return _verVerbose; } set { _verVerbose = value; } }
 
-		public string RemoteEndPoint {
-			get {
-				if (_tcpClient == null)
-					return string.Empty;
-				return _tcpClient.Client.RemoteEndPoint.ToString();
-			}
-		}
-		[Obsolete("remove this", true)]
-		public void AddLastTighteningResultSubscription() {
-			if (veryVerbose)
-				Utility.logger.log(ColtLogLevel.Info, "AddLastTighteningResultSubscription()");
-			_subscriptions.Add(Subscriptions.LastTighteningResult);
-		}
+		//public string RemoteEndPoint {
+		//	get {
+		//		if (_tcpClient == null)
+		//			return string.Empty;
+		//		return _tcpClient.Client.RemoteEndPoint.ToString();
+		//	}
+		//}
+		//[Obsolete("remove this", true)]
+		//public void AddLastTighteningResultSubscription() {
+		//	if (veryVerbose)
+		//		Utility.logger.log(ColtLogLevel.Info, "AddLastTighteningResultSubscription()");
+		//	_subscriptions.Add(Subscriptions.LastTighteningResult);
+		//}
 
-		[Obsolete("remove this", true)]
-		public bool AlarmSubscribe {
-			get { return _alarmSubscribe; }
-			set {
-				try {
-					_alarmSubscribe = value;
-					if (_alarmSubscribe) _subscriptions.Add(Subscriptions.Alarm);
-					else _subscriptions.Remove(Subscriptions.Alarm);
-				} catch (Exception ex) {
-					Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
-					//Utility.logger.log(ColtLogLevel.Error,(string.Format("AlarmSubscribe ex:{0}", ex.Message));
-				}
-			}
-		}
+		//[Obsolete("remove this", true)]
+		//public bool AlarmSubscribe {
+		//	get { return _alarmSubscribe; }
+		//	set {
+		//		try {
+		//			_alarmSubscribe = value;
+		//			if (_alarmSubscribe) _subscriptions.Add(Subscriptions.Alarm);
+		//			else _subscriptions.Remove(Subscriptions.Alarm);
+		//		} catch (Exception ex) {
+		//			Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
+		//			//Utility.logger.log(ColtLogLevel.Error,(string.Format("AlarmSubscribe ex:{0}", ex.Message));
+		//		}
+		//	}
+		//}
 
-		[Obsolete("remove this", true)]
-		public bool RelaySubscribe {
-			get { return _relaySubscribe; }
-			set {
-				try {
-					_relaySubscribe = value;
-					if (_relaySubscribe) _subscriptions.Add(Subscriptions.Relay);
-					else _subscriptions.Remove(Subscriptions.Relay);
-				} catch (Exception ex) {
-					Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
-				}
-			}
-		}
+		//[Obsolete("remove this", true)]
+		//public bool RelaySubscribe {
+		//	get { return _relaySubscribe; }
+		//	set {
+		//		try {
+		//			_relaySubscribe = value;
+		//			if (_relaySubscribe) _subscriptions.Add(Subscriptions.Relay);
+		//			else _subscriptions.Remove(Subscriptions.Relay);
+		//		} catch (Exception ex) {
+		//			Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
+		//		}
+		//	}
+		//}
 
-		[Obsolete("remove this", true)]
-		public bool DigitalInputSubscribe {
-			get { return _digitalInputSubscribe; }
-			set {
-				try {
-					_digitalInputSubscribe = value;
-					if (_digitalInputSubscribe) _subscriptions.Add(Subscriptions.DigitalInput);
-					else _subscriptions.Remove(Subscriptions.DigitalInput);
-				} catch (Exception ex) {
-					Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
-					//Utility.logger.log(ColtLogLevel.Error,(string.Format("DigitalInputSubscribe ex:{0}", ex.Message));
-				}
-			}
-		}
+		//[Obsolete("remove this", true)]
+		//public bool DigitalInputSubscribe {
+		//	get { return _digitalInputSubscribe; }
+		//	set {
+		//		try {
+		//			_digitalInputSubscribe = value;
+		//			if (_digitalInputSubscribe) _subscriptions.Add(Subscriptions.DigitalInput);
+		//			else _subscriptions.Remove(Subscriptions.DigitalInput);
+		//		} catch (Exception ex) {
+		//			Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
+		//			//Utility.logger.log(ColtLogLevel.Error,(string.Format("DigitalInputSubscribe ex:{0}", ex.Message));
+		//		}
+		//	}
+		//}
 
 		public static string logFilePath { get; private set; }
 		#endregion
@@ -305,9 +306,9 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
-		void flushLoggerHandler(object sender, Events.FlushLoggerEventArgs e) {
-			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), string.Empty);
-		}
+		//void flushLoggerHandler(object sender, Events.FlushLoggerEventArgs e) {
+		//	Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), string.Empty);
+		//}
 
 		public void close() {
 			try {
@@ -722,7 +723,6 @@ namespace NSAtlasCopcoBreech {
 				}
 			}
 		}
-
 
 		void handleExternalInputs_0211(string package) {
 			//MID_0211 mid = new MID_0211();
