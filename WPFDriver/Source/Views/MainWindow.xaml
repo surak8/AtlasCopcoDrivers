@@ -25,8 +25,8 @@
 
         </Grid.ColumnDefinitions>
 
-        <Button Name="btnStart" Grid.Row="1" Grid.Column="1" Content="Start"  IsEnabled="{Binding startButtonEnabled}" Click="btnStart_Click"/>
-        <Button Name="btnStop" Grid.Row="1" Grid.Column="2" Content="Stop"  IsEnabled="{Binding stopButtonEnabled}" Click="btnStop_Click"/>
+		<Button Name="btnStart" Grid.Row="1" Grid.Column="1" Content="Start"  IsEnabled="{Binding startButtonEnabled}" Click="btnStart_Click" Visibility="{Binding controlVisibility}"/>
+		<Button Name="btnStop" Grid.Row="1" Grid.Column="2" Content="Stop"  IsEnabled="{Binding stopButtonEnabled}" Click="btnStop_Click" Visibility="{Binding controlVisibility}"/>
         <!--<TextbButton Grid.Row="1" Grid.Column="1" Content="Start"/>-->
         <!--
         <ComboBox 
@@ -44,12 +44,18 @@
             ItemsSource="{Binding atlasCopcoControllers}"
             DisplayMemberPath="controllerDescription"
             SelectedValue="{Binding selectedController}"
+			IsEnabled="{Binding isControlEnabled}"
+			 Visibility="{Binding controlVisibility}"
                   />
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="IP Address"/>
-        <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding ipAddress}" IsReadOnly="True"/> 
-        
-        <TextBlock Grid.Row="4" Grid.Column="1" Text="Port"/>
-        <TextBox Grid.Row="4" Grid.Column="2" Text="{Binding portNumber}" IsReadOnly="True"/>
+		<TextBlock Grid.Row="3" Grid.Column="1" Text="IP Address"			 Visibility="{Binding controlVisibility}"
+/>
+		<TextBox Grid.Row="3" Grid.Column="2" Text="{Binding ipAddress}" IsReadOnly="True"			 Visibility="{Binding controlVisibility}"
+/>
+
+		<TextBlock Grid.Row="4" Grid.Column="1" Text="Port"			 Visibility="{Binding controlVisibility}"
+/>
+		<TextBox Grid.Row="4" Grid.Column="2" Text="{Binding portNumber}" IsReadOnly="True"			 Visibility="{Binding controlVisibility}"
+/>
 
 		<Button Name="btnTest" Click="BtnTest_Click" Grid.Row="5" Grid.Column="1" Content="Test"/>
 	</Grid>

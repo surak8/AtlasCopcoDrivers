@@ -1,3 +1,4 @@
+#if !OTHER_VERSION
 using System;
 using System.Reflection;
 using OpenProtocolInterpreter.MIDs;
@@ -105,3 +106,5 @@ namespace NSAtlasCopcoBreech {
 		SOME_FIELD
 	}
 }
+
+#endif

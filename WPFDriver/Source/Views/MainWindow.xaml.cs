@@ -14,11 +14,15 @@ using System.IO;
 using System.Reflection;
 using System.Windows;
 using Microsoft.Win32;
+using OpenProtocolInterpreter;
+#if OTHER_VERSION
+#else
 using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
 using OpenProtocolInterpreter.MIDs.Communication;
 //using OpenProtocolController;
 using OpenProtocolUtility.Serialization;
+#endif
 //using Microsoft.Win32;
 
 namespace NSAtlasCopcoBreech {
@@ -71,7 +75,14 @@ namespace NSAtlasCopcoBreech {
 
 		}
 
+
+#if OTHER_VERSION
+		void myMidProc(MessageType messageType, Mid messageObject, string messagestring) {
+			Utility.logger.log(MethodBase.GetCurrentMethod());
+		}
+#else
 		void myMidProc(MessageType messageType, MID messageObject, string messagestring) {
+
 			if (messageType == MessageType.KeepAlive)
 				return;
 			string midType = messagestring.Substring(4, 4);
@@ -115,6 +126,7 @@ namespace NSAtlasCopcoBreech {
 			//switch(midType)
 			//Utility.logger.log(MethodBase.GetCurrentMethod(), "msgtype=" + messageType);
 		}
+#endif
 
 		void myCommStatus(CommStatus cs) {
 
@@ -130,7 +142,7 @@ namespace NSAtlasCopcoBreech {
 			Utility.logger.log(MethodBase.GetCurrentMethod(), "MSG=" + msg);
 		}
 
-		#region IDisposable Support
+#region IDisposable Support
 		bool disposedValue = false; // To detect redundant calls
 
 		protected virtual void Dispose(bool disposing) {
@@ -163,10 +175,11 @@ namespace NSAtlasCopcoBreech {
 			// TODO: uncomment the following line if the finalizer is overridden above.
 			GC.SuppressFinalize(this);
 		}
-		#endregion
+#endregion
 
 
 		string _previousLogFile;
+		//private object myMidProc;
 		const string KEY="Previous Log folder";
 
 		void BtnTest_Click(object sender, RoutedEventArgs e) {

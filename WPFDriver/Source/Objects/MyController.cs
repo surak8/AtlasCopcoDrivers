@@ -1,12 +1,9 @@
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
-using System.Net.Sockets;
 using System.Reflection;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+#if OTHER_VERSION
+using OpenProtocolInterpreter;
+#else
 using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
 using OpenProtocolInterpreter.MIDs.Communication;
@@ -18,12 +15,23 @@ using OpenProtocolInterpreter.MIDs.Tightening;
 using OpenProtocolInterpreter.MIDs.VIN;
 using OpenProtocolUtility;
 using OpenProtocolUtility.Serialization;
+#endif
+
 
 namespace NSAtlasCopcoBreech {
+#if OTHER_VERSION
+	public enum MessageType {
+		KeepAlive
+	}
+#endif
 	//public class MyController { }
 	public delegate void DisplayStatusDelegate(string msg);
 	public delegate void ProcessCommStatusDelegate(CommStatus commStatus);
+#if OTHER_VERSION
+	public delegate void ProcessMidDelegate(MessageType messageType, Mid messageObject, string messagestring);
+#else
 	public delegate void ProcessMidDelegate(MessageType messageType, MID messageObject, string messagestring);
+#endif
 
 	public enum CommStatus {
 		Down,
@@ -32,6 +40,39 @@ namespace NSAtlasCopcoBreech {
 	}
 
 	public class MyController : IDisposable {
+		readonly FileStream _midLogStream;
+		TextWriter _midLogFile;
+		static readonly object midLogLock = new object();
+
+		internal void close() {
+			throw new NotImplementedException();
+		}
+
+		public static string logFilePath { get; private set; }
+
+		static MyController() {
+			string asmName = Assembly.GetEntryAssembly().GetName().Name;
+			//logPath=
+			logFilePath = Path.Combine(
+				Environment.GetEnvironmentVariable("TEMP"),
+				asmName);
+		}
+
+		//internal object initialize(string ipAddress, int portNumber, object myMidProc, Action<string> myDispStatus, Action<CommStatus> myCommStatus) {
+		//	throw new NotImplementedException();
+		//}
+
+		internal bool initialize(string ipAddress, int portNumber, ProcessMidDelegate myMidProc, DisplayStatusDelegate myDispStatus, ProcessCommStatusDelegate myCommStatus) {
+			//throw new NotImplementedException();
+			return false;
+		}
+
+		//internal object initialize(string ipAddress, int portNumber, object myMidProc, Action<string> myDispStatus, Action<CommStatus> myCommStatus) {
+		//	throw new NotImplementedException();
+		//}
+
+#if OTHER_VERSION
+#else
 		enum Subscriptions {
 			LastTighteningResult,
 			Alarm,
@@ -71,19 +112,9 @@ namespace NSAtlasCopcoBreech {
 		//DateTime _dastMessage = new DateTime(1900, 1, 1);
 		bool _TryingToConnectInProgress = false;
 		//TextWriter midLogFile;
-		readonly FileStream _midLogStream;
-		TextWriter _midLogFile;
-		static readonly object midLogLock = new object();
 		#endregion
 
 
-		static MyController(){
-			string asmName = Assembly.GetEntryAssembly().GetName().Name;
-			//logPath=
-			logFilePath = Path.Combine(
-				Environment.GetEnvironmentVariable("TEMP"),
-				asmName);
-		}
 
 		public MyController() {
 			string  logName, asmName = Assembly.GetEntryAssembly().GetName().Name,tmp;
@@ -195,7 +226,6 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
-		public static string logFilePath { get; private set; }
 		#endregion
 
 		#region public methods
@@ -865,6 +895,7 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		#endregion
+#endif
 
 		#region IDisposable Support
 		bool disposedValue = false; // To detect redundant calls
@@ -902,7 +933,7 @@ namespace NSAtlasCopcoBreech {
 			// TODO: uncomment the following line if the finalizer is overridden above.
 			GC.SuppressFinalize(this);
 		}
-		#endregion
+#endregion
 
 	}
 }
