@@ -16,10 +16,23 @@ using OpenProtocolInterpreter.MIDs.KeepAlive;
 using OpenProtocolInterpreter.MIDs.MultipleIdentifiers;
 using OpenProtocolInterpreter.MIDs.Tightening;
 using OpenProtocolInterpreter.MIDs.VIN;
-using OpenProtocolUtility;
-using OpenProtocolUtility.Serialization;
+
+//using OpenProtocolUtility;
+//using OpenProtocolUtility.Serialization;
 
 namespace NSAtlasCopcoBreech {
+
+	public enum MessageType {
+		AlarmAcknowledgeTorqueController,
+		AlarmUpload,
+		AlarmStatus,
+		CommStartAcknowledge,
+		KeepAlive,
+		LastTighteningResult
+	}
+	public static class Events {
+		public class FlushLoggerEventArgs : EventArgs { }
+	}
 	//public class MyController { }
 	public delegate void DisplayStatusDelegate(string msg);
 	public delegate void ProcessCommStatusDelegate(CommStatus commStatus);
@@ -61,6 +74,11 @@ namespace NSAtlasCopcoBreech {
 		readonly DateTime _TimeOfLastLogicalConnectedToController = new DateTime(1948, 8, 24);
 		ProcessMidDelegate _processMidDelegate = null;
 		ProcessCommStatusDelegate _processCommStatusDelegate = null;
+
+		Task _taskReceive;
+		Task _taskKeepAlive;
+		Task _taskMonitor;
+
 		NetworkStream _clientStream = null;
 		//[Obsolete("find references to this field", true)]
 		//Logger _logger;
@@ -74,10 +92,56 @@ namespace NSAtlasCopcoBreech {
 		readonly FileStream _midLogStream;
 		TextWriter _midLogFile;
 		static readonly object midLogLock = new object();
+
+		internal event EventHandler ThreadsShutdown;
 		#endregion
 
+		static readonly ManualResetEvent _mreThreads=new ManualResetEvent(true);
+		internal void shutdown() {
+			//_myMutex
+			Utility.logger.log(MethodBase.GetCurrentMethod(), "notifying threads");
+			_mreThreads.Reset();
+			//Utility.logger.log(MethodBase.GetCurrentMethod());
+			//Thread.Sleep(5000);
+			//Utility.logger.log(MethodBase.GetCurrentMethod());
+			Task.WaitAll(new Task[] {
+				_taskKeepAlive,
+				_taskMonitor,
+				_taskReceive
+			});
+			Utility.logger.log(MethodBase.GetCurrentMethod(), "threads closed");
+			lock (midLogLock) {
+				//if (_midLogFile!=null) {
+				//	_midLogFile.Flush();
+				//	_midLogFile.Close();
+				//	_midLogFile.Dispose();
+				//	_midLogFile=null;
+				//}
+				if (_midLogStream!=null) {
 
-		static MyController(){
+					_midLogStream.Flush();
+					_midLogStream.Close();
+					_midLogStream.Dispose();
+					//_midLogStream=null;
+				}
+				if (_midLogFile!=null) {
+					//try { _midLogFile.Flush(); } catch(Exception ex) { Utility.logger.log(MethodBase.GetCurrentMethod(), ex); }
+					//try { _midLogFile.Close(); } catch (Exception ex) { Utility.logger.log(MethodBase.GetCurrentMethod(), ex); }
+					//try { _midLogFile.Dispose(); } catch (Exception ex) { Utility.logger.log(MethodBase.GetCurrentMethod(), ex); }
+					//try { _midLogFile.Flush(); } catch (Exception ex) { Utility.logger.log(MethodBase.GetCurrentMethod(), ex); }
+					//try { _midLogFile.Flush(); } catch (Exception ex) { Utility.logger.log(MethodBase.GetCurrentMethod(), ex); }
+					//_midLogFile.Flush();
+					//_midLogFile.Close();
+					//_midLogFile.Dispose();
+					_midLogFile=null;
+				}
+			}
+			this.ThreadsShutdown?.Invoke(this, new EventArgs());
+			_mreThreads.Set();
+			//if (ThreadsShutdown)
+		}
+
+		static MyController() {
 			string asmName = Assembly.GetEntryAssembly().GetName().Name;
 			//logPath=
 			logFilePath = Path.Combine(
@@ -86,51 +150,42 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		public MyController() {
-			string  logName, asmName = Assembly.GetEntryAssembly().GetName().Name,tmp;
-			string[] logFiles;
-			int fileno;
+			string logName = findNextLogFileName();
 
-			//logPath = Path.Combine(
-			//	Environment.GetEnvironmentVariable("TEMP"),
-			//	asmName);
-			logFiles = Directory.GetFiles(logFilePath, asmName + "_*.data.log");
-			List<string> logFileList = new List<string>(logFiles);
-			logFileList.Sort();
-			//Trace.WriteLine("here");
-			logName = "test";
-			if (logFileList.Count<1)
-				fileno=-1;
-			else {
-				tmp = Path.GetFileNameWithoutExtension(logFileList[logFileList.Count - 1]).Substring((asmName + "_").Length, 4);
-				if (!Int32.TryParse(tmp, out fileno))
-					fileno = -1;
-			}
-			Trace.WriteLine("here");
-			logName = Path.Combine(logFilePath, asmName + "_" + (fileno+1).ToString("000#") + ".data.log");
-
-
+			Utility.logger.log(ColtLogLevel.Debug, "log-file: "+logName+".");
 			lock (midLogLock) {
 				_midLogStream = new FileStream(logName, FileMode.CreateNew, FileAccess.Write, FileShare.ReadWrite);
 				_midLogFile = new StreamWriter(_midLogStream);
-				//_midLogFile.fl
-				//midLogFile = new StreamWriter(logName,));
 			}
 		}
 
-		//~MyController() {
-		//	if (midLogFile != null)
-		//		lock (midLogLock) {
-		//			midLogFile.Flush();
-		//			midLogFile.Close();
-		//			midLogFile = null;
-		//		}
-		//}
+		static int _nextFileNumber=-1;
+		static string findNextLogFileName() {
+			string  logName,asmName = Assembly.GetEntryAssembly().GetName().Name,tmp;
+			//int fileno;
 
-		//public static bool veryVerbose = false;
+			if (_nextFileNumber<0)
+				_nextFileNumber=findLogFileNumber2(asmName);
+			logName = Path.Combine(logFilePath, asmName + "_" + (++_nextFileNumber).ToString("000#") + ".data.log");
+			return logName;
+		}
 
-		// CTOR
+		static int findLogFileNumber2(string asmName) {
+			string[] logFiles;
+			string tmp;
+			List<string> logFileList;
+			int fileno=-1,val;
 
-		// PROPERTIES
+			logFiles = Directory.GetFiles(logFilePath, asmName + "_*.data.log");
+			logFileList = new List<string>(logFiles);
+			logFileList.Sort();
+			if (logFileList.Count>0) {
+				tmp = Path.GetFileNameWithoutExtension(logFileList[logFileList.Count - 1]).Substring((asmName + "_").Length, 4);
+				if (Int32.TryParse(tmp, out val))
+					fileno=val;
+			}
+			return fileno;
+		}
 
 		#region properties
 		public bool DisplayKeepAliveMessage { get; set; }
@@ -235,12 +290,13 @@ namespace NSAtlasCopcoBreech {
 				_displayStatusDelegate = displayStatusDelegate;
 				_processCommStatusDelegate = processCommStatusDelegate;
 
-				Events.GetEvents().FlushLoggerEvent += flushLoggerHandler;
 
-				Task.Run(() => { receiveThread(); });
+				//Events.GetEvents().FlushLoggerEvent += flushLoggerHandler;
+
+				_taskReceive=Task.Run(() => { receiveThread(); });
 				Thread.Sleep(1000);
-				Task.Run(() => { sendKeepAliveThread(); });
-				Task.Run(() => { monitorCommunicationLinkThread(); });
+				_taskKeepAlive=Task.Run(() => { sendKeepAliveThread(); });
+				_taskMonitor=Task.Run(() => { monitorCommunicationLinkThread(); });
 				return true;
 			} catch (Exception ex) {
 				Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
@@ -389,14 +445,22 @@ namespace NSAtlasCopcoBreech {
 		// THREADS
 
 		void monitorCommunicationLinkThread() {
+			bool shutDown=false;
+
 			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod());
-			for (; ; ) {
+			while (!shutDown) {
 				try {
+					if (!_mreThreads.WaitOne(100)) {
+						Utility.logger.log(MethodBase.GetCurrentMethod(), "signaled!");
+						shutDown=true;
+						break;
+					}
 					if (_tcpClient == null) connect();
 				} catch (Exception ex) {
 					Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
 				}
-				Thread.Sleep(1000);
+				if (!shutDown)
+					Thread.Sleep(1000);
 			}
 		}
 
@@ -406,10 +470,16 @@ namespace NSAtlasCopcoBreech {
 			MID_9999 mid;
 			string package;
 			byte[] command;
+			bool shutdownThread=false;
 
 			Utility.logger.log(ColtLogLevel.Info, mb);
-			for (; ; ) {
+			while (!shutdownThread) {
 				try {
+					if (!_mreThreads.WaitOne(100)) {
+						Utility.logger.log(MethodBase.GetCurrentMethod(), "signaled!");
+						shutdownThread=true;
+						break;
+					}
 					if (_clientStream == null) {
 						Thread.Sleep(1000);
 						continue;
@@ -429,7 +499,8 @@ namespace NSAtlasCopcoBreech {
 								Utility.logger.log(ColtLogLevel.Info, mb, mid.GetType().Name + " Sent");
 						}
 					}
-					Thread.Sleep(1000);
+					if (!shutdownThread)
+						Thread.Sleep(1000);
 				} catch (Exception ex) {
 					close();
 					Utility.logger.log(mb, ex);
@@ -442,11 +513,18 @@ namespace NSAtlasCopcoBreech {
 			int bytesRead = 0, length;
 			string package;
 			byte[] command;
+			bool shutdownThread=false;
 
 			if (veryVerbose)
 				Utility.logger.log(ColtLogLevel.Info, mb);
-			for (; ; ) {
+			while (!shutdownThread) {
 				try {
+					if (!_mreThreads.WaitOne(100)) {
+						Utility.logger.log(MethodBase.GetCurrentMethod(), "signaled!");
+						shutdownThread=true;
+						this.close();
+						break;
+					}
 					if (_clientStream == null) {
 						processCommunicationStatus(CommStatus.Down);
 						if (_lastTcpConnectionIsOkForRead) {

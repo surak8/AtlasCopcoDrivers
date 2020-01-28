@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlasCopcoBreech", "AtlasCopcoBreech.csproj", "{C735DFBC-6AAD-4364-9765-ABC7E3619552}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenProtocolInterpreter", "..\..\OpenProtocolAtlasCopco\OpenProtocolInterpreter\OpenProtocolInterpreter.csproj", "{319224B6-48C6-4787-A98B-F33B774268D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenProtocolInterpreter", "..\..\..\NewProjects\OpenProtocolAtlasCopco\OpenProtocolInterpreter\OpenProtocolInterpreter.csproj", "{319224B6-48C6-4787-A98B-F33B774268D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

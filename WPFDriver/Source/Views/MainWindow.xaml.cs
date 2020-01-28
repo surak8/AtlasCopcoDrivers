@@ -18,7 +18,7 @@ using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
 using OpenProtocolInterpreter.MIDs.Communication;
 //using OpenProtocolController;
-using OpenProtocolUtility.Serialization;
+//using OpenProtocolUtility.Serialization;
 //using Microsoft.Win32;
 
 namespace NSAtlasCopcoBreech {
@@ -39,8 +39,11 @@ namespace NSAtlasCopcoBreech {
 			Utility.logger.log(MethodBase.GetCurrentMethod());
 			try {
 				if (_opc != null) {
-					_opc.close();
-					_opc = null;
+					_opc.shutdown();
+					if (_opc!=null) {
+						_opc.close();
+						_opc = null;
+					}
 				}
 			} catch (Exception ex) {
 				Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
@@ -55,6 +58,7 @@ namespace NSAtlasCopcoBreech {
 					var avar = _opc.initialize(_vm.ipAddress, _vm.portNumber, myMidProc, myDispStatus, myCommStatus);
 					Utility.logger.log(MethodBase.GetCurrentMethod());
 					if (avar) {
+						_opc.ThreadsShutdown+=_opc_ThreadsShutdown;
 						_vm.startButtonEnabled = false;
 						_vm.stopButtonEnabled = true;
 						//_opc.AddLastTighteningResultSubscription();
@@ -69,6 +73,17 @@ namespace NSAtlasCopcoBreech {
 			}
 			//var avar = new OPController();
 
+		}
+
+		void _opc_ThreadsShutdown(object sender, EventArgs e) {
+			Utility.logger.log(MethodBase.GetCurrentMethod());
+			if (_opc!=null) {
+				_opc.ThreadsShutdown-= _opc_ThreadsShutdown;
+				_opc.close();
+				_opc=null;
+				_vm.startButtonEnabled=true;
+				_vm.stopButtonEnabled=false;
+			}
 		}
 
 		void myMidProc(MessageType messageType, MID messageObject, string messagestring) {

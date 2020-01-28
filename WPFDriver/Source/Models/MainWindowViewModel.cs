@@ -93,10 +93,10 @@ namespace NSAtlasCopcoBreech {
         }
         ObservableCollection<AtlasCopcoController> createControllerList(out string defaultControllerName) {
             return new ObservableCollection<AtlasCopcoController> {
-                new AtlasCopcoController ("192.168.105.8",4545,"FMS Breech"),
+                new AtlasCopcoController ("192.168.105.8",4545,defaultControllerName="FMS Breech"),
                 new AtlasCopcoController ("192.168.105.210",4545,"Pin FS"),
                 new AtlasCopcoController ("192.168.105.10",4545,"BC Assembly"),
-                new AtlasCopcoController ("192.168.105.170",4545,defaultControllerName="FMS Grip Butt"),
+                new AtlasCopcoController ("192.168.105.170",4545,"FMS Grip Butt"),
             };
         }
 #endif

@@ -42,9 +42,6 @@
   </PropertyGroup>
   <ItemGroup Label="references_here">
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="OpenProtocolUtility">
-      <HintPath>..\..\OpenProtocolAtlasCopco\OpenProtocolUtility\bin\Debug\OpenProtocolUtility.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -93,7 +90,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\OpenProtocolAtlasCopco\OpenProtocolInterpreter\OpenProtocolInterpreter.csproj">
+    <ProjectReference Include="..\..\..\NewProjects\OpenProtocolAtlasCopco\OpenProtocolInterpreter\OpenProtocolInterpreter.csproj">
       <Project>{319224b6-48c6-4787-a98b-f33b774268d0}</Project>
       <Name>OpenProtocolInterpreter</Name>
     </ProjectReference>
