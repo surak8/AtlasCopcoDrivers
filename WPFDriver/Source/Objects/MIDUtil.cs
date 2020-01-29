@@ -2,20 +2,12 @@ using System.Diagnostics;
 using System.IO;
 using System;
 using System.Reflection;
-#if OTHER_VERSION
-#else
 using OpenProtocolInterpreter.MIDs;
-#endif
 using System.Collections.Generic;
 using System.Text;
 
 namespace NSAtlasCopcoBreech {
 	static class MIDUtil {
-#if OTHER_VERSION
-		static LocalMidHandler<OpenProtocolInterpreter.Mid,OpenProtocolInterpreter.MidInterpreter> _lmh=new LocalMidHandler<OpenProtocolInterpreter.Mid, OpenProtocolInterpreter.MidInterpreter>();727727
-#else
-		static LocalMidHandler<>
-#endif
 		internal static void showMidDetails(string[] fileNames) {
 			foreach (string aFile in fileNames)
 				showMidDetail(aFile);
@@ -36,27 +28,14 @@ namespace NSAtlasCopcoBreech {
 				}
 			}
 		}
-
-	}
-
-	/// <summary>
-	/// blah
-	/// </summary>
-	/// <typeparam name="X">is <b>MID</b> type.</typeparam>
-	/// <typeparam name="Y">ks <b>MidIdentifier</b> type</typeparam>
-	class LocalMidHandler<X, Y>
-		where X : new()
-		where Y : new() {
-		static Y _mident=new Y();
-		static IDictionary<int,X> _midMap=null;
-		static readonly object[] nullArgs=new object[] { };
+		static MIDIdentifier _mident=new MIDIdentifier();
+		static IDictionary<int,MID> _midMap=null;
 		static readonly BindingFlags bfCommon=BindingFlags.Public|BindingFlags.Instance;
 		static readonly BindingFlags bfCreate=bfCommon|BindingFlags.CreateInstance;
 		static readonly BindingFlags bfProps=bfCommon|  BindingFlags.GetProperty;
-
-
-		static void showMid(string line) {
-			X realMid;
+		static readonly object[] nullArgs=new object[] { };
+		internal static void showMid(string line) {
+			MID realMid;
 			string midId;
 			int midno;
 
@@ -66,7 +45,9 @@ namespace NSAtlasCopcoBreech {
 			if (Int32.TryParse(midId, out midno)) {
 				//className="MID_"+midno.ToString("000#");
 				if (_midMap.ContainsKey(midno)) {
-					realMid=_midMap[midno].GetType().InvokeMember(null, bfCreate, null, null, nullArgs) as X;
+					realMid=_midMap[midno].GetType().InvokeMember(null, bfCreate, null, null, nullArgs) as MID;
+					if (realMid.HeaderData.Mid==9999)
+						return;
 					if (midno!=152&&midno!=211) {
 						realMid.processPackage(line);
 						showMid1(realMid, line);
@@ -78,14 +59,32 @@ namespace NSAtlasCopcoBreech {
 			} else
 				Utility.logger.log(MethodBase.GetCurrentMethod());
 		}
-		static void showMid1(X realMid, string line) {
-			StringBuilder sb=new StringBuilder();
-			object propValue;
-			string svalue,dispValue,propType;
-			bool showType=false;
 
-			sb.AppendLine(realMid.GetType().FullName);
-			sb.AppendLine("["+line+"]");
+		static void showMid1(MID realMid, string line) {
+			bool showContent=false;
+			StringBuilder sb=new StringBuilder();
+			//bool showType=false;
+			int midValue;
+
+
+			switch (midValue=realMid.HeaderData.Mid) {
+				case 5:
+					sb.AppendLine("accepted MID");
+					break;
+				default: Trace.WriteLine("unhandled MID="+midValue); showContent=true; break;
+			}
+			if (showContent) {
+				sb.AppendLine(realMid.GetType().FullName+": ["+line+"]");
+				constructContent(ref sb, realMid);
+			}
+			Utility.logger.log(sb.ToString());
+		}
+
+		static void constructContent(ref StringBuilder sb, MID realMid) {
+			object propValue;
+			string dispValue,svalue;
+			bool showType;
+
 			foreach (PropertyInfo pi in realMid.GetType().GetProperties(bfCommon)) {
 				if (pi.Name.CompareTo("HeaderData")==0)
 					continue;
@@ -112,7 +111,6 @@ namespace NSAtlasCopcoBreech {
 				} else {
 					if (pi.PropertyType.IsEnum) {
 						dispValue=pi.PropertyType.FullName.Replace("+", ".")+"."+propValue.ToString();
-						//propType=pi.PropertyType.
 					} else {
 						dispValue=propValue.ToString();
 						showType=true;
@@ -120,11 +118,10 @@ namespace NSAtlasCopcoBreech {
 				}
 				sb.AppendLine("\t"+ pi.Name+" = "+dispValue+(showType ? " ["+pi.PropertyType.FullName+"]" : string.Empty)+".");
 			}
-			Utility.logger.log(sb.ToString());
 		}
 
-		static Dictionary<int, X> createMap(Type type) {
-			Dictionary<int, X> ret=new Dictionary<int, X>();
+		static Dictionary<int, MID> createMap(Type type) {
+			Dictionary<int, MID> ret=new Dictionary<int, MID>();
 			int midNo;
 			string midNumber,midClassName,midFullName;
 			object anobj;
@@ -137,12 +134,12 @@ namespace NSAtlasCopcoBreech {
 						anobj=null;
 						try {
 							//anobj=aType.InvokeMember(null, BindingFlags.Public|   BindingFlags.CreateInstance|BindingFlags.DeclaredOnly|BindingFlags.Static|BindingFlags.Instance, null, null, new object[] { }) as MID;
-							anobj=(X) aType.InvokeMember(null, bfCreate, null, null, nullArgs);
+							anobj=aType.InvokeMember(null, bfCreate, null, null, nullArgs) as MID;
 						} catch (Exception ex) {
 							Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
 						}
 						if (anobj!=null)
-							ret.Add(midNo, (X) anobj);
+							ret.Add(midNo, anobj as MID);
 					} else
 						Trace.WriteLine("ack!");
 				}

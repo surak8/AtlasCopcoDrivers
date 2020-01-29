@@ -68,6 +68,8 @@ namespace NSAtlasCopcoBreech {
 		static readonly object midLogLock = new object();
 		 static readonly bool showMidContent=true;
 		string _ipAddress = string.Empty;
+		private bool _shuttingDown;
+		static readonly ManualResetEvent _mreShutdown=new ManualResetEvent(false);
 		#endregion
 		#region cctor
 		static MyController() {
@@ -151,6 +153,21 @@ namespace NSAtlasCopcoBreech {
 		#endregion
 		#region methods
 		internal void shutdown() {
+
+
+			Utility.logger.log(MethodBase.GetCurrentMethod());
+			_shuttingDown=true;
+			sendMid(new MID_0037()); // unsubscribe job-info
+			sendMid(new MID_0054()); // unsubscribe vehicle
+									 // send Communication Stop message.
+			sendMid(new MID_0003());
+
+			_mreShutdown.Set();
+			_mreShutdown.WaitOne(Timeout.Infinite);
+
+			//Thread.Sleep(10*1000);
+
+
 			Utility.logger.log(MethodBase.GetCurrentMethod(), "notifying threads");
 			_mreThreads.Reset();
 
@@ -160,15 +177,13 @@ namespace NSAtlasCopcoBreech {
 			//_taskMonitor=null;
 
 			// now, send disconnect and unsubscribe messages.
-			sendMid(new MID_0037()); // unsubscribe job-info
-			sendMid(new MID_0054()); // unsubscribe vehicle
 
-			Thread.Sleep(10*1000);
+			//Thread.Sleep(10*1000);
 
-			// send Communication Stop message.
-			sendMid(new MID_0003());
+			//// send Communication Stop message.
+			//sendMid(new MID_0005());
 
-			Thread.Sleep(10*1000);
+			//Thread.Sleep(10*1000);
 
 			Task.WaitAll(new Task[] {
 				_taskKeepAlive,
@@ -318,38 +333,35 @@ namespace NSAtlasCopcoBreech {
 		#endregion
 		#region thread-handling methods
 		void monitorCommunicationLinkThread() {
-			bool shutDown=false;
+			//bool shutDown=false;
 			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod());
-			while (!shutDown) {
+			while (!_shuttingDown) {
 				try {
 					if (!_mreThreads.WaitOne(100)) {
 						Utility.logger.log(MethodBase.GetCurrentMethod(), "signaled!");
-						shutDown=true;
+						//shutDown=true;
 						break;
 					}
-					if (_tcpClient == null) connect();
+					if (_tcpClient == null&&!_shuttingDown) connect();
 				} catch (Exception ex) {
 					Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
 				}
-				if (!shutDown)
+				if (!_shuttingDown)
 					Thread.Sleep(1000);
 			}
 		}
 		void sendKeepAliveThread() {
 			MethodBase mb = MethodBase.GetCurrentMethod();
 			DateTime now;
-			//MID_9999 mid;
-			//string package;
-			//byte[] command;
-			bool shutdownThread=false;
-			while (!shutdownThread) {
+
+			while (!_shuttingDown) {
 				try {
 					if (!_mreThreads.WaitOne(100)) {
 						Utility.logger.log(MethodBase.GetCurrentMethod(), "signaled!");
-						shutdownThread=true;
+						//shutdownThread=true;
 						break;
 					}
-					if (_clientStream == null) {
+					if (_clientStream == null&&!_shuttingDown) {
 						Thread.Sleep(1000);
 						continue;
 					} else if (_TryingToConnectInProgress) {
@@ -372,7 +384,7 @@ namespace NSAtlasCopcoBreech {
 						}
 #endif
 					}
-					if (!shutdownThread)
+					if (!_shuttingDown)
 						Thread.Sleep(1000);
 				} catch (Exception ex) {
 					close();
@@ -420,8 +432,10 @@ namespace NSAtlasCopcoBreech {
 					if (veryVerbose)
 						Utility.logger.log(ColtLogLevel.Info, mb, "Read Completed " + bytesRead + " Bytes");
 					if (bytesRead == 0) {
-						close();
-						Utility.logger.log(ColtLogLevel.Error, mb, "Read returned 0 bytes - CLOSING");
+						if (!_shuttingDown) {
+							close();
+							Utility.logger.log(ColtLogLevel.Error, mb, "Read returned 0 bytes - CLOSING");
+						}
 						Thread.Sleep(500);
 						continue;
 					}
@@ -603,13 +617,13 @@ namespace NSAtlasCopcoBreech {
 			MID_0005 mid = new MID_0005();
 			string blah;
 			MethodBase mb = MethodBase.GetCurrentMethod();
+
 			mid.processPackage(package);
-			Utility.logger.log(ColtLogLevel.Info, mb, "Command Accepted: " + mid.MIDAccepted + ".");
-			blah = package.Substring(20, 4);
-			if (blah == "0018") {
-				Utility.logger.log(ColtLogLevel.Info, "MID0018 Accepted");
-			} else if (blah == "0031") {
-				Utility.logger.log(ColtLogLevel.Info, "MID0031 Accepted");
+
+			Utility.logger.log(ColtLogLevel.Info, mb, "accepted MID="+mid.MIDAccepted+".");
+			if (mid.MIDAccepted== 3) {
+				Utility.logger.log(ColtLogLevel.Debug, mb, "comm-shutdown succeeded.");
+				_mreShutdown.Reset();
 			}
 		}
 		MID createRelay_0216() { return new MID_0216(); }
