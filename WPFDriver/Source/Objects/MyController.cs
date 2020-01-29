@@ -8,11 +8,16 @@ using System.Threading;
 using System.Threading.Tasks;
 using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
+using OpenProtocolInterpreter.MIDs.ApplicationSelector;
+using OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem;
 using OpenProtocolInterpreter.MIDs.Communication;
 using OpenProtocolInterpreter.MIDs.IOInterface;
 using OpenProtocolInterpreter.MIDs.Job;
+using OpenProtocolInterpreter.MIDs.Job.Advanced;
 using OpenProtocolInterpreter.MIDs.KeepAlive;
 using OpenProtocolInterpreter.MIDs.MultipleIdentifiers;
+using OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled;
+using OpenProtocolInterpreter.MIDs.ParameterSet;
 using OpenProtocolInterpreter.MIDs.Tightening;
 using OpenProtocolInterpreter.MIDs.VIN;
 namespace NSAtlasCopcoBreech {
@@ -54,13 +59,14 @@ namespace NSAtlasCopcoBreech {
 		internal event EventHandler ThreadsShutdown;
 		object _writeLock = new object();
 		readonly DateTime _TimeOfLastLogicalConnectedToController = new DateTime(1948, 8, 24);
-		readonly FileStream _midLogStream;
+		FileStream _midLogStream;
 		readonly byte[] _clientBuff = new byte[CLIENT_BUFF_SIZE];
 		readonly object _dictLock = new object();
 		static bool _verVerbose = false;
 		static int _nextFileNumber=-1;
 		static readonly ManualResetEvent _mreThreads=new ManualResetEvent(true);
 		static readonly object midLogLock = new object();
+		 static readonly bool showMidContent=true;
 		string _ipAddress = string.Empty;
 		#endregion
 		#region cctor
@@ -74,13 +80,8 @@ namespace NSAtlasCopcoBreech {
 		#endregion
 		#region ctor
 		public MyController() {
-			string logName = findNextLogFileName();
-			Utility.logger.log(ColtLogLevel.Debug, "log-file: "+logName+".");
-			lock (midLogLock) {
-				_midLogStream = new FileStream(logName, FileMode.CreateNew, FileAccess.Write, FileShare.ReadWrite);
-				_midLogFile = new StreamWriter(_midLogStream);
-			}
-		} 
+			createNewLogFile();
+		}
 		#endregion
 
 		#region properties
@@ -152,7 +153,7 @@ namespace NSAtlasCopcoBreech {
 		internal void shutdown() {
 			Utility.logger.log(MethodBase.GetCurrentMethod(), "notifying threads");
 			_mreThreads.Reset();
-			
+
 			// wait for reconnection thread.
 			_taskMonitor.Wait();
 			_taskMonitor.Dispose();
@@ -176,17 +177,34 @@ namespace NSAtlasCopcoBreech {
 			});
 			Utility.logger.log(MethodBase.GetCurrentMethod(), "threads closed");
 			lock (midLogLock) {
-				if (_midLogStream!=null) {
-					_midLogStream.Flush();
-					_midLogStream.Close();
-					_midLogStream.Dispose();
-				}
-				if (_midLogFile!=null) {
-					_midLogFile=null;
-				}
+				closeLogFiles();
 			}
 			this.ThreadsShutdown?.Invoke(this, new EventArgs());
 			_mreThreads.Set();
+		}
+
+		void closeLogFiles() {
+			//lock (midLogLock) {
+			if (_midLogStream!=null) {
+				_midLogStream.Flush();
+				_midLogStream.Close();
+				_midLogStream.Dispose();
+			}
+			if (_midLogFile!=null) {
+				_midLogFile=null;
+			}
+			//}
+		}
+
+		internal void createNewLogFile() {
+			string logName = findNextLogFileName();
+
+			Utility.logger.log(ColtLogLevel.Debug, "log-file: "+logName+".");
+			lock (midLogLock) {
+				closeLogFiles();
+				_midLogStream = new FileStream(logName, FileMode.CreateNew, FileAccess.Write, FileShare.ReadWrite);
+				_midLogFile = new StreamWriter(_midLogStream);
+			}
 		}
 
 		static string findNextLogFileName() {
@@ -236,6 +254,8 @@ namespace NSAtlasCopcoBreech {
 				Utility.logger.log(mb, ex);
 			}
 		}
+
+
 		void processCommunicationStatus(CommStatus commStatus) {
 			try {
 				if (_processCommStatusDelegate == null) {
@@ -318,9 +338,9 @@ namespace NSAtlasCopcoBreech {
 		void sendKeepAliveThread() {
 			MethodBase mb = MethodBase.GetCurrentMethod();
 			DateTime now;
-			MID_9999 mid;
-			string package;
-			byte[] command;
+			//MID_9999 mid;
+			//string package;
+			//byte[] command;
 			bool shutdownThread=false;
 			while (!shutdownThread) {
 				try {
@@ -339,6 +359,9 @@ namespace NSAtlasCopcoBreech {
 					}
 					now = DateTime.Now;
 					if (now.Subtract(_lastMessage) > new TimeSpan(0, 0, 10)) {
+#if true
+						sendMid(new MID_9999());
+#else
 						mid = new MID_9999();
 						command = Encoding.ASCII.GetBytes(package = mid.buildPackage() + "\0");
 						lock (_writeLock) {
@@ -347,6 +370,7 @@ namespace NSAtlasCopcoBreech {
 							if (veryVerbose)
 								Utility.logger.log(ColtLogLevel.Info, mb, mid.GetType().Name + " Sent");
 						}
+#endif
 					}
 					if (!shutdownThread)
 						Thread.Sleep(1000);
@@ -360,7 +384,7 @@ namespace NSAtlasCopcoBreech {
 			MethodBase mb = MethodBase.GetCurrentMethod();
 			int bytesRead = 0, length;
 			string package;
-			byte[] command;
+			//byte[] command;
 			bool shutdownThread=false;
 			if (veryVerbose)
 				Utility.logger.log(ColtLogLevel.Info, mb);
@@ -420,6 +444,8 @@ namespace NSAtlasCopcoBreech {
 								_midLogFile.Flush();
 								_midLogStream.Flush();
 							}
+						if (showMidContent)
+							MIDUtil.showMid(package);
 					}
 					if (!string.IsNullOrEmpty(package) && package.Length > 8 && string.Compare(package.Substring(4, 4), "9999") != 0)
 						Utility.logger.log(ColtLogLevel.Info, mb, "[" + package + "]");
@@ -435,29 +461,60 @@ namespace NSAtlasCopcoBreech {
 							processCommunicationStatus(CommStatus.Up);
 							DateTime now = DateTime.Now;
 							if (now.Subtract(_TimeOfLastLogicalConnectedToController) > TimeSpan.FromMinutes(5)) {
-								sendMid(new MID_0034()); 
-								sendMid(new MID_0051()); 
-								sendMid(new MID_0060()); 
-								sendMid(new MID_0070()); 
-								sendMid(new MID_0151()); 
-								sendMid(new MID_0210()); 
-								sendMid(new MID_0216()); 
-								sendMid(new MID_0220()); 
-														 /*
-														 if (_subscriptions.Contains(Subscriptions.LastTighteningResult)) {
-															 sendMid(subscribeLastTightening_0060());
-														 }
-														 if (_subscriptions.Contains(Subscriptions.Alarm)) {
-															 sendMid(createAlarmSubscription_0070());
-														 }
-														 if (_subscriptions.Contains(Subscriptions.Relay)) {
-															 sendMid(createRelay_0216());
-														 }
-														 if (_subscriptions.Contains(Subscriptions.DigitalInput)) {
-															 sendMid(createDigitalInput_0220());
-														 }
-														 */
+								/* */
+								sendMid(new MID_0014()); // PSET subscribe, respond with MID_0016
+#warning removed MID_0021
+								//sendMid(new MID_0021()); // lock-at-batch-done
+								sendMid(new MID_0034());    // Job info subscribe, 
+
+								sendMid(new MID_0051());    // VIN subscribe
+								sendMid(new MID_0060());    // Last tightening
+								sendMid(new MID_0070());    // Alarm subscribe
+
+								// Command Error ErrorCode:CONTROLLER_IS_NOT_A_SYNC_MASTER_OR_STATION_CONTROLLER for MID=90.
+								//sendMid(new MID_0090());    // MultiSpindle status subscribe
+
+#warning MID_0100 is missing?
+								//sendMid(new MID_0100());    // MultiSpindle result subscribe
+
+								// Command Error ErrorCode:UNKNOWN_MID for MID=105.
+								//sendMid(new MID_0105());    // PowerMACS result subscribe
+
+								sendMid(new MID_0120());    // Job line control info subscribe
+								sendMid(new MID_0151());    // multi-ident result parts subscribe
+								sendMid(new MID_0210());    // extern inputs subscribe
+								sendMid(new MID_0216());    // relay function subscribe
+								sendMid(new MID_0220());    // digital input subscribe
+
+								// Command Error ErrorCode:UNKNOWN_MID for MID=241.
+								//sendMid(new MID_0241());    // user-data subscribe
+
+								sendMid(new MID_0250());    // selector-socket subscribe
+								sendMid(new MID_0261());    // tool tag id subscribe
+
+								// Command Error ErrorCode:UNKNOWN_MID for MID=400.
+								//sendMid(new MID_0400());    // auto/manual mode id subscribe
+
+								sendMid(new MID_0420());    // open proto disable subscribe
+
+								/*
+								if (_subscriptions.Contains(Subscriptions.LastTighteningResult)) {
+									sendMid(subscribeLastTightening_0060());
+								}
+								if (_subscriptions.Contains(Subscriptions.Alarm)) {
+									sendMid(createAlarmSubscription_0070());
+								}
+								if (_subscriptions.Contains(Subscriptions.Relay)) {
+									sendMid(createRelay_0216());
+								}
+								if (_subscriptions.Contains(Subscriptions.DigitalInput)) {
+									sendMid(createDigitalInput_0220());
+								}
+								*/
 							}
+#if true
+							sendMid(new MID_0030());
+#else
 							MID_0030 mid0030 = new MID_0030();
 							package = mid0030.buildPackage() + "\0";
 							command = Encoding.ASCII.GetBytes(package);
@@ -466,9 +523,14 @@ namespace NSAtlasCopcoBreech {
 								_clientStream.Write(command, 0, command.Length);
 								Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "MID0030 Sent");
 							}
+#endif
 							break;
 						case "0004": handleCommandError_0004(package); break;
 						case "0005": handleCommandAccepted_0005(package); break;
+						case "0015": handleCommandAccepted_0015(package); break; // show PSET subscribed
+						case "0021": sendMid(new MID_0023()); break; // notification
+						case "0022": break; // look this up!
+
 						case "0031": captureJobNumber(package); break;
 						case "0052": captureVehicleID(package); break;
 						case "0061":
@@ -495,7 +557,7 @@ namespace NSAtlasCopcoBreech {
 						case "0152": handleMultiIdentAndParts_0152(package); sendMid(new MID_0153()); break;
 						case "0211": handleExternalInputs_0211(package); sendMid(new MID_0212()); break;
 						case "9999": handleKeepAlive(package, processObject); break;
-						default: displayStatus(ColtLogger.makeSig(mb) + " Unsupported package received [" + package.Substring(4, 4) + "]"); break;
+						default: displayStatus(ColtLogger.makeSig(mb) + "*** Unsupported package received [" + package.Substring(4, 4) + "] ***"); break;
 					}
 				} catch (SocketException exSock) {
 					Utility.logger.log(MethodBase.GetCurrentMethod(), exSock);
@@ -506,6 +568,19 @@ namespace NSAtlasCopcoBreech {
 				}
 			}
 		}
+
+		void handleCommandAccepted_0015(string package) {
+			MID_0015 mid=new MID_0015();
+
+			mid.processPackage(package);
+			Utility.logger.log(MethodBase.GetCurrentMethod());
+			sendMid(new MID_0016());
+			if (mid.ParameterSetID==0) {
+				Utility.logger.log(ColtLogLevel.Debug, MethodBase.GetCurrentMethod(), "ParmSet="+mid.ParameterSetID+". Creating a new log-file.");
+				createNewLogFile();
+			}
+		}
+
 		void handleExternalInputs_0211(string package) {
 			MyMid_211 mid = new MyMid_211();
 			mid.processPackage(package);
@@ -522,7 +597,7 @@ namespace NSAtlasCopcoBreech {
 		static void handleCommandError_0004(string package) {
 			MID_0004 mid0004 = new MID_0004();
 			mid0004.processPackage(package);
-			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "Command Error ErrorCode:" + mid0004.ErrorCode + ".");
+			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "Command Error ErrorCode:" + mid0004.ErrorCode + " for MID="+mid0004.FailedMid+".");
 		}
 		static void handleCommandAccepted_0005(string package) {
 			MID_0005 mid = new MID_0005();
@@ -532,9 +607,9 @@ namespace NSAtlasCopcoBreech {
 			Utility.logger.log(ColtLogLevel.Info, mb, "Command Accepted: " + mid.MIDAccepted + ".");
 			blah = package.Substring(20, 4);
 			if (blah == "0018") {
-				Utility.logger.log(ColtLogLevel.Info, "MID0018 Accepted");    
+				Utility.logger.log(ColtLogLevel.Info, "MID0018 Accepted");
 			} else if (blah == "0031") {
-				Utility.logger.log(ColtLogLevel.Info, "MID0031 Accepted");    
+				Utility.logger.log(ColtLogLevel.Info, "MID0031 Accepted");
 			}
 		}
 		MID createRelay_0216() { return new MID_0216(); }
@@ -558,13 +633,20 @@ namespace NSAtlasCopcoBreech {
 				ds("Error: [" + mid.ErrorCode + "]");
 		}
 		void sendMid(MID mid) {
-			string package = mid.buildPackage() + "\0";
+			string tmp,package = (tmp=mid.buildPackage()) + "\0";
 			byte[] command = Encoding.ASCII.GetBytes(package);
 			lock (_writeLock) {
 				_lastMessage = DateTime.Now;
-				_clientStream.Write(command, 0, command.Length);
-				if (veryVerbose)
-					Utility.logger.log(ColtLogLevel.Info, mid.GetType().Name + " Sent");
+				if (_clientStream!=null)
+					_clientStream.Write(command, 0, command.Length);
+				if (mid.HeaderData.Mid==9999
+					) {
+					if (veryVerbose)
+						Utility.logger.log(ColtLogLevel.Debug, "*** SENT: ["+tmp+"]");
+				} else
+					Utility.logger.log(ColtLogLevel.Debug, "*** SENT: ["+tmp+"]");
+				//if (veryVerbose)
+				//	Utility.logger.log(ColtLogLevel.Info, mid.GetType().Name + " Sent");
 			}
 		}
 		MID createControllerAlarmAcknowledged() { return new MID_0075(); }

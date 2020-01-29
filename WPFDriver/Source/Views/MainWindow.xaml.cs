@@ -17,9 +17,6 @@ using Microsoft.Win32;
 using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
 using OpenProtocolInterpreter.MIDs.Communication;
-//using OpenProtocolController;
-//using OpenProtocolUtility.Serialization;
-//using Microsoft.Win32;
 
 namespace NSAtlasCopcoBreech {
 
@@ -61,6 +58,7 @@ namespace NSAtlasCopcoBreech {
 						_opc.ThreadsShutdown+=_opc_ThreadsShutdown;
 						_vm.startButtonEnabled = false;
 						_vm.stopButtonEnabled = true;
+						_vm.newLogFileEnabled=true;
 						//_opc.AddLastTighteningResultSubscription();
 						//_opc.AlarmSubscribe = true;
 						//_opc.RelaySubscribe = true;
@@ -83,6 +81,7 @@ namespace NSAtlasCopcoBreech {
 				_opc=null;
 				_vm.startButtonEnabled=true;
 				_vm.stopButtonEnabled=false;
+				_vm.newLogFileEnabled=false;
 			}
 		}
 
@@ -184,12 +183,12 @@ namespace NSAtlasCopcoBreech {
 		string _previousLogFile;
 		const string KEY="Previous Log folder";
 
-		void BtnTest_Click(object sender, RoutedEventArgs e) {
+		void showLogData(object sender, RoutedEventArgs e) {
 			bool? brc;
 			OpenFileDialog ofd;
 
 			if (string.IsNullOrEmpty(_previousLogFile))
-				_previousLogFile=readPreviousLogFile(KEY, string.Empty);
+				_previousLogFile=Utility.readRegistryValue(KEY, string.Empty);
 			ofd=new OpenFileDialog {
 				AddExtension=true,
 				CheckFileExists=true,
@@ -212,65 +211,51 @@ namespace NSAtlasCopcoBreech {
 
 			if ((brc=ofd.ShowDialog()).HasValue&&brc.Value) {
 				if (ofd.FileNames.Length>0) {
-					savePreviousFile(KEY, ofd.FileNames[0]);
+					Utility.saveRegistryValue(KEY, _previousLogFile= ofd.FileNames[0]);
 					MIDUtil.showMidDetails(ofd.FileNames);
 				} else {
-					MIDUtil.showMidDetail(ofd.FileName);
-					savePreviousFile(KEY, ofd.FileName);
+					MIDUtil.showMidDetail(_previousLogFile=ofd.FileName);
+					Utility.saveRegistryValue(KEY, ofd.FileName);
 				}
 			}
 		}
 
 
-		static string registryPath {
-			get {
-				Assembly asm=Assembly.GetEntryAssembly();
-				AssemblyName an=asm.GetName();
 
-				return "Software\\"+companyName<AssemblyCompanyAttribute>(asm)+"\\"+an.Name+"\\" +an.Version; ;
+		void startNewLogFile(object sender, RoutedEventArgs e) {
+			if (_opc!=null)
+				_opc.createNewLogFile();
+			//_vm.createNewLogFile();
+		}
+
+		void Window1_Initialized(object sender, EventArgs e) {
+			//Utility.logger.log(MethodBase.GetCurrentMethod(), "size: ");
+			//_vm.setWindowCoords(this);
+			double left,top,width,height;
+
+			if (Utility.retrieveWindowBounds("Window data", out left, out top, out width, out height)) {
+				_vm.windowTop=top;
+				_vm.windowLeft=left;
+				_vm.windowWidth=width;
+				_vm.windowHeight=height;
+				//Trace.WriteLine("here");
+				//if (left!=double.NaN) this.Left=left;
+				//if (top!=double.NaN) this.Top=left;
+				//if (width!=double.NaN) this.Width=left;
+				//if (height!=double.NaN) this.Height=left;
+				//if (left!=double.NaN) this.Left=left;
 			}
 		}
-		void savePreviousFile(string key, string strValue) {
-			RegistryKey v = openOrCreateKey(  RegistryHive.CurrentUser);
 
-			v.SetValue(key, strValue);
-			v.Dispose();
+		void Window1_SizeChanged(object sender, SizeChangedEventArgs e) {
+			Utility.saveWindowBoundsToRegistry(this,"Window data");
 		}
 
-		string readPreviousLogFile(string key, string defaultValue) {
-			string ret;
-			RegistryKey v = openOrCreateKey(  RegistryHive.CurrentUser);
-
-			ret=v.GetValue(key, defaultValue) as string;
-			v.Dispose();
-			return ret;
+		void Window1_LocationChanged(object sender, EventArgs e) {
+			//saveWindowBoundsToRegistry(this);
+			//this.lef
+			Utility.saveWindowBoundsToRegistry(this, "Window data");
 		}
 
-		static RegistryKey openOrCreateKey(RegistryHive rh) {
-			RegistryKey rk;
-			string path=registryPath;
-
-			rk=RegistryKey.OpenBaseKey(rh, RegistryView.Default);
-			var v=rk.OpenSubKey(path, true);
-			if (v==null)
-				v=rk.CreateSubKey(path, true);
-			return v;
-		}
-
-		static string companyName<T>(Assembly asm) {
-			var v=asm.GetCustomAttribute<AssemblyCompanyAttribute>();
-			//var vvv=asm.GetCustomAttribute<AssemblyCompanyAttribute>();
-			if (v!=null&&typeof(T).Equals(typeof(AssemblyCompanyAttribute)))
-				return ((AssemblyCompanyAttribute) v).Company;
-			Trace.WriteLine("fix this");
-			//""
-			//return 
-			return null;
-		}
-
-		//  string companyName(Assembly asm) {
-		//	throw new NotImplementedException();
-		//}
 	}
-
 }

@@ -5,30 +5,39 @@
 	x:Name="window1"
 	x:Class="NSAtlasCopcoBreech.MainWindow"
 	Title="MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-    <Grid  >
-        <Grid.RowDefinitions>
-            <RowDefinition Height="10*"/>
-            <RowDefinition Height="5*"/>
-            <RowDefinition Height="5*"/>
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	Width="{Binding windowWidth}"
+	Height="{Binding windowHeight}"
+	Left="{Binding windowLeft}"
+	Top="{Binding windowTop}"
+	SizeChanged="Window1_SizeChanged"
+	LocationChanged="Window1_LocationChanged"
+Initialized="Window1_Initialized"
+	
+	>
+	<Grid  >
+		<Grid.RowDefinitions>
+			<RowDefinition Height="10*"/>
+			<RowDefinition Height="5*"/>
+			<RowDefinition Height="5*"/>
 			<RowDefinition Height="5*"/>
 			<RowDefinition Height="5*"/>
 			<RowDefinition Height="5*"/>
 			<RowDefinition Height="10*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="20*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="5*"/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition Width="20*"/>
+			<ColumnDefinition Width="20*"/>
+			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition Width="5*"/>
 
-        </Grid.ColumnDefinitions>
+		</Grid.ColumnDefinitions>
 
-        <Button Name="btnStart" Grid.Row="1" Grid.Column="1" Content="Start"  IsEnabled="{Binding startButtonEnabled}" Click="btnStart_Click"/>
-        <Button Name="btnStop" Grid.Row="1" Grid.Column="2" Content="Stop"  IsEnabled="{Binding stopButtonEnabled}" Click="btnStop_Click"/>
-        <!--<TextbButton Grid.Row="1" Grid.Column="1" Content="Start"/>-->
-        <!--
+		<Button Name="btnStart" Grid.Row="1" Grid.Column="1" Content="Start"  IsEnabled="{Binding startButtonEnabled}" Click="btnStart_Click"/>
+		<Button Name="btnStop" Grid.Row="1" Grid.Column="2" Content="Stop"  IsEnabled="{Binding stopButtonEnabled}" Click="btnStop_Click"/>
+		<!--<TextbButton Grid.Row="1" Grid.Column="1" Content="Start"/>-->
+		<!--
         <ComboBox 
             Name="cbControllers"
             Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" 
@@ -38,20 +47,20 @@
             SelectedValue="{Binding selectedController}"
                   />
         -->
-        <ComboBox 
+		<ComboBox 
             Name="cbControllers"
             Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" 
             ItemsSource="{Binding atlasCopcoControllers}"
             DisplayMemberPath="controllerDescription"
             SelectedValue="{Binding selectedController}"
                   />
-        <TextBlock Grid.Row="3" Grid.Column="1" Text="IP Address"/>
-        <TextBox Grid.Row="3" Grid.Column="2" Text="{Binding ipAddress}" IsReadOnly="True"/> 
-        
-        <TextBlock Grid.Row="4" Grid.Column="1" Text="Port"/>
-        <TextBox Grid.Row="4" Grid.Column="2" Text="{Binding portNumber}" IsReadOnly="True"/>
+		<TextBlock Grid.Row="3" Grid.Column="1" Text="IP Address"/>
+		<TextBox Grid.Row="3" Grid.Column="2" Text="{Binding ipAddress}" IsReadOnly="True"/>
 
-		<Button Name="btnTest" Click="BtnTest_Click" Grid.Row="5" Grid.Column="1" Content="Test"/>
+		<TextBlock Grid.Row="4" Grid.Column="1" Text="Port"/>
+		<TextBox Grid.Row="4" Grid.Column="2" Text="{Binding portNumber}" IsReadOnly="True"/>
+
+		<Button Name="btnShowLogData" Click="showLogData" Grid.Row="5" Grid.Column="1" Content="Examine log-file(s)."/>
+		<Button Name="btnNewLogFile" Click="startNewLogFile" Grid.Row="5" Grid.Column="2" Content="Create new log-file." IsEnabled="{Binding newLogFileEnabled}"/>
 	</Grid>
-
 </Window>

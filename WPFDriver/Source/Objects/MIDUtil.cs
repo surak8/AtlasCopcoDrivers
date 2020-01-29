@@ -19,6 +19,7 @@ namespace NSAtlasCopcoBreech {
 			string[] lines;
 			string line,midDesc;
 			using (TextReader tw = new StreamReader(filename)) {
+				Utility.logger.log(ColtLogLevel.Debug, MethodBase.GetCurrentMethod(), "file: "+filename+".");
 				foreach (string aline in lines=tw.ReadToEnd().Split('\n')) {
 					if (!string.IsNullOrEmpty(line=aline.Replace('\r', '\0').Trim())&&
 						line.Length>8&&
@@ -34,7 +35,7 @@ namespace NSAtlasCopcoBreech {
 		static readonly BindingFlags bfCreate=bfCommon|BindingFlags.CreateInstance;
 		static readonly BindingFlags bfProps=bfCommon|  BindingFlags.GetProperty;
 		static readonly object[] nullArgs=new object[] { };
-		static void showMid(string line) {
+	internal	static void showMid(string line) {
 			MID realMid;
 			string midId;
 			int midno;
@@ -61,9 +62,10 @@ namespace NSAtlasCopcoBreech {
 		static void showMid1(MID realMid, string line) {
 			StringBuilder sb=new StringBuilder();
 			object propValue;
-			string svalue,dispValue,propType;
+			string svalue,dispValue;
 			bool showType=false;
-
+			if (realMid.HeaderData.Mid==9999)
+				return;
 			sb.AppendLine(realMid.GetType().FullName);
 			sb.AppendLine("["+line+"]");
 			foreach (PropertyInfo pi in realMid.GetType().GetProperties(bfCommon)) {
@@ -100,7 +102,7 @@ namespace NSAtlasCopcoBreech {
 				}
 				sb.AppendLine("\t"+ pi.Name+" = "+dispValue+(showType?" ["+pi.PropertyType.FullName+"]":string.Empty)+".");
 			}
-			Utility.logger.log(sb.ToString());
+			Utility.logger.log(ColtLogLevel.Debug,MethodBase.GetCurrentMethod(), sb.ToString());
 		}
 
 		static Dictionary<int, MID> createMap(Type type) {

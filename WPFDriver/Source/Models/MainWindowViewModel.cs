@@ -15,6 +15,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Windows;
 //using Colt3.Utility;
 //using C3L = Colt3.Logging.Logger;
 
@@ -51,6 +52,7 @@ namespace NSAtlasCopcoBreech {
 
             startButtonEnabled = true;
             stopButtonEnabled = false;
+			newLogFileEnabled=false;
             //ipAddress = "192.168.105.8";
             //portNumber = 4545;
         }
@@ -196,8 +198,15 @@ namespace NSAtlasCopcoBreech {
             get { return _portNumber; }
             set { _portNumber = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
         }
-        #endregion
 
+
+		#endregion
+
+
+		internal void setWindowCoords(Window w) {
+			//throw new NotImplementedException();
+			Utility.logger.log(MethodBase.GetCurrentMethod());
+		}
 
 #if VERSION2
         /// <summary>backing-store for property atlasCopcoController of type <b>CollectionView</b>.</summary>
@@ -213,9 +222,9 @@ namespace NSAtlasCopcoBreech {
         }
 
 #else
-        /// <summary>backing-store for property atlasCopcoConrollers of type <b>ObservableCollection&lt;AtlasCopcoController&gt;</b>.</summary>
-        /// <seealso name="atlasCopcoConrollers"/>
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		/// <summary>backing-store for property atlasCopcoConrollers of type <b>ObservableCollection&lt;AtlasCopcoController&gt;</b>.</summary>
+		/// <seealso name="atlasCopcoConrollers"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
         ObservableCollection<AtlasCopcoController> _atlasCopcoControllers;
 
         /// <summary>property atlasCopcoConrollers.</summary>
@@ -244,6 +253,71 @@ namespace NSAtlasCopcoBreech {
                 }
             }
         }
+
+//a		public bool newLogFileEnabled1 { get; internal set; }
+
+		/// <summary>backing-store for property newLogFileEnabled of type <b>bool</b>.</summary>
+		/// <seealso name="newLogFileEnabled"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		bool _newLogFileEnabled;
+
+		/// <summary>property newLogFileEnabled.</summary>
+		/// <seealso name="_newLogFileEnabled"/>
+		public bool newLogFileEnabled {
+			get { return _newLogFileEnabled; }
+			set { _newLogFileEnabled = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+
+
+		/// <summary>backing-store for property windowWidth of type <b>double</b>.</summary>
+		/// <seealso name="windowWidth"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		double _windowWidth;
+
+		/// <summary>property windowWidth.</summary>
+		/// <seealso name="_windowWidth"/>
+		public double windowWidth {
+			get { return _windowWidth; }
+			set { _windowWidth = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+
+		/// <summary>backing-store for property windowHeight of type <b>double</b>.</summary>
+		/// <seealso name="windowHeight"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		double _windowHeight;
+
+		/// <summary>property windowHeight.</summary>
+		/// <seealso name="_windowHeight"/>
+		public double windowHeight {
+			get { return _windowHeight; }
+			set { _windowHeight = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+
+		/// <summary>backing-store for property windowLeft of type <b>double</b>.</summary>
+		/// <seealso name="windowLeft"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		double _windowLeft;
+
+		/// <summary>property windowLeft.</summary>
+		/// <seealso name="_windowLeft"/>
+		public double windowLeft {
+			get { return _windowLeft; }
+			set { _windowLeft = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+
+
+		/// <summary>backing-store for property windowTop of type <b>double</b>.</summary>
+		/// <seealso name="windowTop"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		double _windowTop;
+
+		/// <summary>property windowTop.</summary>
+		/// <seealso name="_windowTop"/>
+		public double windowTop {
+			get { return _windowTop; }
+			set { _windowTop = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+
 #else
         /// <summary>backing-store for property selectedController of type <b>string</b>.</summary>
         /// <seealso name="selectedController"/>
@@ -258,7 +332,5 @@ namespace NSAtlasCopcoBreech {
         }
 #endif
 
-    }
-
+	}
 }
-
