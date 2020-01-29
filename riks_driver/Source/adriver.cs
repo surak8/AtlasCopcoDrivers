@@ -17,7 +17,7 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using Microsoft.CSharp;
-using OpenProtocolInterpreter.Communication;
+//using OpenProtocolInterpreter.Communication;
 
 namespace NSRiks_driver {
 
@@ -160,6 +160,7 @@ namespace NSRiks_driver {
 		}
 
 		static void testit() {
+#if OTHER_VERSION
 			var m02 = new OpenProtocolInterpreter.Communication.Mid0002();
 			m02.CellId = 1000;
 			m02.ChannelId = 1001;
@@ -185,6 +186,7 @@ namespace NSRiks_driver {
 				Trace.WriteLine("difference!");
 			}
 			Trace.WriteLine("here");
+#endif
 		}
 
 		static bool isTypeAttribute(TypeAttributes ta, TypeAttributes taSearch) { return (ta & taSearch) == taSearch; }

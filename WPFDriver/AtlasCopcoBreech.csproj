@@ -91,7 +91,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\OpenProtocolInterpreter\src\OpenProtocolInterpreter\OpenProtocolInterpreter.csproj">
-      <Project>{4bedd735-1709-4d61-be1d-452df72b39a4}</Project>
+      <Project>{198e440d-585c-493c-8518-4b77b4ab6926}</Project>
       <Name>OpenProtocolInterpreter</Name>
     </ProjectReference>
   </ItemGroup>

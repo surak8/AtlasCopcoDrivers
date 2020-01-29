@@ -14,15 +14,11 @@ using System.IO;
 using System.Reflection;
 using System.Windows;
 using Microsoft.Win32;
-using OpenProtocolInterpreter;
-#if OTHER_VERSION
-#else
 using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
 using OpenProtocolInterpreter.MIDs.Communication;
 //using OpenProtocolController;
-using OpenProtocolUtility.Serialization;
-#endif
+//using OpenProtocolUtility.Serialization;
 //using Microsoft.Win32;
 
 namespace NSAtlasCopcoBreech {
@@ -43,8 +39,11 @@ namespace NSAtlasCopcoBreech {
 			Utility.logger.log(MethodBase.GetCurrentMethod());
 			try {
 				if (_opc != null) {
-					_opc.close();
-					_opc = null;
+					_opc.shutdown();
+					if (_opc!=null) {
+						_opc.close();
+						_opc = null;
+					}
 				}
 			} catch (Exception ex) {
 				Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
@@ -59,6 +58,7 @@ namespace NSAtlasCopcoBreech {
 					var avar = _opc.initialize(_vm.ipAddress, _vm.portNumber, myMidProc, myDispStatus, myCommStatus);
 					Utility.logger.log(MethodBase.GetCurrentMethod());
 					if (avar) {
+						_opc.ThreadsShutdown+=_opc_ThreadsShutdown;
 						_vm.startButtonEnabled = false;
 						_vm.stopButtonEnabled = true;
 						//_opc.AddLastTighteningResultSubscription();
@@ -75,14 +75,18 @@ namespace NSAtlasCopcoBreech {
 
 		}
 
-
-#if OTHER_VERSION
-		void myMidProc(MessageType messageType, Mid messageObject, string messagestring) {
+		void _opc_ThreadsShutdown(object sender, EventArgs e) {
 			Utility.logger.log(MethodBase.GetCurrentMethod());
+			if (_opc!=null) {
+				_opc.ThreadsShutdown-= _opc_ThreadsShutdown;
+				_opc.close();
+				_opc=null;
+				_vm.startButtonEnabled=true;
+				_vm.stopButtonEnabled=false;
+			}
 		}
-#else
-		void myMidProc(MessageType messageType, MID messageObject, string messagestring) {
 
+		void myMidProc(MessageType messageType, MID messageObject, string messagestring) {
 			if (messageType == MessageType.KeepAlive)
 				return;
 			string midType = messagestring.Substring(4, 4);
@@ -126,7 +130,6 @@ namespace NSAtlasCopcoBreech {
 			//switch(midType)
 			//Utility.logger.log(MethodBase.GetCurrentMethod(), "msgtype=" + messageType);
 		}
-#endif
 
 		void myCommStatus(CommStatus cs) {
 
@@ -142,7 +145,7 @@ namespace NSAtlasCopcoBreech {
 			Utility.logger.log(MethodBase.GetCurrentMethod(), "MSG=" + msg);
 		}
 
-#region IDisposable Support
+		#region IDisposable Support
 		bool disposedValue = false; // To detect redundant calls
 
 		protected virtual void Dispose(bool disposing) {
@@ -175,11 +178,10 @@ namespace NSAtlasCopcoBreech {
 			// TODO: uncomment the following line if the finalizer is overridden above.
 			GC.SuppressFinalize(this);
 		}
-#endregion
+		#endregion
 
 
 		string _previousLogFile;
-		//private object myMidProc;
 		const string KEY="Previous Log folder";
 
 		void BtnTest_Click(object sender, RoutedEventArgs e) {
