@@ -21,7 +21,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;OTHER_VERSION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\debug\AtlasCopcoBreech.xml</DocumentationFile>
@@ -90,8 +90,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\NewProjects\OpenProtocolAtlasCopco\OpenProtocolInterpreter\OpenProtocolInterpreter.csproj">
-      <Project>{319224b6-48c6-4787-a98b-f33b774268d0}</Project>
+    <ProjectReference Include="..\..\OpenProtocolInterpreter\src\OpenProtocolInterpreter\OpenProtocolInterpreter.csproj">
+      <Project>{198e440d-585c-493c-8518-4b77b4ab6926}</Project>
       <Name>OpenProtocolInterpreter</Name>
     </ProjectReference>
   </ItemGroup>

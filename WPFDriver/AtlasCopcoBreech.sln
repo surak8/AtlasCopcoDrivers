@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlasCopcoBreech", "AtlasCopcoBreech.csproj", "{C735DFBC-6AAD-4364-9765-ABC7E3619552}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenProtocolInterpreter", "..\..\..\NewProjects\OpenProtocolAtlasCopco\OpenProtocolInterpreter\OpenProtocolInterpreter.csproj", "{319224B6-48C6-4787-A98B-F33B774268D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenProtocolInterpreter", "..\..\OpenProtocolInterpreter\src\OpenProtocolInterpreter\OpenProtocolInterpreter.csproj", "{198E440D-585C-493C-8518-4B77B4AB6926}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{C735DFBC-6AAD-4364-9765-ABC7E3619552}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C735DFBC-6AAD-4364-9765-ABC7E3619552}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C735DFBC-6AAD-4364-9765-ABC7E3619552}.Release|Any CPU.Build.0 = Release|Any CPU
-		{319224B6-48C6-4787-A98B-F33B774268D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{319224B6-48C6-4787-A98B-F33B774268D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{319224B6-48C6-4787-A98B-F33B774268D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{319224B6-48C6-4787-A98B-F33B774268D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{198E440D-585C-493C-8518-4B77B4AB6926}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{198E440D-585C-493C-8518-4B77B4AB6926}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{198E440D-585C-493C-8518-4B77B4AB6926}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{198E440D-585C-493C-8518-4B77B4AB6926}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

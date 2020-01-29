@@ -1,16 +1,17 @@
+#if !OTHER_VERSION
 using System.Reflection;
 using OpenProtocolInterpreter.MIDs;
 
 namespace NSAtlasCopcoBreech {
 	class MyMid_152 : MID {
 
-		#region ctor
+#region ctor
 		public MyMid_152() : base(20, 152, 1) {
 			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod());
 		}
-		#endregion ctor
+#endregion ctor
 
-		#region MID implementation
+#region MID implementation
 
 		public override MID processPackage(string package) {
 			MID ret = base.processPackage(package);
@@ -31,6 +32,7 @@ namespace NSAtlasCopcoBreech {
 					new DataField(4,114,32)
 				});
 		}
-		#endregion MID implementation
+#endregion MID implementation
 	}
 }
+#endif

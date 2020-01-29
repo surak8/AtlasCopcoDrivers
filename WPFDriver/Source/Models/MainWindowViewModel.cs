@@ -48,9 +48,16 @@ namespace NSAtlasCopcoBreech {
             selectedController = findDefaultController<AtlasCopcoController>(atlasCopcoControllers, defSel, "controllerDescription");
 #endif
 #endif
-            //selectDefaultController(defSel);
+			//selectDefaultController(defSel);
 
-            startButtonEnabled = true;
+#if !OTHER_VERSION
+
+			isControlEnabled=true;
+			controlVisibility=  Visibility.Visible;
+#else
+			controlVisibility=  Visibility.Hidden;
+#endif
+			startButtonEnabled = true;
             stopButtonEnabled = false;
 			newLogFileEnabled=false;
             //ipAddress = "192.168.105.8";
@@ -59,7 +66,7 @@ namespace NSAtlasCopcoBreech {
 
 
 
-        #endregion
+#endregion
 
 #if VERSION2
         T findDefaultController2<T>(CollectionView objs, string defSel, string someStringProperty) {
@@ -124,7 +131,7 @@ namespace NSAtlasCopcoBreech {
         //    return new C3L(cl);
         //}
 
-        #region INotifyPropertyChanged implementation
+#region INotifyPropertyChanged implementation
         public event PropertyChangedEventHandler PropertyChanged;
         public void firePropertyChanged(string propertyName) {
             if ((this.PropertyChanged != null))
@@ -143,8 +150,8 @@ namespace NSAtlasCopcoBreech {
             }
         }
 
-        #endregion
-        #region properties
+#endregion
+#region properties
 
 
         /// <summary>backing-store for property startButtonEnabled of type <b>bool</b>.</summary>
@@ -156,7 +163,13 @@ namespace NSAtlasCopcoBreech {
         /// <seealso name="_startButtonEnabled"/>
         public bool startButtonEnabled {
             get { return _startButtonEnabled; }
-            set { _startButtonEnabled = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+            set {
+#if OTHER_VERSION
+				_startButtonEnabled=false;
+#else
+				_startButtonEnabled = value;
+#endif
+				firePropertyChanged(MethodBase.GetCurrentMethod()); }
         }
 
 
@@ -169,7 +182,14 @@ namespace NSAtlasCopcoBreech {
         /// <seealso name="_stopButtonEnabled"/>
         public bool stopButtonEnabled {
             get { return _stopButtonEnabled; }
-            set { _stopButtonEnabled = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+            set {
+#if OTHER_VERSION
+				_stopButtonEnabled=false;
+#else
+				_stopButtonEnabled = value;
+
+#endif
+				firePropertyChanged(MethodBase.GetCurrentMethod()); }
         }
 
 
@@ -198,9 +218,7 @@ namespace NSAtlasCopcoBreech {
             get { return _portNumber; }
             set { _portNumber = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
         }
-
-
-		#endregion
+#endregion
 
 
 		internal void setWindowCoords(Window w) {
@@ -331,6 +349,19 @@ namespace NSAtlasCopcoBreech {
             set { _selectedController = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
         }
 #endif
+		bool _isEnabled;
 
+		public bool isControlEnabled {
+			get{ return _isEnabled; }
+			set { _isEnabled=value;firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+
+Visibility _isVisible;
+
+		public Visibility controlVisibility{
+			get { return _isVisible; }
+			set { _isVisible=value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
 	}
+
 }
