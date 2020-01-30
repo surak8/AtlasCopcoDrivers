@@ -66,9 +66,12 @@ namespace NSAtlasCopcoBreech {
 		static int _nextFileNumber=-1;
 		static readonly ManualResetEvent _mreThreads=new ManualResetEvent(true);
 		static readonly object midLogLock = new object();
-		 static readonly bool showMidContent=true;
+		static readonly bool showMidContent=true;
 		string _ipAddress = string.Empty;
 		private bool _shuttingDown;
+		private bool _initialTighteningData;
+		private int _lastTighteningID;
+		private int _thisTighteningID;
 		static readonly ManualResetEvent _mreShutdown=new ManualResetEvent(false);
 		#endregion
 		#region cctor
@@ -109,6 +112,10 @@ namespace NSAtlasCopcoBreech {
 				}
 				_ipAddress = ipAddress;
 				_port = port;
+				Utility.logger.log(
+					ColtLogLevel.Info, 
+					MethodBase.GetCurrentMethod(), 
+					"Connecting to: "+ipAddress+":"+port+".");
 				_processMidDelegate = processMidDelegate;
 				_displayStatusDelegate = displayStatusDelegate;
 				_processCommStatusDelegate = processCommStatusDelegate;
@@ -239,7 +246,7 @@ namespace NSAtlasCopcoBreech {
 			logFileList.Sort();
 			if (logFileList.Count>0) {
 				tmp = Path.GetFileNameWithoutExtension(logFileList[logFileList.Count - 1]).Substring((asmName + "_").Length, 4);
-				if (Int32.TryParse(tmp, out val))
+				if (int.TryParse(tmp, out val))
 					fileno=val;
 			}
 			return fileno;
@@ -452,7 +459,10 @@ namespace NSAtlasCopcoBreech {
 					if (!string.IsNullOrEmpty(package) && _midLogFile != null) {
 						if (!string.IsNullOrEmpty(package) &&
 							package.Length > 8 &&
-							string.Compare(package.Substring(4, 4), "9999", true) != 0)
+							(MIDUtil.midIdent(package)!=9999 /* keep-alive */							&&
+							MIDUtil.midIdent(package)!=5) /* accepted */)
+
+							//string.Compare(package.Substring(4, 4), "9999", true) != 0)
 							lock (midLogLock) {
 								_midLogFile.WriteLine(package);
 								_midLogFile.Flush();
@@ -476,6 +486,11 @@ namespace NSAtlasCopcoBreech {
 							DateTime now = DateTime.Now;
 							if (now.Subtract(_TimeOfLastLogicalConnectedToController) > TimeSpan.FromMinutes(5)) {
 								/* */
+								sendMid(new MID_0010()); // PSET id request;
+								_initialTighteningData=true;
+								sendMid(new MID_0064()); // old tightening results (0 means: most recent); *** capture this *** _lastTighteningID
+								_initialTighteningData=false;
+
 								sendMid(new MID_0014()); // PSET subscribe, respond with MID_0016
 #warning removed MID_0021
 								//sendMid(new MID_0021()); // lock-at-batch-done
@@ -541,6 +556,10 @@ namespace NSAtlasCopcoBreech {
 							break;
 						case "0004": handleCommandError_0004(package); break;
 						case "0005": handleCommandAccepted_0005(package); break;
+						case "0011": handleCommandAccepted_0011(package); break;
+						case "0013":
+							handleCommandAccepted_0013(package); // pset-def
+							break;
 						case "0015": handleCommandAccepted_0015(package); break; // show PSET subscribed
 						case "0021": sendMid(new MID_0023()); break; // notification
 						case "0022": break; // look this up!
@@ -550,6 +569,9 @@ namespace NSAtlasCopcoBreech {
 						case "0061":
 							MID_0061 mid0061 = new MID_0061();
 							mid0061.processPackage(package);
+							_thisTighteningID=mid0061.TighteningID;
+							generateTighteningRequests();
+
 							Utility.logger.log(ColtLogLevel.Info, string.Format("Batch: {0} of {1} SetId: {2} Id: {3} Torque: {4} Target: {5} Min: {6} Max: {7} Status: Torque:{8} Angle:{9} Tightening:{10}",
 													mid0061.BatchCounter, mid0061.BatchSize, mid0061.ParameterSetID, mid0061.TighteningID, mid0061.Torque, mid0061.TorqueFinalTarget, mid0061.TorqueMinLimit, mid0061.TorqueMaxLimit,
 													mid0061.TorqueStatus, mid0061.AngleStatus, mid0061.TighteningStatus));
@@ -565,6 +587,7 @@ namespace NSAtlasCopcoBreech {
 							processObject(MessageType.LastTighteningResult, mid0061, package);
 							sendMid(createMid0062());
 							break;
+						case "0065": handle_0065(package); break; // old last tightening.
 						case "0071": handleAlarm_0071(package, processObject); sendMid(createAlarmAcknowledgement()); break;
 						case "0074": handleControllerAlarmAck(package, processObject, displayStatus); sendMid(createControllerAlarmAcknowledged()); break;
 						case "0076": handleAlarmStatus(package); break;
@@ -581,6 +604,120 @@ namespace NSAtlasCopcoBreech {
 					close();
 				}
 			}
+		}
+
+		static readonly object _tighteningLock=new object();
+		static IDictionary<int,MidData> _tighteningMap=new Dictionary<int, MidData>();
+
+		class MidData {
+			#region fields
+			MID _mid;
+
+			#endregion
+			#region ctor
+			public MidData(int tid) { tighteningID=tid; }
+
+			#endregion
+			#region properties
+			public bool dataReceived { get; private set; }
+
+			public MID mid { get { return _mid; } set { _mid=value; dataReceived=mid!=null; } }
+			public int tighteningID { get; }
+
+			#endregion
+			#region methods
+			internal void reset() {
+				dataReceived=false;
+				mid=null;
+			}
+			#endregion
+		}
+
+		void generateTighteningRequests() {
+			int nIDS= _thisTighteningID                    -                _lastTighteningID;
+			MID_0064 oldMid;
+
+
+			if (nIDS>0) {
+				// request "missing" results.
+				oldMid=new MID_0064();
+				lock (_tighteningLock) {
+					for (int newID = _lastTighteningID+1; newID<_thisTighteningID; newID++) {
+						if (!_tighteningMap.ContainsKey(newID)) {
+							_tighteningMap.Add(newID, new MidData(newID));
+						} else
+							_tighteningMap[newID].reset();
+						oldMid.TighteningID=newID;
+						sendMid(oldMid);
+					}
+				}
+				_lastTighteningID=_thisTighteningID;
+				_thisTighteningID=-1;
+			}
+		}
+
+		void handle_0065(string package) {
+			MID_0065 mid=new  MID_0065();
+			int tid;
+
+			mid.processPackage(package);
+			if (_initialTighteningData)
+				_lastTighteningID=mid.TighteningID;
+			else {
+				// look in the list and capture the data.
+				lock (_tighteningLock) {
+					if (_tighteningMap.ContainsKey(tid=mid.TighteningID)) {
+						_tighteningMap[tid].mid=mid;
+					}
+				}
+			}
+
+			MIDUtil.showMidDetail(mid, package);
+		}
+
+		static void handleCommandAccepted_0013(string package) {
+			MID_0013 mid=new MID_0013();
+			StringBuilder sb=new StringBuilder();
+
+			mid.processPackage(package);
+			MIDUtil.showMidDetail(mid, package);
+			//MIDUtil.showMidDetail()
+			//sb.AppendLine(mid.
+			//mid13.
+			//break;
+			//handleCommandAccepted_0011(package);
+		}
+
+		void handleCommandAccepted_0011(string package) {
+			MID_0011 mid=new MID_0011();
+			StringBuilder sb=new StringBuilder();
+			List<int> psets=new List<int>();
+			int n;
+
+			mid.processPackage(package);
+			//Trace.WriteLine("here");
+			if ((n=mid.TotalParameterSets)>0) {
+				sb.AppendLine("have "+n+" psets.");
+				for (int i = 0; i<n; i++) {
+					if (i>0)
+						sb.Append(", ");
+					sb.Append(mid.ParameterSets[i]);
+					psets.Add(mid.ParameterSets[i]);
+				}
+				sb.AppendLine();
+			} else {
+				sb.AppendLine("NO PSETS!");
+			}
+			Utility.logger.log(ColtLogLevel.Debug, MethodBase.GetCurrentMethod(), sb.ToString());
+			//if (psets.Count>0) {
+			//	MID_0012 psMid=new MID_0012();
+
+			//	foreach (int aPSet in psets) {
+			//		psMid.ParameterSetID=aPSet;
+			//		//psMid.
+			//		sendMid(psMid);
+			//	}
+			//}
 		}
 
 		void handleCommandAccepted_0015(string package) {
@@ -615,7 +752,7 @@ namespace NSAtlasCopcoBreech {
 		}
 		static void handleCommandAccepted_0005(string package) {
 			MID_0005 mid = new MID_0005();
-			string blah;
+			//string blah;
 			MethodBase mb = MethodBase.GetCurrentMethod();
 
 			mid.processPackage(package);

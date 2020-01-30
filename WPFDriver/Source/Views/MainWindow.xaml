@@ -12,30 +12,19 @@
 	Top="{Binding windowTop}"
 	SizeChanged="Window1_SizeChanged"
 	LocationChanged="Window1_LocationChanged"
-Initialized="Window1_Initialized"
+	Initialized="Window1_Initialized"
 	
 	>
-	<Grid  >
+	<Grid   HorizontalAlignment="Center" VerticalAlignment="Center">
 		<Grid.RowDefinitions>
-			<RowDefinition Height="10*"/>
-			<RowDefinition Height="5*"/>
-			<RowDefinition Height="5*"/>
-			<RowDefinition Height="5*"/>
-			<RowDefinition Height="5*"/>
-			<RowDefinition Height="5*"/>
-			<RowDefinition Height="10*"/>
+			<RowDefinition></RowDefinition>
+			<RowDefinition></RowDefinition>
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="5*"/>
-			<ColumnDefinition Width="20*"/>
-			<ColumnDefinition Width="20*"/>
-			<ColumnDefinition Width="5*"/>
-			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition/>
 
 		</Grid.ColumnDefinitions>
 
-		<Button Name="btnStart" Grid.Row="1" Grid.Column="1" Content="Start"  IsEnabled="{Binding startButtonEnabled}" Click="btnStart_Click"/>
-		<Button Name="btnStop" Grid.Row="1" Grid.Column="2" Content="Stop"  IsEnabled="{Binding stopButtonEnabled}" Click="btnStop_Click"/>
 		<!--<TextbButton Grid.Row="1" Grid.Column="1" Content="Start"/>-->
 		<!--
         <ComboBox 
@@ -47,20 +36,65 @@ Initialized="Window1_Initialized"
             SelectedValue="{Binding selectedController}"
                   />
         -->
-		<ComboBox 
-            Name="cbControllers"
-            Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" 
-            ItemsSource="{Binding atlasCopcoControllers}"
-            DisplayMemberPath="controllerDescription"
-            SelectedValue="{Binding selectedController}"
+		<GroupBox Header="Device selection" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
+			<!--<StackPanel>-->
+			<StackPanel HorizontalAlignment="Stretch">
+				<ComboBox HorizontalAlignment="Stretch"
+					Name="cbControllers"
+					Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+					ItemsSource="{Binding atlasCopcoControllers}"
+					DisplayMemberPath="controllerDescription"
+					SelectedValue="{Binding selectedController}"
+						  Width="150"
                   />
-		<TextBlock Grid.Row="3" Grid.Column="1" Text="IP Address"/>
-		<TextBox Grid.Row="3" Grid.Column="2" Text="{Binding ipAddress}" IsReadOnly="True"/>
+				<StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+					<GroupBox Header="IPAddress" Grid.Row="1" Grid.Column="0" Width="150">
+						<TextBox  Text="{Binding ipAddress}" IsReadOnly="True" IsEnabled="False"/>
+					</GroupBox>
+					<GroupBox Header="Port" Grid.Row="1" Grid.Column="1">
+						<TextBox   Text="{Binding portNumber}" IsReadOnly="True"  IsEnabled="False"/>
+					</GroupBox>
 
-		<TextBlock Grid.Row="4" Grid.Column="1" Text="Port"/>
-		<TextBox Grid.Row="4" Grid.Column="2" Text="{Binding portNumber}" IsReadOnly="True"/>
+				</StackPanel>
+			</StackPanel>
+				<!--<Grid HorizontalAlignment="Stretch">
+					<Grid.RowDefinitions>
+						<RowDefinition/>
+						<RowDefinition/>
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<GroupBox Header="IPAddress" Grid.Row="1" Grid.Column="0">
+						<TextBox  Text="{Binding ipAddress}" IsReadOnly="True"/>
+					</GroupBox>
+					<GroupBox Header="Port" Grid.Row="1" Grid.Column="1">
+						<TextBox   Text="{Binding portNumber}" IsReadOnly="True"/>
+					</GroupBox>
+				</Grid>-->
+			<!--</StackPanel>-->
+		</GroupBox>
 
-		<Button Name="btnShowLogData" Click="showLogData" Grid.Row="5" Grid.Column="1" Content="Examine log-file(s)."/>
-		<Button Name="btnNewLogFile" Click="startNewLogFile" Grid.Row="5" Grid.Column="2" Content="Create new log-file." IsEnabled="{Binding newLogFileEnabled}"/>
+
+		<StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" >
+			<Grid HorizontalAlignment="Center" >
+				<Grid.RowDefinitions>
+					<RowDefinition/>
+					<RowDefinition/>
+				</Grid.RowDefinitions>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition/>
+					<ColumnDefinition/>
+				</Grid.ColumnDefinitions>
+				<Button Name="btnStart" Grid.Row="0" Grid.Column="0" Content="Start"  IsEnabled="{Binding startButtonEnabled}" Click="btnStart_Click"/>
+				<Button Name="btnStop" Grid.Row="0" Grid.Column="1" Content="Stop"  IsEnabled="{Binding stopButtonEnabled}" Click="btnStop_Click"/>
+
+				<Button Name="btnShowLogData" Click="showLogData" Grid.Row="1" Grid.Column="0" Content="Examine log-file(s)."/>
+				<Button Name="btnNewLogFile" Click="startNewLogFile" Grid.Row="1" Grid.Column="1" Content="Create new log-file." IsEnabled="{Binding newLogFileEnabled}"/>
+			</Grid>
+
+		</StackPanel>
 	</Grid>
 </Window>

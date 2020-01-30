@@ -16,18 +16,50 @@ namespace NSAtlasCopcoBreech {
 			showMidData(fileName);
 		}
 		internal static void showMidData(string filename) {
+#if true
+			useFileVersion(filename);
+#else
+			useTextReaderVersion(filename);
+#endif
+		}
+
+		static void useTextReaderVersion(string filename) {
 			string[] lines;
-			string line,midDesc;
-			using (TextReader tw = new StreamReader(filename)) {
-				foreach (string aline in lines=tw.ReadToEnd().Split('\n')) {
-					if (!string.IsNullOrEmpty(line=aline.Replace('\r', '\0').Trim())&&
-						line.Length>8&&
-						string.Compare(midDesc=line.Substring(4, 4), "9999", true)!=0) {
-						showMid(line);
-					}
-				}
+
+			using (TextReader tw = new StreamReader(filename))
+				foreach (string aline in lines=tw.ReadToEnd().Split('\n'))
+					showSingleMid(aline);
+		}
+
+		static void showSingleMid(string aline) {
+			string line;
+
+			if (!string.IsNullOrEmpty(line=aline.Replace('\r', ' ').Replace('\0', ' ').Trim())&&
+				line.Length>8&&
+				midIdent(line)!=9999) {
+				showMid(line);
 			}
 		}
+
+		static void useFileVersion(string filename) {
+			byte[] data;
+			int readLen;
+			long len;
+			string[] lines;
+			string dataStr;
+
+			using (FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read)) {
+				data=new byte[len=fs.Length];
+				readLen=fs.Read(data, 0, (int) len);
+				foreach (string aline in lines=(dataStr=Encoding.ASCII.GetString(data)).Split('\n'))
+					showSingleMid(aline);
+				//if (!string.IsNullOrEmpty(aline))
+				//	if (!string.IsNullOrEmpty(line=aline.Replace('\r', ' ').Replace('\0', ' ').Trim()))
+				//		if ((midNo=MIDUtil.midIdent(line))!=9999)
+				//			showMid(line);
+			}
+		}
+
 		static MIDIdentifier _mident=new MIDIdentifier();
 		static IDictionary<int,MID> _midMap=null;
 		static readonly BindingFlags bfCommon=BindingFlags.Public|BindingFlags.Instance;
@@ -50,7 +82,7 @@ namespace NSAtlasCopcoBreech {
 						return;
 					if (midno!=152&&midno!=211) {
 						realMid.processPackage(line);
-						showMid1(realMid, line);
+						showMidDetail(realMid, line);
 
 					} else
 						Trace.WriteLine("ACK: bad MID-processing. MID="+midno+".");
@@ -60,7 +92,7 @@ namespace NSAtlasCopcoBreech {
 				Utility.logger.log(MethodBase.GetCurrentMethod());
 		}
 
-		static void showMid1(MID realMid, string line) {
+		internal static void showMidDetail(MID realMid, string line) {
 			bool showContent=false;
 			StringBuilder sb=new StringBuilder();
 			//bool showType=false;
@@ -68,9 +100,13 @@ namespace NSAtlasCopcoBreech {
 
 
 			switch (midValue=realMid.HeaderData.Mid) {
-				case 5:
-					sb.AppendLine("accepted MID");
-					break;
+				case 2: sb.AppendLine("comm-start"); break;
+				case 5: sb.AppendLine("accepted MID"); break;
+				case 11: sb.AppendLine("pset-upload"); break;
+				case 13: sb.AppendLine("pset-def"); constructContent(ref sb, realMid); break;
+				case 15: sb.AppendLine("pset-selected"); break;
+				case 31: sb.AppendLine("job-upload"); break;
+				case 76: sb.AppendLine("alarm"); break;
 				default: Trace.WriteLine("unhandled MID="+midValue); showContent=true; break;
 			}
 			if (showContent) {
@@ -110,13 +146,15 @@ namespace NSAtlasCopcoBreech {
 					dispValue=propValue.ToString();
 				} else {
 					if (pi.PropertyType.IsEnum) {
-						dispValue=pi.PropertyType.FullName.Replace("+", ".")+"."+propValue.ToString();
+						//dispValue=pi.PropertyType.FullName.Replace("+", ".")+"."+propValue.ToString();
+						dispValue=propValue.ToString();
 					} else {
 						dispValue=propValue.ToString();
 						showType=true;
 					}
 				}
-				sb.AppendLine("\t"+ pi.Name+" = "+dispValue+(showType ? " ["+pi.PropertyType.FullName+"]" : string.Empty)+".");
+				//sb.AppendLine("\t"+ pi.Name+" = "+dispValue+(showType ? " ["+pi.PropertyType.FullName+"]" : string.Empty)+".");
+				sb.AppendLine("\t"+ pi.Name+" = "+dispValue);
 			}
 		}
 
@@ -145,6 +183,20 @@ namespace NSAtlasCopcoBreech {
 				}
 			}
 			return ret;
+		}
+
+
+		internal static int midIdent(string package) {
+			string strMid;
+			int ret;
+
+			if (!string.IsNullOrEmpty(package)&&package.Length>8) {
+				if (int.TryParse(strMid=package.Substring(4, 4), out ret))
+					return ret;
+				Utility.logger.log(ColtLogLevel.Error, "Invalid MID-value: "+strMid);
+			}
+			Utility.logger.log(ColtLogLevel.Error, "Invalid package: "+package);
+			return -1;
 		}
 	}
 }
