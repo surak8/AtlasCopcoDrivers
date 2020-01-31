@@ -193,9 +193,15 @@ namespace NSAtlasCopcoBreech {
 		void doShowLogFileContent() {
 			bool? brc;
 			OpenFileDialog ofd;
+			string dirName;
 
-			if (string.IsNullOrEmpty(_previousLogFile))
+			if (string.IsNullOrEmpty(_previousLogFile)) {
 				_previousLogFile=Utility.readRegistryValue(KEY, string.Empty);
+				if (!File.Exists(_previousLogFile)) {
+					_previousLogFile=null;
+					Utility.saveRegistryValue(KEY, string.Empty);
+				}
+			}
 			ofd=new OpenFileDialog {
 				AddExtension=true,
 				CheckFileExists=true,
@@ -209,12 +215,19 @@ namespace NSAtlasCopcoBreech {
 			};
 			ofd.RestoreDirectory=true;
 			if (!string.IsNullOrEmpty(_previousLogFile)) {
-				ofd.InitialDirectory=Path.GetDirectoryName(_previousLogFile);
-				ofd.FileName=Path.GetFileName(_previousLogFile);
+				dirName=Path.GetDirectoryName(_previousLogFile);
+				if (!string.IsNullOrEmpty(ofd.InitialDirectory))
+					if (!Directory.Exists(ofd.InitialDirectory))
+						Directory.CreateDirectory(ofd.InitialDirectory);
+				ofd.InitialDirectory=dirName ;
+				if (!string.IsNullOrEmpty(_previousLogFile))
+					if (File.Exists(_previousLogFile))
+						ofd.FileName=Path.GetFileName(_previousLogFile);
 			} else {
 				ofd.InitialDirectory=MyController.logFilePath;
 
 			}
+
 
 			if ((brc=ofd.ShowDialog()).HasValue&&brc.Value) {
 				string[ ] allFiles;
@@ -227,7 +240,7 @@ namespace NSAtlasCopcoBreech {
 				}
 
 				Utility.saveRegistryValue(KEY, _previousLogFile= ofd.FileNames[0]);
-				new CSVGenerator<MIDIdentifier,MID>().generateCSV(Path.Combine(MIDUtil.midLogPath, "test.csv"), allFiles);
+				new CSVGenerator<MIDIdentifier, MID>().generateCSV(Path.Combine(MIDUtil.midLogPath, "test.csv"), allFiles);
 				//MIDUtil.showMidDetails(ofd.FileNames);
 			}
 		}

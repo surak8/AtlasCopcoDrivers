@@ -5,7 +5,8 @@ using System.IO;
 using System.Reflection;
 using System.Text;
 using System.Windows;
-using OpenProtocolInterpreter.MIDs;
+//using OpenProtocolInterpreter.MIDs;
+//using OpenProtocolInterpreter.MIDs;
 
 namespace NSAtlasCopcoBreech {
 	public class CSVGenerator<U, V> {
@@ -69,7 +70,8 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
-		static void writeCSVProperties(PropertyInfo[] pis, MID mid, TextWriter tw) {
+		//[Obsolete("fix this",true)]
+		static void writeCSVProperties(PropertyInfo[] pis, V mid, TextWriter tw) {
 			int n=0;
 			string dispValue;
 			object propValue;
@@ -122,13 +124,13 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		void writeCSVOutputForLine(int midNo, ref bool wroteHeader, string aline, TextWriter tw) {
-			MID mid;
+			V mid;
 			Type tmid;
 			PropertyInfo[] pis;
 
 			if (_midMap1.ContainsKey(midNo)) {
 				tmid=_midMap1[midNo].GetType();
-				mid= tmid.InvokeMember(null, MIDUtil.bfCreate, null, null, MIDUtil.nullArgs) as MID;
+				mid= (V) tmid.InvokeMember(null, MIDUtil.bfCreate, null, null, MIDUtil.nullArgs);
 				tmid.InvokeMember("processPackage",
 					 BindingFlags.Instance|  BindingFlags.NonPublic|  BindingFlags.Public|  BindingFlags.Static | BindingFlags.InvokeMethod,
 					 null, mid, new object[] { aline });
@@ -154,7 +156,7 @@ namespace NSAtlasCopcoBreech {
 						anobj=null;
 						try {
 							//anobj=aType.InvokeMember(null, BindingFlags.Public|   BindingFlags.CreateInstance|BindingFlags.DeclaredOnly|BindingFlags.Static|BindingFlags.Instance, null, null, new object[] { }) as MID;
-							anobj=aType.InvokeMember(null, MIDUtil.bfCreate, null, null, MIDUtil.nullArgs) as MID;
+							anobj=(V) aType.InvokeMember(null, MIDUtil.bfCreate, null, null, MIDUtil.nullArgs);
 						} catch (Exception ex) {
 							Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
 						}
