@@ -50,7 +50,7 @@ namespace NSAtlasCopcoBreech {
 							//Trace.WriteLine("here");
 							if ((pos=tmp.IndexOf("="))>=0) {
 								//Trace.WriteLine("here");
-								strKey=tmp.Substring(0,pos); 
+								strKey=tmp.Substring(0, pos);
 								strValue=tmp.Substring(pos+1);
 								if (double.TryParse(strValue, out d)) {
 									switch (strKey.ToUpper()) {

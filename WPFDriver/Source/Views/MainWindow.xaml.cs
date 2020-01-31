@@ -14,6 +14,7 @@ using System.IO;
 using System.Reflection;
 using System.Windows;
 using Microsoft.Win32;
+//using NSAtlasCopcoShared;
 using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
 using OpenProtocolInterpreter.MIDs.Communication;
@@ -184,6 +185,12 @@ namespace NSAtlasCopcoBreech {
 		const string KEY="Previous Log folder";
 
 		void showLogData(object sender, RoutedEventArgs e) {
+			//new LogViewer<MID>(KEY);
+			//doShowLogFileContent();
+			doShowLogFileContent();
+		}
+
+		void doShowLogFileContent() {
 			bool? brc;
 			OpenFileDialog ofd;
 
@@ -210,17 +217,20 @@ namespace NSAtlasCopcoBreech {
 			}
 
 			if ((brc=ofd.ShowDialog()).HasValue&&brc.Value) {
+				string[ ] allFiles;
 				if (ofd.FileNames.Length>0) {
-					Utility.saveRegistryValue(KEY, _previousLogFile= ofd.FileNames[0]);
-					MIDUtil.showMidDetails(ofd.FileNames);
+					allFiles=ofd.FileNames;
 				} else {
-					MIDUtil.showMidDetail(_previousLogFile=ofd.FileName);
-					Utility.saveRegistryValue(KEY, ofd.FileName);
+					allFiles=new string[] { ofd.FileName };
+					//Utility.saveRegistryValue(KEY, ofd.FileName);
+					//MIDUtil.showMidDetail(new string[] { _previousLogFile=ofd.FileName });
 				}
+
+				Utility.saveRegistryValue(KEY, _previousLogFile= ofd.FileNames[0]);
+				new CSVGenerator<MIDIdentifier,MID>().generateCSV(Path.Combine(MIDUtil.midLogPath, "test.csv"), allFiles);
+				//MIDUtil.showMidDetails(ofd.FileNames);
 			}
 		}
-
-
 
 		void startNewLogFile(object sender, RoutedEventArgs e) {
 			if (_opc!=null)

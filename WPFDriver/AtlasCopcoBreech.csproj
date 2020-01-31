@@ -71,6 +71,7 @@
     <Compile Include="Source\Models\MainWindowViewModel.cs" />
     <Compile Include="Source\Objects\AtlasCopcoController.cs" />
     <Compile Include="Source\Objects\AtlasCopcoControllerConverter.cs" />
+    <Compile Include="Source\Objects\CSVGenerator.cs" />
     <Compile Include="Source\Objects\MIDUtil.cs" />
     <Compile Include="Source\Objects\MyController.cs" />
     <Compile Include="Source\Objects\MyMid_152.cs" />

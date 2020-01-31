@@ -5,21 +5,54 @@ using System.Reflection;
 using OpenProtocolInterpreter.MIDs;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows;
 
 namespace NSAtlasCopcoBreech {
 	static class MIDUtil {
-		internal static void showMidDetails(string[] fileNames) {
+
+		static string _midLogPath;
+
+		public static string midLogPath {
+			get {
+				string asmName;
+
+				if (string.IsNullOrEmpty(_midLogPath)) {
+					asmName = Assembly.GetEntryAssembly().GetName().Name;
+					_midLogPath = Path.Combine(
+						Environment.GetEnvironmentVariable("TEMP"),
+						asmName);
+				}
+				try {
+					if (!Directory.Exists(_midLogPath))
+						Directory.CreateDirectory(_midLogPath);
+				} catch (Exception ex) {
+					Utility.logger.log(
+						ColtLogLevel.Error,
+						MethodBase.GetCurrentMethod(),
+						"Failed to create log-directory: '"+_midLogPath+"'!"+Environment.NewLine
+						+ex.Message);
+				}
+				return _midLogPath;
+			}
+		}
+		internal static void showMidDetails0(string[] fileNames) {
+			//#if true
+
+			//#else
 			foreach (string aFile in fileNames)
 				showMidDetail(aFile);
+			//#endif
 		}
+
+
 		internal static void showMidDetail(string fileName) {
 			showMidData(fileName);
 		}
-		internal static void showMidData(string filename) {
+		internal static void showMidData(string filename, bool writeCSV = false, bool isFirstFile = false, int desiredMid = -1) {
 #if true
-			useFileVersion(filename);
+			useFileVersion(filename, writeCSV, isFirstFile, desiredMid);
 #else
-			useTextReaderVersion(filename);
+			useTextReaderVersion(filename,writeCSV,isFirstFile,desiredMid);
 #endif
 		}
 
@@ -31,17 +64,17 @@ namespace NSAtlasCopcoBreech {
 					showSingleMid(aline);
 		}
 
-		static void showSingleMid(string aline) {
+		static void showSingleMid(string aline, bool writeCSVHeader = false, int desiredMid = -1) {
 			string line;
 
 			if (!string.IsNullOrEmpty(line=aline.Replace('\r', ' ').Replace('\0', ' ').Trim())&&
 				line.Length>8&&
 				midIdent(line)!=9999) {
-				showMid(line);
+				showMid(line, writeCSVHeader, desiredMid);
 			}
 		}
 
-		static void useFileVersion(string filename) {
+		static void useFileVersion(string filename, bool writeCSV, bool isFirstFile, int desiredMid) {
 			byte[] data;
 			int readLen;
 			long len;
@@ -51,22 +84,20 @@ namespace NSAtlasCopcoBreech {
 			using (FileStream fs = new FileStream(filename, FileMode.Open, FileAccess.Read, FileShare.Read)) {
 				data=new byte[len=fs.Length];
 				readLen=fs.Read(data, 0, (int) len);
-				foreach (string aline in lines=(dataStr=Encoding.ASCII.GetString(data)).Split('\n'))
-					showSingleMid(aline);
-				//if (!string.IsNullOrEmpty(aline))
-				//	if (!string.IsNullOrEmpty(line=aline.Replace('\r', ' ').Replace('\0', ' ').Trim()))
-				//		if ((midNo=MIDUtil.midIdent(line))!=9999)
-				//			showMid(line);
+				lines=(dataStr=Encoding.ASCII.GetString(data)).Split('\n');
+				for (int i = 0; i<lines.Length; i++)
+					//foreach (string aline in lines)
+					showSingleMid(lines[i], writeCSV&&isFirstFile&&i==0, desiredMid);
 			}
 		}
 
 		static MIDIdentifier _mident=new MIDIdentifier();
 		static IDictionary<int,MID> _midMap=null;
-		static readonly BindingFlags bfCommon=BindingFlags.Public|BindingFlags.Instance;
-		static readonly BindingFlags bfCreate=bfCommon|BindingFlags.CreateInstance;
-		static readonly BindingFlags bfProps=bfCommon|  BindingFlags.GetProperty;
-		static readonly object[] nullArgs=new object[] { };
-		internal static void showMid(string line) {
+		internal static readonly BindingFlags bfCommon=BindingFlags.Public|BindingFlags.Instance;
+		internal static readonly BindingFlags bfCreate=bfCommon|BindingFlags.CreateInstance;
+		internal    static readonly BindingFlags bfProps=bfCommon|  BindingFlags.GetProperty;
+		internal    static readonly object[] nullArgs=new object[] { };
+		internal static void showMid(string line, bool writeCSVHeader = false, int desiredMid = -1) {
 			MID realMid;
 			string midId;
 			int midno;
@@ -80,24 +111,27 @@ namespace NSAtlasCopcoBreech {
 					realMid=_midMap[midno].GetType().InvokeMember(null, bfCreate, null, null, nullArgs) as MID;
 					if (realMid.HeaderData.Mid==9999)
 						return;
-					if (midno!=152&&midno!=211) {
+					if (desiredMid<1) {
+						if (midno!=152&&midno!=211) {
+							realMid.processPackage(line);
+							showMidDetail(realMid, line);
+						} else
+							Trace.WriteLine("ACK: bad MID-processing. MID="+midno+".");
+					} else if (midno==desiredMid) {
 						realMid.processPackage(line);
-						showMidDetail(realMid, line);
-
-					} else
-						Trace.WriteLine("ACK: bad MID-processing. MID="+midno+".");
+						showMidDetail(realMid, line, writeCSVHeader);
+					}
 				} else
 					Trace.WriteLine("MID not found:" +midno+"!");
 			} else
 				Utility.logger.log(MethodBase.GetCurrentMethod());
 		}
 
-		internal static void showMidDetail(MID realMid, string line) {
+		internal static void showMidDetail(MID realMid, string line, bool writeCSVHeader = false) {
 			bool showContent=false;
 			StringBuilder sb=new StringBuilder();
 			//bool showType=false;
 			int midValue;
-
 
 			switch (midValue=realMid.HeaderData.Mid) {
 				case 2: sb.AppendLine("comm-start"); break;

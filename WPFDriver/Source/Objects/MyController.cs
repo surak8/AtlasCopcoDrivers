@@ -1,3 +1,4 @@
+#define SKIP_HISTORICAL
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+//using NSAtlasCopcoShared;
 using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
 using OpenProtocolInterpreter.MIDs.ApplicationSelector;
@@ -76,24 +78,28 @@ namespace NSAtlasCopcoBreech {
 		#endregion
 		#region cctor
 		static MyController() {
+#if true
+			logFilePath=MIDUtil.midLogPath;
+#else
 			string asmName = Assembly.GetEntryAssembly().GetName().Name;
 			logFilePath = Path.Combine(
 				Environment.GetEnvironmentVariable("TEMP"),
 				asmName);
+#endif
 		}
 
-		#endregion
-		#region ctor
+#endregion
+#region ctor
 		public MyController() {
 			createNewLogFile();
 		}
-		#endregion
+#endregion
 
-		#region properties
+#region properties
 		public static bool veryVerbose { get { return _verVerbose; } set { _verVerbose = value; } }
 		public static string logFilePath { get; private set; }
-		#endregion
-		#region public methods
+#endregion
+#region public methods
 		public bool initialize(string ipAddress, int port, ProcessMidDelegate processMidDelegate,
 			DisplayStatusDelegate displayStatusDelegate, ProcessCommStatusDelegate processCommStatusDelegate) {
 			return initialize(ipAddress, port, processMidDelegate, displayStatusDelegate, processCommStatusDelegate, null);
@@ -113,8 +119,8 @@ namespace NSAtlasCopcoBreech {
 				_ipAddress = ipAddress;
 				_port = port;
 				Utility.logger.log(
-					ColtLogLevel.Info, 
-					MethodBase.GetCurrentMethod(), 
+					ColtLogLevel.Info,
+					MethodBase.GetCurrentMethod(),
 					"Connecting to: "+ipAddress+":"+port+".");
 				_processMidDelegate = processMidDelegate;
 				_displayStatusDelegate = displayStatusDelegate;
@@ -157,8 +163,8 @@ namespace NSAtlasCopcoBreech {
 				_tcpClient = null;
 			}
 		}
-		#endregion
-		#region methods
+#endregion
+#region methods
 		internal void shutdown() {
 
 
@@ -337,8 +343,8 @@ namespace NSAtlasCopcoBreech {
 				}
 			}
 		}
-		#endregion
-		#region thread-handling methods
+#endregion
+#region thread-handling methods
 		void monitorCommunicationLinkThread() {
 			//bool shutDown=false;
 			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod());
@@ -469,7 +475,7 @@ namespace NSAtlasCopcoBreech {
 								_midLogStream.Flush();
 							}
 						if (showMidContent)
-							MIDUtil.showMid(package);
+							MIDUtil.showMid(package );
 					}
 					if (!string.IsNullOrEmpty(package) && package.Length > 8 && string.Compare(package.Substring(4, 4), "9999") != 0)
 						Utility.logger.log(ColtLogLevel.Info, mb, "[" + package + "]");
@@ -610,35 +616,47 @@ namespace NSAtlasCopcoBreech {
 		static IDictionary<int,MidData> _tighteningMap=new Dictionary<int, MidData>();
 
 		class MidData {
-			#region fields
+#region fields
 			MID _mid;
 
-			#endregion
-			#region ctor
+#endregion
+#region ctor
 			public MidData(int tid) { tighteningID=tid; }
 
-			#endregion
-			#region properties
+#endregion
+#region properties
 			public bool dataReceived { get; private set; }
 
 			public MID mid { get { return _mid; } set { _mid=value; dataReceived=mid!=null; } }
 			public int tighteningID { get; }
 
-			#endregion
-			#region methods
+#endregion
+#region methods
 			internal void reset() {
 				dataReceived=false;
 				mid=null;
 			}
-			#endregion
+#endregion
 		}
 
 		void generateTighteningRequests() {
-			int nIDS= _thisTighteningID                    -                _lastTighteningID;
+			int nIDS= _thisTighteningID                    -                _lastTighteningID, n=0;
+#if true
+			Utility.logger.log(
+				ColtLogLevel.Debug,
+				MethodBase.GetCurrentMethod(),
+				"LastTID="+_lastTighteningID+", ThisTID="+_thisTighteningID+", nTIDS="+nIDS+".");
+#else
+
 			MID_0064 oldMid;
 
+			StringBuilder sb=       new StringBuilder();
 
 			if (nIDS>0) {
+#if SKIP_HISTORICAL
+				sb.Append("NOT sending TIDs: ");
+#else
+#endif
 				// request "missing" results.
 				oldMid=new MID_0064();
 				lock (_tighteningLock) {
@@ -648,12 +666,23 @@ namespace NSAtlasCopcoBreech {
 						} else
 							_tighteningMap[newID].reset();
 						oldMid.TighteningID=newID;
+						if (n>0)
+							sb.Append(", ");
+						sb.Append(newID);
+#if !SKIP_HISTORICAL
 						sendMid(oldMid);
+#endif
 					}
 				}
 				_lastTighteningID=_thisTighteningID;
 				_thisTighteningID=-1;
+			} else {
+				sb.Append("good");
 			}
+			if (sb.Length<1)
+				sb.AppendLine("NO TIDS");
+			Utility.logger.log(ColtLogLevel.Debug, sb.ToString());
+#endif
 		}
 
 		void handle_0065(string package) {
@@ -832,8 +861,8 @@ namespace NSAtlasCopcoBreech {
 			foreach (int jobId in mid.JobIds)
 				Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "Job Id: " + jobId + ".");
 		}
-		#endregion
-		#region IDisposable Support
+#endregion
+#region IDisposable Support
 		protected virtual void Dispose(bool disposing) {
 			if (!disposedValue) {
 				if (disposing) {
@@ -852,6 +881,6 @@ namespace NSAtlasCopcoBreech {
 			Dispose(true);
 			GC.SuppressFinalize(this);
 		}
-		#endregion
+#endregion
 	}
 }
