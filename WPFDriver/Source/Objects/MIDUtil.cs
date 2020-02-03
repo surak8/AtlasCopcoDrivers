@@ -1,11 +1,10 @@
+using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System;
 using System.Reflection;
-using OpenProtocolInterpreter.MIDs;
-using System.Collections.Generic;
 using System.Text;
-using System.Windows;
+using OpenProtocolInterpreter.MIDs;
 
 namespace NSAtlasCopcoBreech {
 	static class MIDUtil {
@@ -35,15 +34,10 @@ namespace NSAtlasCopcoBreech {
 				return _midLogPath;
 			}
 		}
-		internal static void showMidDetails0(string[] fileNames) {
-			//#if true
-
-			//#else
+		internal static void showMidDetails(string[] fileNames) {
 			foreach (string aFile in fileNames)
 				showMidDetail(aFile);
-			//#endif
 		}
-
 
 		internal static void showMidDetail(string fileName) {
 			showMidData(fileName);
@@ -86,7 +80,6 @@ namespace NSAtlasCopcoBreech {
 				readLen=fs.Read(data, 0, (int) len);
 				lines=(dataStr=Encoding.ASCII.GetString(data)).Split('\n');
 				for (int i = 0; i<lines.Length; i++)
-					//foreach (string aline in lines)
 					showSingleMid(lines[i], writeCSV&&isFirstFile&&i==0, desiredMid);
 			}
 		}
@@ -106,7 +99,6 @@ namespace NSAtlasCopcoBreech {
 				_midMap=createMap(_mident.GetType());
 			midId=line.Substring(4, 4);
 			if (Int32.TryParse(midId, out midno)) {
-				//className="MID_"+midno.ToString("000#");
 				if (_midMap.ContainsKey(midno)) {
 					realMid=_midMap[midno].GetType().InvokeMember(null, bfCreate, null, null, nullArgs) as MID;
 					if (realMid.HeaderData.Mid==9999)
@@ -130,7 +122,6 @@ namespace NSAtlasCopcoBreech {
 		internal static void showMidDetail(MID realMid, string line, bool writeCSVHeader = false) {
 			bool showContent=false;
 			StringBuilder sb=new StringBuilder();
-			//bool showType=false;
 			int midValue;
 
 			switch (midValue=realMid.HeaderData.Mid) {
@@ -197,6 +188,7 @@ namespace NSAtlasCopcoBreech {
 			int midNo;
 			string midNumber,midClassName,midFullName;
 			object anobj;
+
 			foreach (Type aType in type.Assembly.GetTypes()) {
 				if (aType.IsPublic&&aType.Name.StartsWith("MID_")) {
 					midClassName=aType.Name;
@@ -205,7 +197,6 @@ namespace NSAtlasCopcoBreech {
 					if (Int32.TryParse(midNumber, out midNo)) {
 						anobj=null;
 						try {
-							//anobj=aType.InvokeMember(null, BindingFlags.Public|   BindingFlags.CreateInstance|BindingFlags.DeclaredOnly|BindingFlags.Static|BindingFlags.Instance, null, null, new object[] { }) as MID;
 							anobj=aType.InvokeMember(null, bfCreate, null, null, nullArgs) as MID;
 						} catch (Exception ex) {
 							Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
@@ -218,7 +209,6 @@ namespace NSAtlasCopcoBreech {
 			}
 			return ret;
 		}
-
 
 		internal static int midIdent(string package) {
 			string strMid;

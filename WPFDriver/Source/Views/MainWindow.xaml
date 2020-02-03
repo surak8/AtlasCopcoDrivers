@@ -83,6 +83,7 @@
 				<Grid.RowDefinitions>
 					<RowDefinition/>
 					<RowDefinition/>
+					<RowDefinition/>
 				</Grid.RowDefinitions>
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition/>
@@ -91,8 +92,10 @@
 				<Button Name="btnStart" Grid.Row="0" Grid.Column="0" Content="Start"  IsEnabled="{Binding startButtonEnabled}" Click="btnStart_Click"/>
 				<Button Name="btnStop" Grid.Row="0" Grid.Column="1" Content="Stop"  IsEnabled="{Binding stopButtonEnabled}" Click="btnStop_Click"/>
 
-				<Button Name="btnShowLogData" Click="showLogData" Grid.Row="1" Grid.Column="0" Content="Examine log-file(s)."/>
-				<Button Name="btnNewLogFile" Click="startNewLogFile" Grid.Row="1" Grid.Column="1" Content="Create new log-file." IsEnabled="{Binding newLogFileEnabled}"/>
+				<Button Name="btnNewLogFile" Click="startNewLogFile" Grid.Row="1" Grid.Column="0" Content="Create new log-file." IsEnabled="{Binding newLogFileEnabled}" Height="22" VerticalAlignment="Top"/>
+
+				<Button Name="btnShowLogData" Click="showLogFileData" Grid.Row="2" Grid.Column="0" Content="Examine log-file(s)."/>
+				<Button Name="btnCondenseLog" Click="condenseToCSV" Grid.Row="2" Grid.Column="1" Content="Condense CSV."/>
 			</Grid>
 
 		</StackPanel>

@@ -9,12 +9,10 @@
 //------------------------------------------------------------------------------
 
 using System;
-using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows;
 using Microsoft.Win32;
-//using NSAtlasCopcoShared;
 using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
 using OpenProtocolInterpreter.MIDs.Communication;
@@ -26,13 +24,10 @@ namespace NSAtlasCopcoBreech {
 		MyController _opc;
 		CommStatus _prevStatus = CommStatus.Unknown;
 		public MainWindow() {
-			//OpenProtocol.
 			this.DataContext = (_vm = new MainWindowViewModel());
 			InitializeComponent();
 		}
 
-		//~MainWindow() {
-		//}
 		void btnStop_Click(object sender, RoutedEventArgs e) {
 			Utility.logger.log(MethodBase.GetCurrentMethod());
 			try {
@@ -60,18 +55,12 @@ namespace NSAtlasCopcoBreech {
 						_vm.startButtonEnabled = false;
 						_vm.stopButtonEnabled = true;
 						_vm.newLogFileEnabled=true;
-						//_opc.AddLastTighteningResultSubscription();
-						//_opc.AlarmSubscribe = true;
-						//_opc.RelaySubscribe = true;
-						//_opc.DigitalInputSubscribe = true;
 					}
 
 				} catch (Exception ex) {
 					Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
 				}
 			}
-			//var avar = new OPController();
-
 		}
 
 		void _opc_ThreadsShutdown(object sender, EventArgs e) {
@@ -120,24 +109,16 @@ namespace NSAtlasCopcoBreech {
 							"ControllerReady = " + v2.AlarmStatusData.ControllerReadyStatus + ", " +
 							"ToolReady= " + v2.AlarmStatusData.ToolReadyStatus + ", " +
 							"Time = " + v2.AlarmStatusData.Time.ToString("ddMMyy hh:mm:ss"));
-						//"Error = " + v2.AlarmStatusData.AlarmStatus + ", "
-						//"have " + v2.ToString());
 
 						break;
 					default: Utility.logger.log(MethodBase.GetCurrentMethod(), "unhandled MID: " + midNo + "."); break;
 				}
 			}
-			//switch(midType)
-			//Utility.logger.log(MethodBase.GetCurrentMethod(), "msgtype=" + messageType);
 		}
 
 		void myCommStatus(CommStatus cs) {
-
 			if (_prevStatus == cs) return;
-			//if (_prevStatus == CommStatus.Unknown) {
 			_prevStatus = cs;
-			//} else if (commStatus == _prevStatus)
-			//    return;
 			Utility.logger.log(MethodBase.GetCurrentMethod(), cs.ToString());
 		}
 
@@ -184,17 +165,29 @@ namespace NSAtlasCopcoBreech {
 		string _previousLogFile;
 		const string KEY="Previous Log folder";
 
-		void showLogData(object sender, RoutedEventArgs e) {
-			//new LogViewer<MID>(KEY);
-			//doShowLogFileContent();
-			doShowLogFileContent();
+		enum LogFileProcessType {
+			NONE = -1,
+			MakeHumanReadable,
+			GenerateCSV
+		}
+		void showLogFileData(object sender, RoutedEventArgs e) {
+			doShowLogFileContent(LogFileProcessType.MakeHumanReadable);
 		}
 
-		void doShowLogFileContent() {
+		void condenseToCSV(object sender, RoutedEventArgs e) {
+			doShowLogFileContent(LogFileProcessType.GenerateCSV);
+		}
+
+
+		void doShowLogFileContent(LogFileProcessType lfpt) {
 			bool? brc;
 			OpenFileDialog ofd;
 			string dirName;
 
+			if (lfpt==  LogFileProcessType.NONE) {
+				MessageBox.Show("Unhandled processing-type '"+lfpt+"'."+Environment.NewLine+"Cannot continue.", "Log-file processing");
+				return;
+			}
 			if (string.IsNullOrEmpty(_previousLogFile)) {
 				_previousLogFile=Utility.readRegistryValue(KEY, string.Empty);
 				if (!File.Exists(_previousLogFile)) {
@@ -219,15 +212,13 @@ namespace NSAtlasCopcoBreech {
 				if (!string.IsNullOrEmpty(ofd.InitialDirectory))
 					if (!Directory.Exists(ofd.InitialDirectory))
 						Directory.CreateDirectory(ofd.InitialDirectory);
-				ofd.InitialDirectory=dirName ;
+				ofd.InitialDirectory=dirName;
 				if (!string.IsNullOrEmpty(_previousLogFile))
 					if (File.Exists(_previousLogFile))
 						ofd.FileName=Path.GetFileName(_previousLogFile);
 			} else {
 				ofd.InitialDirectory=MyController.logFilePath;
-
 			}
-
 
 			if ((brc=ofd.ShowDialog()).HasValue&&brc.Value) {
 				string[ ] allFiles;
@@ -235,25 +226,25 @@ namespace NSAtlasCopcoBreech {
 					allFiles=ofd.FileNames;
 				} else {
 					allFiles=new string[] { ofd.FileName };
-					//Utility.saveRegistryValue(KEY, ofd.FileName);
-					//MIDUtil.showMidDetail(new string[] { _previousLogFile=ofd.FileName });
 				}
 
 				Utility.saveRegistryValue(KEY, _previousLogFile= ofd.FileNames[0]);
-				new CSVGenerator<MIDIdentifier, MID>().generateCSV(Path.Combine(MIDUtil.midLogPath, "test.csv"), allFiles);
-				//MIDUtil.showMidDetails(ofd.FileNames);
+				switch (lfpt) {
+					case LogFileProcessType.MakeHumanReadable: new CSVGenerator<MIDIdentifier, MID>().generateCSV(Path.Combine(MIDUtil.midLogPath, "CondensedTightening.csv"), allFiles); break;
+					case LogFileProcessType.GenerateCSV: MIDUtil.showMidDetails(ofd.FileNames); break;
+					default:
+						MessageBox.Show("Unhandled processing-type '"+lfpt+"'."+Environment.NewLine+"Cannot continue.", "Log-file processing");
+						break;
+				}
 			}
 		}
 
 		void startNewLogFile(object sender, RoutedEventArgs e) {
 			if (_opc!=null)
 				_opc.createNewLogFile();
-			//_vm.createNewLogFile();
 		}
 
 		void Window1_Initialized(object sender, EventArgs e) {
-			//Utility.logger.log(MethodBase.GetCurrentMethod(), "size: ");
-			//_vm.setWindowCoords(this);
 			double left,top,width,height;
 
 			if (Utility.retrieveWindowBounds("Window data", out left, out top, out width, out height)) {
@@ -261,24 +252,15 @@ namespace NSAtlasCopcoBreech {
 				_vm.windowLeft=left;
 				_vm.windowWidth=width;
 				_vm.windowHeight=height;
-				//Trace.WriteLine("here");
-				//if (left!=double.NaN) this.Left=left;
-				//if (top!=double.NaN) this.Top=left;
-				//if (width!=double.NaN) this.Width=left;
-				//if (height!=double.NaN) this.Height=left;
-				//if (left!=double.NaN) this.Left=left;
 			}
 		}
 
 		void Window1_SizeChanged(object sender, SizeChangedEventArgs e) {
-			Utility.saveWindowBoundsToRegistry(this,"Window data");
-		}
-
-		void Window1_LocationChanged(object sender, EventArgs e) {
-			//saveWindowBoundsToRegistry(this);
-			//this.lef
 			Utility.saveWindowBoundsToRegistry(this, "Window data");
 		}
 
+		void Window1_LocationChanged(object sender, EventArgs e) {
+			Utility.saveWindowBoundsToRegistry(this, "Window data");
+		}
 	}
 }
