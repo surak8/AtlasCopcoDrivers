@@ -230,8 +230,8 @@ namespace NSAtlasCopcoBreech {
 
 				Utility.saveRegistryValue(KEY, _previousLogFile= ofd.FileNames[0]);
 				switch (lfpt) {
-					case LogFileProcessType.MakeHumanReadable: new CSVGenerator<MIDIdentifier, MID>().generateCSV(Path.Combine(MIDUtil.midLogPath, "CondensedTightening.csv"), allFiles); break;
-					case LogFileProcessType.GenerateCSV: MIDUtil.showMidDetails(ofd.FileNames); break;
+					case LogFileProcessType.MakeHumanReadable: MIDUtil.showMidDetails(ofd.FileNames); break;
+					case LogFileProcessType.GenerateCSV: new CSVGenerator<MIDIdentifier, MID>().generateCSV(Path.Combine(MIDUtil.midLogPath, "CondensedTightening.csv"), allFiles); break;
 					default:
 						MessageBox.Show("Unhandled processing-type '"+lfpt+"'."+Environment.NewLine+"Cannot continue.", "Log-file processing");
 						break;

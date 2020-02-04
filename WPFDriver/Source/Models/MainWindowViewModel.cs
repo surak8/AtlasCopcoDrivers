@@ -15,37 +15,38 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Text;
 using System.Windows;
 //using Colt3.Utility;
 //using C3L = Colt3.Logging.Logger;
 
 namespace NSAtlasCopcoBreech {
 
-    public partial class MainWindowViewModel : INotifyPropertyChanged {
-        #region fields
+	public partial class MainWindowViewModel : INotifyPropertyChanged {
+		#region fields
 
-        static readonly BindingFlags bf = BindingFlags.DeclaredOnly | BindingFlags.ExactBinding |
-            BindingFlags.GetProperty | BindingFlags.Instance |
-            BindingFlags.Public | BindingFlags.Static;
-        static readonly object[] nullArgs = new object[] { };
-        #endregion
+		static readonly BindingFlags bf = BindingFlags.DeclaredOnly | BindingFlags.ExactBinding |
+			BindingFlags.GetProperty | BindingFlags.Instance |
+			BindingFlags.Public | BindingFlags.Static;
+		static readonly object[] nullArgs = new object[] { };
+		#endregion
 
-        #region ctor
-        public MainWindowViewModel() {
-            string defSel;
+		#region ctor
+		public MainWindowViewModel() {
+			string defSel;
 
-            //logger = createLogger();
-            //if (logger != null)
-            //    Logger.kensLogger = logger;
+			//logger = createLogger();
+			//if (logger != null)
+			//    Logger.kensLogger = logger;
 #if VERSION2
             atlasCopcoControllers = createControllerList2(out defSel);
             selectedController = findDefaultController2<AtlasCopcoController>(atlasCopcoControllers, defSel, "controllerDescription");
 #else
-            atlasCopcoControllers = createControllerList(out defSel);
+			atlasCopcoControllers = createControllerList(out defSel);
 #if false
             selectedController = defSel;
 #else
-            selectedController = findDefaultController<AtlasCopcoController>(atlasCopcoControllers, defSel, "controllerDescription");
+			selectedController = findDefaultController<AtlasCopcoController>(atlasCopcoControllers, defSel, "controllerDescription");
 #endif
 #endif
 			//selectDefaultController(defSel);
@@ -58,15 +59,30 @@ namespace NSAtlasCopcoBreech {
 			controlVisibility=  Visibility.Hidden;
 #endif
 			startButtonEnabled = true;
-            stopButtonEnabled = false;
+			stopButtonEnabled = false;
 			newLogFileEnabled=false;
-            //ipAddress = "192.168.105.8";
-            //portNumber = 4545;
-        }
+			//ipAddress = "192.168.105.8";
+			//portNumber = 4545;
+
+			windowTitle=makeWindowTitle();
+		}
 
 
 
-#endregion
+		#endregion
+		string makeWindowTitle() {
+			StringBuilder sb=new StringBuilder();
+			Assembly a=Assembly.GetEntryAssembly();
+			AssemblyName an=a.GetName();
+
+			sb.Append(an.Name);
+			var avar=a.GetCustomAttribute<AssemblyConfigurationAttribute>();
+			if (avar!=null)
+				sb.Append(" ["+avar.Configuration+"]");
+			sb.Append(" ");
+			sb.Append("v"+an.Version.ToString());
+			return sb.ToString();
+		}
 
 #if VERSION2
         T findDefaultController2<T>(CollectionView objs, string defSel, string someStringProperty) {
@@ -90,135 +106,137 @@ namespace NSAtlasCopcoBreech {
             });
         }
 #else
-        static T findDefaultController<T>(ObservableCollection<T> objs, string defSel, string someStringProperty) {
-            string val;
+		static T findDefaultController<T>(ObservableCollection<T> objs, string defSel, string someStringProperty) {
+			string val;
 
-            if (!string.IsNullOrEmpty(defSel))
-                if (objs != null && objs.Count > 0)
-                    foreach (T acc in objs)
-                        if (string.Compare((val = (string) acc.GetType().InvokeMember(someStringProperty, bf, null, acc, nullArgs)), defSel, true) == 0)
-                            return acc;
-            return default(T);
-        }
-        ObservableCollection<AtlasCopcoController> createControllerList(out string defaultControllerName) {
-            return new ObservableCollection<AtlasCopcoController> {
-                new AtlasCopcoController ("192.168.105.8",4545,defaultControllerName="FMS Breech"),
-                new AtlasCopcoController ("192.168.105.210",4545,"Pin FS"),
-                new AtlasCopcoController ("192.168.105.10",4545,"BC Assembly"),
-                new AtlasCopcoController ("192.168.105.170",4545,"FMS Grip Butt"),
-            };
-        }
+			if (!string.IsNullOrEmpty(defSel))
+				if (objs != null && objs.Count > 0)
+					foreach (T acc in objs)
+						if (string.Compare((val = (string) acc.GetType().InvokeMember(someStringProperty, bf, null, acc, nullArgs)), defSel, true) == 0)
+							return acc;
+			return default(T);
+		}
+		ObservableCollection<AtlasCopcoController> createControllerList(out string defaultControllerName) {
+			return new ObservableCollection<AtlasCopcoController> {
+				new AtlasCopcoController ("192.168.105.8",4545,defaultControllerName="FMS Breech"),
+				new AtlasCopcoController ("192.168.105.210",4545,"Pin FS"),
+				new AtlasCopcoController ("192.168.105.10",4545,"BC Assembly"),
+				new AtlasCopcoController ("192.168.105.170",4545,"FMS Grip Butt"),
+			};
+		}
 #endif
 
-        //C3L createLogger() {
-        //    ConfigurationList cl;
-        //    string outPath;
-        //    Assembly asm = Assembly.GetEntryAssembly();
-        //    AssemblyName an = asm.GetName();
+		//C3L createLogger() {
+		//    ConfigurationList cl;
+		//    string outPath;
+		//    Assembly asm = Assembly.GetEntryAssembly();
+		//    AssemblyName an = asm.GetName();
 
-        //    outPath = Environment.ExpandEnvironmentVariables(
-        //        Path.Combine(
-        //            Environment.GetEnvironmentVariable("TEMP"),
-        //            an.Name));
-        //    cl = new ConfigurationList();
+		//    outPath = Environment.ExpandEnvironmentVariables(
+		//        Path.Combine(
+		//            Environment.GetEnvironmentVariable("TEMP"),
+		//            an.Name));
+		//    cl = new ConfigurationList();
 
-        //    cl.Add("Process Name", an.Name);
-        //    cl.Add("double Buffer", true);
-        //    cl.Add("Log To Trace", true);
-        //    cl.Add("File Logging Enabled", 5);
-        //    cl.Add("Log Output Directory", outPath);
-        //    Trace.WriteLine("logging to: " + outPath);
-        //    return new C3L(cl);
-        //}
+		//    cl.Add("Process Name", an.Name);
+		//    cl.Add("double Buffer", true);
+		//    cl.Add("Log To Trace", true);
+		//    cl.Add("File Logging Enabled", 5);
+		//    cl.Add("Log Output Directory", outPath);
+		//    Trace.WriteLine("logging to: " + outPath);
+		//    return new C3L(cl);
+		//}
 
-#region INotifyPropertyChanged implementation
-        public event PropertyChangedEventHandler PropertyChanged;
-        public void firePropertyChanged(string propertyName) {
-            if ((this.PropertyChanged != null))
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+		#region INotifyPropertyChanged implementation
+		public event PropertyChangedEventHandler PropertyChanged;
+		public void firePropertyChanged(string propertyName) {
+			if ((this.PropertyChanged != null))
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 
-        }
-        public void firePropertyChanged(MethodBase mb) {
-            int n;
+		}
+		public void firePropertyChanged(MethodBase mb) {
+			int n;
 
-            if (((n = mb.Name.Length)
-                        > 4)) {
-                if (((string.Compare(mb.Name.Substring(0, 3), "get", true) == 0)
-                            || (string.Compare(mb.Name.Substring(0, 3), "set", true) == 0))) {
-                    firePropertyChanged(mb.Name.Substring(4));
-                }
-            }
-        }
+			if (((n = mb.Name.Length)
+						> 4)) {
+				if (((string.Compare(mb.Name.Substring(0, 3), "get", true) == 0)
+							|| (string.Compare(mb.Name.Substring(0, 3), "set", true) == 0))) {
+					firePropertyChanged(mb.Name.Substring(4));
+				}
+			}
+		}
 
-#endregion
-#region properties
+		#endregion
+		#region properties
 
 
-        /// <summary>backing-store for property startButtonEnabled of type <b>bool</b>.</summary>
-        /// <seealso name="startButtonEnabled"/>
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        bool _startButtonEnabled;
+		/// <summary>backing-store for property startButtonEnabled of type <b>bool</b>.</summary>
+		/// <seealso name="startButtonEnabled"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		bool _startButtonEnabled;
 
-        /// <summary>property startButtonEnabled.</summary>
-        /// <seealso name="_startButtonEnabled"/>
-        public bool startButtonEnabled {
-            get { return _startButtonEnabled; }
-            set {
+		/// <summary>property startButtonEnabled.</summary>
+		/// <seealso name="_startButtonEnabled"/>
+		public bool startButtonEnabled {
+			get { return _startButtonEnabled; }
+			set {
 #if OTHER_VERSION
 				_startButtonEnabled=false;
 #else
 				_startButtonEnabled = value;
 #endif
-				firePropertyChanged(MethodBase.GetCurrentMethod()); }
-        }
+				firePropertyChanged(MethodBase.GetCurrentMethod());
+			}
+		}
 
 
-        /// <summary>backing-store for property stopButtonEnabled of type <b>bool</b>.</summary>
-        /// <seealso name="stopButtonEnabled"/>
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        bool _stopButtonEnabled;
+		/// <summary>backing-store for property stopButtonEnabled of type <b>bool</b>.</summary>
+		/// <seealso name="stopButtonEnabled"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		bool _stopButtonEnabled;
 
-        /// <summary>property stopButtonEnabled.</summary>
-        /// <seealso name="_stopButtonEnabled"/>
-        public bool stopButtonEnabled {
-            get { return _stopButtonEnabled; }
-            set {
+		/// <summary>property stopButtonEnabled.</summary>
+		/// <seealso name="_stopButtonEnabled"/>
+		public bool stopButtonEnabled {
+			get { return _stopButtonEnabled; }
+			set {
 #if OTHER_VERSION
 				_stopButtonEnabled=false;
 #else
 				_stopButtonEnabled = value;
 
 #endif
-				firePropertyChanged(MethodBase.GetCurrentMethod()); }
-        }
+				firePropertyChanged(MethodBase.GetCurrentMethod());
+			}
+		}
 
 
-        /// <summary>backing-store for property ipAddress of type <b>string</b>.</summary>
-        /// <seealso name="ipAddress"/>
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        string _ipAddress;
+		/// <summary>backing-store for property ipAddress of type <b>string</b>.</summary>
+		/// <seealso name="ipAddress"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		string _ipAddress;
 
-        /// <summary>property ipAddress.</summary>
-        /// <seealso name="_ipAddress"/>
-        public string ipAddress {
-            get { return _ipAddress; }
-            set { _ipAddress = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
-        }
+		/// <summary>property ipAddress.</summary>
+		/// <seealso name="_ipAddress"/>
+		public string ipAddress {
+			get { return _ipAddress; }
+			set { _ipAddress = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
 
 
-        /// <summary>backing-store for property portNumber of type <b>int</b>.</summary>
-        /// <seealso name="portNumber"/>
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        int _portNumber;
-        //internal C3L logger { get; private set; }
+		/// <summary>backing-store for property portNumber of type <b>int</b>.</summary>
+		/// <seealso name="portNumber"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		int _portNumber;
+		//internal C3L logger { get; private set; }
 
-        /// <summary>property portNumber.</summary>
-        /// <seealso name="_portNumber"/>
-        public int portNumber {
-            get { return _portNumber; }
-            set { _portNumber = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
-        }
-#endregion
+		/// <summary>property portNumber.</summary>
+		/// <seealso name="_portNumber"/>
+		public int portNumber {
+			get { return _portNumber; }
+			set { _portNumber = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+		#endregion
 
 
 		internal void setWindowCoords(Window w) {
@@ -243,36 +261,37 @@ namespace NSAtlasCopcoBreech {
 		/// <summary>backing-store for property atlasCopcoConrollers of type <b>ObservableCollection&lt;AtlasCopcoController&gt;</b>.</summary>
 		/// <seealso name="atlasCopcoConrollers"/>
 		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        ObservableCollection<AtlasCopcoController> _atlasCopcoControllers;
+		ObservableCollection<AtlasCopcoController> _atlasCopcoControllers;
 
-        /// <summary>property atlasCopcoConrollers.</summary>
-        /// <seealso name="_atlasCopcoConrollers"/>
-        public ObservableCollection<AtlasCopcoController> atlasCopcoControllers {
-            get { return _atlasCopcoControllers; }
-            set { _atlasCopcoControllers = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
-        }
+		/// <summary>property atlasCopcoConrollers.</summary>
+		/// <seealso name="_atlasCopcoConrollers"/>
+		public ObservableCollection<AtlasCopcoController> atlasCopcoControllers {
+			get { return _atlasCopcoControllers; }
+			set { _atlasCopcoControllers = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
 #endif
 
 #if true
-        /// <summary>backing-store for property selectedController of type <b>AtlasCopcoController</b>.</summary>
-        /// <seealso name="selectedController"/>
-        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        AtlasCopcoController _selectedController;
+		/// <summary>backing-store for property selectedController of type <b>AtlasCopcoController</b>.</summary>
+		/// <seealso name="selectedController"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		AtlasCopcoController _selectedController;
 
-        /// <summary>property selectedController.</summary>
-        /// <seealso name="_selectedController"/>
-        public AtlasCopcoController selectedController {
-            get { return _selectedController; }
-            set { _selectedController = value; firePropertyChanged(MethodBase.GetCurrentMethod());
-                if (value != null) {
-                    this.ipAddress = value.ipAddress;
-                    this.portNumber = value.portNumber;
-                    Utility.logger.log(MethodBase.GetCurrentMethod(), value.ToString());
-                }
-            }
-        }
+		/// <summary>property selectedController.</summary>
+		/// <seealso name="_selectedController"/>
+		public AtlasCopcoController selectedController {
+			get { return _selectedController; }
+			set {
+				_selectedController = value; firePropertyChanged(MethodBase.GetCurrentMethod());
+				if (value != null) {
+					this.ipAddress = value.ipAddress;
+					this.portNumber = value.portNumber;
+					Utility.logger.log(MethodBase.GetCurrentMethod(), value.ToString());
+				}
+			}
+		}
 
-//a		public bool newLogFileEnabled1 { get; internal set; }
+		//a		public bool newLogFileEnabled1 { get; internal set; }
 
 		/// <summary>backing-store for property newLogFileEnabled of type <b>bool</b>.</summary>
 		/// <seealso name="newLogFileEnabled"/>
@@ -352,16 +371,28 @@ namespace NSAtlasCopcoBreech {
 		bool _isEnabled;
 
 		public bool isControlEnabled {
-			get{ return _isEnabled; }
-			set { _isEnabled=value;firePropertyChanged(MethodBase.GetCurrentMethod()); }
+			get { return _isEnabled; }
+			set { _isEnabled=value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
 		}
 
-Visibility _isVisible;
+		Visibility _isVisible;
 
-		public Visibility controlVisibility{
+		public Visibility controlVisibility {
 			get { return _isVisible; }
 			set { _isVisible=value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
 		}
-	}
 
+
+		/// <summary>backing-store for property windowTitle of type <b>string</b>.</summary>
+		/// <seealso name="windowTitle"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		string _windowTitle;
+
+		/// <summary>property windowTitle.</summary>
+		/// <seealso name="_windowTitle"/>
+		public string windowTitle {
+			get { return _windowTitle; }
+			set { _windowTitle = value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+	}
 }

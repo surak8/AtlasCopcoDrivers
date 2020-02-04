@@ -74,6 +74,12 @@
     <Compile Include="Source\Objects\CSVGenerator.cs" />
     <Compile Include="Source\Objects\MIDUtil.cs" />
     <Compile Include="Source\Objects\MyController.cs" />
+    <Compile Include="Source\Objects\MyMids\DataField.cs" />
+    <Compile Include="Source\Objects\MyMids\Header.cs" />
+    <Compile Include="Source\Objects\MyMids\Mid.cs" />
+    <Compile Include="Source\Objects\MyMids\Mid0002.cs" />
+    <Compile Include="Source\Objects\MyMids\Mid0011.cs" />
+    <Compile Include="Source\Objects\MyMids\MyMidUtility.cs" />
     <Compile Include="Source\Objects\MyMid_152.cs" />
     <Compile Include="Source\Objects\MyMid_211.cs" />
     <Compile Include="Source\Objects\Utility.cs" />
@@ -100,6 +106,7 @@
       <Name>RB_OpenProtocolInterpreter</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

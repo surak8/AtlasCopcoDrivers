@@ -1,6 +1,7 @@
 #define SKIP_HISTORICAL
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net.Sockets;
 using System.Reflection;
@@ -88,18 +89,18 @@ namespace NSAtlasCopcoBreech {
 #endif
 		}
 
-#endregion
-#region ctor
+		#endregion
+		#region ctor
 		public MyController() {
 			createNewLogFile();
 		}
-#endregion
+		#endregion
 
-#region properties
+		#region properties
 		public static bool veryVerbose { get { return _verVerbose; } set { _verVerbose = value; } }
 		public static string logFilePath { get; private set; }
-#endregion
-#region public methods
+		#endregion
+		#region public methods
 		public bool initialize(string ipAddress, int port, ProcessMidDelegate processMidDelegate,
 			DisplayStatusDelegate displayStatusDelegate, ProcessCommStatusDelegate processCommStatusDelegate) {
 			return initialize(ipAddress, port, processMidDelegate, displayStatusDelegate, processCommStatusDelegate, null);
@@ -163,8 +164,8 @@ namespace NSAtlasCopcoBreech {
 				_tcpClient = null;
 			}
 		}
-#endregion
-#region methods
+		#endregion
+		#region methods
 		internal void shutdown() {
 
 
@@ -212,16 +213,42 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		void closeLogFiles() {
-			//lock (midLogLock) {
-			if (_midLogStream!=null) {
-				_midLogStream.Flush();
-				_midLogStream.Close();
-				_midLogStream.Dispose();
+			try {
+				if (_midLogStream!=null) {
+					_midLogStream.Flush();
+					_midLogStream.Close();
+					_midLogStream.Dispose();
+					_midLogStream=null;
+				}
+			} catch (Exception ex) {
+				Trace.WriteLine("**** close of MID_LOG_STREAM failed!"+Environment.NewLine+ex.Message);
 			}
-			if (_midLogFile!=null) {
-				_midLogFile=null;
+			try {
+				if (_midLogFile!=null) {
+					_midLogFile=null;
+				}
+			} catch (Exception ex) {
+				Trace.WriteLine("**** close of MID_LOG_FILE failed!"+Environment.NewLine+ex.Message);
 			}
-			//}
+			lock (_csvLock) {
+				try {
+					if (_csvLogStream!=null) {
+						_csvLogStream.Flush();
+						_csvLogStream.Close();
+						_csvLogStream.Dispose();
+						_csvLogStream=null;
+					}
+				} catch (Exception ex) {
+					Trace.WriteLine("**** close of CSV_LOG_STREAM failed!"+Environment.NewLine+ex.Message);
+				}
+				try {
+					if (_csvLogFile!=null) {
+						_csvLogFile=null;
+					}
+				} catch (Exception ex) {
+					Trace.WriteLine("**** close of CSV_LOG_FILE failed!"+Environment.NewLine+ex.Message);
+				}
+			}
 		}
 
 		internal void createNewLogFile() {
@@ -343,8 +370,8 @@ namespace NSAtlasCopcoBreech {
 				}
 			}
 		}
-#endregion
-#region thread-handling methods
+		#endregion
+		#region thread-handling methods
 		void monitorCommunicationLinkThread() {
 			//bool shutDown=false;
 			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod());
@@ -475,7 +502,7 @@ namespace NSAtlasCopcoBreech {
 								_midLogStream.Flush();
 							}
 						if (showMidContent)
-							MIDUtil.showMid(package );
+							MIDUtil.showMid(package);
 					}
 					if (!string.IsNullOrEmpty(package) && package.Length > 8 && string.Compare(package.Substring(4, 4), "9999") != 0)
 						Utility.logger.log(ColtLogLevel.Info, mb, "[" + package + "]");
@@ -576,8 +603,11 @@ namespace NSAtlasCopcoBreech {
 							MID_0061 mid0061 = new MID_0061();
 							mid0061.processPackage(package);
 							_thisTighteningID=mid0061.TighteningID;
-							generateTighteningRequests();
+							processObject(MessageType.LastTighteningResult, mid0061, package);
+							sendMid(createMid0062()); // ack this item.
+							writeAsCSV(mid0061);
 
+							generateTighteningRequests();
 							Utility.logger.log(ColtLogLevel.Info, string.Format("Batch: {0} of {1} SetId: {2} Id: {3} Torque: {4} Target: {5} Min: {6} Max: {7} Status: Torque:{8} Angle:{9} Tightening:{10}",
 													mid0061.BatchCounter, mid0061.BatchSize, mid0061.ParameterSetID, mid0061.TighteningID, mid0061.Torque, mid0061.TorqueFinalTarget, mid0061.TorqueMinLimit, mid0061.TorqueMaxLimit,
 													mid0061.TorqueStatus, mid0061.AngleStatus, mid0061.TighteningStatus));
@@ -590,8 +620,6 @@ namespace NSAtlasCopcoBreech {
                              *                       delegate is void, and as a result, the ACK is always performed, regardless        ***
                              *                       of the result of what's done (or FAILS) within the target of 'ProcessObject.      ***
                              ************************************************************************************************************/
-							processObject(MessageType.LastTighteningResult, mid0061, package);
-							sendMid(createMid0062());
 							break;
 						case "0065": handle_0065(package); break; // old last tightening.
 						case "0071": handleAlarm_0071(package, processObject); sendMid(createAlarmAcknowledgement()); break;
@@ -612,31 +640,75 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
-		static readonly object _tighteningLock=new object();
+		/// <summary>CSV-generator for on-going  stuff.</summary>
+		/// <seealso cref="writeAsCSV"/>
+		CSVGenerator<MIDIdentifier, MID> _csvGen;
+		FileStream _csvLogStream;
+		StreamWriter _csvLogFile;
+		readonly object _csvLock=new object();
+		string _csvTighteningName;
+		bool _csvWroteCSVHeader;
+
+		void writeAsCSV(MID mid) {
+			if (_csvGen==null) {
+				_csvTighteningName=Path.Combine(
+					MIDUtil.midLogPath,
+					Assembly.GetEntryAssembly().GetName().Name+
+					"CurrentTighteningData.log");
+				lock (_csvLock) {
+
+					_csvGen=new CSVGenerator<MIDIdentifier, MID>();
+
+				}
+			}
+			lock (_csvLock) {
+				if (_csvLogStream==null||_csvLogFile==null) {
+					//_csvWroteCSVHeader=false;
+					if (File.Exists(_csvTighteningName))
+						_csvLogStream = new FileStream(_csvTighteningName, FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
+					else
+						_csvLogStream = new FileStream(_csvTighteningName, FileMode.CreateNew, FileAccess.Write, FileShare.ReadWrite);
+					_csvLogFile = new StreamWriter(_csvLogStream);
+				}
+			}
+
+			lock (_csvLock) {
+				_csvGen.writeCSVOutputForLine(
+				mid.HeaderData.Mid,
+				ref _csvWroteCSVHeader,
+				mid.buildPackage(), _csvLogFile);
+			}
+			lock (_csvLock) {
+				_csvLogFile.Flush();
+				_csvLogStream.Flush();
+			}
+		}
+
+			static readonly object _tighteningLock=new object();
 		static IDictionary<int,MidData> _tighteningMap=new Dictionary<int, MidData>();
 
 		class MidData {
-#region fields
+			#region fields
 			MID _mid;
 
-#endregion
-#region ctor
+			#endregion
+			#region ctor
 			public MidData(int tid) { tighteningID=tid; }
 
-#endregion
-#region properties
+			#endregion
+			#region properties
 			public bool dataReceived { get; private set; }
 
 			public MID mid { get { return _mid; } set { _mid=value; dataReceived=mid!=null; } }
 			public int tighteningID { get; }
 
-#endregion
-#region methods
+			#endregion
+			#region methods
 			internal void reset() {
 				dataReceived=false;
 				mid=null;
 			}
-#endregion
+			#endregion
 		}
 
 		void generateTighteningRequests() {
@@ -861,8 +933,8 @@ namespace NSAtlasCopcoBreech {
 			foreach (int jobId in mid.JobIds)
 				Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "Job Id: " + jobId + ".");
 		}
-#endregion
-#region IDisposable Support
+		#endregion
+		#region IDisposable Support
 		protected virtual void Dispose(bool disposing) {
 			if (!disposedValue) {
 				if (disposing) {
@@ -881,6 +953,6 @@ namespace NSAtlasCopcoBreech {
 			Dispose(true);
 			GC.SuppressFinalize(this);
 		}
-#endregion
+		#endregion
 	}
 }

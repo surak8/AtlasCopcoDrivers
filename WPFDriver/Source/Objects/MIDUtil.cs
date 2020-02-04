@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Net;
 using System.Reflection;
 using System.Text;
+using NSAtlasCopcoBreech.MyMid;
 using OpenProtocolInterpreter.MIDs;
 
 namespace NSAtlasCopcoBreech {
@@ -13,13 +15,21 @@ namespace NSAtlasCopcoBreech {
 
 		public static string midLogPath {
 			get {
-				string asmName;
+				string asmName,buildCfg;
+				Assembly asm;
+				AssemblyName an;
 
 				if (string.IsNullOrEmpty(_midLogPath)) {
-					asmName = Assembly.GetEntryAssembly().GetName().Name;
-					_midLogPath = Path.Combine(
-						Environment.GetEnvironmentVariable("TEMP"),
-						asmName);
+					asm=Assembly.GetEntryAssembly();
+					an=asm.GetName();
+					asmName = an.Name;
+					buildCfg=asm.GetCustomAttribute<AssemblyConfigurationAttribute>().Configuration;
+					Trace.WriteLine("CFG="+buildCfg+".");
+#if DEBUG
+					_midLogPath = Path.Combine(Environment.GetEnvironmentVariable("TEMP") , asmName,Dns.GetHostName());
+#else
+					_midLogPath = Path.Combine(@"\\appdeploy\APPDEPLOY\Colt Software\Logs", asmName,Dns.GetHostName());
+#endif
 				}
 				try {
 					if (!Directory.Exists(_midLogPath))
@@ -88,8 +98,8 @@ namespace NSAtlasCopcoBreech {
 		static IDictionary<int,MID> _midMap=null;
 		internal static readonly BindingFlags bfCommon=BindingFlags.Public|BindingFlags.Instance;
 		internal static readonly BindingFlags bfCreate=bfCommon|BindingFlags.CreateInstance;
-		internal    static readonly BindingFlags bfProps=bfCommon|  BindingFlags.GetProperty;
-		internal    static readonly object[] nullArgs=new object[] { };
+		internal static readonly BindingFlags bfProps=bfCommon|  BindingFlags.GetProperty;
+		internal static readonly object[] nullArgs=new object[] { };
 		internal static void showMid(string line, bool writeCSVHeader = false, int desiredMid = -1) {
 			MID realMid;
 			string midId;
@@ -104,11 +114,12 @@ namespace NSAtlasCopcoBreech {
 					if (realMid.HeaderData.Mid==9999)
 						return;
 					if (desiredMid<1) {
-						if (midno!=152&&midno!=211) {
-							realMid.processPackage(line);
-							showMidDetail(realMid, line);
-						} else
-							Trace.WriteLine("ACK: bad MID-processing. MID="+midno+".");
+						MyMidUtility.examineMid(line);
+						//if (midno!=152&&midno!=211) {
+						//	realMid.processPackage(line);
+						//	showMidDetail(realMid, line);
+						//} else
+						//	Trace.WriteLine("ACK: bad MID-processing. MID="+midno+".");
 					} else if (midno==desiredMid) {
 						realMid.processPackage(line);
 						showMidDetail(realMid, line, writeCSVHeader);
@@ -126,19 +137,23 @@ namespace NSAtlasCopcoBreech {
 
 			switch (midValue=realMid.HeaderData.Mid) {
 				case 2: sb.AppendLine("comm-start"); break;
-				case 5: sb.AppendLine("accepted MID"); break;
+				case 5: break;
+				//case 5: sb.AppendLine("accepted MID"); break;
 				case 11: sb.AppendLine("pset-upload"); break;
 				case 13: sb.AppendLine("pset-def"); constructContent(ref sb, realMid); break;
 				case 15: sb.AppendLine("pset-selected"); break;
 				case 31: sb.AppendLine("job-upload"); break;
+				case 61:sb.Append("tight");break;
 				case 76: sb.AppendLine("alarm"); break;
 				default: Trace.WriteLine("unhandled MID="+midValue); showContent=true; break;
 			}
-			if (showContent) {
-				sb.AppendLine(realMid.GetType().FullName+": ["+line+"]");
-				constructContent(ref sb, realMid);
+			if (sb.Length>0) {
+				if (showContent) {
+					sb.AppendLine(realMid.GetType().FullName+": ["+line+"]");
+					constructContent(ref sb, realMid);
+				}
+				Utility.logger.log(sb.ToString());
 			}
-			Utility.logger.log(sb.ToString());
 		}
 
 		static void constructContent(ref StringBuilder sb, MID realMid) {

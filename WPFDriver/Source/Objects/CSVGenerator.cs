@@ -64,6 +64,7 @@ namespace NSAtlasCopcoBreech {
 						}
 					}
 				}
+				Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "wrote: "+csvResult+".");
 			} catch (Exception ex) {
 
 				MessageBox.Show("CSV-file '"+csvResult+"' cannot be accessed."+Environment.NewLine+ex.Message, "Error writing CSV-file.");
@@ -123,7 +124,7 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
-		void writeCSVOutputForLine(int midNo, ref bool wroteHeader, string aline, TextWriter tw) {
+	internal	void writeCSVOutputForLine(int midNo, ref bool wroteHeader, string aline, TextWriter tw) {
 			V mid;
 			Type tmid;
 			PropertyInfo[] pis;

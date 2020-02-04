@@ -4,7 +4,7 @@
     xmlns:local="clr-namespace:NSAtlasCopcoBreech"
 	x:Name="window1"
 	x:Class="NSAtlasCopcoBreech.MainWindow"
-	Title="MainWindow"
+	Title="{Binding windowTitle}"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 	Width="{Binding windowWidth}"
 	Height="{Binding windowHeight}"
