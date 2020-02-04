@@ -80,7 +80,7 @@ namespace NSAtlasCopcoBreech {
 #if OTHER_VERSION
 		void myMidProc(MessageType messageType, object messageObject, string messagestring) {
 #else
-			void myMidProc(MessageType messageType, MID messageObject, string messagestring) {
+		void myMidProc(MessageType messageType, MID messageObject, string messagestring) {
 #endif
 			if (messageType == MessageType.KeepAlive)
 				return;
@@ -134,7 +134,7 @@ namespace NSAtlasCopcoBreech {
 			Utility.logger.log(MethodBase.GetCurrentMethod(), "MSG=" + msg);
 		}
 
-#region IDisposable Support
+		#region IDisposable Support
 		bool disposedValue = false; // To detect redundant calls
 
 		protected virtual void Dispose(bool disposing) {
@@ -167,7 +167,7 @@ namespace NSAtlasCopcoBreech {
 			// TODO: uncomment the following line if the finalizer is overridden above.
 			GC.SuppressFinalize(this);
 		}
-#endregion
+		#endregion
 
 
 		string _previousLogFile;
@@ -254,23 +254,31 @@ namespace NSAtlasCopcoBreech {
 				_opc.createNewLogFile();
 		}
 
+		const string FRAME_KEY="Main Window Frame";
+
 		void Window1_Initialized(object sender, EventArgs e) {
 			double left,top,width,height;
 
-			if (Utility.retrieveWindowBounds("Window data", out left, out top, out width, out height)) {
+			if (Utility.retrieveWindowBounds(FRAME_KEY, out left, out top, out width, out height)) {
+				//System.Diagnostics.Trace.WriteLine("Here");
 				_vm.windowTop=top;
 				_vm.windowLeft=left;
 				_vm.windowWidth=width;
 				_vm.windowHeight=height;
+			} else {
+				_vm.windowWidth=325;
+				_vm.windowHeight=225;
+				_vm.windowLeft=(SystemParameters.PrimaryScreenWidth-_vm.windowWidth)/2.0;
+				_vm.windowTop=(SystemParameters.PrimaryScreenHeight-_vm.windowHeight)/2.0;
 			}
 		}
 
 		void Window1_SizeChanged(object sender, SizeChangedEventArgs e) {
-			Utility.saveWindowBoundsToRegistry(this, "Window data");
+			Utility.saveWindowBoundsToRegistry(this, FRAME_KEY);
 		}
 
 		void Window1_LocationChanged(object sender, EventArgs e) {
-			Utility.saveWindowBoundsToRegistry(this, "Window data");
+			Utility.saveWindowBoundsToRegistry(this, FRAME_KEY);
 		}
 	}
 }

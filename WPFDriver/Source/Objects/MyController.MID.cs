@@ -430,7 +430,7 @@ namespace NSAtlasCopcoBreech {
 					 ************************************************************************************************************/
 					break;
 				case "0065": handle_0065(package); break; // old last tightening.
-				case "0071": handleAlarm_0071(package, processObject); sendMid(MID_0072()); break;
+				case "0071": handleAlarm_0071(package, processObject); sendMid(new OpenProtocolInterpreter.MIDs.Alarm.MID_0072()); break;
 				case "0074": handleControllerAlarmAck(package, processObject, displayStatus); sendMid(createControllerAlarmAcknowledged()); break;
 				case "0076": handleAlarmStatus(package); break;
 				case "0152": handleMultiIdentAndParts_0152(package); sendMid(new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0153()); break;
@@ -440,9 +440,9 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
-		private MID MID_0072() {
-			throw new NotImplementedException();
-		}
+		//private MID MID_0072() {
+		//	throw new NotImplementedException();
+		//}
 
 		void acknowledgeCommunicationStart(string package) {
 			_TryingToConnectInProgress = false;

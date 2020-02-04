@@ -45,14 +45,14 @@ namespace NSAtlasCopcoBreech {
 		static void constructContent(ref StringBuilder sb, OpenProtocolInterpreter.MIDs.MID realMid) {
 			object propValue;
 			string dispValue,svalue;
-			bool showType;
+			//bool showType;
 
 			foreach (PropertyInfo pi in realMid.GetType().GetProperties(bfCommon)) {
 				if (pi.Name.CompareTo("HeaderData")==0)
 					continue;
 				if (pi.Name.CompareTo("RegisteredDataFields")==0)
 					continue;
-				showType=false;
+				//showType=false;
 				propValue=realMid.GetType().InvokeMember(pi.Name,
 					bfProps,
 					null, realMid, nullArgs);
@@ -76,7 +76,7 @@ namespace NSAtlasCopcoBreech {
 						dispValue=propValue.ToString();
 					} else {
 						dispValue=propValue.ToString();
-						showType=true;
+						//showType=true;
 					}
 				}
 				//sb.AppendLine("\t"+ pi.Name+" = "+dispValue+(showType ? " ["+pi.PropertyType.FullName+"]" : string.Empty)+".");
@@ -123,7 +123,7 @@ namespace NSAtlasCopcoBreech {
 					if (realMid.HeaderData.Mid==9999)
 						return;
 					if (desiredMid<1) {
-						MyMidUtility.examineMid(line);
+						//MyMidUtility.examineMid(line);
 						//if (midno!=152&&midno!=211) {
 						//	realMid.processPackage(line);
 						//	showMidDetail(realMid, line);

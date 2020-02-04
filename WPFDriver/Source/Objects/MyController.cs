@@ -512,7 +512,7 @@ namespace NSAtlasCopcoBreech {
 
 
 		void generateTighteningRequests() {
-			int nIDS= _thisTighteningID                    -                _lastTighteningID, n=0;
+			int nIDS= _thisTighteningID-_lastTighteningID;
 #if true
 			Utility.logger.log(
 				ColtLogLevel.Debug,
