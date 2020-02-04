@@ -21,7 +21,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\debug\</OutputPath>
-    <DefineConstants>TRACE;DEBUG;OTHER_VERSION1</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;OTHER_VERSION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\debug\AtlasCopcoBreech.xml</DocumentationFile>
@@ -72,8 +72,11 @@
     <Compile Include="Source\Objects\AtlasCopcoController.cs" />
     <Compile Include="Source\Objects\AtlasCopcoControllerConverter.cs" />
     <Compile Include="Source\Objects\CSVGenerator.cs" />
+    <Compile Include="Source\Objects\FakeMid.cs" />
     <Compile Include="Source\Objects\MIDUtil.cs" />
+    <Compile Include="Source\Objects\MIDUtil.MID.cs" />
     <Compile Include="Source\Objects\MyController.cs" />
+    <Compile Include="Source\Objects\MyController.MID.cs" />
     <Compile Include="Source\Objects\MyMids\DataField.cs" />
     <Compile Include="Source\Objects\MyMids\Header.cs" />
     <Compile Include="Source\Objects\MyMids\Mid.cs" />
@@ -97,16 +100,11 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OPImplementations\KenDemers_OpenProtocolInterpreter\OpenProtocolInterpreter.csproj">
-      <Project>{319224b6-48c6-4787-a98b-f33b774268d0}</Project>
-      <Name>OpenProtocolInterpreter</Name>
-    </ProjectReference>
     <ProjectReference Include="..\OPImplementations\RB_OpenProtocolInterpreter\src\OpenProtocolInterpreter\RB_OpenProtocolInterpreter.csproj">
       <Project>{d2e03efa-1e41-44cc-8ad0-0a3a1eb97814}</Project>
       <Name>RB_OpenProtocolInterpreter</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

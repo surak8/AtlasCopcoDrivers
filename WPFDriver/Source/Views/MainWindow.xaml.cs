@@ -13,9 +13,11 @@ using System.IO;
 using System.Reflection;
 using System.Windows;
 using Microsoft.Win32;
+#if !OTHER_VERSION
 using OpenProtocolInterpreter.MIDs;
 using OpenProtocolInterpreter.MIDs.Alarm;
 using OpenProtocolInterpreter.MIDs.Communication;
+#endif
 
 namespace NSAtlasCopcoBreech {
 
@@ -75,7 +77,11 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
-		void myMidProc(MessageType messageType, MID messageObject, string messagestring) {
+#if OTHER_VERSION
+		void myMidProc(MessageType messageType, object messageObject, string messagestring) {
+#else
+			void myMidProc(MessageType messageType, MID messageObject, string messagestring) {
+#endif
 			if (messageType == MessageType.KeepAlive)
 				return;
 			string midType = messagestring.Substring(4, 4);
@@ -83,6 +89,7 @@ namespace NSAtlasCopcoBreech {
 
 			if (Int32.TryParse(midType, out midNo)) {
 				switch (midNo) {
+#if !OTHER_VERSION
 					case 2:
 						MID_0002 v = new MID_0002();
 						v.processPackage(messagestring);
@@ -111,6 +118,7 @@ namespace NSAtlasCopcoBreech {
 							"Time = " + v2.AlarmStatusData.Time.ToString("ddMMyy hh:mm:ss"));
 
 						break;
+#endif
 					default: Utility.logger.log(MethodBase.GetCurrentMethod(), "unhandled MID: " + midNo + "."); break;
 				}
 			}
@@ -126,7 +134,7 @@ namespace NSAtlasCopcoBreech {
 			Utility.logger.log(MethodBase.GetCurrentMethod(), "MSG=" + msg);
 		}
 
-		#region IDisposable Support
+#region IDisposable Support
 		bool disposedValue = false; // To detect redundant calls
 
 		protected virtual void Dispose(bool disposing) {
@@ -159,7 +167,7 @@ namespace NSAtlasCopcoBreech {
 			// TODO: uncomment the following line if the finalizer is overridden above.
 			GC.SuppressFinalize(this);
 		}
-		#endregion
+#endregion
 
 
 		string _previousLogFile;
@@ -231,7 +239,9 @@ namespace NSAtlasCopcoBreech {
 				Utility.saveRegistryValue(KEY, _previousLogFile= ofd.FileNames[0]);
 				switch (lfpt) {
 					case LogFileProcessType.MakeHumanReadable: MIDUtil.showMidDetails(ofd.FileNames); break;
+#if !OTHER_VERSION
 					case LogFileProcessType.GenerateCSV: new CSVGenerator<MIDIdentifier, MID>().generateCSV(Path.Combine(MIDUtil.midLogPath, "CondensedTightening.csv"), allFiles); break;
+#endif
 					default:
 						MessageBox.Show("Unhandled processing-type '"+lfpt+"'."+Environment.NewLine+"Cannot continue.", "Log-file processing");
 						break;
