@@ -35,7 +35,7 @@ namespace NSAtlasCopcoBreech {
 #if DEBUG
 					_midLogPath = Path.Combine(Environment.GetEnvironmentVariable("TEMP"), asmName, buildCfg, Dns.GetHostName());
 #else
-					_midLogPath = Path.Combine(@"\\appdeploy\APPDEPLOY\Colt Software\Logs", asmName,Dns.GetHostName());
+					_midLogPath = Path.Combine(@"\\appdeploy\APPDEPLOY\Colt Software\Logs", asmName, buildCfg, Dns.GetHostName());
 #endif
 				}
 				try {
@@ -85,7 +85,7 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
-		
+
 
 		static void useFileVersion(string filename, bool writeCSV, bool isFirstFile, int desiredMid) {
 			byte[] data;
