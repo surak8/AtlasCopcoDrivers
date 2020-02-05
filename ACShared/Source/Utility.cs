@@ -73,6 +73,8 @@ namespace NSAtlasCopcoShared {
 		static string companyName<T>(Assembly asm) {
 			var v=asm.GetCustomAttribute<AssemblyCompanyAttribute>();
 
+			//var zzz=asm.getc
+
 			if (v!=null&&typeof(T).Equals(typeof(AssemblyCompanyAttribute)))
 				return ((AssemblyCompanyAttribute) v).Company;
 			Trace.WriteLine("fix this");

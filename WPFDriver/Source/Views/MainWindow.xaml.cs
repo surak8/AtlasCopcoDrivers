@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows;
@@ -35,7 +36,7 @@ namespace NSAtlasCopcoBreech {
 			try {
 				if (_opc != null) {
 					_opc.shutdown();
-					if (_opc!=null) {
+					if (_opc != null) {
 						_opc.close();
 						_opc = null;
 					}
@@ -53,10 +54,10 @@ namespace NSAtlasCopcoBreech {
 					var avar = _opc.initialize(_vm.ipAddress, _vm.portNumber, myMidProc, myDispStatus, myCommStatus);
 					Utility.logger.log(MethodBase.GetCurrentMethod());
 					if (avar) {
-						_opc.ThreadsShutdown+=_opc_ThreadsShutdown;
+						_opc.ThreadsShutdown += _opc_ThreadsShutdown;
 						_vm.startButtonEnabled = false;
 						_vm.stopButtonEnabled = true;
-						_vm.newLogFileEnabled=true;
+						_vm.newLogFileEnabled = true;
 					}
 
 				} catch (Exception ex) {
@@ -67,13 +68,13 @@ namespace NSAtlasCopcoBreech {
 
 		void _opc_ThreadsShutdown(object sender, EventArgs e) {
 			Utility.logger.log(MethodBase.GetCurrentMethod());
-			if (_opc!=null) {
-				_opc.ThreadsShutdown-= _opc_ThreadsShutdown;
+			if (_opc != null) {
+				_opc.ThreadsShutdown -= _opc_ThreadsShutdown;
 				_opc.close();
-				_opc=null;
-				_vm.startButtonEnabled=true;
-				_vm.stopButtonEnabled=false;
-				_vm.newLogFileEnabled=false;
+				_opc = null;
+				_vm.startButtonEnabled = true;
+				_vm.stopButtonEnabled = false;
+				_vm.newLogFileEnabled = false;
 			}
 		}
 
@@ -171,7 +172,7 @@ namespace NSAtlasCopcoBreech {
 
 
 		string _previousLogFile;
-		const string KEY="Previous Log folder";
+		const string KEY = "Previous Log folder";
 
 		enum LogFileProcessType {
 			NONE = -1,
@@ -192,84 +193,84 @@ namespace NSAtlasCopcoBreech {
 			OpenFileDialog ofd;
 			string dirName;
 
-			if (lfpt==  LogFileProcessType.NONE) {
-				MessageBox.Show("Unhandled processing-type '"+lfpt+"'."+Environment.NewLine+"Cannot continue.", "Log-file processing");
+			if (lfpt == LogFileProcessType.NONE) {
+				MessageBox.Show("Unhandled processing-type '" + lfpt + "'." + Environment.NewLine + "Cannot continue.", "Log-file processing");
 				return;
 			}
 			if (string.IsNullOrEmpty(_previousLogFile)) {
-				_previousLogFile=Utility.readRegistryValue(KEY, string.Empty);
+				_previousLogFile = Utility.readRegistryValue(KEY, string.Empty);
 				if (!File.Exists(_previousLogFile)) {
-					_previousLogFile=null;
+					_previousLogFile = null;
 					Utility.saveRegistryValue(KEY, string.Empty);
 				}
 			}
-			ofd=new OpenFileDialog {
-				AddExtension=true,
-				CheckFileExists=true,
-				CheckPathExists=true,
-				ValidateNames=true,
-				Multiselect=true,
-				DefaultExt=".log",
-				Filter="Log files (*.log)|*.log|CSV files (*.csv)|*.csv|All files (*.*)|*.*",
-				FilterIndex=0,
-				Title="Select AC files:",
+			ofd = new OpenFileDialog {
+				AddExtension = true,
+				CheckFileExists = true,
+				CheckPathExists = true,
+				ValidateNames = true,
+				Multiselect = true,
+				DefaultExt = ".log",
+				Filter = "Log files (*.log)|*.log|CSV files (*.csv)|*.csv|All files (*.*)|*.*",
+				FilterIndex = 0,
+				Title = "Select AC files:",
 			};
-			ofd.RestoreDirectory=true;
+			ofd.RestoreDirectory = true;
 			if (!string.IsNullOrEmpty(_previousLogFile)) {
-				dirName=Path.GetDirectoryName(_previousLogFile);
+				dirName = Path.GetDirectoryName(_previousLogFile);
 				if (!string.IsNullOrEmpty(ofd.InitialDirectory))
 					if (!Directory.Exists(ofd.InitialDirectory))
 						Directory.CreateDirectory(ofd.InitialDirectory);
-				ofd.InitialDirectory=dirName;
+				ofd.InitialDirectory = dirName;
 				if (!string.IsNullOrEmpty(_previousLogFile))
 					if (File.Exists(_previousLogFile))
-						ofd.FileName=Path.GetFileName(_previousLogFile);
+						ofd.FileName = Path.GetFileName(_previousLogFile);
 			} else {
-				ofd.InitialDirectory=MyController.logFilePath;
+				ofd.InitialDirectory = MyController.logFilePath;
 			}
 
-			if ((brc=ofd.ShowDialog()).HasValue&&brc.Value) {
-				string[ ] allFiles;
-				if (ofd.FileNames.Length>0) {
-					allFiles=ofd.FileNames;
+			if ((brc = ofd.ShowDialog()).HasValue && brc.Value) {
+				string[] allFiles;
+				if (ofd.FileNames.Length > 0) {
+					allFiles = ofd.FileNames;
 				} else {
-					allFiles=new string[] { ofd.FileName };
+					allFiles = new string[] { ofd.FileName };
 				}
 
-				Utility.saveRegistryValue(KEY, _previousLogFile= ofd.FileNames[0]);
+				Utility.saveRegistryValue(KEY, _previousLogFile = ofd.FileNames[0]);
 				switch (lfpt) {
 					case LogFileProcessType.MakeHumanReadable: MIDUtil.showMidDetails(ofd.FileNames); break;
 #if !OTHER_VERSION
 					case LogFileProcessType.GenerateCSV: new CSVGenerator<MIDIdentifier, MID>().generateCSV(Path.Combine(MIDUtil.midLogPath, "CondensedTightening.csv"), allFiles); break;
 #endif
 					default:
-						MessageBox.Show("Unhandled processing-type '"+lfpt+"'."+Environment.NewLine+"Cannot continue.", "Log-file processing");
+						MessageBox.Show("Unhandled processing-type '" + lfpt + "'." + Environment.NewLine + "Cannot continue.", "Log-file processing");
 						break;
 				}
 			}
 		}
 
 		void startNewLogFile(object sender, RoutedEventArgs e) {
-			if (_opc!=null)
+			if (_opc != null)
 				_opc.createNewLogFile();
 		}
 
-		const string FRAME_KEY="Main Window Frame";
+		const string FRAME_KEY = "Main Window Frame";
 
 		void Window1_Initialized(object sender, EventArgs e) {
-			double left,top,width,height;
+			double left, top, width, height;
 
 			if (Utility.retrieveWindowBounds(FRAME_KEY, out left, out top, out width, out height)) {
 				//System.Diagnostics.Trace.WriteLine("Here");
-				_vm.windowTop=top;
-				_vm.windowLeft=left;
-				_vm.windowWidth=width;
-				_vm.windowHeight=height;
+				_vm.windowTop = top;
+				_vm.windowLeft = left;
+				_vm.windowWidth = width;
+				_vm.windowHeight = height;
 			} else {
-				_vm.windowWidth=325;
-				_vm.windowHeight=225;
-				_vm.windowLeft=(SystemParameters.PrimaryScreenWidth-_vm.windowWidth)/2.0;
-				_vm.windowTop=(SystemParameters.PrimaryScreenHeight-_vm.windowHeight)/2.0;
+				_vm.windowWidth = 325;
+				_vm.windowHeight = 225;
+				_vm.windowLeft = (SystemParameters.PrimaryScreenWidth - _vm.windowWidth) / 2.0;
+				_vm.windowTop = (SystemParameters.PrimaryScreenHeight - _vm.windowHeight) / 2.0;
 			}
 		}
 
@@ -280,5 +281,20 @@ namespace NSAtlasCopcoBreech {
 		void Window1_LocationChanged(object sender, EventArgs e) {
 			Utility.saveWindowBoundsToRegistry(this, FRAME_KEY);
 		}
+
+		void testFunction(object sender, RoutedEventArgs e) {
+			const string ASM_NAME = "RB_OpenProtocolInterpreter";
+
+			var v2 = new OpenProtocolInterpreter.MidInterpreter();
+			foreach (var v in AppDomain.CurrentDomain.GetAssemblies()) {
+				if (v.GetName().Name.CompareTo(ASM_NAME) == 0) {
+					blah(v);
+					//Trace.WriteLine("here");
+					break;
+				}
+			}
+		}
+
+	
 	}
 }
