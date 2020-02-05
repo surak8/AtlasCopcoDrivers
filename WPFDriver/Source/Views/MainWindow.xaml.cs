@@ -288,13 +288,10 @@ namespace NSAtlasCopcoBreech {
 			var v2 = new OpenProtocolInterpreter.MidInterpreter();
 			foreach (var v in AppDomain.CurrentDomain.GetAssemblies()) {
 				if (v.GetName().Name.CompareTo(ASM_NAME) == 0) {
-					blah(v);
-					//Trace.WriteLine("here");
+					generateTestsFrom(v);
 					break;
 				}
 			}
 		}
-
-	
 	}
 }
