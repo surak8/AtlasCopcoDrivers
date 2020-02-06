@@ -182,7 +182,7 @@ namespace tests {
             testRevision5();
         }
         void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(0, 1);
+            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(-1, 1);
         }
         void testRevision2() {
             OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(-1, 2);
