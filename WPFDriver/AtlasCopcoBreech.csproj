@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup Label="AssemblyInfo">
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Tests\Tester.cs" />
     <Compile Include="Source\Views\MainWindow.xaml.test.cs" />
   </ItemGroup>
   <ItemGroup Label="IDK">
@@ -151,9 +152,7 @@
       <Name>RB_OpenProtocolInterpreter</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Source\Tests\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
