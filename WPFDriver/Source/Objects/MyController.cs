@@ -91,8 +91,8 @@ namespace NSAtlasCopcoBreech {
 		readonly object _csvLock=new object();
 		string _csvTighteningName;
 		bool _csvWroteCSVHeader;
-		static readonly object _tighteningLock=new object();
-		static IDictionary<int,MidData> _tighteningMap=new Dictionary<int, MidData>();
+		  static readonly object _tighteningLock=new object();
+		static readonly IDictionary<int,MidData> _tighteningMap=new Dictionary<int, MidData>();
 
 		#region cctor
 		static MyController() {

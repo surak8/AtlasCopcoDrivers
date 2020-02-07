@@ -9,6 +9,7 @@
 //------------------------------------------------------------------------------
 
 namespace tests {
+    using System.Diagnostics;
     
     public class Tester {
         public void runTests() {
@@ -181,20 +182,52 @@ namespace tests {
             testRevision4();
             testRevision5();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0001 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(-1, 1);
+            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(-1, 2);
+            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(-1, 3);
+            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(-1, 4);
+            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(-1, 5);
+            OpenProtocolInterpreter.Communication.Mid0001 mid = new OpenProtocolInterpreter.Communication.Mid0001(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -208,23 +241,74 @@ namespace tests {
             testRevision5();
             testRevision6();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0002 mid) {
+            mid.CellId = -1;
+            mid.ChannelId = -1;
+            mid.ControllerName = "TESTTESTTEST";
+            mid.SupplierCode = "TESTTESTTEST";
+            mid.OpenProtocolVersion = "TESTTESTTEST";
+            mid.ControllerSoftwareVersion = "TESTTESTTEST";
+            mid.ToolSoftwareVersion = "TESTTESTTEST";
+            mid.RBUType = "TESTTESTTEST";
+            mid.ControllerSerialNumber = "TESTTESTTEST";
+            mid.SystemType = OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET;
+            mid.SystemSubType = OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS;
+            mid.SequenceNumberSupport = true;
+            mid.LinkingHandlingSupport = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(-1, 1);
+            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(-1, 2);
+            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(-1, 3);
+            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(-1, 4);
+            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(-1, 5);
+            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision6() {
-            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(-1, 6);
+            OpenProtocolInterpreter.Communication.Mid0002 mid = new OpenProtocolInterpreter.Communication.Mid0002(6);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -233,8 +317,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0003 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0003 mid = new OpenProtocolInterpreter.Communication.Mid0003(-1, 1);
+            OpenProtocolInterpreter.Communication.Mid0003 mid = new OpenProtocolInterpreter.Communication.Mid0003(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -243,8 +335,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0004 mid) {
+            mid.FailedMid = -1;
+            mid.ErrorCode = OpenProtocolInterpreter.Error.NO_ERROR;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0004 mid = new OpenProtocolInterpreter.Communication.Mid0004(-1, 1);
+            OpenProtocolInterpreter.Communication.Mid0004 mid = new OpenProtocolInterpreter.Communication.Mid0004(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -253,8 +355,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0005 mid) {
+            mid.MidAccepted = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0005 mid = new OpenProtocolInterpreter.Communication.Mid0005(-1, 1);
+            OpenProtocolInterpreter.Communication.Mid0005 mid = new OpenProtocolInterpreter.Communication.Mid0005(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -263,8 +374,20 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0006 mid) {
+            mid.RequestedMid = "TESTTESTTEST";
+            mid.WantedRevision = -1;
+            mid.ExtraDataLength = -1;
+            mid.ExtraData = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0006 mid = new OpenProtocolInterpreter.Communication.Mid0006(-1, 1);
+            OpenProtocolInterpreter.Communication.Mid0006 mid = new OpenProtocolInterpreter.Communication.Mid0006(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -273,8 +396,20 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0008 mid) {
+            mid.SubscriptionMid = "TESTTESTTEST";
+            mid.WantedRevision = -1;
+            mid.ExtraDataLength = -1;
+            mid.ExtraData = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0008 mid = new OpenProtocolInterpreter.Communication.Mid0008(-1, 1);
+            OpenProtocolInterpreter.Communication.Mid0008 mid = new OpenProtocolInterpreter.Communication.Mid0008(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -285,14 +420,34 @@ namespace tests {
             testRevision2();
             testRevision3();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0010 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0010 mid = new OpenProtocolInterpreter.ParameterSet.Mid0010(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0010 mid = new OpenProtocolInterpreter.ParameterSet.Mid0010(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.ParameterSet.Mid0010 mid = new OpenProtocolInterpreter.ParameterSet.Mid0010(-1, 2);
+            OpenProtocolInterpreter.ParameterSet.Mid0010 mid = new OpenProtocolInterpreter.ParameterSet.Mid0010(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.ParameterSet.Mid0010 mid = new OpenProtocolInterpreter.ParameterSet.Mid0010(-1, 3);
+            OpenProtocolInterpreter.ParameterSet.Mid0010 mid = new OpenProtocolInterpreter.ParameterSet.Mid0010(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -301,8 +456,19 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[SYSTEM.INT32, MSCORLIB, VERSION=4.0.0.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=B77A5C561934E089]]
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0011 mid) {
+            mid.TotalParameterSets = -1;
+            mid.ParameterSets = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0011 mid = new OpenProtocolInterpreter.ParameterSet.Mid0011(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0011 mid = new OpenProtocolInterpreter.ParameterSet.Mid0011(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -314,17 +480,45 @@ namespace tests {
             testRevision3();
             testRevision4();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0012 mid) {
+            mid.ParameterSetId = -1;
+            mid.ParameterSetFileVersion = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0012 mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0012 mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.ParameterSet.Mid0012 mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(-1, 2);
+            OpenProtocolInterpreter.ParameterSet.Mid0012 mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.ParameterSet.Mid0012 mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(-1, 3);
+            OpenProtocolInterpreter.ParameterSet.Mid0012 mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.ParameterSet.Mid0012 mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(-1, 4);
+            OpenProtocolInterpreter.ParameterSet.Mid0012 mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -334,11 +528,37 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0013 mid) {
+            mid.ParameterSetId = -1;
+            mid.ParameterSetName = "TESTTESTTEST";
+            mid.RotationDirection = OpenProtocolInterpreter.RotationDirection.CLOCKWISE;
+            mid.BatchSize = -1;
+            mid.MinTorque = -1m;
+            mid.MaxTorque = -1m;
+            mid.TorqueFinalTarget = -1m;
+            mid.MinAngle = -1;
+            mid.MaxAngle = -1;
+            mid.AngleFinalTarget = -1;
+            mid.FirstTarget = -1m;
+            mid.StartFinalAngle = -1m;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0013 mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0013 mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.ParameterSet.Mid0013 mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(-1, 2);
+            OpenProtocolInterpreter.ParameterSet.Mid0013 mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -347,8 +567,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0014 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0014 mid = new OpenProtocolInterpreter.ParameterSet.Mid0014(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0014 mid = new OpenProtocolInterpreter.ParameterSet.Mid0014(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -358,11 +586,38 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0015 mid) {
+            mid.ParameterSetId = -1;
+            mid.LastChangeInParameterSet = System.DateTime.MinValue;
+            mid.ParameterSetName = "TESTTESTTEST";
+            mid.RotationDirection = OpenProtocolInterpreter.RotationDirection.CLOCKWISE;
+            mid.BatchSize = -1;
+            mid.MinTorque = -1m;
+            mid.MaxTorque = -1m;
+            mid.TorqueFinalTarget = -1m;
+            mid.MinAngle = -1;
+            mid.MaxAngle = -1;
+            mid.AngleFinalTarget = -1;
+            mid.FirstTarget = -1m;
+            mid.StartFinalAngle = -1m;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0015 mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0015 mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.ParameterSet.Mid0015 mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(-1, 2);
+            OpenProtocolInterpreter.ParameterSet.Mid0015 mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -371,8 +626,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0016 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0016 mid = new OpenProtocolInterpreter.ParameterSet.Mid0016(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0016 mid = new OpenProtocolInterpreter.ParameterSet.Mid0016(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -381,8 +644,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0017 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0017 mid = new OpenProtocolInterpreter.ParameterSet.Mid0017(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0017 mid = new OpenProtocolInterpreter.ParameterSet.Mid0017(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -391,8 +662,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0018 mid) {
+            mid.ParameterSetId = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0018 mid = new OpenProtocolInterpreter.ParameterSet.Mid0018(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0018 mid = new OpenProtocolInterpreter.ParameterSet.Mid0018(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -401,8 +681,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0019 mid) {
+            mid.ParameterSetId = -1;
+            mid.BatchSize = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0019 mid = new OpenProtocolInterpreter.ParameterSet.Mid0019(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0019 mid = new OpenProtocolInterpreter.ParameterSet.Mid0019(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -411,8 +701,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0020 mid) {
+            mid.ParameterSetId = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0020 mid = new OpenProtocolInterpreter.ParameterSet.Mid0020(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0020 mid = new OpenProtocolInterpreter.ParameterSet.Mid0020(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -421,8 +720,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0021 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0021 mid = new OpenProtocolInterpreter.ParameterSet.Mid0021(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0021 mid = new OpenProtocolInterpreter.ParameterSet.Mid0021(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -431,8 +738,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0022 mid) {
+            mid.RelayStatus = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0022 mid = new OpenProtocolInterpreter.ParameterSet.Mid0022(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0022 mid = new OpenProtocolInterpreter.ParameterSet.Mid0022(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -441,8 +757,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0023 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0023 mid = new OpenProtocolInterpreter.ParameterSet.Mid0023(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0023 mid = new OpenProtocolInterpreter.ParameterSet.Mid0023(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -451,8 +775,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0024 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0024 mid = new OpenProtocolInterpreter.ParameterSet.Mid0024(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid0024 mid = new OpenProtocolInterpreter.ParameterSet.Mid0024(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -462,11 +794,25 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0030 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0030 mid = new OpenProtocolInterpreter.Job.Mid0030(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0030 mid = new OpenProtocolInterpreter.Job.Mid0030(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Mid0030 mid = new OpenProtocolInterpreter.Job.Mid0030(-1, 2);
+            OpenProtocolInterpreter.Job.Mid0030 mid = new OpenProtocolInterpreter.Job.Mid0030(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -475,8 +821,19 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[SYSTEM.INT32, MSCORLIB, VERSION=4.0.0.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=B77A5C561934E089]]
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0031 mid) {
+            mid.TotalJobs = -1;
+            mid.JobIds = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0031 mid = new OpenProtocolInterpreter.Job.Mid0031(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0031 mid = new OpenProtocolInterpreter.Job.Mid0031(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -487,14 +844,35 @@ namespace tests {
             testRevision2();
             testRevision3();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0032 mid) {
+            mid.JobId = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0032 mid = new OpenProtocolInterpreter.Job.Mid0032(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0032 mid = new OpenProtocolInterpreter.Job.Mid0032(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Mid0032 mid = new OpenProtocolInterpreter.Job.Mid0032(-1, 2);
+            OpenProtocolInterpreter.Job.Mid0032 mid = new OpenProtocolInterpreter.Job.Mid0032(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Job.Mid0032 mid = new OpenProtocolInterpreter.Job.Mid0032(-1, 3);
+            OpenProtocolInterpreter.Job.Mid0032 mid = new OpenProtocolInterpreter.Job.Mid0032(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -505,14 +883,48 @@ namespace tests {
             testRevision2();
             testRevision3();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.JOB.PARAMETERSET, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0033 mid) {
+            mid.JobId = -1;
+            mid.JobName = "TESTTESTTEST";
+            mid.ForcedOrder = OpenProtocolInterpreter.ForcedOrder.FREE_ORDER;
+            mid.MaxTimeForFirstTightening = -1;
+            mid.MaxTimeToCompleteJob = -1;
+            mid.JobBatchMode = OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS;
+            mid.LockAtJobDone = true;
+            mid.UseLineControl = true;
+            mid.RepeatJob = true;
+            mid.ToolLoosening = OpenProtocolInterpreter.ToolLoosening.ENABLED;
+            mid.Reserved = OpenProtocolInterpreter.Reserved.E;
+            mid.NumberOfParameterSets = -1;
+            mid.ParameterSetList = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0033 mid = new OpenProtocolInterpreter.Job.Mid0033(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0033 mid = new OpenProtocolInterpreter.Job.Mid0033(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Mid0033 mid = new OpenProtocolInterpreter.Job.Mid0033(-1, 2);
+            OpenProtocolInterpreter.Job.Mid0033 mid = new OpenProtocolInterpreter.Job.Mid0033(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Job.Mid0033 mid = new OpenProtocolInterpreter.Job.Mid0033(-1, 3);
+            OpenProtocolInterpreter.Job.Mid0033 mid = new OpenProtocolInterpreter.Job.Mid0033(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -524,17 +936,43 @@ namespace tests {
             testRevision3();
             testRevision4();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0034 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0034 mid = new OpenProtocolInterpreter.Job.Mid0034(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0034 mid = new OpenProtocolInterpreter.Job.Mid0034(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Mid0034 mid = new OpenProtocolInterpreter.Job.Mid0034(-1, 2);
+            OpenProtocolInterpreter.Job.Mid0034 mid = new OpenProtocolInterpreter.Job.Mid0034(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Job.Mid0034 mid = new OpenProtocolInterpreter.Job.Mid0034(-1, 3);
+            OpenProtocolInterpreter.Job.Mid0034 mid = new OpenProtocolInterpreter.Job.Mid0034(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Job.Mid0034 mid = new OpenProtocolInterpreter.Job.Mid0034(-1, 4);
+            OpenProtocolInterpreter.Job.Mid0034 mid = new OpenProtocolInterpreter.Job.Mid0034(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -546,17 +984,53 @@ namespace tests {
             testRevision3();
             testRevision4();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0035 mid) {
+            mid.JobId = -1;
+            mid.JobStatus = OpenProtocolInterpreter.JobStatus.NOT_COMPLETED;
+            mid.JobBatchMode = OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS;
+            mid.JobBatchSize = -1;
+            mid.JobBatchCounter = -1;
+            mid.TimeStamp = System.DateTime.MinValue;
+            mid.JobCurrentStep = -1;
+            mid.JobTotalNumberOfSteps = -1;
+            mid.JobStepType = -1;
+            mid.JobTighteningStatus = OpenProtocolInterpreter.JobTighteningStatus.OFF;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0035 mid = new OpenProtocolInterpreter.Job.Mid0035(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0035 mid = new OpenProtocolInterpreter.Job.Mid0035(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Mid0035 mid = new OpenProtocolInterpreter.Job.Mid0035(-1, 2);
+            OpenProtocolInterpreter.Job.Mid0035 mid = new OpenProtocolInterpreter.Job.Mid0035(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Job.Mid0035 mid = new OpenProtocolInterpreter.Job.Mid0035(-1, 3);
+            OpenProtocolInterpreter.Job.Mid0035 mid = new OpenProtocolInterpreter.Job.Mid0035(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Job.Mid0035 mid = new OpenProtocolInterpreter.Job.Mid0035(-1, 4);
+            OpenProtocolInterpreter.Job.Mid0035 mid = new OpenProtocolInterpreter.Job.Mid0035(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -568,17 +1042,43 @@ namespace tests {
             testRevision3();
             testRevision4();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0036 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0036 mid = new OpenProtocolInterpreter.Job.Mid0036(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0036 mid = new OpenProtocolInterpreter.Job.Mid0036(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Mid0036 mid = new OpenProtocolInterpreter.Job.Mid0036(-1, 2);
+            OpenProtocolInterpreter.Job.Mid0036 mid = new OpenProtocolInterpreter.Job.Mid0036(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Job.Mid0036 mid = new OpenProtocolInterpreter.Job.Mid0036(-1, 3);
+            OpenProtocolInterpreter.Job.Mid0036 mid = new OpenProtocolInterpreter.Job.Mid0036(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Job.Mid0036 mid = new OpenProtocolInterpreter.Job.Mid0036(-1, 4);
+            OpenProtocolInterpreter.Job.Mid0036 mid = new OpenProtocolInterpreter.Job.Mid0036(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -590,17 +1090,43 @@ namespace tests {
             testRevision3();
             testRevision4();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0037 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0037 mid = new OpenProtocolInterpreter.Job.Mid0037(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0037 mid = new OpenProtocolInterpreter.Job.Mid0037(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Mid0037 mid = new OpenProtocolInterpreter.Job.Mid0037(-1, 2);
+            OpenProtocolInterpreter.Job.Mid0037 mid = new OpenProtocolInterpreter.Job.Mid0037(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Job.Mid0037 mid = new OpenProtocolInterpreter.Job.Mid0037(-1, 3);
+            OpenProtocolInterpreter.Job.Mid0037 mid = new OpenProtocolInterpreter.Job.Mid0037(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Job.Mid0037 mid = new OpenProtocolInterpreter.Job.Mid0037(-1, 4);
+            OpenProtocolInterpreter.Job.Mid0037 mid = new OpenProtocolInterpreter.Job.Mid0037(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -610,11 +1136,26 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0038 mid) {
+            mid.JobId = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0038 mid = new OpenProtocolInterpreter.Job.Mid0038(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0038 mid = new OpenProtocolInterpreter.Job.Mid0038(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Mid0038 mid = new OpenProtocolInterpreter.Job.Mid0038(-1, 2);
+            OpenProtocolInterpreter.Job.Mid0038 mid = new OpenProtocolInterpreter.Job.Mid0038(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -624,11 +1165,26 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0039 mid) {
+            mid.JobId = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0039 mid = new OpenProtocolInterpreter.Job.Mid0039(-1, 1);
+            OpenProtocolInterpreter.Job.Mid0039 mid = new OpenProtocolInterpreter.Job.Mid0039(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Mid0039 mid = new OpenProtocolInterpreter.Job.Mid0039(-1, 2);
+            OpenProtocolInterpreter.Job.Mid0039 mid = new OpenProtocolInterpreter.Job.Mid0039(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -641,20 +1197,52 @@ namespace tests {
             testRevision4();
             testRevision5();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0040 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(-1, 1);
+            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(-1, 2);
+            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(-1, 3);
+            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(-1, 4);
+            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(-1, 5);
+            OpenProtocolInterpreter.Tool.Mid0040 mid = new OpenProtocolInterpreter.Tool.Mid0040(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -667,20 +1255,69 @@ namespace tests {
             testRevision4();
             testRevision5();
         }
+        // unhandled: OPENPROTOCOLINTERPRETER.TOOL.MID0041+OPENENDDATAS
+        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0041 mid) {
+            mid.ToolSerialNumber = "TESTTESTTEST";
+            mid.ToolNumberOfTightenings = -1;
+            mid.LastCalibrationDate = System.DateTime.MinValue;
+            mid.ControllerSerialNumber = "TESTTESTTEST";
+            mid.CalibrationValue = -1m;
+            mid.LastServiceDate = System.DateTime.MinValue;
+            mid.TighteningsSinceService = -1;
+            mid.ToolType = OpenProtocolInterpreter.ToolType.NO_TOOL;
+            mid.MotorSize = -1;
+            mid.OpenEndData = null;
+            mid.ControllerSoftwareVersion = "TESTTESTTEST";
+            mid.ToolMaxTorque = -1m;
+            mid.GearRatio = -1m;
+            mid.ToolFullSpeed = -1m;
+            mid.PrimaryTool = OpenProtocolInterpreter.PrimaryTool.CABLE;
+            mid.ToolModel = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(-1, 1);
+            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(-1, 2);
+            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(-1, 3);
+            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(-1, 4);
+            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(-1, 5);
+            OpenProtocolInterpreter.Tool.Mid0041 mid = new OpenProtocolInterpreter.Tool.Mid0041(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -689,8 +1326,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0042 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0042 mid = new OpenProtocolInterpreter.Tool.Mid0042(-1, 1);
+            OpenProtocolInterpreter.Tool.Mid0042 mid = new OpenProtocolInterpreter.Tool.Mid0042(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -699,8 +1344,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0043 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0043 mid = new OpenProtocolInterpreter.Tool.Mid0043(-1, 1);
+            OpenProtocolInterpreter.Tool.Mid0043 mid = new OpenProtocolInterpreter.Tool.Mid0043(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -709,8 +1362,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0044 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0044 mid = new OpenProtocolInterpreter.Tool.Mid0044(-1, 1);
+            OpenProtocolInterpreter.Tool.Mid0044 mid = new OpenProtocolInterpreter.Tool.Mid0044(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -719,8 +1380,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0045 mid) {
+            mid.CalibrationValueUnit = OpenProtocolInterpreter.CalibrationUnit.NM;
+            mid.CalibrationValue = -1m;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0045 mid = new OpenProtocolInterpreter.Tool.Mid0045(-1, 1);
+            OpenProtocolInterpreter.Tool.Mid0045 mid = new OpenProtocolInterpreter.Tool.Mid0045(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -729,8 +1400,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0046 mid) {
+            mid.PrimaryTool = OpenProtocolInterpreter.PrimaryTool.CABLE;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0046 mid = new OpenProtocolInterpreter.Tool.Mid0046(-1, 1);
+            OpenProtocolInterpreter.Tool.Mid0046 mid = new OpenProtocolInterpreter.Tool.Mid0046(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -739,8 +1419,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0047 mid) {
+            mid.PairingHandlingType = OpenProtocolInterpreter.PairingHandlingType.START_PAIRING;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0047 mid = new OpenProtocolInterpreter.Tool.Mid0047(-1, 1);
+            OpenProtocolInterpreter.Tool.Mid0047 mid = new OpenProtocolInterpreter.Tool.Mid0047(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -749,8 +1438,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0048 mid) {
+            mid.PairingStatus = OpenProtocolInterpreter.PairingStatus.UNDEFINED;
+            mid.TimeStamp = System.DateTime.MinValue;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0048 mid = new OpenProtocolInterpreter.Tool.Mid0048(-1, 1);
+            OpenProtocolInterpreter.Tool.Mid0048 mid = new OpenProtocolInterpreter.Tool.Mid0048(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -759,8 +1458,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0050 mid) {
+            mid.VinNumber = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Vin.Mid0050 mid = new OpenProtocolInterpreter.Vin.Mid0050(-1, 1);
+            OpenProtocolInterpreter.Vin.Mid0050 mid = new OpenProtocolInterpreter.Vin.Mid0050(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -770,11 +1478,25 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0051 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Vin.Mid0051 mid = new OpenProtocolInterpreter.Vin.Mid0051(-1, 1);
+            OpenProtocolInterpreter.Vin.Mid0051 mid = new OpenProtocolInterpreter.Vin.Mid0051(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Vin.Mid0051 mid = new OpenProtocolInterpreter.Vin.Mid0051(-1, 2);
+            OpenProtocolInterpreter.Vin.Mid0051 mid = new OpenProtocolInterpreter.Vin.Mid0051(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -784,11 +1506,29 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0052 mid) {
+            mid.VinNumber = "TESTTESTTEST";
+            mid.IdentifierResultPart2 = "TESTTESTTEST";
+            mid.IdentifierResultPart3 = "TESTTESTTEST";
+            mid.IdentifierResultPart4 = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Vin.Mid0052 mid = new OpenProtocolInterpreter.Vin.Mid0052(-1, 1);
+            OpenProtocolInterpreter.Vin.Mid0052 mid = new OpenProtocolInterpreter.Vin.Mid0052(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Vin.Mid0052 mid = new OpenProtocolInterpreter.Vin.Mid0052(-1, 2);
+            OpenProtocolInterpreter.Vin.Mid0052 mid = new OpenProtocolInterpreter.Vin.Mid0052(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -798,11 +1538,25 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0053 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Vin.Mid0053 mid = new OpenProtocolInterpreter.Vin.Mid0053(-1, 1);
+            OpenProtocolInterpreter.Vin.Mid0053 mid = new OpenProtocolInterpreter.Vin.Mid0053(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Vin.Mid0053 mid = new OpenProtocolInterpreter.Vin.Mid0053(-1, 2);
+            OpenProtocolInterpreter.Vin.Mid0053 mid = new OpenProtocolInterpreter.Vin.Mid0053(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -811,8 +1565,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0054 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Vin.Mid0054 mid = new OpenProtocolInterpreter.Vin.Mid0054(-1, 1);
+            OpenProtocolInterpreter.Vin.Mid0054 mid = new OpenProtocolInterpreter.Vin.Mid0054(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -827,26 +1589,70 @@ namespace tests {
             testRevision6();
             testRevision7();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0060 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(-1, 1);
+            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(-1, 2);
+            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(-1, 3);
+            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(-1, 4);
+            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(-1, 5);
+            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision6() {
-            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(-1, 6);
+            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(6);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision7() {
-            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(-1, 7);
+            OpenProtocolInterpreter.Tightening.Mid0060 mid = new OpenProtocolInterpreter.Tightening.Mid0060(7);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -861,26 +1667,134 @@ namespace tests {
             testRevision6();
             testRevision7();
         }
+        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.STRATEGYOPTIONS
+        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.TIGHTENINGERRORSTATUS
+        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.TIGHTENINGERRORSTATUS2
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.TIGHTENING.STAGERESULT, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0061 mid) {
+            mid.CellId = -1;
+            mid.ChannelId = -1;
+            mid.TorqueControllerName = "TESTTESTTEST";
+            mid.VinNumber = "TESTTESTTEST";
+            mid.JobId = -1;
+            mid.ParameterSetId = -1;
+            mid.BatchSize = -1;
+            mid.BatchCounter = -1;
+            mid.TighteningStatus = true;
+            mid.TorqueStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.AngleStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.TorqueMinLimit = -1m;
+            mid.TorqueMaxLimit = -1m;
+            mid.TorqueFinalTarget = -1m;
+            mid.Torque = -1m;
+            mid.AngleMinLimit = -1;
+            mid.AngleMaxLimit = -1;
+            mid.AngleFinalTarget = -1;
+            mid.Angle = -1;
+            mid.Timestamp = System.DateTime.MinValue;
+            mid.LastChangeInParameterSet = System.DateTime.MinValue;
+            mid.BatchStatus = OpenProtocolInterpreter.BatchStatus.NOK;
+            mid.TighteningId = -1;
+            mid.Strategy = OpenProtocolInterpreter.Strategy.TORQUE_CONTROL;
+            mid.StrategyOptions = null;
+            mid.RundownAngleStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.CurrentMonitoringStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.SelftapStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.PrevailTorqueMonitoringStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.PrevailTorqueCompensateStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.TighteningErrorStatus = null;
+            mid.RundownAngleMin = -1;
+            mid.RundownAngleMax = -1;
+            mid.RundownAngle = -1;
+            mid.CurrentMonitoringMin = -1;
+            mid.CurrentMonitoringMax = -1;
+            mid.CurrentMonitoringValue = -1;
+            mid.SelftapMin = -1m;
+            mid.SelftapMax = -1m;
+            mid.SelftapTorque = -1m;
+            mid.PrevailTorqueMonitoringMin = -1m;
+            mid.PrevailTorqueMonitoringMax = -1m;
+            mid.PrevailTorque = -1m;
+            mid.JobSequenceNumber = -1;
+            mid.SyncTighteningId = -1;
+            mid.ToolSerialNumber = "TESTTESTTEST";
+            mid.ParameterSetName = "TESTTESTTEST";
+            mid.TorqueValuesUnit = OpenProtocolInterpreter.TorqueValuesUnit.NM;
+            mid.ResultType = OpenProtocolInterpreter.ResultType.TIGHTENING;
+            mid.IdentifierResultPart2 = "TESTTESTTEST";
+            mid.IdentifierResultPart3 = "TESTTESTTEST";
+            mid.IdentifierResultPart4 = "TESTTESTTEST";
+            mid.CustomerTighteningErrorCode = "TESTTESTTEST";
+            mid.PrevailTorqueCompensateValue = -1m;
+            mid.TighteningErrorStatus2 = null;
+            mid.CompensatedAngle = -1m;
+            mid.FinalAngleDecimal = -1m;
+            mid.NumberOfStagesInMultistage = -1;
+            mid.NumberOfStageResults = -1;
+            mid.StageResults = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(-1, 1);
+            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(-1, 2);
+            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(-1, 3);
+            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(-1, 4);
+            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(-1, 5);
+            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision6() {
-            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(-1, 6);
+            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(6);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision7() {
-            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(-1, 7);
+            OpenProtocolInterpreter.Tightening.Mid0061 mid = new OpenProtocolInterpreter.Tightening.Mid0061(7);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -894,23 +1808,61 @@ namespace tests {
             testRevision5();
             testRevision6();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0062 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(-1, 1);
+            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(-1, 2);
+            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(-1, 3);
+            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(-1, 4);
+            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(-1, 5);
+            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision6() {
-            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(-1, 6);
+            OpenProtocolInterpreter.Tightening.Mid0062 mid = new OpenProtocolInterpreter.Tightening.Mid0062(6);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -924,23 +1876,61 @@ namespace tests {
             testRevision5();
             testRevision6();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0063 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(-1, 1);
+            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(-1, 2);
+            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(-1, 3);
+            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(-1, 4);
+            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(-1, 5);
+            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision6() {
-            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(-1, 6);
+            OpenProtocolInterpreter.Tightening.Mid0063 mid = new OpenProtocolInterpreter.Tightening.Mid0063(6);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -954,23 +1944,62 @@ namespace tests {
             testRevision5();
             testRevision6();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0064 mid) {
+            mid.TighteningId = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(-1, 1);
+            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(-1, 2);
+            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(-1, 3);
+            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(-1, 4);
+            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(-1, 5);
+            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision6() {
-            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(-1, 6);
+            OpenProtocolInterpreter.Tightening.Mid0064 mid = new OpenProtocolInterpreter.Tightening.Mid0064(6);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -984,23 +2013,100 @@ namespace tests {
             testRevision5();
             testRevision6();
         }
+        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.STRATEGYOPTIONS
+        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.TIGHTENINGERRORSTATUS
+        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.TIGHTENINGERRORSTATUS2
+        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0065 mid) {
+            mid.TighteningId = -1;
+            mid.VinNumber = "TESTTESTTEST";
+            mid.ParameterSetId = -1;
+            mid.BatchCounter = -1;
+            mid.TighteningStatus = true;
+            mid.TorqueStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.AngleStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.Torque = -1m;
+            mid.Angle = -1;
+            mid.Timestamp = System.DateTime.MinValue;
+            mid.BatchStatus = OpenProtocolInterpreter.BatchStatus.NOK;
+            mid.JobId = -1;
+            mid.Strategy = OpenProtocolInterpreter.Strategy.TORQUE_CONTROL;
+            mid.StrategyOptions = null;
+            mid.BatchSize = -1;
+            mid.RundownAngleStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.CurrentMonitoringStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.SelftapStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.PrevailTorqueMonitoringStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.PrevailTorqueCompensateStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
+            mid.TighteningErrorStatus = null;
+            mid.RundownAngle = -1;
+            mid.CurrentMonitoringValue = -1;
+            mid.SelftapTorque = -1m;
+            mid.PrevailTorque = -1m;
+            mid.JobSequenceNumber = -1;
+            mid.SyncTighteningId = -1;
+            mid.ToolSerialNumber = "TESTTESTTEST";
+            mid.TorqueValuesUnit = OpenProtocolInterpreter.TorqueValuesUnit.NM;
+            mid.ResultType = OpenProtocolInterpreter.ResultType.TIGHTENING;
+            mid.IdentifierResultPart2 = "TESTTESTTEST";
+            mid.IdentifierResultPart3 = "TESTTESTTEST";
+            mid.IdentifierResultPart4 = "TESTTESTTEST";
+            mid.CustomerTighteningErrorCode = "TESTTESTTEST";
+            mid.PrevailTorqueCompensateValue = -1m;
+            mid.TighteningErrorStatus2 = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(-1, 1);
+            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(-1, 2);
+            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(-1, 3);
+            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(-1, 4);
+            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision5() {
-            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(-1, 5);
+            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(5);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision6() {
-            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(-1, 6);
+            OpenProtocolInterpreter.Tightening.Mid0065 mid = new OpenProtocolInterpreter.Tightening.Mid0065(6);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1010,11 +2116,25 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0070 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0070 mid = new OpenProtocolInterpreter.Alarm.Mid0070(-1, 1);
+            OpenProtocolInterpreter.Alarm.Mid0070 mid = new OpenProtocolInterpreter.Alarm.Mid0070(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Alarm.Mid0070 mid = new OpenProtocolInterpreter.Alarm.Mid0070(-1, 2);
+            OpenProtocolInterpreter.Alarm.Mid0070 mid = new OpenProtocolInterpreter.Alarm.Mid0070(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1024,11 +2144,30 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0071 mid) {
+            mid.ErrorCode = "TESTTESTTEST";
+            mid.ControllerReadyStatus = true;
+            mid.ToolReadyStatus = true;
+            mid.Time = System.DateTime.MinValue;
+            mid.AlarmText = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0071 mid = new OpenProtocolInterpreter.Alarm.Mid0071(-1, 1);
+            OpenProtocolInterpreter.Alarm.Mid0071 mid = new OpenProtocolInterpreter.Alarm.Mid0071(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Alarm.Mid0071 mid = new OpenProtocolInterpreter.Alarm.Mid0071(-1, 2);
+            OpenProtocolInterpreter.Alarm.Mid0071 mid = new OpenProtocolInterpreter.Alarm.Mid0071(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1038,11 +2177,25 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0072 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0072 mid = new OpenProtocolInterpreter.Alarm.Mid0072(-1, 1);
+            OpenProtocolInterpreter.Alarm.Mid0072 mid = new OpenProtocolInterpreter.Alarm.Mid0072(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Alarm.Mid0072 mid = new OpenProtocolInterpreter.Alarm.Mid0072(-1, 2);
+            OpenProtocolInterpreter.Alarm.Mid0072 mid = new OpenProtocolInterpreter.Alarm.Mid0072(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1052,11 +2205,25 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0073 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0073 mid = new OpenProtocolInterpreter.Alarm.Mid0073(-1, 1);
+            OpenProtocolInterpreter.Alarm.Mid0073 mid = new OpenProtocolInterpreter.Alarm.Mid0073(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Alarm.Mid0073 mid = new OpenProtocolInterpreter.Alarm.Mid0073(-1, 2);
+            OpenProtocolInterpreter.Alarm.Mid0073 mid = new OpenProtocolInterpreter.Alarm.Mid0073(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1066,11 +2233,26 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0074 mid) {
+            mid.ErrorCode = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0074 mid = new OpenProtocolInterpreter.Alarm.Mid0074(-1, 1);
+            OpenProtocolInterpreter.Alarm.Mid0074 mid = new OpenProtocolInterpreter.Alarm.Mid0074(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Alarm.Mid0074 mid = new OpenProtocolInterpreter.Alarm.Mid0074(-1, 2);
+            OpenProtocolInterpreter.Alarm.Mid0074 mid = new OpenProtocolInterpreter.Alarm.Mid0074(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1080,11 +2262,25 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0075 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0075 mid = new OpenProtocolInterpreter.Alarm.Mid0075(-1, 1);
+            OpenProtocolInterpreter.Alarm.Mid0075 mid = new OpenProtocolInterpreter.Alarm.Mid0075(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Alarm.Mid0075 mid = new OpenProtocolInterpreter.Alarm.Mid0075(-1, 2);
+            OpenProtocolInterpreter.Alarm.Mid0075 mid = new OpenProtocolInterpreter.Alarm.Mid0075(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1093,8 +2289,21 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0076 mid) {
+            mid.AlarmStatus = true;
+            mid.ErrorCode = "TESTTESTTEST";
+            mid.ControllerReadyStatus = true;
+            mid.ToolReadyStatus = true;
+            mid.Time = System.DateTime.MinValue;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0076 mid = new OpenProtocolInterpreter.Alarm.Mid0076(-1, 1);
+            OpenProtocolInterpreter.Alarm.Mid0076 mid = new OpenProtocolInterpreter.Alarm.Mid0076(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1103,8 +2312,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0077 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0077 mid = new OpenProtocolInterpreter.Alarm.Mid0077(-1, 1);
+            OpenProtocolInterpreter.Alarm.Mid0077 mid = new OpenProtocolInterpreter.Alarm.Mid0077(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1113,8 +2330,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0078 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0078 mid = new OpenProtocolInterpreter.Alarm.Mid0078(-1, 1);
+            OpenProtocolInterpreter.Alarm.Mid0078 mid = new OpenProtocolInterpreter.Alarm.Mid0078(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1123,8 +2348,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Time.Mid0080 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Time.Mid0080 mid = new OpenProtocolInterpreter.Time.Mid0080(-1, 1);
+            OpenProtocolInterpreter.Time.Mid0080 mid = new OpenProtocolInterpreter.Time.Mid0080(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1133,8 +2366,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Time.Mid0081 mid) {
+            mid.Time = System.DateTime.MinValue;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Time.Mid0081 mid = new OpenProtocolInterpreter.Time.Mid0081(-1, 1);
+            OpenProtocolInterpreter.Time.Mid0081 mid = new OpenProtocolInterpreter.Time.Mid0081(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1143,8 +2385,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Time.Mid0082 mid) {
+            mid.Time = System.DateTime.MinValue;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Time.Mid0082 mid = new OpenProtocolInterpreter.Time.Mid0082(-1, 1);
+            OpenProtocolInterpreter.Time.Mid0082 mid = new OpenProtocolInterpreter.Time.Mid0082(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1153,8 +2404,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultiSpindle.Mid0090 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultiSpindle.Mid0090 mid = new OpenProtocolInterpreter.MultiSpindle.Mid0090(-1, 1);
+            OpenProtocolInterpreter.MultiSpindle.Mid0090 mid = new OpenProtocolInterpreter.MultiSpindle.Mid0090(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1163,8 +2422,22 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.MULTISPINDLE.SPINDLESTATUS, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.MultiSpindle.Mid0091 mid) {
+            mid.NumberOfSpindles = -1;
+            mid.SyncTighteningId = -1;
+            mid.Time = System.DateTime.MinValue;
+            mid.SyncOverallStatus = true;
+            mid.SpindlesStatus = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultiSpindle.Mid0091 mid = new OpenProtocolInterpreter.MultiSpindle.Mid0091(-1, 1);
+            OpenProtocolInterpreter.MultiSpindle.Mid0091 mid = new OpenProtocolInterpreter.MultiSpindle.Mid0091(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1173,8 +2446,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultiSpindle.Mid0092 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultiSpindle.Mid0092 mid = new OpenProtocolInterpreter.MultiSpindle.Mid0092(-1, 1);
+            OpenProtocolInterpreter.MultiSpindle.Mid0092 mid = new OpenProtocolInterpreter.MultiSpindle.Mid0092(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1183,8 +2464,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultiSpindle.Mid0093 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultiSpindle.Mid0093 mid = new OpenProtocolInterpreter.MultiSpindle.Mid0093(-1, 1);
+            OpenProtocolInterpreter.MultiSpindle.Mid0093 mid = new OpenProtocolInterpreter.MultiSpindle.Mid0093(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1196,17 +2485,45 @@ namespace tests {
             testRevision3();
             testRevision4();
         }
+        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0105 mid) {
+            mid.DataNumberSystem = -1;
+            mid.SendOnlyNewData = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PowerMACS.Mid0105 mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(-1, 1);
+            OpenProtocolInterpreter.PowerMACS.Mid0105 mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.PowerMACS.Mid0105 mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(-1, 2);
+            OpenProtocolInterpreter.PowerMACS.Mid0105 mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.PowerMACS.Mid0105 mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(-1, 3);
+            OpenProtocolInterpreter.PowerMACS.Mid0105 mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.PowerMACS.Mid0105 mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(-1, 4);
+            OpenProtocolInterpreter.PowerMACS.Mid0105 mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1218,17 +2535,61 @@ namespace tests {
             testRevision3();
             testRevision4();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.BOLTDATA, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.SPECIALVALUE, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0106 mid) {
+            mid.TotalNumberOfMessages = -1;
+            mid.MessageNumber = -1;
+            mid.DataNumberSystem = -1;
+            mid.StationNumber = -1;
+            mid.StationName = "TESTTESTTEST";
+            mid.Time = System.DateTime.MinValue;
+            mid.ModeNumber = -1;
+            mid.ModeName = "TESTTESTTEST";
+            mid.SimpleStatus = true;
+            mid.PMStatus = OpenProtocolInterpreter.PowerMacsStatus.OK;
+            mid.WpId = "TESTTESTTEST";
+            mid.NumberOfBolts = -1;
+            mid.BoltsData = null;
+            mid.TotalSpecialValues = -1;
+            mid.SpecialValues = null;
+            mid.SystemSubType = OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PowerMACS.Mid0106 mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(-1, 1);
+            OpenProtocolInterpreter.PowerMACS.Mid0106 mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.PowerMACS.Mid0106 mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(-1, 2);
+            OpenProtocolInterpreter.PowerMACS.Mid0106 mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.PowerMACS.Mid0106 mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(-1, 3);
+            OpenProtocolInterpreter.PowerMACS.Mid0106 mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.PowerMACS.Mid0106 mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(-1, 4);
+            OpenProtocolInterpreter.PowerMACS.Mid0106 mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1240,17 +2601,64 @@ namespace tests {
             testRevision3();
             testRevision4();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.BOLTRESULT, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.STEPRESULT, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.SPECIALVALUE, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0107 mid) {
+            mid.TotalNumberOfMessages = -1;
+            mid.MessageNumber = -1;
+            mid.DataNumberSystem = -1;
+            mid.StationNumber = -1;
+            mid.Time = System.DateTime.MinValue;
+            mid.BoltNumber = -1;
+            mid.BoltName = "TESTTESTTEST";
+            mid.ProgramName = "TESTTESTTEST";
+            mid.PowerMacsStatus = OpenProtocolInterpreter.PowerMACS.Mid0107.PowerMacsStatuses.OK;
+            mid.Errors = "TESTTESTTEST";
+            mid.CustomerErrorCode = "TESTTESTTEST";
+            mid.NumberOfBoltResults = -1;
+            mid.BoltResults = null;
+            mid.NumberOfStepResults = -1;
+            mid.AllStepDataSent = true;
+            mid.StepResults = null;
+            mid.NumberOfSpecialValues = -1;
+            mid.SpecialValues = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PowerMACS.Mid0107 mid = new OpenProtocolInterpreter.PowerMACS.Mid0107(-1, 1);
+            OpenProtocolInterpreter.PowerMACS.Mid0107 mid = new OpenProtocolInterpreter.PowerMACS.Mid0107(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.PowerMACS.Mid0107 mid = new OpenProtocolInterpreter.PowerMACS.Mid0107(-1, 2);
+            OpenProtocolInterpreter.PowerMACS.Mid0107 mid = new OpenProtocolInterpreter.PowerMACS.Mid0107(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.PowerMACS.Mid0107 mid = new OpenProtocolInterpreter.PowerMACS.Mid0107(-1, 3);
+            OpenProtocolInterpreter.PowerMACS.Mid0107 mid = new OpenProtocolInterpreter.PowerMACS.Mid0107(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.PowerMACS.Mid0107 mid = new OpenProtocolInterpreter.PowerMACS.Mid0107(-1, 4);
+            OpenProtocolInterpreter.PowerMACS.Mid0107 mid = new OpenProtocolInterpreter.PowerMACS.Mid0107(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1262,17 +2670,44 @@ namespace tests {
             testRevision3();
             testRevision4();
         }
+        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0108 mid) {
+            mid.BoltData = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PowerMACS.Mid0108 mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(-1, 1);
+            OpenProtocolInterpreter.PowerMACS.Mid0108 mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.PowerMACS.Mid0108 mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(-1, 2);
+            OpenProtocolInterpreter.PowerMACS.Mid0108 mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision3() {
-            OpenProtocolInterpreter.PowerMACS.Mid0108 mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(-1, 3);
+            OpenProtocolInterpreter.PowerMACS.Mid0108 mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(3);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision4() {
-            OpenProtocolInterpreter.PowerMACS.Mid0108 mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(-1, 4);
+            OpenProtocolInterpreter.PowerMACS.Mid0108 mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(4);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1281,8 +2716,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0109 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PowerMACS.Mid0109 mid = new OpenProtocolInterpreter.PowerMACS.Mid0109(-1, 1);
+            OpenProtocolInterpreter.PowerMACS.Mid0109 mid = new OpenProtocolInterpreter.PowerMACS.Mid0109(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1291,8 +2734,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.UserInterface.Mid0110 mid) {
+            mid.UserText = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.UserInterface.Mid0110 mid = new OpenProtocolInterpreter.UserInterface.Mid0110(-1, 1);
+            OpenProtocolInterpreter.UserInterface.Mid0110 mid = new OpenProtocolInterpreter.UserInterface.Mid0110(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1301,8 +2753,22 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.UserInterface.Mid0111 mid) {
+            mid.TextDuration = -1;
+            mid.RemovalCondition = OpenProtocolInterpreter.RemovalCondition.ACKNOWLEDGE_OR_WAIT_EXPIRATION_TIME;
+            mid.Line1 = "TESTTESTTEST";
+            mid.Line2 = "TESTTESTTEST";
+            mid.Line3 = "TESTTESTTEST";
+            mid.Line4 = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.UserInterface.Mid0111 mid = new OpenProtocolInterpreter.UserInterface.Mid0111(-1, 1);
+            OpenProtocolInterpreter.UserInterface.Mid0111 mid = new OpenProtocolInterpreter.UserInterface.Mid0111(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1311,8 +2777,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.UserInterface.Mid0113 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.UserInterface.Mid0113 mid = new OpenProtocolInterpreter.UserInterface.Mid0113(-1, 1);
+            OpenProtocolInterpreter.UserInterface.Mid0113 mid = new OpenProtocolInterpreter.UserInterface.Mid0113(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1321,8 +2795,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0120 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0120 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0120(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0120 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0120(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1331,8 +2813,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0121 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0121 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0121(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0121 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0121(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1341,8 +2831,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0122 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0122 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0122(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0122 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0122(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1351,8 +2849,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0123 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0123 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0123(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0123 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0123(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1361,8 +2867,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0124 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0124 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0124(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0124 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0124(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1371,8 +2885,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0125 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0125 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0125(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0125 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0125(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1381,8 +2903,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0126 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0126 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0126(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0126 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0126(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1391,8 +2921,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0127 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0127 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0127(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0127 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0127(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1401,8 +2939,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0128 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0128 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0128(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0128 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0128(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1412,11 +2958,27 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0129 mid) {
+            mid.ChannelId = -1;
+            mid.ParameterSetId = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0129 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0129(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0129 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0129(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0129 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0129(-1, 2);
+            OpenProtocolInterpreter.Job.Advanced.Mid0129 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0129(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1425,8 +2987,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0130 mid) {
+            mid.JobOffStatus = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0130 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0130(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0130 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0130(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1435,8 +3006,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0131 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0131 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0131(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0131 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0131(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1445,8 +3024,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0132 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0132 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0132(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0132 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0132(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1455,8 +3042,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0133 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0133 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0133(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0133 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0133(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1465,8 +3060,36 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.JOB.ADVANCED.ADVANCEDJOB, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0140 mid) {
+            mid.JobId = -1;
+            mid.JobName = "TESTTESTTEST";
+            mid.NumberOfParameterSets = -1;
+            mid.JobList = null;
+            mid.ForcedOrder = OpenProtocolInterpreter.ForcedOrder.FREE_ORDER;
+            mid.LockAtJobDone = true;
+            mid.ToolLoosening = OpenProtocolInterpreter.ToolLoosening.ENABLED;
+            mid.RepeatJob = true;
+            mid.BatchMode = OpenProtocolInterpreter.BatchMode.ONLY_OK;
+            mid.BatchStatusAtIncrement = true;
+            mid.DecrementBatchAtOkLoosening = true;
+            mid.MaxTimeForFirstTightening = -1;
+            mid.MaxTimeToCompleteJob = -1;
+            mid.DisplayResultAtAutoSelect = -1;
+            mid.UsingLineControl = true;
+            mid.IdentifierResultPart = OpenProtocolInterpreter.IdentifierPart.JOB_VIN_NUMBER;
+            mid.ResultOfNonTightenings = true;
+            mid.ResetAllIdentifiersAtJobDone = true;
+            mid.Reserved = OpenProtocolInterpreter.Reserved.E;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0140 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0140(-1, 1);
+            OpenProtocolInterpreter.Job.Advanced.Mid0140 mid = new OpenProtocolInterpreter.Job.Advanced.Mid0140(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1475,8 +3098,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0150 mid) {
+            mid.IdentifierData = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0150 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0150(-1, 1);
+            OpenProtocolInterpreter.MultipleIdentifiers.Mid0150 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0150(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1485,8 +3117,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0151 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0151 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0151(-1, 1);
+            OpenProtocolInterpreter.MultipleIdentifiers.Mid0151 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0151(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1495,8 +3135,24 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: OPENPROTOCOLINTERPRETER.MULTIPLEIDENTIFIERS.IDENTIFIERSTATUS
+        // unhandled: OPENPROTOCOLINTERPRETER.MULTIPLEIDENTIFIERS.IDENTIFIERSTATUS
+        // unhandled: OPENPROTOCOLINTERPRETER.MULTIPLEIDENTIFIERS.IDENTIFIERSTATUS
+        // unhandled: OPENPROTOCOLINTERPRETER.MULTIPLEIDENTIFIERS.IDENTIFIERSTATUS
+        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0152 mid) {
+            mid.FirstIdentifierStatus = null;
+            mid.SecondIdentifierStatus = null;
+            mid.ThirdIdentifierStatus = null;
+            mid.FourthIdentifierStatus = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0152 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0152(-1, 1);
+            OpenProtocolInterpreter.MultipleIdentifiers.Mid0152 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0152(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1505,8 +3161,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0153 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0153 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0153(-1, 1);
+            OpenProtocolInterpreter.MultipleIdentifiers.Mid0153 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0153(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1515,8 +3179,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0154 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0154 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0154(-1, 1);
+            OpenProtocolInterpreter.MultipleIdentifiers.Mid0154 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0154(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1525,8 +3197,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0155 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0155 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0155(-1, 1);
+            OpenProtocolInterpreter.MultipleIdentifiers.Mid0155 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0155(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1535,8 +3215,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0156 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0156 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0156(-1, 1);
+            OpenProtocolInterpreter.MultipleIdentifiers.Mid0156 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0156(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1545,8 +3233,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0157 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0157 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0157(-1, 1);
+            OpenProtocolInterpreter.MultipleIdentifiers.Mid0157 mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0157(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1555,8 +3251,26 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0200 mid) {
+            mid.StatusRelayOne = OpenProtocolInterpreter.RelayStatus.OFF;
+            mid.StatusRelayTwo = OpenProtocolInterpreter.RelayStatus.OFF;
+            mid.StatusRelayThree = OpenProtocolInterpreter.RelayStatus.OFF;
+            mid.StatusRelayFour = OpenProtocolInterpreter.RelayStatus.OFF;
+            mid.StatusRelayFive = OpenProtocolInterpreter.RelayStatus.OFF;
+            mid.StatusRelaySix = OpenProtocolInterpreter.RelayStatus.OFF;
+            mid.StatusRelaySeven = OpenProtocolInterpreter.RelayStatus.OFF;
+            mid.StatusRelayEight = OpenProtocolInterpreter.RelayStatus.OFF;
+            mid.StatusRelayNine = OpenProtocolInterpreter.RelayStatus.OFF;
+            mid.StatusRelayTen = OpenProtocolInterpreter.RelayStatus.OFF;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0200 mid = new OpenProtocolInterpreter.IOInterface.Mid0200(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0200 mid = new OpenProtocolInterpreter.IOInterface.Mid0200(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1565,8 +3279,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0210 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0210 mid = new OpenProtocolInterpreter.IOInterface.Mid0210(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0210 mid = new OpenProtocolInterpreter.IOInterface.Mid0210(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1575,8 +3297,24 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0211 mid) {
+            mid.StatusDigInOne = true;
+            mid.StatusDigInTwo = true;
+            mid.StatusDigInThree = true;
+            mid.StatusDigInFour = true;
+            mid.StatusDigInFive = true;
+            mid.StatusDigInSix = true;
+            mid.StatusDigInSeven = true;
+            mid.StatusDigInEight = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0211 mid = new OpenProtocolInterpreter.IOInterface.Mid0211(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0211 mid = new OpenProtocolInterpreter.IOInterface.Mid0211(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1585,8 +3323,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0212 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0212 mid = new OpenProtocolInterpreter.IOInterface.Mid0212(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0212 mid = new OpenProtocolInterpreter.IOInterface.Mid0212(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1595,8 +3341,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0213 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0213 mid = new OpenProtocolInterpreter.IOInterface.Mid0213(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0213 mid = new OpenProtocolInterpreter.IOInterface.Mid0213(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1606,11 +3360,26 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0214 mid) {
+            mid.DeviceNumber = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0214 mid = new OpenProtocolInterpreter.IOInterface.Mid0214(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0214 mid = new OpenProtocolInterpreter.IOInterface.Mid0214(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.IOInterface.Mid0214 mid = new OpenProtocolInterpreter.IOInterface.Mid0214(-1, 2);
+            OpenProtocolInterpreter.IOInterface.Mid0214 mid = new OpenProtocolInterpreter.IOInterface.Mid0214(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1620,11 +3389,32 @@ namespace tests {
             testRevision1();
             testRevision2();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.IOINTERFACE.RELAY, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.IOINTERFACE.DIGITALINPUT, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0215 mid) {
+            mid.IODeviceId = -1;
+            mid.Relays = null;
+            mid.DigitalInputs = null;
+            mid.NumberOfRelays = -1;
+            mid.NumberOfDigitalInputs = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0215 mid = new OpenProtocolInterpreter.IOInterface.Mid0215(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0215 mid = new OpenProtocolInterpreter.IOInterface.Mid0215(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
         void testRevision2() {
-            OpenProtocolInterpreter.IOInterface.Mid0215 mid = new OpenProtocolInterpreter.IOInterface.Mid0215(-1, 2);
+            OpenProtocolInterpreter.IOInterface.Mid0215 mid = new OpenProtocolInterpreter.IOInterface.Mid0215(2);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1633,8 +3423,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0216 mid) {
+            mid.RelayNumber = OpenProtocolInterpreter.RelayNumber.OFF;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0216 mid = new OpenProtocolInterpreter.IOInterface.Mid0216(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0216 mid = new OpenProtocolInterpreter.IOInterface.Mid0216(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1643,8 +3442,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0217 mid) {
+            mid.RelayNumber = OpenProtocolInterpreter.RelayNumber.OFF;
+            mid.RelayStatus = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0217 mid = new OpenProtocolInterpreter.IOInterface.Mid0217(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0217 mid = new OpenProtocolInterpreter.IOInterface.Mid0217(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1653,8 +3462,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0218 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0218 mid = new OpenProtocolInterpreter.IOInterface.Mid0218(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0218 mid = new OpenProtocolInterpreter.IOInterface.Mid0218(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1663,8 +3480,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0219 mid) {
+            mid.RelayNumber = OpenProtocolInterpreter.RelayNumber.OFF;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0219 mid = new OpenProtocolInterpreter.IOInterface.Mid0219(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0219 mid = new OpenProtocolInterpreter.IOInterface.Mid0219(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1673,8 +3499,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0220 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0220 mid = new OpenProtocolInterpreter.IOInterface.Mid0220(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0220 mid = new OpenProtocolInterpreter.IOInterface.Mid0220(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1683,8 +3518,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0221 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
+            mid.DigitalInputStatus = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0221 mid = new OpenProtocolInterpreter.IOInterface.Mid0221(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0221 mid = new OpenProtocolInterpreter.IOInterface.Mid0221(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1693,8 +3538,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0222 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0222 mid = new OpenProtocolInterpreter.IOInterface.Mid0222(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0222 mid = new OpenProtocolInterpreter.IOInterface.Mid0222(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1703,8 +3556,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0223 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0223 mid = new OpenProtocolInterpreter.IOInterface.Mid0223(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0223 mid = new OpenProtocolInterpreter.IOInterface.Mid0223(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1713,8 +3575,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0224 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0224 mid = new OpenProtocolInterpreter.IOInterface.Mid0224(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0224 mid = new OpenProtocolInterpreter.IOInterface.Mid0224(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1723,8 +3594,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0225 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0225 mid = new OpenProtocolInterpreter.IOInterface.Mid0225(-1, 1);
+            OpenProtocolInterpreter.IOInterface.Mid0225 mid = new OpenProtocolInterpreter.IOInterface.Mid0225(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1733,8 +3613,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0240 mid) {
+            mid.UserData = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0240 mid = new OpenProtocolInterpreter.PLCUserData.Mid0240(-1, 1);
+            OpenProtocolInterpreter.PLCUserData.Mid0240 mid = new OpenProtocolInterpreter.PLCUserData.Mid0240(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1743,8 +3632,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0241 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0241 mid = new OpenProtocolInterpreter.PLCUserData.Mid0241(-1, 1);
+            OpenProtocolInterpreter.PLCUserData.Mid0241 mid = new OpenProtocolInterpreter.PLCUserData.Mid0241(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1753,8 +3650,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0242 mid) {
+            mid.UserData = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0242 mid = new OpenProtocolInterpreter.PLCUserData.Mid0242(-1, 1);
+            OpenProtocolInterpreter.PLCUserData.Mid0242 mid = new OpenProtocolInterpreter.PLCUserData.Mid0242(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1763,8 +3669,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0243 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0243 mid = new OpenProtocolInterpreter.PLCUserData.Mid0243(-1, 1);
+            OpenProtocolInterpreter.PLCUserData.Mid0243 mid = new OpenProtocolInterpreter.PLCUserData.Mid0243(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1773,8 +3687,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0244 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0244 mid = new OpenProtocolInterpreter.PLCUserData.Mid0244(-1, 1);
+            OpenProtocolInterpreter.PLCUserData.Mid0244 mid = new OpenProtocolInterpreter.PLCUserData.Mid0244(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1783,8 +3705,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0245 mid) {
+            mid.Offset = -1;
+            mid.UserData = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0245 mid = new OpenProtocolInterpreter.PLCUserData.Mid0245(-1, 1);
+            OpenProtocolInterpreter.PLCUserData.Mid0245 mid = new OpenProtocolInterpreter.PLCUserData.Mid0245(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1793,8 +3725,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0250 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0250 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0250(-1, 1);
+            OpenProtocolInterpreter.ApplicationSelector.Mid0250 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0250(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1803,8 +3743,20 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[SYSTEM.BOOLEAN, MSCORLIB, VERSION=4.0.0.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=B77A5C561934E089]]
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0251 mid) {
+            mid.DeviceId = -1;
+            mid.NumberOfSockets = -1;
+            mid.SocketStatus = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0251 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0251(-1, 1);
+            OpenProtocolInterpreter.ApplicationSelector.Mid0251 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0251(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1813,8 +3765,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0252 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0252 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0252(-1, 1);
+            OpenProtocolInterpreter.ApplicationSelector.Mid0252 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0252(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1823,8 +3783,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0253 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0253 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0253(-1, 1);
+            OpenProtocolInterpreter.ApplicationSelector.Mid0253 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0253(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1833,8 +3801,19 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.LIGHTCOMMAND, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0254 mid) {
+            mid.DeviceId = -1;
+            mid.GreenLights = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0254 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0254(-1, 1);
+            OpenProtocolInterpreter.ApplicationSelector.Mid0254 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0254(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1843,8 +3822,19 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.LIGHTCOMMAND, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0255 mid) {
+            mid.DeviceId = -1;
+            mid.RedLights = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0255 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0255(-1, 1);
+            OpenProtocolInterpreter.ApplicationSelector.Mid0255 mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0255(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1853,8 +3843,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0260 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0260 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0260(-1, 1);
+            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0260 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0260(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1863,8 +3861,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0261 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0261 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0261(-1, 1);
+            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0261 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0261(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1873,8 +3879,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0262 mid) {
+            mid.ToolTagId = "TESTTESTTEST";
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0262 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0262(-1, 1);
+            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0262 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0262(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1883,8 +3898,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0263 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0263 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0263(-1, 1);
+            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0263 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0263(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1893,8 +3916,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0264 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0264 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0264(-1, 1);
+            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0264 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0264(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1903,8 +3934,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0265 mid) {
+            mid.ToolTagId = "TESTTESTTEST";
+            mid.ToolStatus = OpenProtocolInterpreter.ToolStatus.OPERABLE;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0265 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0265(-1, 1);
+            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0265 mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0265(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1913,8 +3954,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ApplicationController.Mid0270 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationController.Mid0270 mid = new OpenProtocolInterpreter.ApplicationController.Mid0270(-1, 1);
+            OpenProtocolInterpreter.ApplicationController.Mid0270 mid = new OpenProtocolInterpreter.ApplicationController.Mid0270(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1923,8 +3972,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Statistic.Mid0300 mid) {
+            mid.ParameterSetId = -1;
+            mid.HistogramType = OpenProtocolInterpreter.HistogramType.TORQUE;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Statistic.Mid0300 mid = new OpenProtocolInterpreter.Statistic.Mid0300(-1, 1);
+            OpenProtocolInterpreter.Statistic.Mid0300 mid = new OpenProtocolInterpreter.Statistic.Mid0300(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1933,8 +3992,30 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Statistic.Mid0301 mid) {
+            mid.ParameterSetId = -1;
+            mid.HistogramType = OpenProtocolInterpreter.HistogramType.TORQUE;
+            mid.SigmaHistogram = -1m;
+            mid.MeanValueHistogram = -1m;
+            mid.ClassRange = -1m;
+            mid.FirstBar = -1;
+            mid.SecondBar = -1;
+            mid.ThirdBar = -1;
+            mid.FourthBar = -1;
+            mid.FifthBar = -1;
+            mid.SixthBar = -1;
+            mid.SeventhBar = -1;
+            mid.EighthBar = -1;
+            mid.NinethBar = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Statistic.Mid0301 mid = new OpenProtocolInterpreter.Statistic.Mid0301(-1, 1);
+            OpenProtocolInterpreter.Statistic.Mid0301 mid = new OpenProtocolInterpreter.Statistic.Mid0301(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1943,8 +4024,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0400 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0400 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0400(-1, 1);
+            OpenProtocolInterpreter.AutomaticManualMode.Mid0400 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0400(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1953,8 +4042,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0401 mid) {
+            mid.ManualAutomaticMode = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0401 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0401(-1, 1);
+            OpenProtocolInterpreter.AutomaticManualMode.Mid0401 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0401(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1963,8 +4061,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0402 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0402 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0402(-1, 1);
+            OpenProtocolInterpreter.AutomaticManualMode.Mid0402 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0402(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1973,8 +4079,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0403 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0403 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0403(-1, 1);
+            OpenProtocolInterpreter.AutomaticManualMode.Mid0403 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0403(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1983,8 +4097,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0410 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0410 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0410(-1, 1);
+            OpenProtocolInterpreter.AutomaticManualMode.Mid0410 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0410(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -1993,8 +4115,18 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0411 mid) {
+            mid.AutoDisableSetting = -1;
+            mid.CurrentBatch = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0411 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0411(-1, 1);
+            OpenProtocolInterpreter.AutomaticManualMode.Mid0411 mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0411(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2003,8 +4135,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0420 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0420 mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0420(-1, 1);
+            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0420 mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0420(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2013,8 +4153,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421 mid) {
+            mid.DigitalInputStatus = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421 mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421(-1, 1);
+            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421 mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2023,8 +4172,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0422 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0422 mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0422(-1, 1);
+            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0422 mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0422(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2033,8 +4190,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0423 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0423 mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0423(-1, 1);
+            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0423 mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0423(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2043,8 +4208,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0500 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0500 mid = new OpenProtocolInterpreter.MotorTuning.Mid0500(-1, 1);
+            OpenProtocolInterpreter.MotorTuning.Mid0500 mid = new OpenProtocolInterpreter.MotorTuning.Mid0500(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2053,8 +4226,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0501 mid) {
+            mid.MotorTuneResult = true;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0501 mid = new OpenProtocolInterpreter.MotorTuning.Mid0501(-1, 1);
+            OpenProtocolInterpreter.MotorTuning.Mid0501 mid = new OpenProtocolInterpreter.MotorTuning.Mid0501(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2063,8 +4245,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0502 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0502 mid = new OpenProtocolInterpreter.MotorTuning.Mid0502(-1, 1);
+            OpenProtocolInterpreter.MotorTuning.Mid0502 mid = new OpenProtocolInterpreter.MotorTuning.Mid0502(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2073,8 +4263,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0503 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0503 mid = new OpenProtocolInterpreter.MotorTuning.Mid0503(-1, 1);
+            OpenProtocolInterpreter.MotorTuning.Mid0503 mid = new OpenProtocolInterpreter.MotorTuning.Mid0503(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2083,8 +4281,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0504 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0504 mid = new OpenProtocolInterpreter.MotorTuning.Mid0504(-1, 1);
+            OpenProtocolInterpreter.MotorTuning.Mid0504 mid = new OpenProtocolInterpreter.MotorTuning.Mid0504(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2093,8 +4299,28 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.RESULT.OBJECTDATA, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.RESULT.VARIABLEDATAFIELD, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.Result.Mid1201 mid) {
+            mid.TotalNumberOfMessages = -1;
+            mid.MessageNumber = -1;
+            mid.ResultDataIdentifier = -1;
+            mid.Time = System.DateTime.MinValue;
+            mid.ResultStatus = true;
+            mid.OperationType = OpenProtocolInterpreter.OperationType.NON_SYNCHRONIZED_TIGHTENING;
+            mid.NumberOfObjects = -1;
+            mid.NumberOfDataFields = -1;
+            mid.ObjectDataList = null;
+            mid.VariableDataFields = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Result.Mid1201 mid = new OpenProtocolInterpreter.Result.Mid1201(-1, 1);
+            OpenProtocolInterpreter.Result.Mid1201 mid = new OpenProtocolInterpreter.Result.Mid1201(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2103,8 +4329,23 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.RESULT.VARIABLEDATAFIELD, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
+        public void setAllProperties(OpenProtocolInterpreter.Result.Mid1202 mid) {
+            mid.TotalNumberOfMessages = -1;
+            mid.MessageNumber = -1;
+            mid.ResultDataIdentifier = -1;
+            mid.ObjectId = -1;
+            mid.NumberOfDataFields = -1;
+            mid.VariableDataFields = null;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Result.Mid1202 mid = new OpenProtocolInterpreter.Result.Mid1202(-1, 1);
+            OpenProtocolInterpreter.Result.Mid1202 mid = new OpenProtocolInterpreter.Result.Mid1202(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2113,8 +4354,16 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.Result.Mid1203 mid) {
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.Result.Mid1203 mid = new OpenProtocolInterpreter.Result.Mid1203(-1, 1);
+            OpenProtocolInterpreter.Result.Mid1203 mid = new OpenProtocolInterpreter.Result.Mid1203(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2123,8 +4372,17 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid2504 mid) {
+            mid.ParameterSetId = -1;
+        }
         void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid2504 mid = new OpenProtocolInterpreter.ParameterSet.Mid2504(-1, 1);
+            OpenProtocolInterpreter.ParameterSet.Mid2504 mid = new OpenProtocolInterpreter.ParameterSet.Mid2504(1);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
     // <summary>test</summary>
@@ -2133,8 +4391,16 @@ namespace tests {
         public void runTests() {
             testRevision0();
         }
+        public void setAllProperties(OpenProtocolInterpreter.KeepAlive.Mid9999 mid) {
+        }
         void testRevision0() {
-            OpenProtocolInterpreter.KeepAlive.Mid9999 mid = new OpenProtocolInterpreter.KeepAlive.Mid9999(-1, 0);
+            OpenProtocolInterpreter.KeepAlive.Mid9999 mid = new OpenProtocolInterpreter.KeepAlive.Mid9999(0);
+            string package;
+
+            this.setAllProperties(mid);
+            package = mid.Pack();
+            System.Diagnostics.Trace.WriteLine(("package = " 
+                            + (package + ".")));
         }
     }
 }
