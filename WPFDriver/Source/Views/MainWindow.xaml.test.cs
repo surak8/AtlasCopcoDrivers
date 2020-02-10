@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 namespace NSAtlasCopcoBreech {
 	public partial class MainWindow {
 		void generateTestsFrom(Assembly asm) {
-#if true0	
+#if true1	
 			new tests.Tester().runTests();
 #else
 			new TestGenerator().generateTestsFor(asm);
@@ -20,7 +20,11 @@ namespace NSAtlasCopcoBreech {
 	class TestGenerator {
 		const BindingFlags bfProps = BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty;
 		const BindingFlags bfCreate = BindingFlags.Public | BindingFlags.CreateInstance | BindingFlags.Instance;
+#if OTHER_VERSION
 		const string CLASS_NAME_REGEX = "^Mid[0-9]+$";
+#else
+		const string CLASS_NAME_REGEX = "^MID_[0-9]+$";
+#endif
 		readonly object[] nullArgs = new object[0];
 		readonly CodeNamespace _ns;
 		readonly CodeCompileUnit _ccu;
@@ -38,7 +42,7 @@ namespace NSAtlasCopcoBreech {
 		}
 		internal void generateTestsFor(Assembly asm) {
 			object obj;
-			CodeMemberMethod m, amethod;
+			CodeMemberMethod amethod;
 			string aname;
 			CodeDomProvider cdp = CodeDomProvider.CreateProvider("c#");
 			_mcommon.Statements.Clear();
@@ -95,7 +99,7 @@ namespace NSAtlasCopcoBreech {
 						testRunnerMethod.Name)));
 			setupTestMethod(midInstance, cdp, midClassToTest, testRunnerMethod);
 		}
-		void setupTestMethod(object midInstance, CodeDomProvider cdp, CodeTypeDeclaration ctd, CodeMemberMethod mrunmTests) {
+		void setupTestMethod(object midInstance, CodeDomProvider cdp, CodeTypeDeclaration ctd, CodeMemberMethod mrunmTests, int revision = -1) {
 			CodeMemberMethod msetProps;
 			CodeArgumentReferenceExpression ar;
 			Type midType = midInstance.GetType();
@@ -106,7 +110,7 @@ namespace NSAtlasCopcoBreech {
 			msetProps.Parameters.Add(
 				new CodeParameterDeclarationExpression(
 					new CodeTypeReference(midType), ar.ParameterName));
-			setPropertiesFor(msetProps, ar, midType);
+			setPropertiesFor(msetProps, ar, midType, revision);
 			generateRevisionTests(midInstance, cdp, ctd, mrunmTests, msetProps);
 		}
 		CodeTypeReference createType(Type midType) {
@@ -120,30 +124,38 @@ namespace NSAtlasCopcoBreech {
 			int revision;
 			Type midType = midInstance.GetType();
 			var avar = midType.InvokeMember("HeaderData", bfProps, null, midInstance, nullArgs);
-			revision = (int)avar.GetType().InvokeMember("Revision", bfProps, null, avar, nullArgs);
+			revision = (int) avar.GetType().InvokeMember("Revision", bfProps, null, avar, nullArgs);
 			if (revision > 1)
 				for (int arev = 1; arev < revision; arev++)
 					generateRevisionTestFor(ctd, mrunmTests, midType, arev, msetProps.Name, cdp, revision > 1);
 			generateRevisionTestFor(ctd, mrunmTests, midType, revision, msetProps.Name, cdp, revision > 1);
 		}
-		void setPropertiesFor(CodeMemberMethod m, CodeArgumentReferenceExpression ar, Type atype) {
+		void setPropertiesFor(CodeMemberMethod m, CodeArgumentReferenceExpression ar, Type atype, int revision) {
 			foreach (PropertyInfo pi in atype.GetProperties(bfProps | BindingFlags.DeclaredOnly)) {
 				if (pi.SetMethod != null && pi.SetMethod.IsPrivate) {
 					m.Statements.AddRange(new CodeStatement[] {
 						new CodeSnippetStatement("/*"),
 						new CodeAssignStatement(
 							new CodeFieldReferenceExpression(ar, pi.Name),
-							makePropertyValue(pi.PropertyType, m)),
+							createParameter(pi,revision,m)
+							//makePropertyValue(pi.PropertyType, m)
+							
+							),
 						new CodeSnippetStatement("*/")
 					});
 				} else {
 					m.Statements.Add(
 						new CodeAssignStatement(
 							new CodeFieldReferenceExpression(ar, pi.Name),
-							makePropertyValue(pi.PropertyType, m)));
+							createParameter(pi, revision, m)
+							//makePropertyValue(pi.PropertyType, m)
+							));
 				}
 			}
 		}
+
+
+		[Obsolete("replace with createParameter", true)]
 		CodeExpression makePropertyValue(Type ptype, CodeMemberMethod m) {
 			CodeExpression ret = new CodePrimitiveExpression();
 			string typename;
@@ -151,7 +163,7 @@ namespace NSAtlasCopcoBreech {
 				case "SYSTEM.STRING": return new CodePrimitiveExpression("TESTTESTTEST");
 				case "SYSTEM.INT32": return new CodePrimitiveExpression(-1);
 				case "SYSTEM.INT64": return new CodePrimitiveExpression(-1);
-				case "SYSTEM.DECIMAL": return new CodePrimitiveExpression((decimal)-1);
+				case "SYSTEM.DECIMAL": return new CodePrimitiveExpression((decimal) -1);
 				case "SYSTEM.BOOLEAN": return new CodePrimitiveExpression(true);
 				case "SYSTEM.DATETIME":
 					return new CodePropertyReferenceExpression(
@@ -173,13 +185,13 @@ namespace NSAtlasCopcoBreech {
 		}
 		static void showCompileUnit(CodeCompileUnit ccu, CodeDomProvider provider) {
 			StringBuilder sb;
-			CodeGeneratorOptions opts = new CodeGeneratorOptions {
-				BlankLinesBetweenMembers = false,
-				ElseOnClosing = true,
-				VerbatimOrder = false
-			};
+			//CodeGeneratorOptions opts = new CodeGeneratorOptions {
+			//	BlankLinesBetweenMembers = false,
+			//	ElseOnClosing = true,
+			//	VerbatimOrder = false
+			//};
 			using (TextWriter tw = new StringWriter(sb = new StringBuilder())) {
-				provider.GenerateCodeFromCompileUnit(ccu, tw, opts);
+				provider.GenerateCodeFromCompileUnit(ccu, tw, options);
 			}
 			string currentPath = Directory.GetCurrentDirectory(), newFilePath, filename;
 			newFilePath = Path.Combine(currentPath, "..\\..", "Source\\Tests");
@@ -205,58 +217,132 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		//void showMethod(CodeMemberMethod m, CodeDomProvider cdp, string msg = null) {
-			void showMethod(CodeMemberMethod m, CodeDomProvider cdp, string msg = null) {
-				StringBuilder sb;
-			CodeGeneratorOptions opts = new CodeGeneratorOptions {
-				BlankLinesBetweenMembers = false,
-				BracingStyle = "BLOCK",
-				ElseOnClosing = true,
-				IndentString = new string(' ', 4),
-				VerbatimOrder = false
-			};
+		void showMethod(CodeMemberMethod m, CodeDomProvider cdp, string msg = null) {
+			StringBuilder sb;
+			//CodeGeneratorOptions opts = new CodeGeneratorOptions {
+			//	BlankLinesBetweenMembers = false,
+			//	BracingStyle = "BLOCK",
+			//	ElseOnClosing = true,
+			//	IndentString = new string(' ', 4),
+			//	VerbatimOrder = false
+			//};
 
 			using (StringWriter sw = new StringWriter(sb = new StringBuilder())) {
-				cdp.GenerateCodeFromMember(m, sw, opts);
+				cdp.GenerateCodeFromMember(m, sw, options);
 			};
 			Trace.WriteLine((string.IsNullOrEmpty(msg) ? string.Empty : (msg + " : ")) + sb.ToString());
 		}
 
 		void generateTestMethod(CodeMemberMethod mm, Type atype, int revision, string setPropMethodName, CodeDomProvider cdp, CodeMemberMethod m, CodeVariableReferenceExpression vr, CodeVariableReferenceExpression vrPkg) {
-			CodeStatementCollection csc = new CodeStatementCollection(), cscResult;
-			csc.AddRange(new CodeStatement[] {
-					new CodeSnippetStatement(),
-					new CodeExpressionStatement(
-						new CodeMethodInvokeExpression(new CodeThisReferenceExpression(),setPropMethodName,vr)),
-					new CodeAssignStatement(vrPkg,new CodeMethodInvokeExpression(vr,"Pack")),
-					new CodeExpressionStatement(
-						new CodeMethodInvokeExpression(
-							//new CodeTypeReferenceExpression (typeof(System.Diagnostics.Trace )),
-							new CodeTypeReferenceExpression (typeof(Trace )),
-							"WriteLine",
-							new CodeBinaryOperatorExpression(
-								new CodePrimitiveExpression("package = "),
-								 CodeBinaryOperatorType.Add ,
-								 new CodeBinaryOperatorExpression(
-								 vrPkg,
-								  CodeBinaryOperatorType.Add,
-								  new CodePrimitiveExpression(".")))))
-			});
+			//CodeStatementCollection csc = new CodeStatementCollection(), cscResult;
+			CodeStatementCollection cscResult;
+						//CodeExpression cePack;
+
+//			csc.AddRange(
+//				new CodeStatement[] {
+//					new CodeSnippetStatement(),
+//					new CodeExpressionStatement(
+//						new CodeMethodInvokeExpression(new CodeThisReferenceExpression(),setPropMethodName,vr)),
+//			});
+//			csc.Add(new CodeSnippetStatement("#error here!"));
+//			csc.AddRange(
+//				new CodeStatement[] {
+
+//#if OTHER_VERSION
+//					new CodeAssignStatement(vrPkg,new CodeMethodInvokeExpression(vr,"Pack")),
+
+//#else
+					
+//					//new CodeCommentStatement("mid.processPackage(package);"),
+//					//new CodeExpressionStatement(
+//					//	new CodeMethodInvokeExpression(vr,"processPackage",vrPkg)),
+//					//new CodeCommentStatement("string s=mid.buildPackage();"),
+//					//new CKCw CodeMethodInvokeExpression(vr,"buildPackage"))
+//					new CodeAssignStatement(vrPkg,new CodeMethodInvokeExpression(vr,"buildPackage"))
+
+
+//#endif
+//							});
+
+//			//showStatements(cdp, csc);
+//			csc.AddRange(
+//				new CodeStatement[] {
+
+//					new CodeExpressionStatement(
+//						new CodeMethodInvokeExpression(
+//							//new CodeTypeReferenceExpression (typeof(System.Diagnostics.Trace )),
+//							new CodeTypeReferenceExpression (typeof(Trace )),
+//							"WriteLine",
+//							new CodeBinaryOperatorExpression(
+//								new CodePrimitiveExpression("package = "),
+//								 CodeBinaryOperatorType.Add ,
+//								 new CodeBinaryOperatorExpression(
+//								 vrPkg,
+//								  CodeBinaryOperatorType.Add,
+//								  new CodePrimitiveExpression(".")))))
+//			});
 #if true
-			cscResult = generateCTORS(atype, vr, vrPkg, setPropMethodName,revision);
+			cscResult = generateCTORS(atype, vr, vrPkg, setPropMethodName, revision, m,cdp);
+			//cscResult.AddRange(csc);
 #else
 			cscResult = generateBestCTOR(mm, atype, revision, cdp, m, vr, csc);
 #endif
 			m.Statements.AddRange(cscResult);
 		}
 
-		CodeStatementCollection generateCTORS(Type midType, CodeVariableReferenceExpression vr, CodeVariableReferenceExpression vrPkg, string setPropMethodName, int revision) {
+		static CodeGeneratorOptions _opts;
+		static CodeGeneratorOptions options {
+			get {
+				if (_opts==null)
+					_opts=new CodeGeneratorOptions{
+						BlankLinesBetweenMembers=false,
+						BracingStyle="BLOCK",
+						ElseOnClosing=true,
+						IndentString=new string(' ',4),
+						VerbatimOrder=false
+					};
+				return _opts;
+			}
+		}
+
+		void showStatements(CodeDomProvider cdp, CodeStatementCollection csc) {
+			if (cdp==null)
+				return;
+			if (csc==null)
+				return;
+			StringBuilder sb;
+			//CodeGeneratorOptions opts=new CodeGeneratorOptions{
+			//	BlankLinesBetweenMembers=false,
+			//	BracingStyle="BLOCK",
+			//	ElseOnClosing=true,
+			//	IndentString=new string(' ',4),
+			//	VerbatimOrder=false
+			//};
+			using (StringWriter sw = new StringWriter(sb=new StringBuilder())) {
+				foreach (CodeStatement cs in csc) {
+					cdp.GenerateCodeFromStatement(cs, sw, options);
+				}
+			}
+			Trace.WriteLine(sb.ToString());
+		}
+
+		CodeStatementCollection generateCTORS(Type midType, CodeVariableReferenceExpression vr, CodeVariableReferenceExpression vrPkg, string setPropMethodName, int revision, CodeTypeMember ctm,CodeDomProvider cdp) {
 			CodeStatementCollection ret = new CodeStatementCollection();
 			CodeStatementCollection testStatements = new CodeStatementCollection();
 			//code
 			CodeVariableReferenceExpression vrMB, vrEx;
+			CodeExpression ce;
+#if OTHER_VERSION
+			const string EXTRACT_METHOD_NAME="Pack";
+#else
+			const string EXTRACT_METHOD_NAME="buildPackage";
+#endif
+
 
 			vrMB = new CodeVariableReferenceExpression("mb");
 			vrEx = new CodeVariableReferenceExpression("ex");
+//#if OTHER_VERSION
+//ce=
 
 			testStatements = new CodeStatementCollection(
 				new CodeStatement[] {
@@ -264,13 +350,13 @@ namespace NSAtlasCopcoBreech {
 						new CodeStatement[] {
 							new CodeExpressionStatement(
 								new CodeMethodInvokeExpression(new CodeThisReferenceExpression(),setPropMethodName, vr)),
-							new CodeAssignStatement(vrPkg,new CodeMethodInvokeExpression(vr,"Pack")),
+							new CodeAssignStatement(vrPkg,new CodeMethodInvokeExpression(vr,EXTRACT_METHOD_NAME)),
 							new CodeExpressionStatement(
 								new CodeMethodInvokeExpression(
 									new CodeTypeReferenceExpression ("Trace"),
 									"WriteLine",
 									new CodeBinaryOperatorExpression(
-										new CodePrimitiveExpression("package = "),
+										new CodePrimitiveExpression(vrPkg.VariableName+" = "),
 										 CodeBinaryOperatorType.Add ,
 										 new CodeBinaryOperatorExpression(
 										 vrPkg,
@@ -281,7 +367,7 @@ namespace NSAtlasCopcoBreech {
 							new CodeCatchClause(
 								vrEx.VariableName,
 								new CodeTypeReference(typeof(Exception)),
-								new CodeStatement[] { 
+								new CodeStatement[] {
 									createVarDef(vrMB,typeof(MethodBase),
 										invokeMethod(typeof(MethodBase),"GetCurrentMethod")),
 									new CodeCommentStatement("catch-1"),
@@ -307,7 +393,7 @@ namespace NSAtlasCopcoBreech {
 												new CodePropertyReferenceExpression(
 													new CodeTypeReferenceExpression(typeof(Environment)),"NewLine"),
 												new CodePropertyReferenceExpression(vrEx,"StackTrace")
-											})))
+											},cdp)))
 								}) },
 						new CodeStatement[] {
 								new CodeCommentStatement("finally")
@@ -316,86 +402,139 @@ namespace NSAtlasCopcoBreech {
 				});
 
 			foreach (ConstructorInfo cc in midType.GetConstructors())
-				addCTOR(cc, ret, vr, vrPkg, midType, testStatements, revision);
+				addCTOR(cc, ret, vr, vrPkg, midType, testStatements, revision, ctm);
 			return ret;
 		}
 
-		static CodeVariableDeclarationStatement createVarDef(CodeVariableReferenceExpression vr,Type t,CodeExpression ceInit) {
+		static CodeVariableDeclarationStatement createVarDef(CodeVariableReferenceExpression vr, Type t, CodeExpression ceInit) {
 			return new CodeVariableDeclarationStatement(
 				t,
 				vr.VariableName,
 				ceInit);
-	//new CodeMethodInvokeExpression(
-	//new CodeTypeReferenceExpression(t),
-	//"GetCurrentMethod"));
+			//new CodeMethodInvokeExpression(
+			//new CodeTypeReferenceExpression(t),
+			//"GetCurrentMethod"));
 		}
-		static CodeExpression invokeMethod(Type t,string mname) {
+		static CodeExpression invokeMethod(Type t, string mname) {
 			return new CodeMethodInvokeExpression(new CodeTypeReferenceExpression(t), mname);
 		}
 
-		CodeExpression makeExpressionVector(CodeExpression[] exprs) {
-			CodeBinaryOperatorExpression cboe = null;
-			CodeExpression ret = null;
+		CodeExpression makeExpressionVector(CodeExpression[] exprs,CodeDomProvider cdp) {
+			//CodeBinaryOperatorExpression cboe = null;
+			CodeExpression ret = null,tmp=null;
 			int n;
 
-			if (exprs != null && (n=exprs.Length ) > 0) {
-				if (n > 1) {
-
-				} else if (n > 0)
-					ret = exprs[0];
-					//return null;
-				//if (n == 1)
-				//	return exprs[0];
-
+			if (exprs != null && (n=exprs.Length) > 0) {
+				if (n==1)
+					ret=exprs[0];
+				else {
+					// create a recursive CodeBinaryOperatorExpression
+					ret=exprs[0];
+					for (int i = n-2; i>0; --i) {
+						//Trace.WriteLine("here");
+						if (tmp==null)
+							tmp=new CodeBinaryOperatorExpression(exprs[i], CodeBinaryOperatorType.Add, exprs[i+1]);
+						else {
+							//Trace.WriteLine("here");
+							tmp=new CodeBinaryOperatorExpression(exprs[0], CodeBinaryOperatorType.Add, tmp);
+						}
+					}
+					//Trace.WriteLine("here");
+					if (tmp!=null)
+						ret=tmp;
+				}
 			}
-			//foreach(CodeExpression ce in exprs) {
-			//	if (cboe==null)
 
-			//}
-			//return new CodeExpression();
+			if (ret==null)
+				return new CodeSnippetExpression("#warning "+
+					MethodBase.GetCurrentMethod().ReflectedType.Name+"."+
+					MethodBase.GetCurrentMethod().Name+": ACK!");
+			else {
+				showExpressions(cdp, exprs);
+				showExpression(cdp, ret);
+			}
 			return ret;
 		}
-		void addCTOR(ConstructorInfo cc, CodeStatementCollection ret, CodeVariableReferenceExpression vr, CodeVariableReferenceExpression vrPkg, Type midType, CodeStatementCollection testStatements, int revision) {
+
+		void showExpression(CodeDomProvider cdp, CodeExpression ret) {
+			//StringBuilder sb;
+
+			if (cdp==null)
+				return;
+			showExpressions(cdp, new CodeExpression[] { ret });
+		}
+
+		void showExpressions(CodeDomProvider cdp, CodeExpression[] exprs) {
+			StringBuilder sb;
+
+			if (exprs==null)
+				return;
+			using (StringWriter sw = new StringWriter(sb=new StringBuilder())) {
+				foreach (CodeExpression ce in exprs)
+					cdp.GenerateCodeFromExpression(ce, sw, options);
+			}
+			Trace.WriteLine(sb.ToString());
+		}
+
+		void addCTOR(ConstructorInfo cc, CodeStatementCollection ret, CodeVariableReferenceExpression vr, CodeVariableReferenceExpression vrPkg, Type midType, CodeStatementCollection testStatements, int revision, CodeTypeMember ctm) {
 			ParameterInfo[] parms;
 			CodeExpressionCollection ceCtor = new CodeExpressionCollection();
 
-			if ((parms = cc.GetParameters()).Length != 0) {
+			parms=cc.GetParameters();
+			//if ((parms = cc.GetParameters()).Length != 0) {
 				ret.Add(new CodeCommentStatement("Revision " + revision + "."));
-				ret.Add(new CodeAssignStatement(vr, createObj(new CodeTypeReference(midType), parms,revision)));
+				ret.Add(new CodeAssignStatement(vr, createObj(new CodeTypeReference(midType), parms, revision, ctm)));
 				ret.AddRange(testStatements);
-			}
+			//}
 		}
 
-		CodeExpression createObj(CodeTypeReference ctr, ParameterInfo[] parms, int revision) {
+		CodeExpression createObj(CodeTypeReference ctr, ParameterInfo[] parms, int revision, CodeTypeMember ctm) {
 			CodeObjectCreateExpression ret = new CodeObjectCreateExpression(ctr);
 			//CodeExpressionCollection cec = new CodeExpressionCollection();
 
 			foreach (ParameterInfo aparm in parms)
-				ret.Parameters.Add(createParameter(aparm,revision));
+				ret.Parameters.Add(createParameter(aparm, revision, ctm));
 			//ret.Parameters.AddRange(cec);
 			return ret;
 		}
 
-		static readonly CodeExpression nullParm = new CodePrimitiveExpression();
-		static readonly IDictionary<Type, CodeExpression> parmMap = new Dictionary<Type, CodeExpression>(
-			);
-		CodeExpression createParameter(ParameterInfo aparm, int revision) {
-			Type ptype = aparm.ParameterType;
-			//Trace.WriteLine("here");
 
-			if (string.Compare(aparm.Name, "revision", true) == 0)
+		static readonly CodeExpression nullParm = new CodePrimitiveExpression();
+		static readonly IDictionary<Type, CodeExpression> parmMap = new Dictionary<Type, CodeExpression>(           );
+
+		CodeExpression createParameter(ParameterInfo aparm, int revision, CodeTypeMember ctm) {
+			return createParameter(aparm.Name, aparm.ParameterType, revision, ctm);
+		}
+
+		CodeExpression createParameter(PropertyInfo pi, int revision, CodeTypeMember ctm) {
+			return createParameter(pi.Name, pi.PropertyType, revision, ctm);
+		}
+
+		//  CodeExpression createParameter(string name, Type propertyType,int revision) {
+		//	return createParameter(name, propertyType, revision);
+		//}
+
+		//CodeExpression createParameter3(ParameterInfo aparm, int revision) {
+		CodeExpression createParameter(string parmName, Type ptype, int revision, CodeTypeMember ctm) {
+			//Type ptype = aparm.ParameterType;
+			//Trace.WriteLine("here");
+			string errMsg;
+
+			if (string.Compare(parmName, "revision", true) == 0)
 				return new CodePrimitiveExpression(revision);
 			if (!parmMap.ContainsKey(ptype)) {
 				if (ptype.Equals(typeof(string)))
 					parmMap.Add(ptype, new CodePrimitiveExpression("STRING"));
 				else if (ptype.Equals(typeof(int)))
 					parmMap.Add(ptype, new CodePrimitiveExpression(0));
+				else if (ptype.Equals(typeof(double)))
+					parmMap.Add(ptype, new CodePrimitiveExpression(0));
 				else if (ptype.Equals(typeof(long)))
-					parmMap.Add(ptype, new CodePrimitiveExpression((long)0));
+					parmMap.Add(ptype, new CodePrimitiveExpression((long) 0));
 				else if (ptype.Equals(typeof(bool)))
 					parmMap.Add(ptype, new CodePrimitiveExpression(false));
 				else if (ptype.Equals(typeof(decimal)))
-					parmMap.Add(ptype, new CodePrimitiveExpression((decimal)0));
+					parmMap.Add(ptype, new CodePrimitiveExpression((decimal) 0));
 				else if (ptype.Equals(typeof(DateTime)))
 					parmMap.Add(ptype,
 						new CodeFieldReferenceExpression(
@@ -424,8 +563,25 @@ namespace NSAtlasCopcoBreech {
 					}
 				}
 				if (!parmMap.ContainsKey(ptype)) {
-					Trace.WriteLine("unknown type: " + ptype.FullName + "!");
-					parmMap.Add(ptype, nullParm);
+					bool addAsNull=true;
+
+					if (ptype.IsClass) {
+						if (ptype.FullName.Contains("+")) {
+							errMsg="adding unknown type: (inner class)" + ptype.FullName + "!";
+							if (ctm!=null)
+								ctm.Comments.Add(new CodeCommentStatement(errMsg));
+							Trace.WriteLine(errMsg);
+							parmMap.Add(ptype, new CodeObjectCreateExpression(ptype));
+							addAsNull=false;
+						}
+					}
+					if (addAsNull) {
+						errMsg="adding NULL for unknown type: " + ptype.FullName + "!";
+						if (ctm!=null)
+							ctm.Comments.Add(new CodeCommentStatement(errMsg));
+						Trace.WriteLine(errMsg);
+						parmMap.Add(ptype, nullParm);
+					}
 				}
 
 			}
@@ -495,13 +651,13 @@ namespace NSAtlasCopcoBreech {
 									ctorFound = true;
 								} else {
 									Trace.WriteLine("not INT / revision!" + Environment.NewLine + "have " + cdp.GetTypeOutput(new CodeTypeReference(ptype)) + ".");
-									addPossibleCTORComment(cscRet, ci, mm, cdp, vr);
+									addPossibleCTORComment(cscRet, ci, mm, cdp, vr, revision);
 								}
 							}
 						}
 					} else {
 						Trace.WriteLine("have " + nparms + " parameters.");
-						addPossibleCTORComment(cscRet, ci, m, cdp, vr);
+						addPossibleCTORComment(cscRet, ci, m, cdp, vr, revision);
 					}
 				}
 				if (ctorFound)
@@ -537,11 +693,13 @@ namespace NSAtlasCopcoBreech {
 				cs.EndDirectives.Add(new CodeRegionDirective(CodeRegionMode.End, v));
 			}
 		}
-		void addPossibleCTORComment(CodeStatementCollection csc, ConstructorInfo ci, CodeMemberMethod m, CodeDomProvider cdp, CodeVariableReferenceExpression vr) {
+		void addPossibleCTORComment(CodeStatementCollection csc, ConstructorInfo ci, CodeMemberMethod m, CodeDomProvider cdp, CodeVariableReferenceExpression vr, int revision) {
 			StringBuilder sb = new StringBuilder();
 			ParameterInfo[] parms;
 			CodeExpressionCollection cecParms = new CodeExpressionCollection();
 			CodeObjectCreateExpression coce;
+			CodeExpression ceTmp;
+
 			parms = ci.GetParameters();
 			sb.Append("possible ctor: ");
 			sb.Append(ci.DeclaringType.FullName);
@@ -551,7 +709,11 @@ namespace NSAtlasCopcoBreech {
 					sb.Append(", ");
 				}
 				sb.Append(cdp.GetTypeOutput(new CodeTypeReference(parms[i].ParameterType)) + " " + parms[i].Name);
-				cecParms.Add(makePropertyValue(parms[i].ParameterType, m));
+				ceTmp=createParameter(parms[i], revision, m);
+				Trace.WriteLine("fix this");
+				// add the result 
+				//cecParms.Add(makePropertyValue(parms[i].ParameterType, m));
+				//cecParms.Add(createParameter(parms[i].ParameterType, m));
 			}
 			sb.Append(")");
 			csc.Add(new CodeCommentStatement(sb.ToString()));

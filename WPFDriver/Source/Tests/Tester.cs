@@ -13,168 +13,161 @@ namespace tests {
     
     public class Tester {
         public void runTests() {
-            new TestMid0001().runTests();
-            new TestMid0002().runTests();
-            new TestMid0003().runTests();
-            new TestMid0004().runTests();
-            new TestMid0005().runTests();
-            new TestMid0006().runTests();
-            new TestMid0008().runTests();
-            new TestMid0010().runTests();
-            new TestMid0011().runTests();
-            new TestMid0012().runTests();
-            new TestMid0013().runTests();
-            new TestMid0014().runTests();
-            new TestMid0015().runTests();
-            new TestMid0016().runTests();
-            new TestMid0017().runTests();
-            new TestMid0018().runTests();
-            new TestMid0019().runTests();
-            new TestMid0020().runTests();
-            new TestMid0021().runTests();
-            new TestMid0022().runTests();
-            new TestMid0023().runTests();
-            new TestMid0024().runTests();
-            new TestMid0030().runTests();
-            new TestMid0031().runTests();
-            new TestMid0032().runTests();
-            new TestMid0033().runTests();
-            new TestMid0034().runTests();
-            new TestMid0035().runTests();
-            new TestMid0036().runTests();
-            new TestMid0037().runTests();
-            new TestMid0038().runTests();
-            new TestMid0039().runTests();
-            new TestMid0040().runTests();
-            new TestMid0041().runTests();
-            new TestMid0042().runTests();
-            new TestMid0043().runTests();
-            new TestMid0044().runTests();
-            new TestMid0045().runTests();
-            new TestMid0046().runTests();
-            new TestMid0047().runTests();
-            new TestMid0048().runTests();
-            new TestMid0050().runTests();
-            new TestMid0051().runTests();
-            new TestMid0052().runTests();
-            new TestMid0053().runTests();
-            new TestMid0054().runTests();
-            new TestMid0060().runTests();
-            new TestMid0061().runTests();
-            new TestMid0062().runTests();
-            new TestMid0063().runTests();
-            new TestMid0064().runTests();
-            new TestMid0065().runTests();
-            new TestMid0070().runTests();
-            new TestMid0071().runTests();
-            new TestMid0072().runTests();
-            new TestMid0073().runTests();
-            new TestMid0074().runTests();
-            new TestMid0075().runTests();
-            new TestMid0076().runTests();
-            new TestMid0077().runTests();
-            new TestMid0078().runTests();
-            new TestMid0080().runTests();
-            new TestMid0081().runTests();
-            new TestMid0082().runTests();
-            new TestMid0090().runTests();
-            new TestMid0091().runTests();
-            new TestMid0092().runTests();
-            new TestMid0093().runTests();
-            new TestMid0105().runTests();
-            new TestMid0106().runTests();
-            new TestMid0107().runTests();
-            new TestMid0108().runTests();
-            new TestMid0109().runTests();
-            new TestMid0110().runTests();
-            new TestMid0111().runTests();
-            new TestMid0113().runTests();
-            new TestMid0120().runTests();
-            new TestMid0121().runTests();
-            new TestMid0122().runTests();
-            new TestMid0123().runTests();
-            new TestMid0124().runTests();
-            new TestMid0125().runTests();
-            new TestMid0126().runTests();
-            new TestMid0127().runTests();
-            new TestMid0128().runTests();
-            new TestMid0129().runTests();
-            new TestMid0130().runTests();
-            new TestMid0131().runTests();
-            new TestMid0132().runTests();
-            new TestMid0133().runTests();
-            new TestMid0140().runTests();
-            new TestMid0150().runTests();
-            new TestMid0151().runTests();
-            new TestMid0152().runTests();
-            new TestMid0153().runTests();
-            new TestMid0154().runTests();
-            new TestMid0155().runTests();
-            new TestMid0156().runTests();
-            new TestMid0157().runTests();
-            new TestMid0200().runTests();
-            new TestMid0210().runTests();
-            new TestMid0211().runTests();
-            new TestMid0212().runTests();
-            new TestMid0213().runTests();
-            new TestMid0214().runTests();
-            new TestMid0215().runTests();
-            new TestMid0216().runTests();
-            new TestMid0217().runTests();
-            new TestMid0218().runTests();
-            new TestMid0219().runTests();
-            new TestMid0220().runTests();
-            new TestMid0221().runTests();
-            new TestMid0222().runTests();
-            new TestMid0223().runTests();
-            new TestMid0224().runTests();
-            new TestMid0225().runTests();
-            new TestMid0240().runTests();
-            new TestMid0241().runTests();
-            new TestMid0242().runTests();
-            new TestMid0243().runTests();
-            new TestMid0244().runTests();
-            new TestMid0245().runTests();
-            new TestMid0250().runTests();
-            new TestMid0251().runTests();
-            new TestMid0252().runTests();
-            new TestMid0253().runTests();
-            new TestMid0254().runTests();
-            new TestMid0255().runTests();
-            new TestMid0260().runTests();
-            new TestMid0261().runTests();
-            new TestMid0262().runTests();
-            new TestMid0263().runTests();
-            new TestMid0264().runTests();
-            new TestMid0265().runTests();
-            new TestMid0270().runTests();
-            new TestMid0300().runTests();
-            new TestMid0301().runTests();
-            new TestMid0400().runTests();
-            new TestMid0401().runTests();
-            new TestMid0402().runTests();
-            new TestMid0403().runTests();
-            new TestMid0410().runTests();
-            new TestMid0411().runTests();
-            new TestMid0420().runTests();
-            new TestMid0421().runTests();
-            new TestMid0422().runTests();
-            new TestMid0423().runTests();
-            new TestMid0500().runTests();
-            new TestMid0501().runTests();
-            new TestMid0502().runTests();
-            new TestMid0503().runTests();
-            new TestMid0504().runTests();
-            new TestMid1201().runTests();
-            new TestMid1202().runTests();
-            new TestMid1203().runTests();
-            new TestMid2504().runTests();
-            new TestMid9999().runTests();
+            new TestMID_0001().runTests();
+            new TestMID_0002().runTests();
+            new TestMID_0003().runTests();
+            new TestMID_0004().runTests();
+            new TestMID_0005().runTests();
+            new TestMID_0006().runTests();
+            new TestMID_0010().runTests();
+            new TestMID_0011().runTests();
+            new TestMID_0012().runTests();
+            new TestMID_0013().runTests();
+            new TestMID_0014().runTests();
+            new TestMID_0015().runTests();
+            new TestMID_0016().runTests();
+            new TestMID_0017().runTests();
+            new TestMID_0018().runTests();
+            new TestMID_0019().runTests();
+            new TestMID_0020().runTests();
+            new TestMID_0021().runTests();
+            new TestMID_0022().runTests();
+            new TestMID_0023().runTests();
+            new TestMID_0024().runTests();
+            new TestMID_0030().runTests();
+            new TestMID_0031().runTests();
+            new TestMID_0032().runTests();
+            new TestMID_0033().runTests();
+            new TestMID_0034().runTests();
+            new TestMID_0035().runTests();
+            new TestMID_0036().runTests();
+            new TestMID_0037().runTests();
+            new TestMID_0038().runTests();
+            new TestMID_0040().runTests();
+            new TestMID_0041().runTests();
+            new TestMID_0042().runTests();
+            new TestMID_0043().runTests();
+            new TestMID_0044().runTests();
+            new TestMID_0045().runTests();
+            new TestMID_0046().runTests();
+            new TestMID_0047().runTests();
+            new TestMID_0048().runTests();
+            new TestMID_0050().runTests();
+            new TestMID_0051().runTests();
+            new TestMID_0052().runTests();
+            new TestMID_0053().runTests();
+            new TestMID_0054().runTests();
+            new TestMID_0060().runTests();
+            new TestMID_0061().runTests();
+            new TestMID_0062().runTests();
+            new TestMID_0063().runTests();
+            new TestMID_0064().runTests();
+            new TestMID_0065().runTests();
+            new TestMID_0070().runTests();
+            new TestMID_0071().runTests();
+            new TestMID_0072().runTests();
+            new TestMID_0073().runTests();
+            new TestMID_0074().runTests();
+            new TestMID_0075().runTests();
+            new TestMID_0076().runTests();
+            new TestMID_0077().runTests();
+            new TestMID_0078().runTests();
+            new TestMID_0080().runTests();
+            new TestMID_0081().runTests();
+            new TestMID_0082().runTests();
+            new TestMID_0090().runTests();
+            new TestMID_0091().runTests();
+            new TestMID_0092().runTests();
+            new TestMID_0105().runTests();
+            new TestMID_0106().runTests();
+            new TestMID_0107().runTests();
+            new TestMID_0108().runTests();
+            new TestMID_0109().runTests();
+            new TestMID_0110().runTests();
+            new TestMID_0111().runTests();
+            new TestMID_0113().runTests();
+            new TestMID_0120().runTests();
+            new TestMID_0121().runTests();
+            new TestMID_0122().runTests();
+            new TestMID_0123().runTests();
+            new TestMID_0124().runTests();
+            new TestMID_0125().runTests();
+            new TestMID_0126().runTests();
+            new TestMID_0127().runTests();
+            new TestMID_0128().runTests();
+            new TestMID_0129().runTests();
+            new TestMID_0130().runTests();
+            new TestMID_0131().runTests();
+            new TestMID_0132().runTests();
+            new TestMID_0133().runTests();
+            new TestMID_0140().runTests();
+            new TestMID_0150().runTests();
+            new TestMID_0151().runTests();
+            new TestMID_0152().runTests();
+            new TestMID_0153().runTests();
+            new TestMID_0154().runTests();
+            new TestMID_0155().runTests();
+            new TestMID_0156().runTests();
+            new TestMID_0157().runTests();
+            new TestMID_0200().runTests();
+            new TestMID_0210().runTests();
+            new TestMID_0211().runTests();
+            new TestMID_0212().runTests();
+            new TestMID_0213().runTests();
+            new TestMID_0214().runTests();
+            new TestMID_0216().runTests();
+            new TestMID_0217().runTests();
+            new TestMID_0218().runTests();
+            new TestMID_0219().runTests();
+            new TestMID_0220().runTests();
+            new TestMID_0221().runTests();
+            new TestMID_0222().runTests();
+            new TestMID_0223().runTests();
+            new TestMID_0224().runTests();
+            new TestMID_0225().runTests();
+            new TestMID_0240().runTests();
+            new TestMID_0241().runTests();
+            new TestMID_0242().runTests();
+            new TestMID_0243().runTests();
+            new TestMID_0244().runTests();
+            new TestMID_0245().runTests();
+            new TestMID_0250().runTests();
+            new TestMID_0251().runTests();
+            new TestMID_0252().runTests();
+            new TestMID_0253().runTests();
+            new TestMID_0254().runTests();
+            new TestMID_0255().runTests();
+            new TestMID_0260().runTests();
+            new TestMID_0261().runTests();
+            new TestMID_0262().runTests();
+            new TestMID_0263().runTests();
+            new TestMID_0264().runTests();
+            new TestMID_0265().runTests();
+            new TestMID_0270().runTests();
+            new TestMID_0300().runTests();
+            new TestMID_0301().runTests();
+            new TestMID_0400().runTests();
+            new TestMID_0401().runTests();
+            new TestMID_0402().runTests();
+            new TestMID_0403().runTests();
+            new TestMID_0410().runTests();
+            new TestMID_0411().runTests();
+            new TestMID_0420().runTests();
+            new TestMID_0421().runTests();
+            new TestMID_0422().runTests();
+            new TestMID_0423().runTests();
+            new TestMID_0500().runTests();
+            new TestMID_0501().runTests();
+            new TestMID_0502().runTests();
+            new TestMID_0503().runTests();
+            new TestMID_0504().runTests();
+            new TestMID_2504().runTests();
+            new TestMID_9999().runTests();
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Communication.Mid0001</para></remarks>
-    public class TestMid0001 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Communication.MID_0001</para></remarks>
+    public class TestMID_0001 {
         public void runTests() {
             testRevision1();
             testRevision2();
@@ -182,24 +175,47 @@ namespace tests {
             testRevision4();
             testRevision5();
         }
-        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0001 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Communication.MID_0001 mid) {
         }
         void testRevision1() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0001 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0001 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0001(1);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001(1);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -207,20 +223,43 @@ namespace tests {
         }
         void testRevision2() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0001 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0001 mid;
             string package;
 
             // Revision 2.
-            mid = new OpenProtocolInterpreter.Communication.Mid0001(2);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 2.
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001(2);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -228,20 +267,43 @@ namespace tests {
         }
         void testRevision3() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0001 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0001 mid;
             string package;
 
             // Revision 3.
-            mid = new OpenProtocolInterpreter.Communication.Mid0001(3);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 3.
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001(3);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -249,20 +311,43 @@ namespace tests {
         }
         void testRevision4() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0001 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0001 mid;
             string package;
 
             // Revision 4.
-            mid = new OpenProtocolInterpreter.Communication.Mid0001(4);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 4.
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001(4);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -270,713 +355,43 @@ namespace tests {
         }
         void testRevision5() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0001 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0001 mid;
             string package;
 
             // Revision 5.
-            mid = new OpenProtocolInterpreter.Communication.Mid0001(5);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Communication.Mid0002</para></remarks>
-    public class TestMid0002 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-            testRevision5();
-            testRevision6();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0002 mid) {
-            mid.CellId = -1;
-            mid.ChannelId = -1;
-            mid.ControllerName = "TESTTESTTEST";
-            mid.SupplierCode = "TESTTESTTEST";
-            mid.OpenProtocolVersion = "TESTTESTTEST";
-            mid.ControllerSoftwareVersion = "TESTTESTTEST";
-            mid.ToolSoftwareVersion = "TESTTESTTEST";
-            mid.RBUType = "TESTTESTTEST";
-            mid.ControllerSerialNumber = "TESTTESTTEST";
-            mid.SystemType = OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET;
-            mid.SystemSubType = OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS;
-            mid.SequenceNumberSupport = true;
-            mid.LinkingHandlingSupport = true;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0002 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, false, false, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0002 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, false, false, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0002 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, false, false, 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0002 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, false, false, 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision5() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0002 mid;
-            string package;
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 5.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", 5);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0001(5);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, false, false, 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision6() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Communication.Mid0002 mid;
-            string package;
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", 6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", 6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", 6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", 6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, 6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Communication.Mid0002(0, 0, "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", OpenProtocolInterpreter.SystemType.SYSTEM_TYPE_NOT_SET, OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS, false, false, 6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -984,3437 +399,8 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Communication.Mid0003</para></remarks>
-    public class TestMid0003 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0003 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0003 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Communication.Mid0004</para></remarks>
-    public class TestMid0004 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0004 mid) {
-            mid.FailedMid = -1;
-            mid.ErrorCode = OpenProtocolInterpreter.Error.NO_ERROR;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0004 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0004(0, OpenProtocolInterpreter.Error.NO_ERROR);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Communication.Mid0005</para></remarks>
-    public class TestMid0005 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0005 mid) {
-            mid.MidAccepted = -1;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0005 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0005(0);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Communication.Mid0006</para></remarks>
-    public class TestMid0006 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0006 mid) {
-            mid.RequestedMid = "TESTTESTTEST";
-            mid.WantedRevision = -1;
-            mid.ExtraDataLength = -1;
-            mid.ExtraData = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0006 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0006("STRING", 0, "STRING");
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Communication.Mid0008</para></remarks>
-    public class TestMid0008 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Communication.Mid0008 mid) {
-            mid.SubscriptionMid = "TESTTESTTEST";
-            mid.WantedRevision = -1;
-            mid.ExtraDataLength = -1;
-            mid.ExtraData = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Communication.Mid0008 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Communication.Mid0008("STRING", 0, "STRING");
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0010</para></remarks>
-    public class TestMid0010 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0010 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0010 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0010(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0010 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0010(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0010 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0010(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0011</para></remarks>
-    public class TestMid0011 {
-        public void runTests() {
-            testRevision1();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[SYSTEM.INT32, MSCORLIB, VERSION=4.0.0.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=B77A5C561934E089]]
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0011 mid) {
-/*
-            mid.TotalParameterSets = -1;
-*/
-            mid.ParameterSets = new System.Collections.Generic.List<int>();
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0011 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0011(new int[1]);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0012</para></remarks>
-    public class TestMid0012 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0012 mid) {
-            mid.ParameterSetId = -1;
-            mid.ParameterSetFileVersion = -1;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0012 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(0, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(0, 0, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0012 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(0, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(0, 0, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0012 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(0, 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(0, 0, 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0012 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(0, 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0012(0, 0, 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0013</para></remarks>
-    public class TestMid0013 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0013 mid) {
-            mid.ParameterSetId = -1;
-            mid.ParameterSetName = "TESTTESTTEST";
-            mid.RotationDirection = OpenProtocolInterpreter.RotationDirection.CLOCKWISE;
-            mid.BatchSize = -1;
-            mid.MinTorque = -1m;
-            mid.MaxTorque = -1m;
-            mid.TorqueFinalTarget = -1m;
-            mid.MinAngle = -1;
-            mid.MaxAngle = -1;
-            mid.AngleFinalTarget = -1;
-            mid.FirstTarget = -1m;
-            mid.StartFinalAngle = -1m;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0013 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(0, "STRING", OpenProtocolInterpreter.RotationDirection.CLOCKWISE, 0, 0m, 0m, 0m, 0, 0, 0, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(0, "STRING", OpenProtocolInterpreter.RotationDirection.CLOCKWISE, 0, 0m, 0m, 0m, 0, 0, 0, 0m, 0m, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0013 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(0, "STRING", OpenProtocolInterpreter.RotationDirection.CLOCKWISE, 0, 0m, 0m, 0m, 0, 0, 0, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0013(0, "STRING", OpenProtocolInterpreter.RotationDirection.CLOCKWISE, 0, 0m, 0m, 0m, 0, 0, 0, 0m, 0m, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0014</para></remarks>
-    public class TestMid0014 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0014 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0014 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0014(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0015</para></remarks>
-    public class TestMid0015 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0015 mid) {
-            mid.ParameterSetId = -1;
-            mid.LastChangeInParameterSet = System.DateTime.MinValue;
-            mid.ParameterSetName = "TESTTESTTEST";
-            mid.RotationDirection = OpenProtocolInterpreter.RotationDirection.CLOCKWISE;
-            mid.BatchSize = -1;
-            mid.MinTorque = -1m;
-            mid.MaxTorque = -1m;
-            mid.TorqueFinalTarget = -1m;
-            mid.MinAngle = -1;
-            mid.MaxAngle = -1;
-            mid.AngleFinalTarget = -1;
-            mid.FirstTarget = -1m;
-            mid.StartFinalAngle = -1m;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0015 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(0, System.DateTime.Now, null, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(0, "STRING", System.DateTime.Now, OpenProtocolInterpreter.RotationDirection.CLOCKWISE, 0, 0m, 0m, 0m, 0, 0, 0, 0m, 0m, null, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.ParameterSet.Mid0015 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(0, System.DateTime.Now, null, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0015(0, "STRING", System.DateTime.Now, OpenProtocolInterpreter.RotationDirection.CLOCKWISE, 0, 0m, 0m, 0m, 0, 0, 0, 0m, 0m, null, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0016</para></remarks>
-    public class TestMid0016 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0016 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0016 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0017</para></remarks>
-    public class TestMid0017 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0017 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0017 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0018</para></remarks>
-    public class TestMid0018 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0018 mid) {
-            mid.ParameterSetId = -1;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0018 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0018(0);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0019</para></remarks>
-    public class TestMid0019 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0019 mid) {
-            mid.ParameterSetId = -1;
-            mid.BatchSize = -1;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0019 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0019(0, 0);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0020</para></remarks>
-    public class TestMid0020 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0020 mid) {
-            mid.ParameterSetId = -1;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0020 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0020(0);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0021</para></remarks>
-    public class TestMid0021 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0021 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0021 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0021(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0022</para></remarks>
-    public class TestMid0022 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0022 mid) {
-            mid.RelayStatus = true;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0022 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0022(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid0022(false, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0023</para></remarks>
-    public class TestMid0023 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0023 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0023 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid0024</para></remarks>
-    public class TestMid0024 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid0024 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid0024 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0030</para></remarks>
-    public class TestMid0030 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0030 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0030 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0030(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0030 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0030(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0031</para></remarks>
-    public class TestMid0031 {
-        public void runTests() {
-            testRevision1();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[SYSTEM.INT32, MSCORLIB, VERSION=4.0.0.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=B77A5C561934E089]]
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0031 mid) {
-/*
-            mid.TotalJobs = -1;
-*/
-            mid.JobIds = new System.Collections.Generic.List<int>();
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Mid0031 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0031(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0031(0, new int[1], 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0032</para></remarks>
-    public class TestMid0032 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0032 mid) {
-            mid.JobId = -1;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0032 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0032(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0032(0, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0032 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0032(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0032(0, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0032 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0032(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0032(0, 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0033</para></remarks>
-    public class TestMid0033 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.JOB.PARAMETERSET, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0033 mid) {
-            mid.JobId = -1;
-            mid.JobName = "TESTTESTTEST";
-            mid.ForcedOrder = OpenProtocolInterpreter.ForcedOrder.FREE_ORDER;
-            mid.MaxTimeForFirstTightening = -1;
-            mid.MaxTimeToCompleteJob = -1;
-            mid.JobBatchMode = OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS;
-            mid.LockAtJobDone = true;
-            mid.UseLineControl = true;
-            mid.RepeatJob = true;
-            mid.ToolLoosening = OpenProtocolInterpreter.ToolLoosening.ENABLED;
-            mid.Reserved = OpenProtocolInterpreter.Reserved.E;
-            mid.NumberOfParameterSets = -1;
-            mid.ParameterSetList = new System.Collections.Generic.List<OpenProtocolInterpreter.Job.ParameterSet>();
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0033 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0033(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0033(0, "STRING", OpenProtocolInterpreter.ForcedOrder.FREE_ORDER, 0, 0, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, false, false, false, OpenProtocolInterpreter.ToolLoosening.ENABLED, OpenProtocolInterpreter.Reserved.E, 0, new OpenProtocolInterpreter.Job.ParameterSet[1], 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0033 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0033(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0033(0, "STRING", OpenProtocolInterpreter.ForcedOrder.FREE_ORDER, 0, 0, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, false, false, false, OpenProtocolInterpreter.ToolLoosening.ENABLED, OpenProtocolInterpreter.Reserved.E, 0, new OpenProtocolInterpreter.Job.ParameterSet[1], 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0033 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0033(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0033(0, "STRING", OpenProtocolInterpreter.ForcedOrder.FREE_ORDER, 0, 0, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, false, false, false, OpenProtocolInterpreter.ToolLoosening.ENABLED, OpenProtocolInterpreter.Reserved.E, 0, new OpenProtocolInterpreter.Job.ParameterSet[1], 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0034</para></remarks>
-    public class TestMid0034 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0034 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0034 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0034(1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0034 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0034(2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0034 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0034(3, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0034 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Job.Mid0034(4, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0035</para></remarks>
-    public class TestMid0035 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0035 mid) {
-            mid.JobId = -1;
-            mid.JobStatus = OpenProtocolInterpreter.JobStatus.NOT_COMPLETED;
-            mid.JobBatchMode = OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS;
-            mid.JobBatchSize = -1;
-            mid.JobBatchCounter = -1;
-            mid.TimeStamp = System.DateTime.MinValue;
-            mid.JobCurrentStep = -1;
-            mid.JobTotalNumberOfSteps = -1;
-            mid.JobStepType = -1;
-            mid.JobTighteningStatus = OpenProtocolInterpreter.JobTighteningStatus.OFF;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0035 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, 1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, 0, 0, 0, 1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, OpenProtocolInterpreter.JobTighteningStatus.OFF, 1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0035 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, 2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, 0, 0, 0, 2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, OpenProtocolInterpreter.JobTighteningStatus.OFF, 2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0035 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(3, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, 3, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, 0, 0, 0, 3, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, OpenProtocolInterpreter.JobTighteningStatus.OFF, 3, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0035 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(4, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, 4, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, 0, 0, 0, 4, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Job.Mid0035(0, OpenProtocolInterpreter.JobStatus.NOT_COMPLETED, OpenProtocolInterpreter.JobBatchMode.ONLY_OK_TIGHTENINGS, 0, 0, System.DateTime.Now, OpenProtocolInterpreter.JobTighteningStatus.OFF, 4, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0036</para></remarks>
-    public class TestMid0036 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0036 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0036 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0036(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0036 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0036(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0036 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0036(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0036 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Job.Mid0036(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0037</para></remarks>
-    public class TestMid0037 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0037 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0037 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0037(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0037 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0037(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0037 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Job.Mid0037(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0037 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Job.Mid0037(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0038</para></remarks>
-    public class TestMid0038 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0038 mid) {
-            mid.JobId = -1;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0038 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0038(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0038(0, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0038 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0038(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0038(0, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Mid0039</para></remarks>
-    public class TestMid0039 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Mid0039 mid) {
-            mid.JobId = -1;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0039 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0039(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Mid0039(0, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Mid0039 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0039(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Mid0039(0, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tool.Mid0040</para></remarks>
-    public class TestMid0040 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-            testRevision5();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0040 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0040 mid;
-            string package;
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0040 mid;
-            string package;
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0040 mid;
-            string package;
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0040 mid;
-            string package;
-
-        }
-        void testRevision5() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0040 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tool.Mid0041</para></remarks>
-    public class TestMid0041 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-            testRevision5();
-        }
-        // unhandled: OPENPROTOCOLINTERPRETER.TOOL.MID0041+OPENENDDATAS
-        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0041 mid) {
-            mid.ToolSerialNumber = "TESTTESTTEST";
-            mid.ToolNumberOfTightenings = -1;
-            mid.LastCalibrationDate = System.DateTime.MinValue;
-            mid.ControllerSerialNumber = "TESTTESTTEST";
-            mid.CalibrationValue = -1m;
-            mid.LastServiceDate = System.DateTime.MinValue;
-            mid.TighteningsSinceService = -1;
-            mid.ToolType = OpenProtocolInterpreter.ToolType.NO_TOOL;
-            mid.MotorSize = -1;
-            mid.OpenEndData = new OpenProtocolInterpreter.Tool.Mid0041.OpenEndDatas();
-            mid.ControllerSoftwareVersion = "TESTTESTTEST";
-            mid.ToolMaxTorque = -1m;
-            mid.GearRatio = -1m;
-            mid.ToolFullSpeed = -1m;
-            mid.PrimaryTool = OpenProtocolInterpreter.PrimaryTool.CABLE;
-            mid.ToolModel = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0041 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, "STRING", 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0041 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, "STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0041 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, "STRING", 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0041 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, "STRING", 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision5() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tool.Mid0041 mid;
-            string package;
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041(5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tool.Mid0041("STRING", 0, System.DateTime.Now, "STRING", 0m, System.DateTime.Now, 0, OpenProtocolInterpreter.ToolType.NO_TOOL, 0, null, "STRING", 0m, 0m, 0m, OpenProtocolInterpreter.PrimaryTool.CABLE, "STRING", 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tool.Mid0042</para></remarks>
-    public class TestMid0042 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0042 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0042 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tool.Mid0043</para></remarks>
-    public class TestMid0043 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0043 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0043 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tool.Mid0044</para></remarks>
-    public class TestMid0044 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0044 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0044 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tool.Mid0045</para></remarks>
-    public class TestMid0045 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0045 mid) {
-            mid.CalibrationValueUnit = OpenProtocolInterpreter.CalibrationUnit.NM;
-            mid.CalibrationValue = -1m;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0045 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tool.Mid0045(OpenProtocolInterpreter.CalibrationUnit.NM, 0m);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tool.Mid0046</para></remarks>
-    public class TestMid0046 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0046 mid) {
-            mid.PrimaryTool = OpenProtocolInterpreter.PrimaryTool.CABLE;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0046 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tool.Mid0046(OpenProtocolInterpreter.PrimaryTool.CABLE);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tool.Mid0047</para></remarks>
-    public class TestMid0047 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0047 mid) {
-            mid.PairingHandlingType = OpenProtocolInterpreter.PairingHandlingType.START_PAIRING;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0047 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tool.Mid0048</para></remarks>
-    public class TestMid0048 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tool.Mid0048 mid) {
-            mid.PairingStatus = OpenProtocolInterpreter.PairingStatus.UNDEFINED;
-            mid.TimeStamp = System.DateTime.MinValue;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Tool.Mid0048 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tool.Mid0048(OpenProtocolInterpreter.PairingStatus.UNDEFINED, System.DateTime.Now);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Vin.Mid0050</para></remarks>
-    public class TestMid0050 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0050 mid) {
-            mid.VinNumber = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Vin.Mid0050 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Vin.Mid0050("STRING");
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Vin.Mid0051</para></remarks>
-    public class TestMid0051 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0051 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Vin.Mid0051 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Vin.Mid0051(1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Vin.Mid0051 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Vin.Mid0051(2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Vin.Mid0052</para></remarks>
-    public class TestMid0052 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0052 mid) {
-            mid.VinNumber = "TESTTESTTEST";
-            mid.IdentifierResultPart2 = "TESTTESTTEST";
-            mid.IdentifierResultPart3 = "TESTTESTTEST";
-            mid.IdentifierResultPart4 = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Vin.Mid0052 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Vin.Mid0052(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Vin.Mid0052("STRING", 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Vin.Mid0052("STRING", "STRING", "STRING", "STRING", 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Vin.Mid0052 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Vin.Mid0052(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Vin.Mid0052("STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Vin.Mid0052("STRING", "STRING", "STRING", "STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Vin.Mid0053</para></remarks>
-    public class TestMid0053 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0053 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Vin.Mid0053 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Vin.Mid0053(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Vin.Mid0053 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Vin.Mid0053(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Vin.Mid0054</para></remarks>
-    public class TestMid0054 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Vin.Mid0054 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Vin.Mid0054 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Vin.Mid0054(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tightening.Mid0060</para></remarks>
-    public class TestMid0060 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-            testRevision5();
-            testRevision6();
-            testRevision7();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0060 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0060 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0060(1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0060 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0060(2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0060 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0060(3, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0060 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0060(4, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision5() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0060 mid;
-            string package;
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0060(5, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision6() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0060 mid;
-            string package;
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0060(6, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision7() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0060 mid;
-            string package;
-
-            // Revision 7.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0060(7, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tightening.Mid0061</para></remarks>
-    public class TestMid0061 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-            testRevision5();
-            testRevision6();
-            testRevision7();
-        }
-        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.STRATEGYOPTIONS
-        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.TIGHTENINGERRORSTATUS
-        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.TIGHTENINGERRORSTATUS2
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.TIGHTENING.STAGERESULT, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0061 mid) {
-            mid.CellId = -1;
-            mid.ChannelId = -1;
-            mid.TorqueControllerName = "TESTTESTTEST";
-            mid.VinNumber = "TESTTESTTEST";
-            mid.JobId = -1;
-            mid.ParameterSetId = -1;
-            mid.BatchSize = -1;
-            mid.BatchCounter = -1;
-            mid.TighteningStatus = true;
-            mid.TorqueStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.AngleStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.TorqueMinLimit = -1m;
-            mid.TorqueMaxLimit = -1m;
-            mid.TorqueFinalTarget = -1m;
-            mid.Torque = -1m;
-            mid.AngleMinLimit = -1;
-            mid.AngleMaxLimit = -1;
-            mid.AngleFinalTarget = -1;
-            mid.Angle = -1;
-            mid.Timestamp = System.DateTime.MinValue;
-            mid.LastChangeInParameterSet = System.DateTime.MinValue;
-            mid.BatchStatus = OpenProtocolInterpreter.BatchStatus.NOK;
-            mid.TighteningId = -1;
-            mid.Strategy = OpenProtocolInterpreter.Strategy.TORQUE_CONTROL;
-            mid.StrategyOptions = new OpenProtocolInterpreter.Tightening.StrategyOptions();
-            mid.RundownAngleStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.CurrentMonitoringStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.SelftapStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.PrevailTorqueMonitoringStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.PrevailTorqueCompensateStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.TighteningErrorStatus = new OpenProtocolInterpreter.Tightening.TighteningErrorStatus();
-            mid.RundownAngleMin = -1;
-            mid.RundownAngleMax = -1;
-            mid.RundownAngle = -1;
-            mid.CurrentMonitoringMin = -1;
-            mid.CurrentMonitoringMax = -1;
-            mid.CurrentMonitoringValue = -1;
-            mid.SelftapMin = -1m;
-            mid.SelftapMax = -1m;
-            mid.SelftapTorque = -1m;
-            mid.PrevailTorqueMonitoringMin = -1m;
-            mid.PrevailTorqueMonitoringMax = -1m;
-            mid.PrevailTorque = -1m;
-            mid.JobSequenceNumber = -1;
-            mid.SyncTighteningId = -1;
-            mid.ToolSerialNumber = "TESTTESTTEST";
-            mid.ParameterSetName = "TESTTESTTEST";
-            mid.TorqueValuesUnit = OpenProtocolInterpreter.TorqueValuesUnit.NM;
-            mid.ResultType = OpenProtocolInterpreter.ResultType.TIGHTENING;
-            mid.IdentifierResultPart2 = "TESTTESTTEST";
-            mid.IdentifierResultPart3 = "TESTTESTTEST";
-            mid.IdentifierResultPart4 = "TESTTESTTEST";
-            mid.CustomerTighteningErrorCode = "TESTTESTTEST";
-            mid.PrevailTorqueCompensateValue = -1m;
-            mid.TighteningErrorStatus2 = new OpenProtocolInterpreter.Tightening.TighteningErrorStatus2();
-            mid.CompensatedAngle = -1m;
-            mid.FinalAngleDecimal = -1m;
-            mid.NumberOfStagesInMultistage = -1;
-            mid.NumberOfStageResults = -1;
-            mid.StageResults = new System.Collections.Generic.List<OpenProtocolInterpreter.Tightening.StageResult>();
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0061 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0061(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0061 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0061(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0061 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0061(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0061 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0061(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision5() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0061 mid;
-            string package;
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0061(5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision6() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0061 mid;
-            string package;
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0061(6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision7() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0061 mid;
-            string package;
-
-            // Revision 7.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0061(7);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tightening.Mid0062</para></remarks>
-    public class TestMid0062 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Communication.MID_0002</para></remarks>
+    public class TestMID_0002 {
         public void runTests() {
             testRevision1();
             testRevision2();
@@ -4423,24 +409,60 @@ namespace tests {
             testRevision5();
             testRevision6();
         }
-        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0062 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Communication.MID_0002 mid) {
+            mid.CellID = 0;
+            mid.ChannelID = 0;
+            mid.ControllerName = "STRING";
+            mid.SupplierCode = "STRING";
+            mid.OpenProtocolVersion = "STRING";
+            mid.ControllerSoftwareVersion = "STRING";
+            mid.ToolSoftwareVersion = "STRING";
+            mid.RBUType = "STRING";
+            mid.ControllerSerialNumber = "STRING";
+            mid.SystemType = OpenProtocolInterpreter.MIDs.Communication.MID_0002.SystemTypes.SYSTEM_TYPE_NOT_SET;
+            mid.SystemSubType = 0;
+            mid.SequenceNumberSupport = false;
+            mid.LinkingHandlingSupport = false;
         }
         void testRevision1() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0062 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0002 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0062(1);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002(1);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -4448,20 +470,43 @@ namespace tests {
         }
         void testRevision2() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0062 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0002 mid;
             string package;
 
             // Revision 2.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0062(2);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 2.
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002(2);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -4469,20 +514,43 @@ namespace tests {
         }
         void testRevision3() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0062 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0002 mid;
             string package;
 
             // Revision 3.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0062(3);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 3.
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002(3);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -4490,20 +558,43 @@ namespace tests {
         }
         void testRevision4() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0062 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0002 mid;
             string package;
 
             // Revision 4.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0062(4);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 4.
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002(4);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -4511,20 +602,43 @@ namespace tests {
         }
         void testRevision5() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0062 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0002 mid;
             string package;
 
             // Revision 5.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0062(5);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 5.
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002(5);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -4532,391 +646,43 @@ namespace tests {
         }
         void testRevision6() {
             // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0062 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0002 mid;
             string package;
 
             // Revision 6.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0062(6);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tightening.Mid0063</para></remarks>
-    public class TestMid0063 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-            testRevision5();
-            testRevision6();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0063 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0063 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0063(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0063 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0063(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0063 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0063(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0063 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0063(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision5() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0063 mid;
-            string package;
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0063(5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision6() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0063 mid;
-            string package;
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0063(6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tightening.Mid0064</para></remarks>
-    public class TestMid0064 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-            testRevision5();
-            testRevision6();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0064 mid) {
-            mid.TighteningId = -1;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0064 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(0, 1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0064 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(0, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0064 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(0, 3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0064 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(0, 4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision5() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0064 mid;
-            string package;
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(0, 5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision6() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0064 mid;
-            string package;
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 6.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0064(0, 6);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0002(6);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -4924,178 +690,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Tightening.Mid0065</para></remarks>
-    public class TestMid0065 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Communication.MID_0003</para></remarks>
+    public class TestMID_0003 {
         public void runTests() {
             testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-            testRevision5();
-            testRevision6();
         }
-        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.STRATEGYOPTIONS
-        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.TIGHTENINGERRORSTATUS
-        // unhandled: OPENPROTOCOLINTERPRETER.TIGHTENING.TIGHTENINGERRORSTATUS2
-        public void setAllProperties(OpenProtocolInterpreter.Tightening.Mid0065 mid) {
-            mid.TighteningId = -1;
-            mid.VinNumber = "TESTTESTTEST";
-            mid.ParameterSetId = -1;
-            mid.BatchCounter = -1;
-            mid.TighteningStatus = true;
-            mid.TorqueStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.AngleStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.Torque = -1m;
-            mid.Angle = -1;
-            mid.Timestamp = System.DateTime.MinValue;
-            mid.BatchStatus = OpenProtocolInterpreter.BatchStatus.NOK;
-            mid.JobId = -1;
-            mid.Strategy = OpenProtocolInterpreter.Strategy.TORQUE_CONTROL;
-            mid.StrategyOptions = new OpenProtocolInterpreter.Tightening.StrategyOptions();
-            mid.BatchSize = -1;
-            mid.RundownAngleStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.CurrentMonitoringStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.SelftapStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.PrevailTorqueMonitoringStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.PrevailTorqueCompensateStatus = OpenProtocolInterpreter.TighteningValueStatus.LOW;
-            mid.TighteningErrorStatus = new OpenProtocolInterpreter.Tightening.TighteningErrorStatus();
-            mid.RundownAngle = -1;
-            mid.CurrentMonitoringValue = -1;
-            mid.SelftapTorque = -1m;
-            mid.PrevailTorque = -1m;
-            mid.JobSequenceNumber = -1;
-            mid.SyncTighteningId = -1;
-            mid.ToolSerialNumber = "TESTTESTTEST";
-            mid.TorqueValuesUnit = OpenProtocolInterpreter.TorqueValuesUnit.NM;
-            mid.ResultType = OpenProtocolInterpreter.ResultType.TIGHTENING;
-            mid.IdentifierResultPart2 = "TESTTESTTEST";
-            mid.IdentifierResultPart3 = "TESTTESTTEST";
-            mid.IdentifierResultPart4 = "TESTTESTTEST";
-            mid.CustomerTighteningErrorCode = "TESTTESTTEST";
-            mid.PrevailTorqueCompensateValue = -1m;
-            mid.TighteningErrorStatus2 = new OpenProtocolInterpreter.Tightening.TighteningErrorStatus2();
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Communication.MID_0003 mid) {
         }
         void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0065 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0003 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0065(1);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0003();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0065 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0065(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0065 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0065(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0065 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0065(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision5() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0065 mid;
-            string package;
-
-            // Revision 5.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0065(5);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision6() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Tightening.Mid0065 mid;
-            string package;
-
-            // Revision 6.
-            mid = new OpenProtocolInterpreter.Tightening.Mid0065(6);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -5103,168 +723,72 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Alarm.Mid0070</para></remarks>
-    public class TestMid0070 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Communication.MID_0004</para></remarks>
+    public class TestMID_0004 {
         public void runTests() {
             testRevision1();
-            testRevision2();
         }
-        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0070 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Communication.MID_0004 mid) {
+            mid.FailedMid = 0;
+            mid.ErrorCode = OpenProtocolInterpreter.MIDs.Communication.MID_0004.Errors.NO_ERROR;
         }
         void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0070 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0004 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0070(1, null);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0004();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0070 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0070(2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Alarm.Mid0071</para></remarks>
-    public class TestMid0071 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0071 mid) {
-            mid.ErrorCode = "TESTTESTTEST";
-            mid.ControllerReadyStatus = true;
-            mid.ToolReadyStatus = true;
-            mid.Time = System.DateTime.MinValue;
-            mid.AlarmText = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0071 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0071(1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0071("STRING", false, false, System.DateTime.Now, 1, null);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0004(0, 0);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0071("STRING", false, false, System.DateTime.Now, "STRING", 1, null);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0004(0, OpenProtocolInterpreter.MIDs.Communication.MID_0004.Errors.NO_ERROR);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0071 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0071(2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0071("STRING", false, false, System.DateTime.Now, 2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0071("STRING", false, false, System.DateTime.Now, "STRING", 2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -5272,186 +796,52 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Alarm.Mid0072</para></remarks>
-    public class TestMid0072 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Communication.MID_0005</para></remarks>
+    public class TestMID_0005 {
         public void runTests() {
             testRevision1();
-            testRevision2();
         }
-        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0072 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Communication.MID_0005 mid) {
+            mid.MIDAccepted = 0;
         }
         void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0072 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0005 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0072(1);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0005();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0072 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0072(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Alarm.Mid0073</para></remarks>
-    public class TestMid0073 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0073 mid) {
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0073 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0073(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0073 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0073(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Alarm.Mid0074</para></remarks>
-    public class TestMid0074 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0074 mid) {
-            mid.ErrorCode = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0074 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0074(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0074("STRING", 1);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0005(0);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0074 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0074(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0074("STRING", 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -5459,51 +849,33 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Alarm.Mid0075</para></remarks>
-    public class TestMid0075 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Communication.MID_0006</para></remarks>
+    public class TestMID_0006 {
         public void runTests() {
             testRevision1();
-            testRevision2();
         }
-        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0075 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Communication.MID_0006 mid) {
+            mid.MIDAccepted = 0;
         }
         void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0075 mid;
+            OpenProtocolInterpreter.MIDs.Communication.MID_0006 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0075(1);
+            mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0006();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Alarm.Mid0075 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0075(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -5511,33 +883,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Alarm.Mid0076</para></remarks>
-    public class TestMid0076 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0010</para></remarks>
+    public class TestMID_0010 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0076 mid) {
-            mid.AlarmStatus = true;
-            mid.ErrorCode = "TESTTESTTEST";
-            mid.ControllerReadyStatus = true;
-            mid.ToolReadyStatus = true;
-            mid.Time = System.DateTime.MinValue;
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0010 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0076 mid;
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0010 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Alarm.Mid0076(false, "STRING", false, false, System.DateTime.Now);
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0010();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -5545,424 +916,687 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Alarm.Mid0077</para></remarks>
-    public class TestMid0077 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0011</para></remarks>
+    public class TestMID_0011 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0077 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0077 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Alarm.Mid0078</para></remarks>
-    public class TestMid0078 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Alarm.Mid0078 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Alarm.Mid0078 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Time.Mid0080</para></remarks>
-    public class TestMid0080 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Time.Mid0080 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Time.Mid0080 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Time.Mid0081</para></remarks>
-    public class TestMid0081 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Time.Mid0081 mid) {
-            mid.Time = System.DateTime.MinValue;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Time.Mid0081 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Time.Mid0081(System.DateTime.Now);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Time.Mid0082</para></remarks>
-    public class TestMid0082 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Time.Mid0082 mid) {
-            mid.Time = System.DateTime.MinValue;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Time.Mid0082 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Time.Mid0082(System.DateTime.Now);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultiSpindle.Mid0090</para></remarks>
-    public class TestMid0090 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MultiSpindle.Mid0090 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultiSpindle.Mid0090 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.MultiSpindle.Mid0090(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultiSpindle.Mid0091</para></remarks>
-    public class TestMid0091 {
-        public void runTests() {
-            testRevision1();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.MULTISPINDLE.SPINDLESTATUS, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.MultiSpindle.Mid0091 mid) {
-            mid.NumberOfSpindles = -1;
-            mid.SyncTighteningId = -1;
-            mid.Time = System.DateTime.MinValue;
-            mid.SyncOverallStatus = true;
-            mid.SpindlesStatus = new System.Collections.Generic.List<OpenProtocolInterpreter.MultiSpindle.SpindleStatus>();
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultiSpindle.Mid0091 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.MultiSpindle.Mid0091(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.MultiSpindle.Mid0091(0, 0, System.DateTime.Now, false, new OpenProtocolInterpreter.MultiSpindle.SpindleStatus[1], null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultiSpindle.Mid0092</para></remarks>
-    public class TestMid0092 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MultiSpindle.Mid0092 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultiSpindle.Mid0092 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultiSpindle.Mid0093</para></remarks>
-    public class TestMid0093 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MultiSpindle.Mid0093 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultiSpindle.Mid0093 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PowerMACS.Mid0105</para></remarks>
-    public class TestMid0105 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0105 mid) {
-            mid.DataNumberSystem = -1;
-            mid.SendOnlyNewData = true;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0105 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(1, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0105 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0105 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(3, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0105 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0105(4, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PowerMACS.Mid0106</para></remarks>
-    public class TestMid0106 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.BOLTDATA, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.SPECIALVALUE, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0106 mid) {
-            mid.TotalNumberOfMessages = -1;
-            mid.MessageNumber = -1;
-            mid.DataNumberSystem = -1;
-            mid.StationNumber = -1;
-            mid.StationName = "TESTTESTTEST";
-            mid.Time = System.DateTime.MinValue;
-            mid.ModeNumber = -1;
-            mid.ModeName = "TESTTESTTEST";
-            mid.SimpleStatus = true;
-            mid.PMStatus = OpenProtocolInterpreter.PowerMacsStatus.OK;
-            mid.WpId = "TESTTESTTEST";
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0011 mid) {
 /*
-            mid.NumberOfBolts = -1;
+            mid.TotalParameterSets = 0;
 */
-            mid.BoltsData = new System.Collections.Generic.List<OpenProtocolInterpreter.PowerMACS.BoltData>();
+            mid.ParameterSets = null;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0011 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0011();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0011(new int[1]);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0012</para></remarks>
+    public class TestMID_0012 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0012 mid) {
+            mid.ParameterSetID = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0012 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0012();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0012(0);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0013</para></remarks>
+    public class TestMID_0013 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0013 mid) {
+            mid.ParameterSetID = 0;
+            mid.ParameterSetName = "STRING";
+            mid.RotationDirection = OpenProtocolInterpreter.MIDs.ParameterSet.MID_0013.RotationDirections.CLOCKWISE;
+            mid.BatchSize = 0;
+            mid.MinTorque = 0m;
+            mid.MaxTorque = 0m;
+            mid.TorqueFinalTarget = 0m;
+            mid.MinAngle = 0;
+            mid.MaxAngle = 0;
+            mid.AngleFinalTarget = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0013 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0013();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0013(0, "STRING", OpenProtocolInterpreter.MIDs.ParameterSet.MID_0013.RotationDirections.CLOCKWISE, 0, 0m, 0m, 0m, 0, 0, 0);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0014</para></remarks>
+    public class TestMID_0014 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0014 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0014 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0014();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0015</para></remarks>
+    public class TestMID_0015 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0015 mid) {
+            mid.ParameterSetID = 0;
+            mid.LastChangeInParameterSet = System.DateTime.Now;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0015 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0015();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0015(0, System.DateTime.Now);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0016</para></remarks>
+    public class TestMID_0016 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0016 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0016 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0016();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0017</para></remarks>
+    public class TestMID_0017 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0017 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0017 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0017();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0018</para></remarks>
+    public class TestMID_0018 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0018 mid) {
+            mid.ParameterSetID = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0018 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0018();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0018(0);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0019</para></remarks>
+    public class TestMID_0019 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0019 mid) {
+            mid.ParameterSetID = 0;
+            mid.BatchSize = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0019 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0019();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0019(0, 0);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0020</para></remarks>
+    public class TestMID_0020 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0020 mid) {
+            mid.ParameterSetID = 0;
+            mid.BatchSize = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0020 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0020();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0021</para></remarks>
+    public class TestMID_0021 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0021 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0021 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0021();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0022</para></remarks>
+    public class TestMID_0022 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0022 mid) {
+            mid.RelayStatus = false;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0022 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0022();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0022(false);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0023</para></remarks>
+    public class TestMID_0023 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0023 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0023 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0023();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_0024</para></remarks>
+    public class TestMID_0024 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0024 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_0024 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0024();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.MID_0030</para></remarks>
+    public class TestMID_0030 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0030 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.MID_0030 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0030();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.MID_0031</para></remarks>
+    public class TestMID_0031 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0031 mid) {
 /*
-            mid.TotalSpecialValues = -1;
+            mid.TotalJobs = 0;
 */
-            mid.SpecialValues = new System.Collections.Generic.List<OpenProtocolInterpreter.PowerMACS.SpecialValue>();
-            mid.SystemSubType = OpenProtocolInterpreter.SystemSubType.NO_SUBTYPE_EXISTS;
+            mid.JobIds = null;
         }
         void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0106 mid;
+            OpenProtocolInterpreter.MIDs.Job.MID_0031 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(1, null);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0031();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0106 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(2, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0106 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(3, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0106 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0106(4, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -5970,567 +1604,52 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PowerMACS.Mid0107</para></remarks>
-    public class TestMid0107 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.MID_0032</para></remarks>
+    public class TestMID_0032 {
         public void runTests() {
             testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
         }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.BOLTRESULT, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.STEPRESULT, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.POWERMACS.SPECIALVALUE, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0107 mid) {
-            mid.TotalNumberOfMessages = -1;
-            mid.MessageNumber = -1;
-            mid.DataNumberSystem = -1;
-            mid.StationNumber = -1;
-            mid.Time = System.DateTime.MinValue;
-            mid.BoltNumber = -1;
-            mid.BoltName = "TESTTESTTEST";
-            mid.ProgramName = "TESTTESTTEST";
-            mid.PowerMacsStatus = OpenProtocolInterpreter.PowerMACS.Mid0107.PowerMacsStatuses.OK;
-            mid.Errors = "TESTTESTTEST";
-            mid.CustomerErrorCode = "TESTTESTTEST";
-/*
-            mid.NumberOfBoltResults = -1;
-*/
-            mid.BoltResults = new System.Collections.Generic.List<OpenProtocolInterpreter.PowerMACS.BoltResult>();
-/*
-            mid.NumberOfStepResults = -1;
-*/
-            mid.AllStepDataSent = true;
-            mid.StepResults = new System.Collections.Generic.List<OpenProtocolInterpreter.PowerMACS.StepResult>();
-/*
-            mid.NumberOfSpecialValues = -1;
-*/
-            mid.SpecialValues = new System.Collections.Generic.List<OpenProtocolInterpreter.PowerMACS.SpecialValue>();
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0032 mid) {
+            mid.JobID = 0;
         }
         void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0107 mid;
-            string package;
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0107 mid;
-            string package;
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0107 mid;
-            string package;
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0107 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PowerMACS.Mid0108</para></remarks>
-    public class TestMid0108 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-            testRevision3();
-            testRevision4();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0108 mid) {
-            mid.BoltData = true;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0108 mid;
+            OpenProtocolInterpreter.MIDs.Job.MID_0032 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(1);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0032();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0108 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision3() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0108 mid;
-            string package;
-
-            // Revision 3.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(3);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision4() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.PowerMACS.Mid0108 mid;
-            string package;
-
-            // Revision 4.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0108(4);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PowerMACS.Mid0109</para></remarks>
-    public class TestMid0109 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.PowerMACS.Mid0109 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.PowerMACS.Mid0109 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.PowerMACS.Mid0109(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.UserInterface.Mid0110</para></remarks>
-    public class TestMid0110 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.UserInterface.Mid0110 mid) {
-            mid.UserText = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.UserInterface.Mid0110 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.UserInterface.Mid0110("STRING");
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.UserInterface.Mid0111</para></remarks>
-    public class TestMid0111 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.UserInterface.Mid0111 mid) {
-            mid.TextDuration = -1;
-            mid.RemovalCondition = OpenProtocolInterpreter.RemovalCondition.ACKNOWLEDGE_OR_WAIT_EXPIRATION_TIME;
-            mid.Line1 = "TESTTESTTEST";
-            mid.Line2 = "TESTTESTTEST";
-            mid.Line3 = "TESTTESTTEST";
-            mid.Line4 = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.UserInterface.Mid0111 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.UserInterface.Mid0111(0, OpenProtocolInterpreter.RemovalCondition.ACKNOWLEDGE_OR_WAIT_EXPIRATION_TIME, "STRING", "STRING", "STRING", "STRING");
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.UserInterface.Mid0113</para></remarks>
-    public class TestMid0113 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.UserInterface.Mid0113 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.UserInterface.Mid0113 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0120</para></remarks>
-    public class TestMid0120 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0120 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0120 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0120(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0121</para></remarks>
-    public class TestMid0121 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0121 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0121 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0121(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0122</para></remarks>
-    public class TestMid0122 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0122 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0122 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0122(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0123</para></remarks>
-    public class TestMid0123 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0123 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0123 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0123(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0124</para></remarks>
-    public class TestMid0124 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0124 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0124 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0124(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0125</para></remarks>
-    public class TestMid0125 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0125 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0125 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0125(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0126</para></remarks>
-    public class TestMid0126 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0126 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0126 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0127</para></remarks>
-    public class TestMid0127 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0127 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0127 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0128</para></remarks>
-    public class TestMid0128 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0128 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0128 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0129</para></remarks>
-    public class TestMid0129 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0129 mid) {
-            mid.ChannelId = -1;
-            mid.ParameterSetId = -1;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Advanced.Mid0129 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0129(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0129(0, 0, 1);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0032(0);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.Job.Advanced.Mid0129 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0129(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0129(0, 0, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -6538,29 +1657,33 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0130</para></remarks>
-    public class TestMid0130 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.MID_0033</para></remarks>
+    public class TestMID_0033 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0130 mid) {
-            mid.JobOffStatus = true;
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0033 mid) {
+            mid.JobData = new OpenProtocolInterpreter.MIDs.Job.MID_0033.JobDatas();
         }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0130 mid;
+            OpenProtocolInterpreter.MIDs.Job.MID_0033 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0130(false);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0033();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -6568,90 +1691,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0131</para></remarks>
-    public class TestMid0131 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.MID_0034</para></remarks>
+    public class TestMID_0034 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0131 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0034 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0131 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0132</para></remarks>
-    public class TestMid0132 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0132 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0132 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0133</para></remarks>
-    public class TestMid0133 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0133 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0133 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Job.Advanced.Mid0140</para></remarks>
-    public class TestMid0140 {
-        public void runTests() {
-            testRevision1();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.JOB.ADVANCED.ADVANCEDJOB, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.Job.Advanced.Mid0140 mid) {
-            mid.JobId = -1;
-            mid.JobName = "TESTTESTTEST";
-            mid.NumberOfParameterSets = -1;
-            mid.JobList = new System.Collections.Generic.List<OpenProtocolInterpreter.Job.Advanced.AdvancedJob>();
-            mid.ForcedOrder = OpenProtocolInterpreter.ForcedOrder.FREE_ORDER;
-            mid.LockAtJobDone = true;
-            mid.ToolLoosening = OpenProtocolInterpreter.ToolLoosening.ENABLED;
-            mid.RepeatJob = true;
-            mid.BatchMode = OpenProtocolInterpreter.BatchMode.ONLY_OK;
-            mid.BatchStatusAtIncrement = true;
-            mid.DecrementBatchAtOkLoosening = true;
-            mid.MaxTimeForFirstTightening = -1;
-            mid.MaxTimeToCompleteJob = -1;
-            mid.DisplayResultAtAutoSelect = -1;
-            mid.UsingLineControl = true;
-            mid.IdentifierResultPart = OpenProtocolInterpreter.IdentifierPart.JOB_VIN_NUMBER;
-            mid.ResultOfNonTightenings = true;
-            mid.ResetAllIdentifiersAtJobDone = true;
-            mid.Reserved = OpenProtocolInterpreter.Reserved.E;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Job.Advanced.Mid0140 mid;
+            OpenProtocolInterpreter.MIDs.Job.MID_0034 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.Job.Advanced.Mid0140(1);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0034();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -6659,459 +1724,76 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultipleIdentifiers.Mid0150</para></remarks>
-    public class TestMid0150 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.MID_0035</para></remarks>
+    public class TestMID_0035 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0150 mid) {
-            mid.IdentifierData = "TESTTESTTEST";
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0035 mid) {
+            mid.JobID = 0;
+            mid.JobStatus = OpenProtocolInterpreter.MIDs.Job.MID_0035.JobStatuses.NOT_COMPLETED;
+            mid.JobBatchMode = OpenProtocolInterpreter.MIDs.Job.MID_0035.JobBatchModes.ONLY_OK;
+            mid.JobBatchSize = 0;
+            mid.JobBatchCounter = 0;
+            mid.TimeStamp = System.DateTime.Now;
         }
         void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0150 mid;
+            OpenProtocolInterpreter.MIDs.Job.MID_0035 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0150("STRING");
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0035();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultipleIdentifiers.Mid0151</para></remarks>
-    public class TestMid0151 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0151 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0151 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.MultipleIdentifiers.Mid0151(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultipleIdentifiers.Mid0152</para></remarks>
-    public class TestMid0152 {
-        public void runTests() {
-            testRevision1();
-        }
-        // unhandled: OPENPROTOCOLINTERPRETER.MULTIPLEIDENTIFIERS.IDENTIFIERSTATUS
-        // unhandled: OPENPROTOCOLINTERPRETER.MULTIPLEIDENTIFIERS.IDENTIFIERSTATUS
-        // unhandled: OPENPROTOCOLINTERPRETER.MULTIPLEIDENTIFIERS.IDENTIFIERSTATUS
-        // unhandled: OPENPROTOCOLINTERPRETER.MULTIPLEIDENTIFIERS.IDENTIFIERSTATUS
-        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0152 mid) {
-            mid.FirstIdentifierStatus = new OpenProtocolInterpreter.MultipleIdentifiers.IdentifierStatus();
-            mid.SecondIdentifierStatus = new OpenProtocolInterpreter.MultipleIdentifiers.IdentifierStatus();
-            mid.ThirdIdentifierStatus = new OpenProtocolInterpreter.MultipleIdentifiers.IdentifierStatus();
-            mid.FourthIdentifierStatus = new OpenProtocolInterpreter.MultipleIdentifiers.IdentifierStatus();
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0152 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultipleIdentifiers.Mid0153</para></remarks>
-    public class TestMid0153 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0153 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0153 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultipleIdentifiers.Mid0154</para></remarks>
-    public class TestMid0154 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0154 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0154 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultipleIdentifiers.Mid0155</para></remarks>
-    public class TestMid0155 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0155 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0155 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultipleIdentifiers.Mid0156</para></remarks>
-    public class TestMid0156 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0156 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0156 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MultipleIdentifiers.Mid0157</para></remarks>
-    public class TestMid0157 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MultipleIdentifiers.Mid0157 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MultipleIdentifiers.Mid0157 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0200</para></remarks>
-    public class TestMid0200 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0200 mid) {
-            mid.StatusRelayOne = OpenProtocolInterpreter.RelayStatus.OFF;
-            mid.StatusRelayTwo = OpenProtocolInterpreter.RelayStatus.OFF;
-            mid.StatusRelayThree = OpenProtocolInterpreter.RelayStatus.OFF;
-            mid.StatusRelayFour = OpenProtocolInterpreter.RelayStatus.OFF;
-            mid.StatusRelayFive = OpenProtocolInterpreter.RelayStatus.OFF;
-            mid.StatusRelaySix = OpenProtocolInterpreter.RelayStatus.OFF;
-            mid.StatusRelaySeven = OpenProtocolInterpreter.RelayStatus.OFF;
-            mid.StatusRelayEight = OpenProtocolInterpreter.RelayStatus.OFF;
-            mid.StatusRelayNine = OpenProtocolInterpreter.RelayStatus.OFF;
-            mid.StatusRelayTen = OpenProtocolInterpreter.RelayStatus.OFF;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0200 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0210</para></remarks>
-    public class TestMid0210 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0210 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0210 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0210(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0211</para></remarks>
-    public class TestMid0211 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0211 mid) {
-            mid.StatusDigInOne = true;
-            mid.StatusDigInTwo = true;
-            mid.StatusDigInThree = true;
-            mid.StatusDigInFour = true;
-            mid.StatusDigInFive = true;
-            mid.StatusDigInSix = true;
-            mid.StatusDigInSeven = true;
-            mid.StatusDigInEight = true;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0211 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0211(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0212</para></remarks>
-    public class TestMid0212 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0212 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0212 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0213</para></remarks>
-    public class TestMid0213 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0213 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0213 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0214</para></remarks>
-    public class TestMid0214 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0214 mid) {
-            mid.DeviceNumber = -1;
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.IOInterface.Mid0214 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0214(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0214(0, 1);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0035(0, 0, 0, 0, 0, System.DateTime.Now);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.IOInterface.Mid0214 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0214(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0214(0, 2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0215</para></remarks>
-    public class TestMid0215 {
-        public void runTests() {
-            testRevision1();
-            testRevision2();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.IOINTERFACE.RELAY, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.IOINTERFACE.DIGITALINPUT, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0215 mid) {
-            mid.IODeviceId = -1;
-            mid.Relays = new System.Collections.Generic.List<OpenProtocolInterpreter.IOInterface.Relay>();
-            mid.DigitalInputs = new System.Collections.Generic.List<OpenProtocolInterpreter.IOInterface.DigitalInput>();
-/*
-            mid.NumberOfRelays = -1;
-*/
-/*
-            mid.NumberOfDigitalInputs = -1;
-*/
-        }
-        void testRevision1() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.IOInterface.Mid0215 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0215(1);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-        void testRevision2() {
-            // HAVE multiple revisions
-            OpenProtocolInterpreter.IOInterface.Mid0215 mid;
-            string package;
-
-            // Revision 2.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0215(2);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0216</para></remarks>
-    public class TestMid0216 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0216 mid) {
-            mid.RelayNumber = OpenProtocolInterpreter.RelayNumber.OFF;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0216 mid;
-            string package;
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0216(null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0216(OpenProtocolInterpreter.RelayNumber.OFF, null);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0035(0, OpenProtocolInterpreter.MIDs.Job.MID_0035.JobStatuses.NOT_COMPLETED, OpenProtocolInterpreter.MIDs.Job.MID_0035.JobBatchModes.ONLY_OK, 0, 0, System.DateTime.Now);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7119,45 +1801,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0217</para></remarks>
-    public class TestMid0217 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.MID_0036</para></remarks>
+    public class TestMID_0036 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0217 mid) {
-            mid.RelayNumber = OpenProtocolInterpreter.RelayNumber.OFF;
-            mid.RelayStatus = true;
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0036 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0217 mid;
+            OpenProtocolInterpreter.MIDs.Job.MID_0036 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0217(null);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0036();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0217(OpenProtocolInterpreter.RelayNumber.OFF, false, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7165,43 +1834,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0218</para></remarks>
-    public class TestMid0218 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.MID_0037</para></remarks>
+    public class TestMID_0037 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0218 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0037 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0218 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0219</para></remarks>
-    public class TestMid0219 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0219 mid) {
-            mid.RelayNumber = OpenProtocolInterpreter.RelayNumber.OFF;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0219 mid;
+            OpenProtocolInterpreter.MIDs.Job.MID_0037 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0219(OpenProtocolInterpreter.RelayNumber.OFF);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0037();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7209,44 +1867,52 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0220</para></remarks>
-    public class TestMid0220 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.MID_0038</para></remarks>
+    public class TestMID_0038 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0220 mid) {
-            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0038 mid) {
+            mid.JobID = 0;
         }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0220 mid;
+            OpenProtocolInterpreter.MIDs.Job.MID_0038 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0220(null);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0038();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0220(OpenProtocolInterpreter.DigitalInputNumber.OFF, null);
+            mid = new OpenProtocolInterpreter.MIDs.Job.MID_0038(0);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7254,45 +1920,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0221</para></remarks>
-    public class TestMid0221 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tool.MID_0040</para></remarks>
+    public class TestMID_0040 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0221 mid) {
-            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
-            mid.DigitalInputStatus = true;
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tool.MID_0040 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0221 mid;
+            OpenProtocolInterpreter.MIDs.Tool.MID_0040 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0221(null);
+            mid = new OpenProtocolInterpreter.MIDs.Tool.MID_0040();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0221(OpenProtocolInterpreter.DigitalInputNumber.OFF, false, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7300,43 +1953,36 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0222</para></remarks>
-    public class TestMid0222 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tool.MID_0041</para></remarks>
+    public class TestMID_0041 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0222 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tool.MID_0041 mid) {
+            mid.ToolSerialNumber = "STRING";
+            mid.ToolNumberOfTIghtenings = 0;
+            mid.LastCalibrationDate = System.DateTime.Now;
+            mid.ControllerSerialNumber = "STRING";
         }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0222 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0223</para></remarks>
-    public class TestMid0223 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0223 mid) {
-            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0223 mid;
+            OpenProtocolInterpreter.MIDs.Tool.MID_0041 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0223(OpenProtocolInterpreter.DigitalInputNumber.OFF);
+            mid = new OpenProtocolInterpreter.MIDs.Tool.MID_0041();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7344,29 +1990,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0224</para></remarks>
-    public class TestMid0224 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tool.MID_0042</para></remarks>
+    public class TestMID_0042 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0224 mid) {
-            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tool.MID_0042 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0224 mid;
+            OpenProtocolInterpreter.MIDs.Tool.MID_0042 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0224(OpenProtocolInterpreter.DigitalInputNumber.OFF);
+            mid = new OpenProtocolInterpreter.MIDs.Tool.MID_0042();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7374,29 +2023,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.IOInterface.Mid0225</para></remarks>
-    public class TestMid0225 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tool.MID_0043</para></remarks>
+    public class TestMID_0043 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.IOInterface.Mid0225 mid) {
-            mid.DigitalInputNumber = OpenProtocolInterpreter.DigitalInputNumber.OFF;
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tool.MID_0043 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.IOInterface.Mid0225 mid;
+            OpenProtocolInterpreter.MIDs.Tool.MID_0043 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.IOInterface.Mid0225(OpenProtocolInterpreter.DigitalInputNumber.OFF);
+            mid = new OpenProtocolInterpreter.MIDs.Tool.MID_0043();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7404,29 +2056,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PLCUserData.Mid0240</para></remarks>
-    public class TestMid0240 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tool.MID_0044</para></remarks>
+    public class TestMID_0044 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0240 mid) {
-            mid.UserData = "TESTTESTTEST";
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tool.MID_0044 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0240 mid;
+            OpenProtocolInterpreter.MIDs.Tool.MID_0044 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.PLCUserData.Mid0240("STRING");
+            mid = new OpenProtocolInterpreter.MIDs.Tool.MID_0044();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7434,28 +2089,34 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PLCUserData.Mid0241</para></remarks>
-    public class TestMid0241 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tool.MID_0045</para></remarks>
+    public class TestMID_0045 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0241 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tool.MID_0045 mid) {
+            mid.CalibrationValueUnit = OpenProtocolInterpreter.MIDs.Tool.MID_0045.CalibrationValueUnits.NM;
+            mid.CalibrationValue = 0;
         }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0241 mid;
+            OpenProtocolInterpreter.MIDs.Tool.MID_0045 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.PLCUserData.Mid0241(null);
+            mid = new OpenProtocolInterpreter.MIDs.Tool.MID_0045();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7463,44 +2124,33 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PLCUserData.Mid0242</para></remarks>
-    public class TestMid0242 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tool.MID_0046</para></remarks>
+    public class TestMID_0046 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0242 mid) {
-            mid.UserData = "TESTTESTTEST";
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tool.MID_0046 mid) {
+            mid.PrimaryTool = OpenProtocolInterpreter.MIDs.Tool.MID_0046.PrimaryTools.CABLE;
         }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0242 mid;
+            OpenProtocolInterpreter.MIDs.Tool.MID_0046 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.PLCUserData.Mid0242(null);
+            mid = new OpenProtocolInterpreter.MIDs.Tool.MID_0046();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.PLCUserData.Mid0242("STRING", null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7508,58 +2158,33 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PLCUserData.Mid0243</para></remarks>
-    public class TestMid0243 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tool.MID_0047</para></remarks>
+    public class TestMID_0047 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0243 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tool.MID_0047 mid) {
+            mid.PairingHandlingType = OpenProtocolInterpreter.MIDs.Tool.MID_0047.PairingHandlingTypes.START_PAIRING;
         }
         void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0243 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PLCUserData.Mid0244</para></remarks>
-    public class TestMid0244 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0244 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0244 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.PLCUserData.Mid0245</para></remarks>
-    public class TestMid0245 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.PLCUserData.Mid0245 mid) {
-            mid.Offset = -1;
-            mid.UserData = "TESTTESTTEST";
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.PLCUserData.Mid0245 mid;
+            OpenProtocolInterpreter.MIDs.Tool.MID_0047 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.PLCUserData.Mid0245(0, "STRING");
+            mid = new OpenProtocolInterpreter.MIDs.Tool.MID_0047();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7567,28 +2192,34 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationSelector.Mid0250</para></remarks>
-    public class TestMid0250 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tool.MID_0048</para></remarks>
+    public class TestMID_0048 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0250 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tool.MID_0048 mid) {
+            mid.PairingStatus = OpenProtocolInterpreter.MIDs.Tool.MID_0048.PairingStatuses.UNDEFINED;
+            mid.TimeStamp = System.DateTime.Now;
         }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0250 mid;
+            OpenProtocolInterpreter.MIDs.Tool.MID_0048 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0250(null);
+            mid = new OpenProtocolInterpreter.MIDs.Tool.MID_0048();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7596,47 +2227,33 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationSelector.Mid0251</para></remarks>
-    public class TestMid0251 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.VIN.MID_0050</para></remarks>
+    public class TestMID_0050 {
         public void runTests() {
             testRevision1();
         }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[SYSTEM.BOOLEAN, MSCORLIB, VERSION=4.0.0.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=B77A5C561934E089]]
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0251 mid) {
-            mid.DeviceId = -1;
-            mid.NumberOfSockets = -1;
-            mid.SocketStatus = new System.Collections.Generic.List<bool>();
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.VIN.MID_0050 mid) {
+            mid.VINNumber = "STRING";
         }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0251 mid;
+            OpenProtocolInterpreter.MIDs.VIN.MID_0050 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0251(null);
+            mid = new OpenProtocolInterpreter.MIDs.VIN.MID_0050();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0251(0, 0, new bool[1], null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7644,59 +2261,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationSelector.Mid0252</para></remarks>
-    public class TestMid0252 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.VIN.MID_0051</para></remarks>
+    public class TestMID_0051 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0252 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.VIN.MID_0051 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0252 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationSelector.Mid0253</para></remarks>
-    public class TestMid0253 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0253 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0253 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationSelector.Mid0254</para></remarks>
-    public class TestMid0254 {
-        public void runTests() {
-            testRevision1();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.LIGHTCOMMAND, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0254 mid) {
-            mid.DeviceId = -1;
-            mid.GreenLights = new System.Collections.Generic.List<OpenProtocolInterpreter.LightCommand>();
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0254 mid;
+            OpenProtocolInterpreter.MIDs.VIN.MID_0051 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0254(0, new OpenProtocolInterpreter.LightCommand[1]);
+            mid = new OpenProtocolInterpreter.MIDs.VIN.MID_0051();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7704,31 +2294,33 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationSelector.Mid0255</para></remarks>
-    public class TestMid0255 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.VIN.MID_0052</para></remarks>
+    public class TestMID_0052 {
         public void runTests() {
             testRevision1();
         }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.LIGHTCOMMAND, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationSelector.Mid0255 mid) {
-            mid.DeviceId = -1;
-            mid.RedLights = new System.Collections.Generic.List<OpenProtocolInterpreter.LightCommand>();
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.VIN.MID_0052 mid) {
+            mid.VINNumber = "STRING";
         }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationSelector.Mid0255 mid;
+            OpenProtocolInterpreter.MIDs.VIN.MID_0052 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.ApplicationSelector.Mid0255(0, new OpenProtocolInterpreter.LightCommand[1]);
+            mid = new OpenProtocolInterpreter.MIDs.VIN.MID_0052();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7736,42 +2328,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0260</para></remarks>
-    public class TestMid0260 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.VIN.MID_0053</para></remarks>
+    public class TestMID_0053 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0260 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.VIN.MID_0053 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0260 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0261</para></remarks>
-    public class TestMid0261 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0261 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0261 mid;
+            OpenProtocolInterpreter.MIDs.VIN.MID_0053 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0261(null);
+            mid = new OpenProtocolInterpreter.MIDs.VIN.MID_0053();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7779,29 +2361,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0262</para></remarks>
-    public class TestMid0262 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.VIN.MID_0054</para></remarks>
+    public class TestMID_0054 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0262 mid) {
-            mid.ToolTagId = "TESTTESTTEST";
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.VIN.MID_0054 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0262 mid;
+            OpenProtocolInterpreter.MIDs.VIN.MID_0054 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0262(null);
+            mid = new OpenProtocolInterpreter.MIDs.VIN.MID_0054();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7809,58 +2394,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0263</para></remarks>
-    public class TestMid0263 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tightening.MID_0060</para></remarks>
+    public class TestMID_0060 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0263 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tightening.MID_0060 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0263 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0264</para></remarks>
-    public class TestMid0264 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0264 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0264 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0265</para></remarks>
-    public class TestMid0265 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0265 mid) {
-            mid.ToolTagId = "TESTTESTTEST";
-            mid.ToolStatus = OpenProtocolInterpreter.ToolStatus.OPERABLE;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0265 mid;
+            OpenProtocolInterpreter.MIDs.Tightening.MID_0060 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.ApplicationToolLocationSystem.Mid0265("STRING", OpenProtocolInterpreter.ToolStatus.OPERABLE);
+            mid = new OpenProtocolInterpreter.MIDs.Tightening.MID_0060();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7868,86 +2427,55 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ApplicationController.Mid0270</para></remarks>
-    public class TestMid0270 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tightening.MID_0061</para></remarks>
+    public class TestMID_0061 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.ApplicationController.Mid0270 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tightening.MID_0061 mid) {
+            mid.CellID = 0;
+            mid.ChannelID = 0;
+            mid.TorqueControllerName = "STRING";
+            mid.VINNumber = "STRING";
+            mid.JobID = 0;
+            mid.ParameterSetID = 0;
+            mid.BatchSize = 0;
+            mid.BatchCounter = 0;
+            mid.TighteningStatus = false;
+            mid.TorqueStatus = OpenProtocolInterpreter.MIDs.Tightening.MID_0061.TighteningValuesStatuses.LOW;
+            mid.AngleStatus = OpenProtocolInterpreter.MIDs.Tightening.MID_0061.TighteningValuesStatuses.LOW;
+            mid.TorqueMinLimit = 0m;
+            mid.TorqueMaxLimit = 0m;
+            mid.TorqueFinalTarget = 0m;
+            mid.Torque = 0m;
+            mid.AngleMinLimit = 0;
+            mid.AngleMaxLimit = 0;
+            mid.AngleFinalTarget = 0;
+            mid.Angle = 0;
+            mid.TimeStamp = System.DateTime.Now;
+            mid.LastChangeInParameterSet = System.DateTime.Now;
+            mid.BatchStatus = OpenProtocolInterpreter.MIDs.Tightening.MID_0061.BatchStatuses.NOK;
+            mid.TighteningID = 0;
         }
         void testRevision1() {
-            OpenProtocolInterpreter.ApplicationController.Mid0270 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Statistic.Mid0300</para></remarks>
-    public class TestMid0300 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Statistic.Mid0300 mid) {
-            mid.ParameterSetId = -1;
-            mid.HistogramType = OpenProtocolInterpreter.HistogramType.TORQUE;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Statistic.Mid0300 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Statistic.Mid0301</para></remarks>
-    public class TestMid0301 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Statistic.Mid0301 mid) {
-            mid.ParameterSetId = -1;
-            mid.HistogramType = OpenProtocolInterpreter.HistogramType.TORQUE;
-            mid.SigmaHistogram = -1m;
-            mid.MeanValueHistogram = -1m;
-            mid.ClassRange = -1m;
-            mid.FirstBar = -1;
-            mid.SecondBar = -1;
-            mid.ThirdBar = -1;
-            mid.FourthBar = -1;
-            mid.FifthBar = -1;
-            mid.SixthBar = -1;
-            mid.SeventhBar = -1;
-            mid.EighthBar = -1;
-            mid.NinethBar = -1;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Statistic.Mid0301 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.AutomaticManualMode.Mid0400</para></remarks>
-    public class TestMid0400 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0400 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0400 mid;
+            OpenProtocolInterpreter.MIDs.Tightening.MID_0061 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0400(null);
+            mid = new OpenProtocolInterpreter.MIDs.Tightening.MID_0061();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -7955,44 +2483,118 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.AutomaticManualMode.Mid0401</para></remarks>
-    public class TestMid0401 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tightening.MID_0062</para></remarks>
+    public class TestMID_0062 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0401 mid) {
-            mid.ManualAutomaticMode = true;
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tightening.MID_0062 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0401 mid;
+            OpenProtocolInterpreter.MIDs.Tightening.MID_0062 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0401(null);
+            mid = new OpenProtocolInterpreter.MIDs.Tightening.MID_0062();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tightening.MID_0063</para></remarks>
+    public class TestMID_0063 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tightening.MID_0063 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Tightening.MID_0063 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Tightening.MID_0063();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tightening.MID_0064</para></remarks>
+    public class TestMID_0064 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tightening.MID_0064 mid) {
+            mid.TighteningID = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Tightening.MID_0064 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Tightening.MID_0064();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0401(false, null);
+            mid = new OpenProtocolInterpreter.MIDs.Tightening.MID_0064(0);
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -8000,72 +2602,43 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.AutomaticManualMode.Mid0402</para></remarks>
-    public class TestMid0402 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Tightening.MID_0065</para></remarks>
+    public class TestMID_0065 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0402 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Tightening.MID_0065 mid) {
+            mid.TighteningID = 0;
+            mid.VINNumber = "STRING";
+            mid.ParameterSetID = 0;
+            mid.BatchCounter = 0;
+            mid.TighteningStatus = false;
+            mid.TorqueStatus = OpenProtocolInterpreter.MIDs.Tightening.MID_0065.TighteningValuesStatuses.LOW;
+            mid.AngleStatus = OpenProtocolInterpreter.MIDs.Tightening.MID_0065.TighteningValuesStatuses.LOW;
+            mid.Torque = 0m;
+            mid.Angle = 0;
+            mid.TimeStamp = System.DateTime.Now;
+            mid.BatchStatus = OpenProtocolInterpreter.MIDs.Tightening.MID_0065.BatchStatuses.NOK;
         }
         void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0402 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.AutomaticManualMode.Mid0403</para></remarks>
-    public class TestMid0403 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0403 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0403 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.AutomaticManualMode.Mid0410</para></remarks>
-    public class TestMid0410 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0410 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0410 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.AutomaticManualMode.Mid0411</para></remarks>
-    public class TestMid0411 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.AutomaticManualMode.Mid0411 mid) {
-            mid.AutoDisableSetting = -1;
-            mid.CurrentBatch = -1;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.AutomaticManualMode.Mid0411 mid;
+            OpenProtocolInterpreter.MIDs.Tightening.MID_0065 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.AutomaticManualMode.Mid0411(0, 0);
+            mid = new OpenProtocolInterpreter.MIDs.Tightening.MID_0065();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -8073,28 +2646,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0420</para></remarks>
-    public class TestMid0420 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Alarm.MID_0070</para></remarks>
+    public class TestMID_0070 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0420 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0070 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0420 mid;
+            OpenProtocolInterpreter.MIDs.Alarm.MID_0070 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0420(null);
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0070();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -8102,44 +2679,33 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421</para></remarks>
-    public class TestMid0421 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Alarm.MID_0071</para></remarks>
+    public class TestMID_0071 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421 mid) {
-            mid.DigitalInputStatus = true;
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0071 mid) {
+            mid.AlarmData = new OpenProtocolInterpreter.MIDs.Alarm.MID_0071.Alarms();
         }
         void testRevision1() {
-            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421 mid;
+            OpenProtocolInterpreter.MIDs.Alarm.MID_0071 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421(null);
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0071();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
-            } finally {
-                // finally
-            }
-
-            // Revision 1.
-            mid = new OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0421(false, null);
-            try {
-                this.setAllProperties(mid);
-                package = mid.Pack();
-                Trace.WriteLine(("package = " 
-                                + (package + ".")));
-            } catch (System.Exception ex) {
-                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
-                // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -8147,86 +2713,118 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0422</para></remarks>
-    public class TestMid0422 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Alarm.MID_0072</para></remarks>
+    public class TestMID_0072 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0422 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0072 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0422 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0423</para></remarks>
-    public class TestMid0423 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0423 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.OpenProtocolCommandsDisabled.Mid0423 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MotorTuning.Mid0500</para></remarks>
-    public class TestMid0500 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0500 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0500 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MotorTuning.Mid0501</para></remarks>
-    public class TestMid0501 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0501 mid) {
-            mid.MotorTuneResult = true;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0501 mid;
+            OpenProtocolInterpreter.MIDs.Alarm.MID_0072 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.MotorTuning.Mid0501(null);
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0072();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Alarm.MID_0073</para></remarks>
+    public class TestMID_0073 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0073 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Alarm.MID_0073 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0073();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Alarm.MID_0074</para></remarks>
+    public class TestMID_0074 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0074 mid) {
+            mid.ErrorCode = "STRING";
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Alarm.MID_0074 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0074();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.MotorTuning.Mid0501(false, null);
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0074("STRING");
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -8234,132 +2832,32 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MotorTuning.Mid0502</para></remarks>
-    public class TestMid0502 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Alarm.MID_0075</para></remarks>
+    public class TestMID_0075 {
         public void runTests() {
             testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0502 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0075 mid) {
         }
         void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0502 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MotorTuning.Mid0503</para></remarks>
-    public class TestMid0503 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0503 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0503 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.MotorTuning.Mid0504</para></remarks>
-    public class TestMid0504 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.MotorTuning.Mid0504 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.MotorTuning.Mid0504 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Result.Mid1201</para></remarks>
-    public class TestMid1201 {
-        public void runTests() {
-            testRevision1();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.RESULT.OBJECTDATA, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.RESULT.VARIABLEDATAFIELD, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.Result.Mid1201 mid) {
-            mid.TotalNumberOfMessages = -1;
-            mid.MessageNumber = -1;
-            mid.ResultDataIdentifier = -1;
-            mid.Time = System.DateTime.MinValue;
-            mid.ResultStatus = true;
-            mid.OperationType = OpenProtocolInterpreter.OperationType.NON_SYNCHRONIZED_TIGHTENING;
-            mid.NumberOfObjects = -1;
-            mid.NumberOfDataFields = -1;
-            mid.ObjectDataList = new System.Collections.Generic.List<OpenProtocolInterpreter.Result.ObjectData>();
-            mid.VariableDataFields = new System.Collections.Generic.List<OpenProtocolInterpreter.Result.VariableDataField>();
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Result.Mid1201 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Result.Mid1202</para></remarks>
-    public class TestMid1202 {
-        public void runTests() {
-            testRevision1();
-        }
-        // unhandled: SYSTEM.COLLECTIONS.GENERIC.LIST`1[[OPENPROTOCOLINTERPRETER.RESULT.VARIABLEDATAFIELD, RB_OPENPROTOCOLINTERPRETER, VERSION=3.0.3.0, CULTURE=NEUTRAL, PUBLICKEYTOKEN=NULL]]
-        public void setAllProperties(OpenProtocolInterpreter.Result.Mid1202 mid) {
-            mid.TotalNumberOfMessages = -1;
-            mid.MessageNumber = -1;
-            mid.ResultDataIdentifier = -1;
-            mid.ObjectId = -1;
-            mid.NumberOfDataFields = -1;
-            mid.VariableDataFields = new System.Collections.Generic.List<OpenProtocolInterpreter.Result.VariableDataField>();
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Result.Mid1202 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.Result.Mid1203</para></remarks>
-    public class TestMid1203 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.Result.Mid1203 mid) {
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.Result.Mid1203 mid;
-            string package;
-
-        }
-    }
-    // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.ParameterSet.Mid2504</para></remarks>
-    public class TestMid2504 {
-        public void runTests() {
-            testRevision1();
-        }
-        public void setAllProperties(OpenProtocolInterpreter.ParameterSet.Mid2504 mid) {
-            mid.ParameterSetId = -1;
-        }
-        void testRevision1() {
-            OpenProtocolInterpreter.ParameterSet.Mid2504 mid;
+            OpenProtocolInterpreter.MIDs.Alarm.MID_0075 mid;
             string package;
 
             // Revision 1.
-            mid = new OpenProtocolInterpreter.ParameterSet.Mid2504(0);
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0075();
             try {
                 this.setAllProperties(mid);
-                package = mid.Pack();
+                package = mid.buildPackage();
                 Trace.WriteLine(("package = " 
                                 + (package + ".")));
             } catch (System.Exception ex) {
                 System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
                 // catch-1
-                System.Diagnostics.Trace.WriteLine(mb.ReflectedType.Name, ".", mb.ReflectedType.Name);
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
             } finally {
                 // finally
             }
@@ -8367,16 +2865,3330 @@ namespace tests {
         }
     }
     // <summary>test</summary>
-    // <remarks><para>Type=OpenProtocolInterpreter.KeepAlive.Mid9999</para></remarks>
-    public class TestMid9999 {
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Alarm.MID_0076</para></remarks>
+    public class TestMID_0076 {
         public void runTests() {
-            testRevision0();
+            testRevision1();
         }
-        public void setAllProperties(OpenProtocolInterpreter.KeepAlive.Mid9999 mid) {
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0076 mid) {
+            mid.AlarmStatusData = new OpenProtocolInterpreter.MIDs.Alarm.MID_0076.AlarmStatusesData();
         }
-        void testRevision0() {
-            OpenProtocolInterpreter.KeepAlive.Mid9999 mid;
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Alarm.MID_0076 mid;
             string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0076();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Alarm.MID_0077</para></remarks>
+    public class TestMID_0077 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0077 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Alarm.MID_0077 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0077();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Alarm.MID_0078</para></remarks>
+    public class TestMID_0078 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0078 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Alarm.MID_0078 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0078();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Time.MID_0080</para></remarks>
+    public class TestMID_0080 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Time.MID_0080 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Time.MID_0080 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Time.MID_0080();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Time.MID_0081</para></remarks>
+    public class TestMID_0081 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Time.MID_0081 mid) {
+            mid.Time = System.DateTime.Now;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Time.MID_0081 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Time.MID_0081();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Time.MID_0082</para></remarks>
+    public class TestMID_0082 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Time.MID_0082 mid) {
+            mid.Time = System.DateTime.Now;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Time.MID_0082 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Time.MID_0082();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0090</para></remarks>
+    public class TestMID_0090 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0090 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0090 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0090();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0091</para></remarks>
+    public class TestMID_0091 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0091 mid) {
+            mid.MultiSpindleData = new OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0091.MultiSpindlesData();
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0091 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0091();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0092</para></remarks>
+    public class TestMID_0092 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0092 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0092 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0092();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PowerMACS.MID_0105</para></remarks>
+    public class TestMID_0105 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PowerMACS.MID_0105 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PowerMACS.MID_0105 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PowerMACS.MID_0105();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106</para></remarks>
+    public class TestMID_0106 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106 mid) {
+            mid.TotalNumberOfMessages = 0;
+            mid.MessageNumber = 0;
+            mid.DataNumberSystem = 0;
+            mid.StationNumber = 0;
+            mid.StationName = "STRING";
+            mid.Time = System.DateTime.Now;
+            mid.ModeNumber = 0;
+            mid.ModeName = "STRING";
+            mid.SimpleStatus = false;
+            mid.PMStatus = OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106.PowerMacsStatuses.OK;
+            mid.WpId = "STRING";
+            mid.NumberOfBolts = 0;
+            mid.BoltsData = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106.BoltData>();
+            mid.SpecialValues = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106.SpecialValue>();
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107</para></remarks>
+    public class TestMID_0107 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107 mid) {
+            mid.TotalNumberOfMessages = 0;
+            mid.MessageNumber = 0;
+            mid.DataNumberSystem = 0;
+            mid.StationNumber = 0;
+            mid.Time = System.DateTime.Now;
+            mid.BoltNumber = 0;
+            mid.BoltName = "STRING";
+            mid.ProgramName = "STRING";
+            mid.PMStatus = OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107.PowerMacsStatuses.OK;
+            mid.Errors = "STRING";
+            mid.CustomerErrorCode = "STRING";
+            mid.BoltResults = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107.BoltResult>();
+            mid.AllStepDataSent = false;
+            mid.StepResults = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107.StepResult>();
+            mid.SpecialValues = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107.SpecialValue>();
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PowerMACS.MID_0108</para></remarks>
+    public class TestMID_0108 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PowerMACS.MID_0108 mid) {
+            mid.BoltData = false;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PowerMACS.MID_0108 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PowerMACS.MID_0108();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PowerMACS.MID_0109</para></remarks>
+    public class TestMID_0109 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PowerMACS.MID_0109 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PowerMACS.MID_0109 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PowerMACS.MID_0109();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.UserInterface.MID_0110</para></remarks>
+    public class TestMID_0110 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.UserInterface.MID_0110 mid) {
+            mid.UserText = "STRING";
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.UserInterface.MID_0110 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.UserInterface.MID_0110();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.UserInterface.MID_0111</para></remarks>
+    public class TestMID_0111 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.UserInterface.MID_0111 mid) {
+            mid.TextDuration = 0;
+            mid.RemovalCondition = OpenProtocolInterpreter.MIDs.UserInterface.MID_0111.RemovalConditions.ACKNOWLEDGE_OR_WAIT_EXPIRATION_TIME;
+            mid.Line1 = "STRING";
+            mid.Line2 = "STRING";
+            mid.Line3 = "STRING";
+            mid.Line4 = "STRING";
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.UserInterface.MID_0111 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.UserInterface.MID_0111();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.UserInterface.MID_0113</para></remarks>
+    public class TestMID_0113 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.UserInterface.MID_0113 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.UserInterface.MID_0113 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.UserInterface.MID_0113();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0120</para></remarks>
+    public class TestMID_0120 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0120 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0120 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0120();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0121</para></remarks>
+    public class TestMID_0121 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0121 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0121 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0121();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0122</para></remarks>
+    public class TestMID_0122 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0122 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0122 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0122();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0123</para></remarks>
+    public class TestMID_0123 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0123 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0123 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0123();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0124</para></remarks>
+    public class TestMID_0124 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0124 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0124 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0124();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0125</para></remarks>
+    public class TestMID_0125 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0125 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0125 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0125();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0126</para></remarks>
+    public class TestMID_0126 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0126 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0126 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0126();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0127</para></remarks>
+    public class TestMID_0127 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0127 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0127 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0127();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0128</para></remarks>
+    public class TestMID_0128 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0128 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0128 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0128();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0129</para></remarks>
+    public class TestMID_0129 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0129 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0129 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0129();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0130</para></remarks>
+    public class TestMID_0130 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0130 mid) {
+            mid.JobOffStatus = false;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0130 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0130();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0131</para></remarks>
+    public class TestMID_0131 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0131 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0131 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0131();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0132</para></remarks>
+    public class TestMID_0132 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0132 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0132 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0132();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0133</para></remarks>
+    public class TestMID_0133 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0133 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0133 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0133();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140</para></remarks>
+    public class TestMID_0140 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140 mid) {
+            mid.JobID = 0;
+            mid.JobName = "STRING";
+            mid.NumberOfParameterSets = 0;
+            mid.JobList = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140.Job>();
+            mid.ForcedOrder = OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140.ForcedOrders.FREE_ORDER;
+            mid.LockAtJobDone = false;
+            mid.ToolLoosening = OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140.ToolLoosenings.ENABLED;
+            mid.RepeatJob = false;
+            mid.BatchMode = OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140.BatchModes.ONLY_OK;
+            mid.BatchStatusAtIncrement = false;
+            mid.DecrementBatchAtOKLoosening = false;
+            mid.MaxTimeForFirstTightening = 0;
+            mid.MaxTimeToCompleteJob = 0;
+            mid.DisplayResultAtAutoSelect = 0;
+            mid.UsingLineControl = false;
+            mid.IdentifierResultPartOne = OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140.IdentifierPart.JOB_VIN_NUMBER;
+            mid.ResultOfNonTightenings = false;
+            mid.ResetAllIdentifiersAtJobDone = false;
+            mid.Reserved = OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140.Reserveds.E;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0150</para></remarks>
+    public class TestMID_0150 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0150 mid) {
+            mid.IdentifierData = "STRING";
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0150 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0150();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0150("STRING");
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0151</para></remarks>
+    public class TestMID_0151 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0151 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0151 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0151();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152</para></remarks>
+    public class TestMID_0152 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152 mid) {
+            mid.FirstIdentifierStatus = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152.IdentifierStatus();
+            mid.SecondIdentifierStatus = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152.IdentifierStatus();
+            mid.ThirdIdentifierStatus = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152.IdentifierStatus();
+            mid.FourthIdentifierStatus = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152.IdentifierStatus();
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0153</para></remarks>
+    public class TestMID_0153 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0153 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0153 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0153();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0154</para></remarks>
+    public class TestMID_0154 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0154 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0154 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0154();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0155</para></remarks>
+    public class TestMID_0155 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0155 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0155 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0155();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0156</para></remarks>
+    public class TestMID_0156 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0156 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0156 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0156();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0157</para></remarks>
+    public class TestMID_0157 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0157 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0157 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0157();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0200</para></remarks>
+    public class TestMID_0200 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0200 mid) {
+            mid.StatusRelayOne = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+            mid.StatusRelayTwo = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+            mid.StatusRelayThree = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+            mid.StatusRelayFour = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+            mid.StatusRelayFive = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+            mid.StatusRelaySix = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+            mid.StatusRelaySeven = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+            mid.StatusRelayEight = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+            mid.StatusRelayNine = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+            mid.StatusRelayTen = OpenProtocolInterpreter.MIDs.IOInterface.MID_0200.RelayStatuses.OFF;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0200 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0200();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0210</para></remarks>
+    public class TestMID_0210 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0210 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0210 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0210();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0211</para></remarks>
+    public class TestMID_0211 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0211 mid) {
+            mid.StatusDigInOne = false;
+            mid.StatusDigInTwo = false;
+            mid.StatusDigInThree = false;
+            mid.StatusDigInFour = false;
+            mid.StatusDigInFive = false;
+            mid.StatusDigInSix = false;
+            mid.StatusDigInSeven = false;
+            mid.StatusDigInEight = false;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0211 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0211();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0212</para></remarks>
+    public class TestMID_0212 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0212 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0212 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0212();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0213</para></remarks>
+    public class TestMID_0213 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0213 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0213 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0213();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0214</para></remarks>
+    public class TestMID_0214 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0214 mid) {
+            mid.DeviceNumber = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0214 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0214();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0214(0);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0216</para></remarks>
+    public class TestMID_0216 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0216 mid) {
+            mid.RelayNumber = OpenProtocolInterpreter.MIDs.IOInterface.Relay.RelayNumbers.OFF;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0216 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0216();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0217</para></remarks>
+    public class TestMID_0217 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0217 mid) {
+            mid.RelayNumber = OpenProtocolInterpreter.MIDs.IOInterface.Relay.RelayNumbers.OFF;
+            mid.RelayStatus = false;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0217 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0217();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0218</para></remarks>
+    public class TestMID_0218 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0218 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0218 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0218();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0219</para></remarks>
+    public class TestMID_0219 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0219 mid) {
+            mid.RelayNumber = OpenProtocolInterpreter.MIDs.IOInterface.Relay.RelayNumbers.OFF;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0219 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0219();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0220</para></remarks>
+    public class TestMID_0220 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0220 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.MIDs.IOInterface.DigitalInput.DigitalInputNumbers.OFF;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0220 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0220();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0221</para></remarks>
+    public class TestMID_0221 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0221 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.MIDs.IOInterface.DigitalInput.DigitalInputNumbers.OFF;
+            mid.DigitalInputStatus = false;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0221 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0221();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0222</para></remarks>
+    public class TestMID_0222 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0222 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0222 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0222();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0223</para></remarks>
+    public class TestMID_0223 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0223 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.MIDs.IOInterface.DigitalInput.DigitalInputNumbers.OFF;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0223 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0223();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0224</para></remarks>
+    public class TestMID_0224 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0224 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.MIDs.IOInterface.DigitalInput.DigitalInputNumbers.OFF;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0224 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0224();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.IOInterface.MID_0225</para></remarks>
+    public class TestMID_0225 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.IOInterface.MID_0225 mid) {
+            mid.DigitalInputNumber = OpenProtocolInterpreter.MIDs.IOInterface.DigitalInput.DigitalInputNumbers.OFF;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.IOInterface.MID_0225 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.IOInterface.MID_0225();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PLCUserData.MID_0240</para></remarks>
+    public class TestMID_0240 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PLCUserData.MID_0240 mid) {
+            mid.UserData = "STRING";
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PLCUserData.MID_0240 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PLCUserData.MID_0240();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PLCUserData.MID_0241</para></remarks>
+    public class TestMID_0241 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PLCUserData.MID_0241 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PLCUserData.MID_0241 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PLCUserData.MID_0241();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PLCUserData.MID_0242</para></remarks>
+    public class TestMID_0242 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PLCUserData.MID_0242 mid) {
+            mid.UserData = "STRING";
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PLCUserData.MID_0242 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PLCUserData.MID_0242();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PLCUserData.MID_0243</para></remarks>
+    public class TestMID_0243 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PLCUserData.MID_0243 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PLCUserData.MID_0243 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PLCUserData.MID_0243();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PLCUserData.MID_0244</para></remarks>
+    public class TestMID_0244 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PLCUserData.MID_0244 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PLCUserData.MID_0244 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PLCUserData.MID_0244();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.PLCUserData.MID_0245</para></remarks>
+    public class TestMID_0245 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.PLCUserData.MID_0245 mid) {
+            mid.Offset = 0;
+            mid.UserData = "STRING";
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.PLCUserData.MID_0245 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.PLCUserData.MID_0245();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0250</para></remarks>
+    public class TestMID_0250 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0250 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0250 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0250();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0251</para></remarks>
+    public class TestMID_0251 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0251 mid) {
+            mid.DeviceID = 0;
+            mid.NumberOfSockets = 0;
+            mid.SocketStatuses = null;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0251 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0251();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0252</para></remarks>
+    public class TestMID_0252 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0252 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0252 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0252();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0253</para></remarks>
+    public class TestMID_0253 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0253 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0253 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0253();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0254</para></remarks>
+    public class TestMID_0254 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0254 mid) {
+            mid.DeviceID = 0;
+            mid.GreenLights = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0254.GreenLightCommand>();
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0254 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0254();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0255</para></remarks>
+    public class TestMID_0255 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0255 mid) {
+            mid.DeviceID = 0;
+            mid.RedLights = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0255.RedLightCommand>();
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0255 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0255();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0260</para></remarks>
+    public class TestMID_0260 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0260 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0260 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0260();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0261</para></remarks>
+    public class TestMID_0261 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0261 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0261 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0261();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0262</para></remarks>
+    public class TestMID_0262 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0262 mid) {
+            mid.ToolTagID = "STRING";
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0262 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0262();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0263</para></remarks>
+    public class TestMID_0263 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0263 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0263 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0263();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0264</para></remarks>
+    public class TestMID_0264 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0264 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0264 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0264();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0265</para></remarks>
+    public class TestMID_0265 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0265 mid) {
+            mid.ToolTagID = "STRING";
+            mid.Status = OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0265.Statuses.OPERABLE;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0265 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem.MID_0265();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ApplicationController.MID_0270</para></remarks>
+    public class TestMID_0270 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationController.MID_0270 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ApplicationController.MID_0270 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ApplicationController.MID_0270();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Statistic.MID_0300</para></remarks>
+    public class TestMID_0300 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Statistic.MID_0300 mid) {
+            mid.ParameterSetID = 0;
+            mid.HistogramType = OpenProtocolInterpreter.MIDs.Statistic.MID_0300.HistogramTypes.TORQUE;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Statistic.MID_0300 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Statistic.MID_0300();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.Statistic.MID_0301</para></remarks>
+    public class TestMID_0301 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.Statistic.MID_0301 mid) {
+            mid.ParameterSetID = 0;
+            mid.HistogramType = OpenProtocolInterpreter.MIDs.Statistic.MID_0301.HistogramTypes.TORQUE;
+            mid.SigmaHistogram = 0m;
+            mid.MeanValueHistogram = 0m;
+            mid.ClassRange = 0m;
+            mid.Bar1 = 0;
+            mid.Bar2 = 0;
+            mid.Bar3 = 0;
+            mid.Bar4 = 0;
+            mid.Bar5 = 0;
+            mid.Bar6 = 0;
+            mid.Bar7 = 0;
+            mid.Bar8 = 0;
+            mid.Bar9 = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.Statistic.MID_0301 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.Statistic.MID_0301();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0400</para></remarks>
+    public class TestMID_0400 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0400 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0400 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0400();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0401</para></remarks>
+    public class TestMID_0401 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0401 mid) {
+            mid.ManualAutomaticMode = false;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0401 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0401();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0401(false);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0402</para></remarks>
+    public class TestMID_0402 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0402 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0402 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0402();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0403</para></remarks>
+    public class TestMID_0403 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0403 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0403 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0403();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0410</para></remarks>
+    public class TestMID_0410 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0410 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0410 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0410();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0411</para></remarks>
+    public class TestMID_0411 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0411 mid) {
+            mid.AutoDisableSetting = 0;
+            mid.CurrentBatch = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0411 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.AutomaticManualMode.MID_0411();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0420</para></remarks>
+    public class TestMID_0420 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0420 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0420 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0420();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0421</para></remarks>
+    public class TestMID_0421 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0421 mid) {
+            mid.DigitalInputStatus = false;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0421 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0421();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0422</para></remarks>
+    public class TestMID_0422 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0422 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0422 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0422();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0423</para></remarks>
+    public class TestMID_0423 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0423 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0423 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.OpenProtocolCommandsDisabled.MID_0423();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MotorTuning.MID_0500</para></remarks>
+    public class TestMID_0500 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MotorTuning.MID_0500 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MotorTuning.MID_0500 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MotorTuning.MID_0500();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MotorTuning.MID_0501</para></remarks>
+    public class TestMID_0501 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MotorTuning.MID_0501 mid) {
+            mid.MotorTuneResult = false;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MotorTuning.MID_0501 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MotorTuning.MID_0501();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MotorTuning.MID_0501(false);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MotorTuning.MID_0502</para></remarks>
+    public class TestMID_0502 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MotorTuning.MID_0502 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MotorTuning.MID_0502 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MotorTuning.MID_0502();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MotorTuning.MID_0503</para></remarks>
+    public class TestMID_0503 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MotorTuning.MID_0503 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MotorTuning.MID_0503 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MotorTuning.MID_0503();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.MotorTuning.MID_0504</para></remarks>
+    public class TestMID_0504 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.MotorTuning.MID_0504 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.MotorTuning.MID_0504 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.MotorTuning.MID_0504();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.ParameterSet.MID_2504</para></remarks>
+    public class TestMID_2504 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_2504 mid) {
+            mid.ParameterSetID = 0;
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.ParameterSet.MID_2504 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_2504();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.ParameterSet.MID_2504(0);
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
+
+        }
+    }
+    // <summary>test</summary>
+    // <remarks><para>Type=OpenProtocolInterpreter.MIDs.KeepAlive.MID_9999</para></remarks>
+    public class TestMID_9999 {
+        public void runTests() {
+            testRevision1();
+        }
+        public void setAllProperties(OpenProtocolInterpreter.MIDs.KeepAlive.MID_9999 mid) {
+        }
+        void testRevision1() {
+            OpenProtocolInterpreter.MIDs.KeepAlive.MID_9999 mid;
+            string package;
+
+            // Revision 1.
+            mid = new OpenProtocolInterpreter.MIDs.KeepAlive.MID_9999();
+            try {
+                this.setAllProperties(mid);
+                package = mid.buildPackage();
+                Trace.WriteLine(("package = " 
+                                + (package + ".")));
+            } catch (System.Exception ex) {
+                System.Reflection.MethodBase mb = System.Reflection.MethodBase.GetCurrentMethod();
+                // catch-1
+                System.Diagnostics.Trace.WriteLine((mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (mb.ReflectedType.Name 
+                                + (System.Environment.NewLine + ex.StackTrace))))));
+            } finally {
+                // finally
+            }
 
         }
     }

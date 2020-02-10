@@ -283,10 +283,17 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		void testFunction(object sender, RoutedEventArgs e) {
+#if OTHER_VERSION
 			const string ASM_NAME = "RB_OpenProtocolInterpreter";
 
 			var v2 = new OpenProtocolInterpreter.MidInterpreter();
+#else
+			const string ASM_NAME = "OpenProtocolInterpreter";
+
+			var v2 = new OpenProtocolInterpreter.MIDs.MIDIdentifier();
+#endif
 			foreach (var v in AppDomain.CurrentDomain.GetAssemblies()) {
+
 				if (v.GetName().Name.CompareTo(ASM_NAME) == 0) {
 					generateTestsFrom(v);
 					break;
