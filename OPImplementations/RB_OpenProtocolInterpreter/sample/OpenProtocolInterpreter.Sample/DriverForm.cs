@@ -18,8 +18,8 @@ using OpenProtocolInterpreter.Tightening;
 
 namespace OpenProtocolInterpreter.Sample {
 	public partial class DriverForm : Form {
-		private Timer keepAliveTimer;
-		private OpenProtocolDriver driver;
+		Timer keepAliveTimer;
+		OpenProtocolDriver driver;
 
 		public DriverForm() {
 			InitializeComponent();
@@ -28,9 +28,10 @@ namespace OpenProtocolInterpreter.Sample {
 			keepAliveTimer.Interval = 1000;
 		}
 
-		private void BtnConnection_Click(object sender, EventArgs e) {
+		void BtnConnection_Click(object sender, EventArgs e) {
 			//Added list of mids i want to use in my interpreter, every another will be desconsidered
-			driver = new OpenProtocolDriver(new Type[]
+			driver = new OpenProtocolDriver(
+				new Type[]
 			{
 				typeof(Mid0002),
 				typeof(Mid0005),
@@ -57,7 +58,7 @@ namespace OpenProtocolInterpreter.Sample {
 				typeof(Mid9999)
 			});
 
-			var client = new Ethernet.SimpleTcpClient().Connect(textIp.Text, (int)numericPort.Value);
+			var client = new Ethernet.SimpleTcpClient().Connect(textIp.Text, (int) numericPort.Value);
 			if (driver.BeginCommunication(client)) {
 				keepAliveTimer.Start();
 				connectionStatus.Text = "Connected!";
@@ -69,7 +70,7 @@ namespace OpenProtocolInterpreter.Sample {
 			}
 		}
 
-		private void KeepAliveTimer_Tick(object sender, EventArgs e) {
+		void KeepAliveTimer_Tick(object sender, EventArgs e) {
 			if (driver.KeepAlive.ElapsedMilliseconds > 10000) //10 sec
 			{
 				Console.WriteLine($"Sending Keep Alive...");
@@ -87,7 +88,7 @@ namespace OpenProtocolInterpreter.Sample {
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void BtnJobInfoSubscribe_Click(object sender, EventArgs e) {
+		void BtnJobInfoSubscribe_Click(object sender, EventArgs e) {
 			Console.WriteLine($"Sending Job Info Subscribe...");
 			var pack = driver.SendAndWaitForResponse(new Mid0034().Pack(), TimeSpan.FromSeconds(10));
 
@@ -109,7 +110,7 @@ namespace OpenProtocolInterpreter.Sample {
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		private void BtnTighteningSubscribe_Click(object sender, EventArgs e) {
+		void BtnTighteningSubscribe_Click(object sender, EventArgs e) {
 
 			Console.WriteLine($"Sending Tightening Subscribe...");
 			var pack = driver.SendAndWaitForResponse(new Mid0060().Pack(), TimeSpan.FromSeconds(10));
@@ -129,7 +130,7 @@ namespace OpenProtocolInterpreter.Sample {
 		}
 
 
-		private void BtnSendJob_Click(object sender, EventArgs e) {
+		void BtnSendJob_Click(object sender, EventArgs e) {
 			new SendJobCommand(driver).Execute((int) numericJob.Value);
 		}
 
@@ -137,7 +138,7 @@ namespace OpenProtocolInterpreter.Sample {
 		/// Async method from controller, MID 0035 (Job Info)
 		/// </summary>
 		/// <param name="e"></param>
-		private void OnJobInfoReceived(MIDIncome e) {
+		void OnJobInfoReceived(MIDIncome e) {
 			driver.SendMessage(e.Mid.BuildAckPackage());
 
 			var jobInfo = e.Mid as Mid0035;
@@ -156,7 +157,7 @@ namespace OpenProtocolInterpreter.Sample {
 		/// Basically, on every tightening this method will be called!
 		/// </summary>
 		/// <param name="e"></param>
-		private void OnTighteningReceived(MIDIncome e) {
+		void OnTighteningReceived(MIDIncome e) {
 			driver.SendMessage(e.Mid.BuildAckPackage());
 
 			var tighteningMid = e.Mid as Mid0061;
@@ -187,18 +188,18 @@ namespace OpenProtocolInterpreter.Sample {
                                  TighteningID: <{tighteningMid.TighteningId}>");
 		}
 
-		private void BtnSendProduct_Click(object sender, EventArgs e) {
+		void BtnSendProduct_Click(object sender, EventArgs e) {
 			new DownloadProductCommand(driver).Execute(txtProduct.Text);
 		}
 
-		private void BtnAbortJob_Click(object sender, EventArgs e) {
+		void BtnAbortJob_Click(object sender, EventArgs e) {
 			new AbortJobCommand(driver).Execute();
 		}
 	}
 
-//namespace NSCurrent {
-		/// <summary>logging class.</summary>
-		public static class Logger {
+	//namespace NSCurrent {
+	/// <summary>logging class.</summary>
+	public static class Logger {
 
 		#region fields
 		/// <summary>controls logging-style.</summary>

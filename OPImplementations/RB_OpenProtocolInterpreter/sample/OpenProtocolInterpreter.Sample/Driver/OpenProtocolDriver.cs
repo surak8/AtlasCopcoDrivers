@@ -6,10 +6,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 
-namespace OpenProtocolInterpreter.Sample.Driver
-{
-    public class OpenProtocolDriver
-    {
+namespace OpenProtocolInterpreter.Sample.Driver {
+    public class OpenProtocolDriver {
         private readonly MidInterpreter _midInterpreter;
         private SimpleTcpClient simpleTcpClient;
         public Stopwatch KeepAlive { get; set; }
@@ -22,8 +20,7 @@ namespace OpenProtocolInterpreter.Sample.Driver
         /// <summary>
         /// Using all MIDs
         /// </summary>
-        public OpenProtocolDriver()
-        {
+        public OpenProtocolDriver() {
             OnReceivedMID = new Dictionary<Type, ReceivedCommandActionDelegate>();
             _midInterpreter = new MidInterpreter().UseAllMessages();
         }
@@ -31,14 +28,12 @@ namespace OpenProtocolInterpreter.Sample.Driver
         /// <summary>
         /// Custom MIDs that will be used on OpenProtocol lib (Filtering my used mids)
         /// </summary>
-        public OpenProtocolDriver(IEnumerable<Type> usedMids)
-        {
+        public OpenProtocolDriver(IEnumerable<Type> usedMids) {
             OnReceivedMID = new Dictionary<Type, ReceivedCommandActionDelegate>();
             _midInterpreter = new MidInterpreter().UseAllMessages(usedMids);
         }
 
-        public bool BeginCommunication(SimpleTcpClient client)
-        {
+        public bool BeginCommunication(SimpleTcpClient client) {
             simpleTcpClient = client;
             simpleTcpClient.DataReceived += OnPackageReceived;
             simpleTcpClient.DelimiterDataReceived += OnPackageReceived;
@@ -50,8 +45,7 @@ namespace OpenProtocolInterpreter.Sample.Driver
         /// </summary>
         /// <param name="midType"></param>
         /// <param name="deleg"></param>
-        public void AddUpdateOnReceivedCommand(Type midType, ReceivedCommandActionDelegate deleg)
-        {
+        public void AddUpdateOnReceivedCommand(Type midType, ReceivedCommandActionDelegate deleg) {
             if (OnReceivedMID.ContainsKey(midType))
                 OnReceivedMID[midType] = deleg;
             else
@@ -62,18 +56,14 @@ namespace OpenProtocolInterpreter.Sample.Driver
         /// Send an Async message to controller without waiting for response
         /// </summary>
         /// <param name="message">Message to be sent</param>
-        public void SendMessage(string message)
-        {
-            try
-            {
+        public void SendMessage(string message) {
+            try {
                 System.Threading.Thread.Sleep(500); //Just to not send so many packages at once
                 Console.WriteLine($"Sending message: {message}");
 
                 this.simpleTcpClient.WriteLine(message);
                 this.KeepConnectionAlive();
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 Console.WriteLine($"Exception: {ex.Message}");
             }
         }
@@ -84,28 +74,23 @@ namespace OpenProtocolInterpreter.Sample.Driver
         /// <param name="message">Message to be sent</param>
         /// <param name="timeout">Max time to wait</param>
         /// <returns>Controller's message</returns>
-        public Mid SendAndWaitForResponse(string message, TimeSpan timeout)
-        {
-            try
-            {
+        public Mid SendAndWaitForResponse(string message, TimeSpan timeout) {
+            try {
                 System.Threading.Thread.Sleep(500);
                 Mid midResponse = null;
 
                 Console.WriteLine($"Sending message: {message}");
                 Message response = this.simpleTcpClient.WriteLineAndGetReply(message, timeout);
 
-                Console.WriteLine((response != null) ? $"Response: {response.MessageString}" : "TIMEOUT!");
+                Console.WriteLine((response != null) ? $"Response: {response.MessageString}" : ("TIMEOUT!"+" [did not receive response-MID '"+message+"']."));
 
-                if (response != null)
-                {
+                if (response != null) {
                     KeepConnectionAlive();
                     midResponse = _midInterpreter.Parse(response.MessageString);
                 }
 
                 return midResponse;
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 Console.WriteLine($"Exception: {ex.Message}");
                 return null;
             }
@@ -117,25 +102,20 @@ namespace OpenProtocolInterpreter.Sample.Driver
         /// </summary>
         /// <param name="sender">sender</param>
         /// <param name="message">Message received</param>
-        protected virtual void OnPackageReceived(object sender, Message message)
-        {
-            try
-            {
+        protected virtual void OnPackageReceived(object sender, Message message) {
+            try {
                 Console.WriteLine($"Message arrived: {message.MessageString}");
 
                 var mid = this._midInterpreter.Parse(message.MessageString);
                 var action = this.OnReceivedMID.FirstOrDefault(x => x.Key == mid.GetType());
 
-                if (action.Equals(default(KeyValuePair<Type, ReceivedCommandActionDelegate>)))
-                {
+                if (action.Equals(default(KeyValuePair<Type, ReceivedCommandActionDelegate>))) {
                     Console.WriteLine($"NO ACTION WAS REGISTERED TO MID: {mid.GetType()}");
                     return;
                 }
 
                 action.Value(new MIDIncome() { Mid = mid });
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 Console.WriteLine($"Exception: {ex.Message}");
             }
         }
@@ -143,14 +123,11 @@ namespace OpenProtocolInterpreter.Sample.Driver
         /// <summary>
         /// Start TCP/IP connection and initiates an OpenProtocol conversation with controller, send start communication to controller (MID 0001)
         /// </summary>
-        protected virtual bool StartCommunication()
-        {
-            try
-            {
+        protected virtual bool StartCommunication() {
+            try {
                 var message = SendAndWaitForResponse(new Mid0001(1).Pack(), TimeSpan.FromSeconds(10));
                 if (message != null)
-                    switch (message.HeaderData.Mid)
-                    {
+                    switch (message.HeaderData.Mid) {
                         case Mid0002.MID:
                             OnCommunicationStartAccepted(message as Mid0002);
                             break;
@@ -158,9 +135,7 @@ namespace OpenProtocolInterpreter.Sample.Driver
                             OnCommunicationStartError(message as Mid0004);
                             break;
                     }
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 Connected = false;
                 Console.WriteLine($"Exception: {ex.Message}");
             }
@@ -172,14 +147,12 @@ namespace OpenProtocolInterpreter.Sample.Driver
         /// When controller accept comunication start accordingly with OpenProtocol telegrams (MID 0002)
         /// </summary>
         /// <param name="e"></param>
-        protected virtual void OnCommunicationStartAccepted(Mid0002 mid)
-        {
+        protected virtual void OnCommunicationStartAccepted(Mid0002 mid) {
             Connected = true;
             Console.WriteLine($"Communication Start Accepted (MID 0002)");
         }
 
-        protected virtual void OnCommunicationStartError(Mid0004 mid)
-        {
+        protected virtual void OnCommunicationStartError(Mid0004 mid) {
             Connected = false;
             if (mid.ErrorCode == Error.CLIENT_ALREADY_CONNECTED)
                 Console.WriteLine("Client is already connected!!");
@@ -187,8 +160,7 @@ namespace OpenProtocolInterpreter.Sample.Driver
                 Console.WriteLine(Error.MID_REVISION_UNSUPPORTED.ToString());
         }
 
-        private void KeepConnectionAlive()
-        {
+        private void KeepConnectionAlive() {
             KeepAlive = Stopwatch.StartNew();
         }
     }
