@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup Label="IDK">
     <Compile Include="Source\Logger.cs" />
+    <Compile Include="Source\MyThread.cs" />
     <Compile Include="Source\UI\tcp_listenerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,17 +63,12 @@
   </ItemGroup>
   <ItemGroup Label="References">
     <Reference Include="RB_OpenProtocolInterpreter">
-      <HintPath>..\AtlasCopcoDrivers\OPImplementations\RB_OpenProtocolInterpreter\src\OpenProtocolInterpreter\bin\Debug\netstandard2.0\RB_OpenProtocolInterpreter.dll</HintPath>
+      <HintPath>..\OPImplementations\RB_OpenProtocolInterpreter\sample\OpenProtocolInterpreter.Sample\bin\Debug\RB_OpenProtocolInterpreter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Source\UI\tcp_listenerForm.resx">
-      <DependentUpon>tcp_listenerForm.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

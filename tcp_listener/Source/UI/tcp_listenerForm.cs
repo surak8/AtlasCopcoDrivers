@@ -8,9 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using OpenProtocolInterpreter;
-using OpenProtocolInterpreter.Communication;
-using OpenProtocolInterpreter.KeepAlive;
+//using OpenProtocolInterpreter;
+//using OpenProtocolInterpreter.Communication;
+//using OpenProtocolInterpreter.KeepAlive;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,171 +21,63 @@ using System.Reflection;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-
+using NSTcp_listener.Threads;
+using OpenProtocolInterpreter;
+using OpenProtocolInterpreter.Communication;
+using OpenProtocolInterpreter.Job;
+using OpenProtocolInterpreter.Job.Advanced;
+using OpenProtocolInterpreter.KeepAlive;
+using OpenProtocolInterpreter.Vin;
 
 namespace NSTcp_listener {
 
-    public partial class tcp_listenerForm {
-        const string DEFAULT_ADDRESSS = "127.0.0.1";
-        //const string DEFAULT_ADDRESSS = "192.168.105.8";
-        const int DEFAULT_PORT = 4545;
-        public tcp_listenerForm() {
-            InitializeComponent();
-        }
-        void exitClick(object sender, EventArgs ea) {
-            CancelEventArgs cea = new CancelEventArgs();
+	public partial class tcp_listenerForm {
+		const string DEFAULT_ADDRESSS = "127.0.0.1";
+		//const string DEFAULT_ADDRESSS = "192.168.105.8";
+		const int DEFAULT_PORT = 4545;
+		public tcp_listenerForm() {
+			InitializeComponent();
+		}
+		void exitClick(object sender, EventArgs ea) {
+			CancelEventArgs cea = new CancelEventArgs();
 
-            Application.Exit(cea);
-            if (cea.Cancel) {
-                return;
-            }
-            Application.Exit();
-        }
-        void formLoad(object sender, EventArgs ea) {
-        }
-        [STAThread()]
-        public static void Main(string[] args) {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new tcp_listenerForm());
-        }
-        List<MyThread> _threads = new List<MyThread>();
-        void tsmiStartListening_Click(object sender, EventArgs e) {
-            MyThread mt;
-            Logger.log(MethodBase.GetCurrentMethod());
-            Logger.log(MethodBase.GetCurrentMethod(), "creating thread-object");
-            _threads.Add(mt = new MyThread(DEFAULT_ADDRESSS, DEFAULT_PORT));
-            //_threads.Add(mt = new MyThread("192.168.105.8", 4545));
-            Logger.log(MethodBase.GetCurrentMethod(), "starting thread-object");
-            mt.start();
-            //new MyThread().start();
-        }
-    }
-    class MyThread {
-        //private readonly string ipAddress;
-        Thread _thread;
-        TcpListener _server;
-        ManualResetEvent _mre;
-
-        //string v1;
-        //int v2;
-
-        public MyThread(string anIPAddress, int nPort) {
-            Logger.log(MethodBase.GetCurrentMethod());
-            //this.v1 = v1;
-            //this.v2 = v2;
-            this.ipAddress = anIPAddress;
-            this.portNumber = nPort;
-        }
-
-        public string ipAddress { get; }
-        public int portNumber { get; }
-
-        //private object runThread;
-
-        internal void start() {
-            Logger.log(MethodBase.GetCurrentMethod(), "creating thread");
-            this._thread = new Thread(this.runThread);
-            Logger.log(MethodBase.GetCurrentMethod(), "starting thread");
-            this._thread.Start(this);
-        }
-        void runThread(object anObj) {
-            bool _exitLoop = false;
-            TcpClient client;
-            NetworkStream stream;
-            byte[] bytes = new byte[1028];
-            string data;
-            int i;
-
-            _mre = new ManualResetEvent(false);
-            _mre.Set();
-            if (_mre.WaitOne(100))
-                Trace.WriteLine("DID wait-one");
-            else
-                Trace.WriteLine("did NOT do wait-one");
-            try {
-                _server = new TcpListener(IPAddress.Parse(ipAddress), portNumber);
-                //_server=new TcpListener {
-
-                //}
-
-                //s.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, 1);
-                _server.Server.SetSocketOption(SocketOptionLevel.Socket,
-                     SocketOptionName.ReuseAddress, 1);
-                _server.Start();
-                client = _server.AcceptTcpClient();
-                stream = client.GetStream();
-                while (!_exitLoop) {
-                    // await connection
-                    i = stream.Read(bytes, 0, bytes.Length);
-                    if (i < 1) {
-                        //_mre.Reset();
-                        client.Close();
-                    } else {
-                        data = Encoding.ASCII.GetString(bytes, 0, i);
-                        int amid;
-
-                        if ((amid=readMid(data))!=9999)
-                        Trace.WriteLine("read: " + data);
-                        handleResponse(data, stream);
-                    }
-                    //client.Close
-                }
-                stream.Close();
-                client.Close();
-            } catch (Exception ex) {
-                Trace.WriteLine(ex.Message);
-            }
-        }
-
-        void handleResponse(string data, NetworkStream stream) {
-            int mid;
-            //string replyData;
-            //byte[] bytes;
-            //OpenProtocolInterpreter.Mid opmid;
-
-            Logger.log(MethodBase.GetCurrentMethod(), "Data=[" + data + "]");
-            switch (mid = readMid(data)) {
-                case 1:
-                    // respond with 2 or 4;
-                    sendReply(stream, new Mid0002(), mid);
-                    break;
-                case 9999:
-                    sendReply(stream, new Mid9999(), mid,false);
-                    //replyData = (opmid = new OpenProtocolInterpreter.KeepAlive.Mid9999()).Pack();
-                    //Logger.log(MethodBase.GetCurrentMethod(), "Replying with " + opmid.GetType().Name + " in response.");
-                    //bytes = Encoding.ASCII.GetBytes(replyData+'\0');
-                    //stream.Write(bytes, 0, bytes.Length);
-                    break;
-                default:
-                    Logger.log(MethodBase.GetCurrentMethod(), "unhandled MID=" + mid + ".");
-                    break;
-            }
-        }
-
-        void sendReply(NetworkStream stream, Mid amid, int midNo,bool logSend=true) {
-            byte[] bytes;
-            string replyData ;
-
-            if (amid != null) {
-                replyData = amid.Pack() + '\0';
-                if (logSend)
-                    Logger.log(MethodBase.GetCurrentMethod(), "Replying with " + amid.GetType().Name + " to Mid" + midNo.ToString("000#") + ".");
-                bytes = Encoding.ASCII.GetBytes(replyData);
-                stream.Write(bytes, 0, bytes.Length);
-            }
-        }
-
-        int readMid(string data) {
-            int len, ntmp;
-            string tmp;
-
-            if (!string.IsNullOrEmpty(data) && (len = data.Length) > 8) {
-                if (int.TryParse(tmp = data.Substring(4, 4), out ntmp))
-                    if (ntmp >= 0)
-                        return ntmp;
-            }
-            return -1;
-        }
-    }
+			Application.Exit(cea);
+			if (cea.Cancel) {
+				return;
+			}
+			Application.Exit();
+		}
+		void formLoad(object sender, EventArgs ea) {
+		}
+		[STAThread()]
+		public static void Main(string[] args) {
+			Application.EnableVisualStyles();
+			Application.SetCompatibleTextRenderingDefault(false);
+			Application.Run(new tcp_listenerForm());
+		}
+		List<MyThread> _threads = new List<MyThread>();
+		void tsmiStartListening_Click(object sender, EventArgs e) {
+			MyThread mt;
+			Logger.log(MethodBase.GetCurrentMethod());
+			Logger.log(MethodBase.GetCurrentMethod(), "creating thread-object");
+			_threads.Add(mt = new MyThread(DEFAULT_ADDRESSS, DEFAULT_PORT));
+			//_threads.Add(mt = new MyThread("192.168.105.8", 4545));
+			Logger.log(MethodBase.GetCurrentMethod(), "starting thread-object");
+			mt.start();
+			//new MyThread().start();
+		}
+		protected override void OnFormClosed(FormClosedEventArgs e) {
+			int n;
+			MyThread[] currentThreads;
+			if ((n=_threads.Count)>0) {
+				currentThreads=new MyThread[n];
+				_threads.CopyTo(currentThreads);
+				for (int i = 0; i<n; i++) {
+					currentThreads[i].stop();
+					currentThreads[i].waitHandle.WaitOne();
+				}
+			}
+			base.OnFormClosed(e);
+		}
+	}
 }
