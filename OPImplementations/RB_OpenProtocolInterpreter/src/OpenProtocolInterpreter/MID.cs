@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace OpenProtocolInterpreter
@@ -129,8 +130,13 @@ namespace OpenProtocolInterpreter
             {
                 return field.HasPrefix ? package.Substring(2 + field.Index, field.Size) : package.Substring(field.Index, field.Size);
             }
-            catch (ArgumentOutOfRangeException)
+            catch (ArgumentOutOfRangeException aore)
             {
+                MethodBase mb = MethodBase.GetCurrentMethod();
+
+                StringBuilder sb = new StringBuilder();
+                Exception ex0=ex
+                
                 return null;
             }
         }

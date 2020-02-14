@@ -14,12 +14,15 @@ using OpenProtocolInterpreter.Sample.Driver;
 using OpenProtocolInterpreter.Sample.Driver.Commands;
 using OpenProtocolInterpreter.Sample.Driver.Events;
 using OpenProtocolInterpreter.Sample.Driver.Helpers;
+using OpenProtocolInterpreter.Sample.Ethernet;
 using OpenProtocolInterpreter.Tightening;
 
 namespace OpenProtocolInterpreter.Sample {
 	public partial class DriverForm : Form {
 		Timer keepAliveTimer;
 		OpenProtocolDriver driver;
+
+		public bool connected { get; private set; }
 
 		public DriverForm() {
 			InitializeComponent();
@@ -31,42 +34,53 @@ namespace OpenProtocolInterpreter.Sample {
 		void BtnConnection_Click(object sender, EventArgs e) {
 			//Added list of mids i want to use in my interpreter, every another will be desconsidered
 			driver = new OpenProtocolDriver(
-				new Type[]
-			{
-				typeof(Mid0002),
-				typeof(Mid0005),
-				typeof(Mid0004),
-				typeof(Mid0003),
+				new Type[] {
+					typeof(Mid0002),
+					typeof(Mid0005),
+					typeof(Mid0004),
+					typeof(Mid0003),
 
-				typeof(ParameterSet.Mid0011),
-				typeof(ParameterSet.Mid0013),
+					typeof(ParameterSet.Mid0011),
+					typeof(ParameterSet.Mid0013),
 
-				typeof(Mid0035),
-				typeof(Mid0031),
+					typeof(Mid0035),
+					typeof(Mid0031),
 
-				typeof(Alarm.Mid0071),
-				typeof(Alarm.Mid0074),
-				typeof(Alarm.Mid0076),
+					typeof(Alarm.Mid0071),
+					typeof(Alarm.Mid0074),
+					typeof(Alarm.Mid0076),
 
-				typeof(Vin.Mid0052),
+					typeof(Vin.Mid0052),
 
-				typeof(Mid0061),
-				typeof(Mid0065),
+					typeof(Mid0061),
+					typeof(Mid0065),
 
-				typeof(Time.Mid0081),
+					typeof(Time.Mid0081),
 
-				typeof(Mid9999)
-			});
+					typeof(Mid9999)
+				});
+			SimpleTcpClient client = null;
+			try {
 
-			var client = new Ethernet.SimpleTcpClient().Connect(textIp.Text, (int) numericPort.Value);
-			if (driver.BeginCommunication(client)) {
-				keepAliveTimer.Start();
-				connectionStatus.Text = "Connected!";
-				connectionStatus.BackColor = Color.Green;
-			} else {
-				driver = null;
-				connectionStatus.Text = "Disconnected!";
-				connectionStatus.BackColor = Color.Red;
+				client = new Ethernet.SimpleTcpClient().Connect(textIp.Text, (int) numericPort.Value);
+			} catch (Exception ex) {
+				Logger.log(MethodBase.GetCurrentMethod(), ex);
+
+			}
+			if (client != null) {
+				if (driver.BeginCommunication(client)) {
+					keepAliveTimer.Start();
+					connectionStatus.Text = "Connected!";
+					connectionStatus.BackColor = Color.Green;
+					connected = true;
+					setupUI();
+				} else {
+					driver = null;
+					connectionStatus.Text = "Disconnected!";
+					connectionStatus.BackColor = Color.Red;
+					connected = false;
+					setupUI();
+				}
 			}
 		}
 
@@ -194,6 +208,18 @@ namespace OpenProtocolInterpreter.Sample {
 
 		void BtnAbortJob_Click(object sender, EventArgs e) {
 			new AbortJobCommand(driver).Execute();
+		}
+
+		 void DriverForm_Load(object sender, EventArgs e) {
+			setupUI();
+		}
+
+		  void setupUI() {
+			this.groupBox1.Enabled = connected;
+			this.groupBox2.Enabled = connected;
+			this.textIp.Enabled = !connected;
+			this.numericPort.Enabled = !connected;
+			this.btnConnection.Enabled = !connected;
 		}
 	}
 

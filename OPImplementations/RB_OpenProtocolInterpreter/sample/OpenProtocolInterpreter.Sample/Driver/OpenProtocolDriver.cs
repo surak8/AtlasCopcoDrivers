@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 
 namespace OpenProtocolInterpreter.Sample.Driver {
     public class OpenProtocolDriver {
@@ -34,10 +35,15 @@ namespace OpenProtocolInterpreter.Sample.Driver {
         }
 
         public bool BeginCommunication(SimpleTcpClient client) {
-            simpleTcpClient = client;
-            simpleTcpClient.DataReceived += OnPackageReceived;
-            simpleTcpClient.DelimiterDataReceived += OnPackageReceived;
-            return StartCommunication();
+            try {
+                simpleTcpClient = client;
+                simpleTcpClient.DataReceived += OnPackageReceived;
+                simpleTcpClient.DelimiterDataReceived += OnPackageReceived;
+                return StartCommunication();
+            }catch(Exception ex) {
+                Logger.log(MethodBase.GetCurrentMethod(), ex);
+            }
+            return false;
         }
 
         /// <summary>

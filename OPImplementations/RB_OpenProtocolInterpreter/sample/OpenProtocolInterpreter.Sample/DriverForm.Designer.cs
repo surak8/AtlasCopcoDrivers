@@ -265,6 +265,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Name = "DriverForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.DriverForm_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericPort)).EndInit();
