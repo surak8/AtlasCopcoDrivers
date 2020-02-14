@@ -32,39 +32,27 @@ namespace OpenProtocolInterpreter.Sample.Ethernet {
         public event EventHandler<Message> DelimiterDataReceived;
         public event EventHandler<Message> DataReceived;
 
-        internal bool QueueStop {
-            get {
-                lock (_queueStopLock)
-                    return _queueStop;
-            }
-            set {
-                lock (_queueStopLock)
-                    _queueStop = value;
-            }
-        }
+        internal bool QueueStop {            get {                lock (_queueStopLock)                    return _queueStop;            }            set {               lock (_queueStopLock)                    _queueStop = value;            }        }
         internal int ReadLoopIntervalMs { get; set; }
         public bool AutoTrimStrings { get; set; }
 
-        public SimpleTcpClient Connect(string hostNameOrIpAddress, int port) {
-            if (string.IsNullOrEmpty(hostNameOrIpAddress)) {
-                throw new ArgumentNullException("hostNameOrIpAddress");
-            }
+		public SimpleTcpClient Connect(string hostNameOrIpAddress, int port) {
+			if (string.IsNullOrEmpty(hostNameOrIpAddress))
+				throw new ArgumentNullException("hostNameOrIpAddress");
+			_client = new TcpClient();
+			_client.Connect(hostNameOrIpAddress, port);
+			StartRxThread();
+			return this;
+		}
 
-            _client = new TcpClient();
-            _client.Connect(hostNameOrIpAddress, port);
+		void StartRxThread() {
+			if (_rxThread != null) { return; }
 
-            StartRxThread();
-
-            return this;
-        }
-
-        private void StartRxThread() {
-            if (_rxThread != null) { return; }
-
-            _rxThread = new Thread(ListenerLoop);
-            _rxThread.IsBackground = true;
-            _rxThread.Start();
-        }
+			_rxThread = new Thread(ListenerLoop) {
+				IsBackground = true
+			};
+			_rxThread.Start();
+		}
 
         public SimpleTcpClient Disconnect() {
             if (_client == null) { return this; }

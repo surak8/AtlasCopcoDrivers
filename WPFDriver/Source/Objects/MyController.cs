@@ -50,49 +50,47 @@ namespace NSAtlasCopcoBreech {
 		#region constants
 		const int CLIENT_BUFF_SIZE = 1024;
 		#endregion
+
 		#region fields
 		DateTime _lastMessage;
 		DisplayStatusDelegate _displayStatusDelegate = null;
+		FileStream _csvLogStream;
+		FileStream _midLogStream;
 		NetworkStream _clientStream = null;
 		ProcessCommStatusDelegate _processCommStatusDelegate = null;
 		ProcessMidDelegate _processMidDelegate = null;
+		StreamWriter _csvLogFile;
 		Task _taskKeepAlive;
 		Task _taskMonitor;
 		Task _taskReceive;
 		TcpClient _tcpClient = null;
 		TextWriter _midLogFile;
 		bool _TryingToConnectInProgress = false;
+		bool _csvWroteCSVHeader;
+		bool _initialTighteningData;
 		bool _lastTcpConnectionIsOkForRead = false;
+		bool _shuttingDown;
 		bool disposedValue = false;
+		int _lastTighteningID;
 		int _port;
+		int _thisTighteningID;
 		internal event EventHandler ThreadsShutdown;
 		object _writeLock = new object();
 		readonly DateTime _TimeOfLastLogicalConnectedToController = new DateTime(1948, 8, 24);
-		FileStream _midLogStream;
 		readonly byte[] _clientBuff = new byte[CLIENT_BUFF_SIZE];
+		readonly object _csvLock=new object();
 		readonly object _dictLock = new object();
 		static bool _verVerbose = false;
 		static int _nextFileNumber=-1;
-		static readonly ManualResetEvent _mreThreads=new ManualResetEvent(true);
-		static readonly object midLogLock = new object();
-		static readonly bool showMidContent=true;
-		string _ipAddress = string.Empty;
-		bool _shuttingDown;
-		bool _initialTighteningData;
-		int _lastTighteningID;
-		int _thisTighteningID;
-		static readonly ManualResetEvent _mreShutdown=new ManualResetEvent(false);
-		#endregion
-
-		/// <summary>CSV-generator for on-going  stuff.</summary>
-		/// <seealso cref="writeAsCSV"/>
-		FileStream _csvLogStream;
-		StreamWriter _csvLogFile;
-		readonly object _csvLock=new object();
-		string _csvTighteningName;
-		bool _csvWroteCSVHeader;
-		  static readonly object _tighteningLock=new object();
 		static readonly IDictionary<int,MidData> _tighteningMap=new Dictionary<int, MidData>();
+		static readonly ManualResetEvent _mreShutdown=new ManualResetEvent(false);
+		static readonly ManualResetEvent _mreThreads=new ManualResetEvent(true);
+		static readonly bool showMidContent=true;
+		static readonly object _tighteningLock=new object();
+		static readonly object midLogLock = new object();
+		string _csvTighteningName;
+		string _ipAddress = string.Empty;
+		#endregion
 
 		#region cctor
 		static MyController() {
@@ -107,6 +105,7 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		#endregion
+		
 		#region ctor
 		public MyController() {
 			createNewLogFile();
@@ -117,6 +116,8 @@ namespace NSAtlasCopcoBreech {
 		public static bool veryVerbose { get { return _verVerbose; } set { _verVerbose = value; } }
 		public static string logFilePath { get; set; }
 		#endregion
+
+		static readonly object _streamLock=new object();
 		#region public methods
 		public bool initialize(string ipAddress, int port, ProcessMidDelegate processMidDelegate,
 			DisplayStatusDelegate displayStatusDelegate, ProcessCommStatusDelegate processCommStatusDelegate) {
@@ -157,11 +158,13 @@ namespace NSAtlasCopcoBreech {
 			try {
 				processCommunicationStatus(CommStatus.Down);
 				try {
-					if (_clientStream != null) {
-						Utility.logger.log(ColtLogLevel.Info, " Attempting To Close Stream");
-						_clientStream.Close();
-						Utility.logger.log(ColtLogLevel.Info, " TcpClient Stream Closed");
-						_clientStream = null;
+					lock (_streamLock) {
+						if (_clientStream != null) {
+							Utility.logger.log(ColtLogLevel.Info, " Attempting To Close Stream");
+							_clientStream.Close();
+							Utility.logger.log(ColtLogLevel.Info, " TcpClient Stream Closed");
+							_clientStream = null;
+						}
 					}
 				} catch {
 				}
@@ -225,8 +228,6 @@ namespace NSAtlasCopcoBreech {
 			this.ThreadsShutdown?.Invoke(this, new EventArgs());
 			_mreThreads.Set();
 		}
-
-
 
 		void closeLogFiles() {
 			try {
@@ -354,7 +355,9 @@ namespace NSAtlasCopcoBreech {
 				_tcpClient = new TcpClient(_ipAddress, _port) {
 					NoDelay = true
 				};
-				_clientStream = _tcpClient.GetStream();
+				lock (_streamLock) {
+					_clientStream = _tcpClient.GetStream();
+				}
 				Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "Connected");
 				processCommunicationStatus(CommStatus.Up);
 				Thread.Sleep(1000);
@@ -367,7 +370,6 @@ namespace NSAtlasCopcoBreech {
 				return;
 			}
 		}
-
 
 		#endregion
 		#region thread-handling methods
@@ -421,8 +423,6 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
-
-
 		void receiveThread() {
 			MethodBase mb = MethodBase.GetCurrentMethod();
 			int bytesRead = 0, length;
@@ -473,11 +473,15 @@ namespace NSAtlasCopcoBreech {
 					while (bytesRead < 4)
 						bytesRead += _clientStream.Read(_clientBuff, bytesRead, 4 - bytesRead);
 					length = int.Parse(Encoding.ASCII.GetString(_clientBuff, 0, 4)) + 1;
-					bytesRead += _clientStream.Read(_clientBuff, 4, length - 4);
+					lock (_streamLock) {
+						bytesRead += _clientStream.Read(_clientBuff, 4, length - 4);
+					}
 					if (veryVerbose)
 						Utility.logger.log(ColtLogLevel.Info, mb, bytesRead + " of " + length + " Bytes Read.");
-					while (bytesRead < length)
-						bytesRead += _clientStream.Read(_clientBuff, bytesRead, length - bytesRead);
+					lock (_streamLock) {
+						while (bytesRead < length)
+							bytesRead += _clientStream.Read(_clientBuff, bytesRead, length - bytesRead);
+					}
 					bytesRead = 0;
 					package = Encoding.ASCII.GetString(_clientBuff, 0, length);
 					if (!string.IsNullOrEmpty(package) && _midLogFile != null) {
@@ -501,15 +505,13 @@ namespace NSAtlasCopcoBreech {
 					handlePackage(mb, package);
 				} catch (SocketException exSock) {
 					Utility.logger.log(MethodBase.GetCurrentMethod(), exSock);
-					close();
+					close();c
 				} catch (Exception ex) {
 					Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
 					close();
 				}
 			}
 		}
-
-
 
 		void generateTighteningRequests() {
 			int nIDS= _thisTighteningID-_lastTighteningID;

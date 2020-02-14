@@ -1,0 +1,33 @@
+<Window xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:NSNewDriver"
+	x:Name="window1"
+	x:Class="NSNewDriver.MainWindow"
+	Title="{Binding windowTitle}"
+	Width="{Binding windowWidth}"
+	Height="{Binding windowHeight}"
+	Left="{Binding windowLeft}"
+	Top="{Binding windowTop}"
+	SizeChanged="Window1_SizeChanged"
+	LocationChanged="Window1_LocationChanged"
+	Initialized="Window1_Initialized"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		HorizontalAlignment="Center" HorizontalContentAlignment="Stretch"
+		VerticalAlignment="Center" VerticalContentAlignment="Stretch"
+			
+		>
+
+
+	<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+			<ColumnDefinition/>
+		</Grid.ColumnDefinitions>
+		<Button Grid.Row="1" Grid.Column="1" Content="Click me"/>
+	</Grid>
+
+</Window>
