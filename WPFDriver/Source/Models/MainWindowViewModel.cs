@@ -10,6 +10,7 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -30,44 +31,34 @@ namespace NSAtlasCopcoBreech {
 			BindingFlags.Public | BindingFlags.Static;
 		static readonly object[] nullArgs = new object[] { };
 		#endregion
+	Dictionary<string,AtlasCopcoController> _controllers;
 
 		#region ctor
 		public MainWindowViewModel() {
-			string defSel;
+			AtlasCopcoController vvv;
 
-			//logger = createLogger();
-			//if (logger != null)
-			//    Logger.kensLogger = logger;
-#if VERSION2
-            atlasCopcoControllers = createControllerList2(out defSel);
-            selectedController = findDefaultController2<AtlasCopcoController>(atlasCopcoControllers, defSel, "controllerDescription");
-#else
-			atlasCopcoControllers = createControllerList(out defSel);
-#if false
-            selectedController = defSel;
-#else
-			selectedController = findDefaultController<AtlasCopcoController>(atlasCopcoControllers, defSel, "controllerDescription");
-#endif
-#endif
-			//selectDefaultController(defSel);
+			this.atlasCopcoControllers = new ObservableCollection<AtlasCopcoController>(
+				new AtlasCopcoController[] {
+					new AtlasCopcoController("192.168.105.176", 4545,  "FMS Torque Ext Tube"),
+					new AtlasCopcoController("192.168.105.170", 4545,  "FMS Grip Butt"),
+					vvv=new AtlasCopcoController("192.168.105.8", 4545, "FMS Breech"),
+					new AtlasCopcoController("192.168.105.10", 4545, "FMS BC Assembly"),
+					new AtlasCopcoController("192.168.105.177", 4545, "COMM Torque")
+				});
+			this.selectedController = vvv;
 
 #if !OTHER_VERSION
 
-			isControlEnabled=true;
-			controlVisibility=  Visibility.Visible;
+			isControlEnabled = true;
+			controlVisibility = Visibility.Visible;
 #else
 			controlVisibility=  Visibility.Hidden;
 #endif
 			startButtonEnabled = true;
 			stopButtonEnabled = false;
-			newLogFileEnabled=false;
-			//ipAddress = "192.168.105.8";
-			//portNumber = 4545;
-
-			windowTitle=makeWindowTitle();
+			newLogFileEnabled = false;
+			windowTitle = makeWindowTitle();
 		}
-
-
 
 		#endregion
 		string makeWindowTitle() {
@@ -84,47 +75,49 @@ namespace NSAtlasCopcoBreech {
 			return sb.ToString();
 		}
 
-#if VERSION2
-        T findDefaultController2<T>(CollectionView objs, string defSel, string someStringProperty) {
-            string val;
+//#if VERSION2
+//        T findDefaultController2<T>(CollectionView objs, string defSel, string someStringProperty) {
+//            string val;
 
-            if (!string.IsNullOrEmpty(defSel))
-                if (objs != null && objs.Count > 0)
-                    foreach (T acc in objs)
-                        if (string.Compare((val = (string) acc.GetType().InvokeMember(someStringProperty, bf, null, acc, nullArgs)), defSel, true) == 0)
-                            return acc;
-            return default(T);
-        }
+//            if (!string.IsNullOrEmpty(defSel))
+//                if (objs != null && objs.Count > 0)
+//                    foreach (T acc in objs)
+//                        if (string.Compare((val = (string) acc.GetType().InvokeMember(someStringProperty, bf, null, acc, nullArgs)), defSel, true) == 0)
+//                            return acc;
+//            return default(T);
+//        }
 
-        CollectionView createControllerList2(out string defaultControllerName) {
-            return new CollectionView(
-            new AtlasCopcoController[] {
-                new AtlasCopcoController("192.168.105.8", 4545, "FMS Breech"),
-                new AtlasCopcoController("192.168.105.210", 4545, "Pin FS"),
-                new AtlasCopcoController("192.168.105.10", 4545, "BC Assembly"),
-                new AtlasCopcoController("192.168.105.170", 4545, defaultControllerName = "FMS Grip Butt")
-            });
-        }
-#else
-		static T findDefaultController<T>(ObservableCollection<T> objs, string defSel, string someStringProperty) {
-			string val;
+//        CollectionView createControllerList2(out string defaultControllerName) {
+//            return new CollectionView(
+//            new AtlasCopcoController[] {
+//                new AtlasCopcoController("192.168.105.176", 4545, defaultControllerName = "FMS Torque Ext Tube")
+//                new AtlasCopcoController("192.168.105.170", 4545, defaultControllerName = "FMS Grip Butt")
+//                new AtlasCopcoController("192.168.105.8", 4545, "FMS Breech"),
+//                new AtlasCopcoController("192.168.105.10", 4545, "FMS BC Assembly"),
+//                new AtlasCopcoController("192.168.105.177", 4545, "COMM Torque"),
+//                //new AtlasCopcoController("192.168.105.210", 4545, "Pin FS"),
+//            });
+//        }
+//#else
+//		static T findDefaultController<T>(ObservableCollection<T> objs, string defSel, string someStringProperty) {
+//			string val;
 
-			if (!string.IsNullOrEmpty(defSel))
-				if (objs != null && objs.Count > 0)
-					foreach (T acc in objs)
-						if (string.Compare((val = (string) acc.GetType().InvokeMember(someStringProperty, bf, null, acc, nullArgs)), defSel, true) == 0)
-							return acc;
-			return default(T);
-		}
-		ObservableCollection<AtlasCopcoController> createControllerList(out string defaultControllerName) {
-			return new ObservableCollection<AtlasCopcoController> {
-				new AtlasCopcoController ("192.168.105.8",4545,defaultControllerName="FMS Breech"),
-				new AtlasCopcoController ("192.168.105.210",4545,"Pin FS"),
-				new AtlasCopcoController ("192.168.105.10",4545,"BC Assembly"),
-				new AtlasCopcoController ("192.168.105.170",4545,"FMS Grip Butt"),
-			};
-		}
-#endif
+//			if (!string.IsNullOrEmpty(defSel))
+//				if (objs != null && objs.Count > 0)
+//					foreach (T acc in objs)
+//						if (string.Compare((val = (string) acc.GetType().InvokeMember(someStringProperty, bf, null, acc, nullArgs)), defSel, true) == 0)
+//							return acc;
+//			return default(T);
+//		}
+//		ObservableCollection<AtlasCopcoController> createControllerList(out string defaultControllerName) {
+//			return new ObservableCollection<AtlasCopcoController> {
+//				new AtlasCopcoController ("192.168.105.8",4545,defaultControllerName="FMS Breech"),
+//				new AtlasCopcoController ("192.168.105.210",4545,"Pin FS"),
+//				new AtlasCopcoController ("192.168.105.10",4545,"BC Assembly"),
+//				new AtlasCopcoController ("192.168.105.170",4545,"FMS Grip Butt"),
+//			};
+//		}
+//#endif
 
 		//C3L createLogger() {
 		//    ConfigurationList cl;

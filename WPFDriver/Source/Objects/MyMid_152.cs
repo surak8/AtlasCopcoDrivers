@@ -1,9 +1,11 @@
 #if !OTHER_VERSION
+using System;
 using System.Reflection;
 //using OpenProtocolInterpreter.MIDs;
 //using OpenProtocolInterpreter.MIDs;
 
 namespace NSAtlasCopcoBreech {
+	[Obsolete("don't use this",true)]
 	class MyMid_152 : OpenProtocolInterpreter.MIDs.MID {
 
 #region ctor

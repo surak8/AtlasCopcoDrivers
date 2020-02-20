@@ -921,6 +921,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding NULL for unknown type: System.Collections.Generic.List`1[[System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.ParameterSet.MID_0011 mid) {
 /*
             mid.TotalParameterSets = 0;
@@ -1662,6 +1663,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)OpenProtocolInterpreter.MIDs.Job.MID_0033+JobDatas!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.MID_0033 mid) {
             mid.JobData = new OpenProtocolInterpreter.MIDs.Job.MID_0033.JobDatas();
         }
@@ -2684,6 +2686,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)OpenProtocolInterpreter.MIDs.Alarm.MID_0071+Alarms!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0071 mid) {
             mid.AlarmData = new OpenProtocolInterpreter.MIDs.Alarm.MID_0071.Alarms();
         }
@@ -2870,6 +2873,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)OpenProtocolInterpreter.MIDs.Alarm.MID_0076+AlarmStatusesData!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.Alarm.MID_0076 mid) {
             mid.AlarmStatusData = new OpenProtocolInterpreter.MIDs.Alarm.MID_0076.AlarmStatusesData();
         }
@@ -3104,6 +3108,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0091+MultiSpindlesData!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0091 mid) {
             mid.MultiSpindleData = new OpenProtocolInterpreter.MIDs.MultiSpindle.Status.MID_0091.MultiSpindlesData();
         }
@@ -3204,6 +3209,8 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)System.Collections.Generic.List`1[[OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106+BoltData, OpenProtocolInterpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]!
+        // adding unknown type: (inner class)System.Collections.Generic.List`1[[OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106+SpecialValue, OpenProtocolInterpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.PowerMACS.MID_0106 mid) {
             mid.TotalNumberOfMessages = 0;
             mid.MessageNumber = 0;
@@ -3251,6 +3258,9 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)System.Collections.Generic.List`1[[OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107+BoltResult, OpenProtocolInterpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]!
+        // adding unknown type: (inner class)System.Collections.Generic.List`1[[OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107+StepResult, OpenProtocolInterpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]!
+        // adding unknown type: (inner class)System.Collections.Generic.List`1[[OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107+SpecialValue, OpenProtocolInterpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.PowerMACS.MID_0107 mid) {
             mid.TotalNumberOfMessages = 0;
             mid.MessageNumber = 0;
@@ -3935,6 +3945,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)System.Collections.Generic.List`1[[OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140+Job, OpenProtocolInterpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.Job.Advanced.MID_0140 mid) {
             mid.JobID = 0;
             mid.JobName = "STRING";
@@ -4073,6 +4084,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152+IdentifierStatus!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152 mid) {
             mid.FirstIdentifierStatus = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152.IdentifierStatus();
             mid.SecondIdentifierStatus = new OpenProtocolInterpreter.MIDs.MultipleIdentifiers.MID_0152.IdentifierStatus();
@@ -5086,6 +5098,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding NULL for unknown type: System.Collections.Generic.List`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0251 mid) {
             mid.DeviceID = 0;
             mid.NumberOfSockets = 0;
@@ -5188,6 +5201,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)System.Collections.Generic.List`1[[OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0254+GreenLightCommand, OpenProtocolInterpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0254 mid) {
             mid.DeviceID = 0;
             mid.GreenLights = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0254.GreenLightCommand>();
@@ -5223,6 +5237,7 @@ namespace tests {
         public void runTests() {
             testRevision1();
         }
+        // adding unknown type: (inner class)System.Collections.Generic.List`1[[OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0255+RedLightCommand, OpenProtocolInterpreter, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]!
         public void setAllProperties(OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0255 mid) {
             mid.DeviceID = 0;
             mid.RedLights = new System.Collections.Generic.List<OpenProtocolInterpreter.MIDs.ApplicationSelector.MID_0255.RedLightCommand>();

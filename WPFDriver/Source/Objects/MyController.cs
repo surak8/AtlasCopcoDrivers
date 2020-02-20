@@ -48,8 +48,12 @@ namespace NSAtlasCopcoBreech {
 	}
 	public partial class MyController : IDisposable {
 		#region constants
+#if true
+		const int CLIENT_BUFF_SIZE = 4096;
+#else
 		const int CLIENT_BUFF_SIZE = 1024;
-		#endregion
+#endif
+#endregion
 
 		#region fields
 		DateTime _lastMessage;
@@ -80,7 +84,7 @@ namespace NSAtlasCopcoBreech {
 		readonly byte[] _clientBuff = new byte[CLIENT_BUFF_SIZE];
 		readonly object _csvLock=new object();
 		readonly object _dictLock = new object();
-		static bool _verVerbose = false;
+		static bool _verVerbose = true;
 		static int _nextFileNumber=-1;
 		static readonly IDictionary<int,MidData> _tighteningMap=new Dictionary<int, MidData>();
 		static readonly ManualResetEvent _mreShutdown=new ManualResetEvent(false);
@@ -505,7 +509,7 @@ namespace NSAtlasCopcoBreech {
 					handlePackage(mb, package);
 				} catch (SocketException exSock) {
 					Utility.logger.log(MethodBase.GetCurrentMethod(), exSock);
-					close();c
+					close();
 				} catch (Exception ex) {
 					Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
 					close();
