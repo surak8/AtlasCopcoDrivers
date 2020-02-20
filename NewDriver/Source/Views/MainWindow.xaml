@@ -1,4 +1,5 @@
-<Window xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:NSNewDriver"
+<Window 
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:NSNewDriver"
 	x:Name="window1"
 	x:Class="NSNewDriver.MainWindow"
 	Title="{Binding windowTitle}"
@@ -9,25 +10,128 @@
 	SizeChanged="Window1_SizeChanged"
 	LocationChanged="Window1_LocationChanged"
 	Initialized="Window1_Initialized"
-		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-		HorizontalAlignment="Center" HorizontalContentAlignment="Stretch"
-		VerticalAlignment="Center" VerticalContentAlignment="Stretch"
-			
-		>
-
-
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	>
 	<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 		<Grid.RowDefinitions>
+			<RowDefinition Height="4*"/>
+			<RowDefinition Height="3*"/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
+			<RowDefinition/>
 			<RowDefinition/>
 			<RowDefinition/>
 			<RowDefinition/>
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
-			<ColumnDefinition/>
-			<ColumnDefinition/>
-			<ColumnDefinition/>
+			<ColumnDefinition Width="5*"/>
+			<ColumnDefinition Width="10*"/>
+			<ColumnDefinition Width="10*"/>
+			<ColumnDefinition Width="5*"/>
 		</Grid.ColumnDefinitions>
-		<Button Grid.Row="1" Grid.Column="1" Content="Click me"/>
+
+		<Grid Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4">
+			<Grid.RowDefinitions>
+				<RowDefinition/>
+				<RowDefinition/>
+				<RowDefinition/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<CheckBox 
+				Name="cbAutostart"
+				Content="Autostart" 
+				Grid.Row="0" Grid.Column="2" 
+				Click="CbAutostart_Click"
+				IsChecked="{Binding isAutostartChecked}"
+				IsEnabled="{Binding allowDeviceSelection}"/>
+
+			<ComboBox 
+				Name="cbControllers"
+				Grid.Row="1" 
+				Grid.Column="1" 
+				Grid.ColumnSpan="3"
+				ItemsSource="{Binding atlasCopcoControllers}"
+				SelectedValue="{Binding selectedController}"
+				DisplayMemberPath="controllerDescription"
+				IsEnabled="{Binding allowDeviceSelection}"/>
+			<GroupBox Header="VIN"
+				Grid.Row="2"
+				Grid.Column="2"
+					  IsEnabled="{Binding deviceConnected}"
+					  >
+				<TextBox Name="tbVIN" Width="100" Height="25" Text="{Binding vinNumber}"/>
+			</GroupBox>
+			<Button 
+				HorizontalAlignment="Center"
+				HorizontalContentAlignment="Center"
+				VerticalAlignment="Center"
+				VerticalContentAlignment="Center"
+				Name="btnSetVin" 
+				Grid.Row="2"
+				Grid.Column="4"
+				Click="BtnSetVin_Click" 
+				IsEnabled="{Binding deviceConnected}" 
+				Content="Set VIN"/>
+		</Grid>
+
+		<StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" Grid.ColumnSpan="2">
+			<GroupBox Header="IPAddress" >
+				<TextBox Name="tbAddress" Text="{Binding selectedIPAddress,Mode=OneWay}" IsReadOnly="True" />
+			</GroupBox>
+			<GroupBox Header="Port">
+				<TextBox Name="tbPort" Text="{Binding selectedPortNumber,Mode=OneWay,TargetNullValue=''}" IsReadOnly="True"/>
+			</GroupBox>
+		</StackPanel>
+		<StackPanel 
+			Orientation="Horizontal" 
+			HorizontalAlignment="Center"
+			Grid.Row="2" Grid.Column="1"
+			Grid.ColumnSpan="2"
+			>
+			<Button Name="btnStart"  Content="Start" Click="BtnStart_Click" IsEnabled="{Binding allowDeviceSelection}" Height="22" VerticalAlignment="Top"/>
+			<Button Name="btnStop"  Content="Stop" Click="BtnStop_Click" IsEnabled="{Binding deviceConnected}"/>
+		</StackPanel>
+
+		<Button Grid.Row="3" Grid.Column="1" Content="Subscribe Alarm (70)" Click="alarmSubscribe" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="3" Grid.Column="2" Content="Unsubscribe Alarm (73)" Click="alarmUnsubscribe" IsEnabled="{Binding deviceConnected}"/>
+
+		<Button Grid.Row="4" Grid.Column="1" Content="Subscribe Last Tightening (60)" Click="lastTighteningSubscribe" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="4" Grid.Column="2" Content="Unsubscribe Last Tightening (63)" Click="unsubscribeLastTightening63" IsEnabled="{Binding deviceConnected}"/>
+
+		<Button Grid.Row="5" Grid.Column="1" Content="Request PSets" Click="requestPSets" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="5" Grid.Column="2" Content="Subscribe PSets (14)" Click="subscribePSets" IsEnabled="{Binding deviceConnected}"/>
+
+		<Button Grid.Row="6" Grid.Column="1" Content="Request Jobs" Click="requestJobs" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="6" Grid.Column="2" Content="Subscribe Job Info (34)" Click="subscribeJobInfo" IsEnabled="{Binding deviceConnected}"/>
+
+		<Button Grid.Row="7" Grid.Column="1" Content="Subscribe LockBatch (21)" Click="subscribeLockBatch" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="7" Grid.Column="2" Content="Subscribe VIN (51)" Click="vinSubscribe" IsEnabled="{Binding deviceConnected}"/>
+
+		<Button Grid.Row="8" Grid.Column="1" Content="Subscribe Multi-spindle status (90)" Click="multiSpindleStatusSubscribe" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="8" Grid.Column="2" Content="Subscribe Multi-spindle result (100)" Click="multiSpindleResultSubscribe" IsEnabled="{Binding deviceConnected}"/>
+
+		<Button Grid.Row="9" Grid.Column="1" Content="Subscribe (120)" Click="subscribe120" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="9" Grid.Column="2" Content="Subscribe (151)" Click="subscribe151" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="10" Grid.Column="1" Content="Subscribe (210)" Click="subscribe210" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="10" Grid.Column="2" Content="Subscribe (216)" Click="subscribe216" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="11" Grid.Column="1" Content="Subscribe (240)" Click="subscribe240" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="11" Grid.Column="2" Content="Subscribe (250)" Click="subscribe250" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="12" Grid.Column="1" Content="Subscribe (261)" Click="subscribe261" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="12" Grid.Column="2" Content="Subscribe (400)" Click="subscribe400" IsEnabled="{Binding deviceConnected}"/>
+		<Button Grid.Row="13" Grid.Column="1" Content="Subscribe (420)" Click="subscribe420" IsEnabled="{Binding deviceConnected}"/>
+		<!--<Button Grid.Row="12" Grid.Column="1" Content="Subscribe (70)" Click="alarmSubscribe" IsEnabled="{Binding deviceConnected}"/>-->
 	</Grid>
 
 </Window>

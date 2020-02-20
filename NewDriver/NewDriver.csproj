@@ -21,7 +21,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>.\bin\debug</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;KENNY</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>.\bin\debug\NewDriver.xml</DocumentationFile>
@@ -44,9 +44,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
-    <Reference Include="RB_OpenProtocolInterpreter">
-      <HintPath>..\OPImplementations\RB_OpenProtocolInterpreter\sample\OpenProtocolInterpreter.Sample\bin\Debug\RB_OpenProtocolInterpreter.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -73,6 +70,9 @@
     </ApplicationDefinition>
     <Compile Include="Source\Models\MainWindowViewModel.cs" />
     <Compile Include="Source\Objects\ACListener.cs" />
+    <Compile Include="Source\Objects\ACListener.MidHandling.cs" />
+    <Compile Include="Source\Objects\ACListener.Utility.cs" />
+    <Compile Include="Source\Objects\MidFinder.cs" />
     <Compile Include="Source\Objects\Utility.cs" />
     <Compile Include="Source\Views\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -86,6 +86,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\NewProjects\ColtUtilities2\ColtUtilities2.csproj">
+      <Project>{31ad9839-84e5-4726-b9b0-34ea62290592}</Project>
+      <Name>ColtUtilities2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OPImplementations\KenDemers_OpenProtocolInterpreter\OpenProtocolInterpreter.csproj">
+      <Project>{319224b6-48c6-4787-a98b-f33b774268d0}</Project>
+      <Name>OpenProtocolInterpreter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\OPImplementations\RB_OpenProtocolInterpreter\src\OpenProtocolInterpreter\RB_OpenProtocolInterpreter.csproj">
+      <Project>{d2e03efa-1e41-44cc-8ad0-0a3a1eb97814}</Project>
+      <Name>RB_OpenProtocolInterpreter</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

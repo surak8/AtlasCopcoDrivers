@@ -12,43 +12,44 @@
 using System;
 using System.Reflection;
 using System.Windows;
+using Colt.Utility.Logging;
 
 namespace NSNewDriver {
-    
-    public partial class App : Application {
+
+
+	public partial class App : Application, IColtLoggerProvider {
 		MainWindow _mw;
 
-		//protected override void OnLoadCompleted(NavigationEventArgs e) {
-		//	Utility.logger.log(MethodBase.GetCurrentMethod());
-		//	base.OnLoadCompleted(e);
-		//}
+		IColtLogger   _logger;
+		public IColtLogger logger { get { return _logger; } private set { _logger = value; } }
+
+		public App() {
+			_logger = DefaultColtLogger.createDefault();
+		}
 
 		protected override void OnSessionEnding(SessionEndingCancelEventArgs e) {
-			Utility.logger.log(MethodBase.GetCurrentMethod());
+			logger.log(MethodBase.GetCurrentMethod());
 			base.OnSessionEnding(e);
 		}
 
 		void Application_Startup(object sender, StartupEventArgs e) {
-			Utility.logger.log(MethodBase.GetCurrentMethod());
-			_mw = new MainWindow();
+			logger.log(MethodBase.GetCurrentMethod());
+			_mw = new MainWindow(logger);
 			Application.Current.MainWindow = _mw;
 			_mw.Show();
 		}
 
 		void Application_Exit(object sender, ExitEventArgs e) {
-			Utility.logger.log(MethodBase.GetCurrentMethod());
-			Utility.shutdown();
+			logger.log(MethodBase.GetCurrentMethod());
+			if (logger != null) {
+				logger.Dispose();
+				logger = null;
+			}
 		}
 
 		void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e) {
-			Utility.logger.log(MethodBase.GetCurrentMethod(), e.Exception);
+			logger.log(MethodBase.GetCurrentMethod(), e.Exception);
 			e.Handled = true;
 		}
 	}
-
-	//public static class Utility {
-	//	internal static void shutdown() {
-	//		throw new NotImplementedException();
-	//	}
-	//}
 }
