@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 namespace NSAtlasCopcoBreech {
 	public partial class MainWindow {
 		void generateTestsFrom(Assembly asm) {
-#if true
+#if true1	
 			new tests.Tester().runTests();
 #else
 			new TestGenerator().generateTestsFor(asm);
@@ -148,6 +148,7 @@ namespace NSAtlasCopcoBreech {
 						new CodeAssignStatement(
 							new CodeFieldReferenceExpression(ar, pi.Name),
 							createParameter(pi, revision, m)
+							//makePropertyValue(pi.PropertyType, m)
 							));
 				}
 			}
@@ -184,7 +185,11 @@ namespace NSAtlasCopcoBreech {
 		}
 		static void showCompileUnit(CodeCompileUnit ccu, CodeDomProvider provider) {
 			StringBuilder sb;
-
+			//CodeGeneratorOptions opts = new CodeGeneratorOptions {
+			//	BlankLinesBetweenMembers = false,
+			//	ElseOnClosing = true,
+			//	VerbatimOrder = false
+			//};
 			using (TextWriter tw = new StringWriter(sb = new StringBuilder())) {
 				provider.GenerateCodeFromCompileUnit(ccu, tw, options);
 			}
@@ -206,10 +211,21 @@ namespace NSAtlasCopcoBreech {
 				m.Statements.Add(new CodeCommentStatement("HAVE multiple revisions"));
 			addVarDefs(atype, m, vr, vrPkg);
 			generateTestMethod(mm, atype, revision, setPropMethodName, cdp, m, vr, vrPkg);
+			//showMethod(m, cdp);
+			//Trace.WriteLine("done");
+			;
 		}
 
+		//void showMethod(CodeMemberMethod m, CodeDomProvider cdp, string msg = null) {
 		void showMethod(CodeMemberMethod m, CodeDomProvider cdp, string msg = null) {
 			StringBuilder sb;
+			//CodeGeneratorOptions opts = new CodeGeneratorOptions {
+			//	BlankLinesBetweenMembers = false,
+			//	BracingStyle = "BLOCK",
+			//	ElseOnClosing = true,
+			//	IndentString = new string(' ', 4),
+			//	VerbatimOrder = false
+			//};
 
 			using (StringWriter sw = new StringWriter(sb = new StringBuilder())) {
 				cdp.GenerateCodeFromMember(m, sw, options);
@@ -218,11 +234,56 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		void generateTestMethod(CodeMemberMethod mm, Type atype, int revision, string setPropMethodName, CodeDomProvider cdp, CodeMemberMethod m, CodeVariableReferenceExpression vr, CodeVariableReferenceExpression vrPkg) {
-
+			//CodeStatementCollection csc = new CodeStatementCollection(), cscResult;
 			CodeStatementCollection cscResult;
+						//CodeExpression cePack;
 
+//			csc.AddRange(
+//				new CodeStatement[] {
+//					new CodeSnippetStatement(),
+//					new CodeExpressionStatement(
+//						new CodeMethodInvokeExpression(new CodeThisReferenceExpression(),setPropMethodName,vr)),
+//			});
+//			csc.Add(new CodeSnippetStatement("#error here!"));
+//			csc.AddRange(
+//				new CodeStatement[] {
+
+//#if OTHER_VERSION
+//					new CodeAssignStatement(vrPkg,new CodeMethodInvokeExpression(vr,"Pack")),
+
+//#else
+					
+//					//new CodeCommentStatement("mid.processPackage(package);"),
+//					//new CodeExpressionStatement(
+//					//	new CodeMethodInvokeExpression(vr,"processPackage",vrPkg)),
+//					//new CodeCommentStatement("string s=mid.buildPackage();"),
+//					//new CKCw CodeMethodInvokeExpression(vr,"buildPackage"))
+//					new CodeAssignStatement(vrPkg,new CodeMethodInvokeExpression(vr,"buildPackage"))
+
+
+//#endif
+//							});
+
+//			//showStatements(cdp, csc);
+//			csc.AddRange(
+//				new CodeStatement[] {
+
+//					new CodeExpressionStatement(
+//						new CodeMethodInvokeExpression(
+//							//new CodeTypeReferenceExpression (typeof(System.Diagnostics.Trace )),
+//							new CodeTypeReferenceExpression (typeof(Trace )),
+//							"WriteLine",
+//							new CodeBinaryOperatorExpression(
+//								new CodePrimitiveExpression("package = "),
+//								 CodeBinaryOperatorType.Add ,
+//								 new CodeBinaryOperatorExpression(
+//								 vrPkg,
+//								  CodeBinaryOperatorType.Add,
+//								  new CodePrimitiveExpression(".")))))
+//			});
 #if true
-			cscResult = generateCTORS(atype, vr, vrPkg, setPropMethodName, revision, m, cdp);
+			cscResult = generateCTORS(atype, vr, vrPkg, setPropMethodName, revision, m,cdp);
+			//cscResult.AddRange(csc);
 #else
 			cscResult = generateBestCTOR(mm, atype, revision, cdp, m, vr, csc);
 #endif
@@ -232,34 +293,40 @@ namespace NSAtlasCopcoBreech {
 		static CodeGeneratorOptions _opts;
 		static CodeGeneratorOptions options {
 			get {
-				if (_opts == null)
-					_opts = new CodeGeneratorOptions {
-						BlankLinesBetweenMembers = false,
-						BracingStyle = "BLOCK",
-						ElseOnClosing = true,
-						IndentString = new string(' ', 4),
-						VerbatimOrder = false
+				if (_opts==null)
+					_opts=new CodeGeneratorOptions{
+						BlankLinesBetweenMembers=false,
+						BracingStyle="BLOCK",
+						ElseOnClosing=true,
+						IndentString=new string(' ',4),
+						VerbatimOrder=false
 					};
 				return _opts;
 			}
 		}
 
 		void showStatements(CodeDomProvider cdp, CodeStatementCollection csc) {
+			if (cdp==null)
+				return;
+			if (csc==null)
+				return;
 			StringBuilder sb;
-
-			if (cdp == null)
-				return;
-			if (csc == null)
-				return;
-
-			using (StringWriter sw = new StringWriter(sb = new StringBuilder())) {
-				foreach (CodeStatement cs in csc)
+			//CodeGeneratorOptions opts=new CodeGeneratorOptions{
+			//	BlankLinesBetweenMembers=false,
+			//	BracingStyle="BLOCK",
+			//	ElseOnClosing=true,
+			//	IndentString=new string(' ',4),
+			//	VerbatimOrder=false
+			//};
+			using (StringWriter sw = new StringWriter(sb=new StringBuilder())) {
+				foreach (CodeStatement cs in csc) {
 					cdp.GenerateCodeFromStatement(cs, sw, options);
+				}
 			}
 			Trace.WriteLine(sb.ToString());
 		}
 
-		CodeStatementCollection generateCTORS(Type midType, CodeVariableReferenceExpression vr, CodeVariableReferenceExpression vrPkg, string setPropMethodName, int revision, CodeTypeMember ctm, CodeDomProvider cdp) {
+		CodeStatementCollection generateCTORS(Type midType, CodeVariableReferenceExpression vr, CodeVariableReferenceExpression vrPkg, string setPropMethodName, int revision, CodeTypeMember ctm,CodeDomProvider cdp) {
 			CodeStatementCollection ret = new CodeStatementCollection();
 			CodeStatementCollection testStatements = new CodeStatementCollection();
 			//code
@@ -274,6 +341,8 @@ namespace NSAtlasCopcoBreech {
 
 			vrMB = new CodeVariableReferenceExpression("mb");
 			vrEx = new CodeVariableReferenceExpression("ex");
+//#if OTHER_VERSION
+//ce=
 
 			testStatements = new CodeStatementCollection(
 				new CodeStatement[] {
@@ -338,38 +407,48 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		static CodeVariableDeclarationStatement createVarDef(CodeVariableReferenceExpression vr, Type t, CodeExpression ceInit) {
-			return new CodeVariableDeclarationStatement(t, vr.VariableName, ceInit);
+			return new CodeVariableDeclarationStatement(
+				t,
+				vr.VariableName,
+				ceInit);
+			//new CodeMethodInvokeExpression(
+			//new CodeTypeReferenceExpression(t),
+			//"GetCurrentMethod"));
 		}
 		static CodeExpression invokeMethod(Type t, string mname) {
 			return new CodeMethodInvokeExpression(new CodeTypeReferenceExpression(t), mname);
 		}
 
-		CodeExpression makeExpressionVector(CodeExpression[] exprs, CodeDomProvider cdp) {
+		CodeExpression makeExpressionVector(CodeExpression[] exprs,CodeDomProvider cdp) {
+			//CodeBinaryOperatorExpression cboe = null;
 			CodeExpression ret = null,tmp=null;
 			int n;
 
-			if (exprs != null && (n = exprs.Length) > 0) {
-				if (n == 1)
-					ret = exprs[0];
+			if (exprs != null && (n=exprs.Length) > 0) {
+				if (n==1)
+					ret=exprs[0];
 				else {
 					// create a recursive CodeBinaryOperatorExpression
-					ret = exprs[0];
-					for (int i = n - 2; i > 0; --i) {
-						if (tmp == null)
-							tmp = new CodeBinaryOperatorExpression(exprs[i], CodeBinaryOperatorType.Add, exprs[i + 1]);
+					ret=exprs[0];
+					for (int i = n-2; i>0; --i) {
+						//Trace.WriteLine("here");
+						if (tmp==null)
+							tmp=new CodeBinaryOperatorExpression(exprs[i], CodeBinaryOperatorType.Add, exprs[i+1]);
 						else {
-							tmp = new CodeBinaryOperatorExpression(exprs[0], CodeBinaryOperatorType.Add, tmp);
+							//Trace.WriteLine("here");
+							tmp=new CodeBinaryOperatorExpression(exprs[0], CodeBinaryOperatorType.Add, tmp);
 						}
 					}
-					if (tmp != null)
-						ret = tmp;
+					//Trace.WriteLine("here");
+					if (tmp!=null)
+						ret=tmp;
 				}
 			}
 
-			if (ret == null)
-				return new CodeSnippetExpression("#warning " +
-					MethodBase.GetCurrentMethod().ReflectedType.Name + "." +
-					MethodBase.GetCurrentMethod().Name + ": ACK!");
+			if (ret==null)
+				return new CodeSnippetExpression("#warning "+
+					MethodBase.GetCurrentMethod().ReflectedType.Name+"."+
+					MethodBase.GetCurrentMethod().Name+": ACK!");
 			else {
 				showExpressions(cdp, exprs);
 				showExpression(cdp, ret);
@@ -378,7 +457,9 @@ namespace NSAtlasCopcoBreech {
 		}
 
 		void showExpression(CodeDomProvider cdp, CodeExpression ret) {
-			if (cdp == null)
+			//StringBuilder sb;
+
+			if (cdp==null)
 				return;
 			showExpressions(cdp, new CodeExpression[] { ret });
 		}
@@ -386,9 +467,9 @@ namespace NSAtlasCopcoBreech {
 		void showExpressions(CodeDomProvider cdp, CodeExpression[] exprs) {
 			StringBuilder sb;
 
-			if (exprs == null)
+			if (exprs==null)
 				return;
-			using (StringWriter sw = new StringWriter(sb = new StringBuilder())) {
+			using (StringWriter sw = new StringWriter(sb=new StringBuilder())) {
 				foreach (CodeExpression ce in exprs)
 					cdp.GenerateCodeFromExpression(ce, sw, options);
 			}
@@ -399,18 +480,21 @@ namespace NSAtlasCopcoBreech {
 			ParameterInfo[] parms;
 			CodeExpressionCollection ceCtor = new CodeExpressionCollection();
 
-			parms = cc.GetParameters();
-			ret.Add(new CodeCommentStatement("Revision " + revision + "."));
-			ret.Add(new CodeAssignStatement(vr, createObj(new CodeTypeReference(midType), parms, revision, ctm)));
-			ret.AddRange(testStatements);
+			parms=cc.GetParameters();
+			//if ((parms = cc.GetParameters()).Length != 0) {
+				ret.Add(new CodeCommentStatement("Revision " + revision + "."));
+				ret.Add(new CodeAssignStatement(vr, createObj(new CodeTypeReference(midType), parms, revision, ctm)));
+				ret.AddRange(testStatements);
 			//}
 		}
 
 		CodeExpression createObj(CodeTypeReference ctr, ParameterInfo[] parms, int revision, CodeTypeMember ctm) {
 			CodeObjectCreateExpression ret = new CodeObjectCreateExpression(ctr);
+			//CodeExpressionCollection cec = new CodeExpressionCollection();
 
 			foreach (ParameterInfo aparm in parms)
 				ret.Parameters.Add(createParameter(aparm, revision, ctm));
+			//ret.Parameters.AddRange(cec);
 			return ret;
 		}
 
@@ -426,7 +510,14 @@ namespace NSAtlasCopcoBreech {
 			return createParameter(pi.Name, pi.PropertyType, revision, ctm);
 		}
 
+		//  CodeExpression createParameter(string name, Type propertyType,int revision) {
+		//	return createParameter(name, propertyType, revision);
+		//}
+
+		//CodeExpression createParameter3(ParameterInfo aparm, int revision) {
 		CodeExpression createParameter(string parmName, Type ptype, int revision, CodeTypeMember ctm) {
+			//Type ptype = aparm.ParameterType;
+			//Trace.WriteLine("here");
 			string errMsg;
 
 			if (string.Compare(parmName, "revision", true) == 0)
@@ -449,10 +540,12 @@ namespace NSAtlasCopcoBreech {
 						new CodeFieldReferenceExpression(
 							new CodeTypeReferenceExpression(ptype),
 							"Now"));
+				//new CodePrimitiveExpression((decimal)0));
 				else if (ptype.IsEnum)
 					parmMap.Add(ptype,
 						new CodeFieldReferenceExpression(new CodeTypeReferenceExpression(ptype), Enum.GetNames(ptype)[0]));
 				else {
+					//Trace.WriteLine("ack");
 					if (ptype.IsInterface) {
 						if (ptype.Name.StartsWith("Nullable")) {
 							Trace.WriteLine("ack");
@@ -474,17 +567,17 @@ namespace NSAtlasCopcoBreech {
 
 					if (ptype.IsClass) {
 						if (ptype.FullName.Contains("+")) {
-							errMsg = "adding unknown type: (inner class)" + ptype.FullName + "!";
-							if (ctm != null)
+							errMsg="adding unknown type: (inner class)" + ptype.FullName + "!";
+							if (ctm!=null)
 								ctm.Comments.Add(new CodeCommentStatement(errMsg));
 							Trace.WriteLine(errMsg);
 							parmMap.Add(ptype, new CodeObjectCreateExpression(ptype));
-							addAsNull = false;
+							addAsNull=false;
 						}
 					}
 					if (addAsNull) {
-						errMsg = "adding NULL for unknown type: " + ptype.FullName + "!";
-						if (ctm != null)
+						errMsg="adding NULL for unknown type: " + ptype.FullName + "!";
+						if (ctm!=null)
 							ctm.Comments.Add(new CodeCommentStatement(errMsg));
 						Trace.WriteLine(errMsg);
 						parmMap.Add(ptype, nullParm);
@@ -616,8 +709,11 @@ namespace NSAtlasCopcoBreech {
 					sb.Append(", ");
 				}
 				sb.Append(cdp.GetTypeOutput(new CodeTypeReference(parms[i].ParameterType)) + " " + parms[i].Name);
-				ceTmp = createParameter(parms[i], revision, m);
+				ceTmp=createParameter(parms[i], revision, m);
 				Trace.WriteLine("fix this");
+				// add the result 
+				//cecParms.Add(makePropertyValue(parms[i].ParameterType, m));
+				//cecParms.Add(createParameter(parms[i].ParameterType, m));
 			}
 			sb.Append(")");
 			csc.Add(new CodeCommentStatement(sb.ToString()));

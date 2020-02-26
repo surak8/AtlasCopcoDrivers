@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Sockets;
 using System.Threading;
+// riktest
 
 namespace OpenProtocolInterpreter.Sample.Ethernet {
     /// <summary>
@@ -11,48 +12,71 @@ namespace OpenProtocolInterpreter.Sample.Ethernet {
     /// <see cref="https://github.com/BrandonPotter/SimpleTCP" />
     /// </summary>
     public class SimpleTcpClient : IDisposable {
+#region fields
+         event EventHandler<Message> ReplyEvent;
+        public event EventHandler<Message> DelimiterDataReceived;
+        public event EventHandler<Message> DataReceived;
+#endregion fields
+		#region fields
+         List<byte> _queuedMsg = new List<byte>();
+         Thread _rxThread = null;
+         bool _queueStop;
+         bool waitingForResponse = false;
+         readonly object _messageSendLock = new object();
+         readonly object _queueStopLock = new object();
+         TcpClient _client = null;
+		#endregion fields
+		
+		#region ctor
         public SimpleTcpClient() {
             StringEncoder = System.Text.Encoding.ASCII;
             ReadLoopIntervalMs = 10;
             Delimiter = 0x00; // NUL
         }
-
-        private readonly object _messageSendLock = new object();
-        private readonly object _queueStopLock = new object();
-        private bool waitingForResponse = false;
-        private Thread _rxThread = null;
-        private List<byte> _queuedMsg = new List<byte>();
-        private bool _queueStop;
-        private event EventHandler<Message> ReplyEvent;
-
+		#endregion ctor
+		
+		#region properties
         public byte Delimiter { get; set; }
         public System.Text.Encoding StringEncoder { get; set; }
-        private TcpClient _client = null;
-
-        public event EventHandler<Message> DelimiterDataReceived;
-        public event EventHandler<Message> DataReceived;
-
-        internal bool QueueStop {            get {                lock (_queueStopLock)                    return _queueStop;            }            set {               lock (_queueStopLock)                    _queueStop = value;            }        }
+        internal bool QueueStop {
+            get {
+                lock (_queueStopLock)
+                    return _queueStop;
+            }
+            set {
+                lock (_queueStopLock)
+                    _queueStop = value;
+            }
+        }
         internal int ReadLoopIntervalMs { get; set; }
         public bool AutoTrimStrings { get; set; }
+        public TcpClient Client { get { return _client; } }
+		#endregion properties
 
-		public SimpleTcpClient Connect(string hostNameOrIpAddress, int port) {
-			if (string.IsNullOrEmpty(hostNameOrIpAddress))
-				throw new ArgumentNullException("hostNameOrIpAddress");
-			_client = new TcpClient();
-			_client.Connect(hostNameOrIpAddress, port);
-			StartRxThread();
-			return this;
-		}
 
-		void StartRxThread() {
-			if (_rxThread != null) { return; }
+#region methods
 
-			_rxThread = new Thread(ListenerLoop) {
-				IsBackground = true
-			};
-			_rxThread.Start();
-		}
+
+        public SimpleTcpClient Connect(string hostNameOrIpAddress, int port) {
+            if (string.IsNullOrEmpty(hostNameOrIpAddress)) {
+                throw new ArgumentNullException("hostNameOrIpAddress");
+            }
+
+            _client = new TcpClient();
+            _client.Connect(hostNameOrIpAddress, port);
+
+            StartRxThread();
+
+            return this;
+        }
+
+         void StartRxThread() {
+            if (_rxThread != null) { return; }
+
+            _rxThread = new Thread(ListenerLoop);
+            _rxThread.IsBackground = true;
+            _rxThread.Start();
+        }
 
         public SimpleTcpClient Disconnect() {
             if (_client == null) { return this; }
@@ -61,9 +85,8 @@ namespace OpenProtocolInterpreter.Sample.Ethernet {
             return this;
         }
 
-        public TcpClient Client { get { return _client; } }
 
-        private void ListenerLoop(object state) {
+         void ListenerLoop(object state) {
             while (!QueueStop) {
                 try {
                     RunLoopStep();
@@ -77,7 +100,7 @@ namespace OpenProtocolInterpreter.Sample.Ethernet {
             _rxThread = null;
         }
 
-        private void RunLoopStep() {
+         void RunLoopStep() {
             if (_client == null) { return; }
             if (_client.Connected == false) { return; }
 
@@ -110,7 +133,7 @@ namespace OpenProtocolInterpreter.Sample.Ethernet {
             }
         }
 
-        private void NotifyDelimiterMessageRx(System.Net.Sockets.TcpClient client, byte[] msg) {
+         void NotifyDelimiterMessageRx(System.Net.Sockets.TcpClient client, byte[] msg) {
             Message m = new Message(msg, client, StringEncoder, Delimiter, AutoTrimStrings);
 
             if (this.ReplyEvent != null) {
@@ -121,7 +144,7 @@ namespace OpenProtocolInterpreter.Sample.Ethernet {
             DelimiterDataReceived(this, m);
         }
 
-        private void NotifyEndTransmissionRx(System.Net.Sockets.TcpClient client, byte[] msg) {
+         void NotifyEndTransmissionRx(System.Net.Sockets.TcpClient client, byte[] msg) {
             Message m = new Message(msg, client, StringEncoder, Delimiter, AutoTrimStrings);
 
             if (this.ReplyEvent != null) {
@@ -185,11 +208,12 @@ namespace OpenProtocolInterpreter.Sample.Ethernet {
                 return mReply;
             }
         }
+#endregion methods
 
 
 
         #region IDisposable Support
-        private bool disposedValue = false; // To detect redundant calls
+         bool disposedValue = false; // To detect redundant calls
 
         protected virtual void Dispose(bool disposing) {
             if (!disposedValue) {

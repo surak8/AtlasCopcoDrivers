@@ -300,10 +300,5 @@ namespace NSAtlasCopcoBreech {
 				}
 			}
 		}
-
-		void readPSets(object sender, RoutedEventArgs e) {
-			if (_opc != null)
-				_opc.readPSets();
-		}
 	}
 }

@@ -1,14 +1,9 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Net.Sockets;
 using System.Reflection;
 using System.Text;
-using System.Threading;
-using OpenProtocolInterpreter.MIDs.IOInterface;
-using OpenProtocolInterpreter.MIDs.MultipleIdentifiers;
-using OpenProtocolInterpreter.MIDs.ParameterSet;
 //using OpenProtocolInterpreter.MIDs;
 //using OpenProtocolInterpreter.MIDs;
 //using OpenProtocolInterpreter.MIDs.ApplicationToolLocationSystem;
@@ -36,96 +31,45 @@ namespace NSAtlasCopcoBreech {
 		}
 #else
 		class MidData {
-			#region fields
+		#region fields
 			OpenProtocolInterpreter.MIDs.MID _mid;
 
-			#endregion
-			#region ctor
-			public MidData(int tid) { tighteningID = tid; }
+		#endregion
+		#region ctor
+			public MidData(int tid) { tighteningID=tid; }
 
-			#endregion
-			#region properties
+		#endregion
+		#region properties
 			public bool dataReceived { get; private set; }
 
-			public OpenProtocolInterpreter.MIDs.MID mid { get { return _mid; } set { _mid = value; dataReceived = mid != null; } }
+			public OpenProtocolInterpreter.MIDs.MID mid { get { return _mid; } set { _mid=value; dataReceived=mid!=null; } }
 			public int tighteningID { get; }
 
-			#endregion
-			#region methods
+		#endregion
+		#region methods
 			internal void reset() {
-				dataReceived = false;
-				mid = null;
+				dataReceived=false;
+				mid=null;
 			}
-			#endregion
+		#endregion
 		}
 
 		CSVGenerator<OpenProtocolInterpreter.MIDs.MIDIdentifier, OpenProtocolInterpreter.MIDs.MID> _csvGen;
 
-		internal void readPSets() {
-			MID_0010 m10=new MID_0010(          );
-			byte[] data,newData=new byte[4096];
-			int nReadAttempted,nBytesRead,midNo,spaceLen;
-			string package,tmp;
-			bool dataFound=false;
-
-			data = Encoding.ASCII.GetBytes(m10.buildPackage() + '\0');
-			lock (_streamLock) {
-				_clientStream.Write(data, 0, data.Length);
-				nReadAttempted = 0;
-				do {
-					while (!_clientStream.DataAvailable) {
-						Thread.Sleep(100);
-						nReadAttempted++;
-						if (nReadAttempted > 20)
-							break;
-					}
-					if (_clientStream.DataAvailable) {
-						nBytesRead = _clientStream.Read(newData, 0, newData.Length);
-
-						package = Encoding.ASCII.GetString(newData, 0, nBytesRead);
-						//tmp=package.Substring()
-						if (package.IndexOf("\0") > 0)
-							tmp = package.Substring(0, package.IndexOf("\0"));
-						else
-							tmp = package;
-						MID_0011 m=new  MID_0011();
-						m.processPackage(package);
-						Utility.logger.log("FOUND [" + tmp + "]");
-						if (int.TryParse(tmp.Substring(0,4),out spaceLen)) {
-							Utility.logger.log("SPACELEN=" + spaceLen + " examine :" + tmp.Substring(spaceLen));
-							package = tmp.Substring(spaceLen  );
-							Utility.logger.log("new package: [" + package + "]");
-						}
-						//Utility.logger.log("FOUND [" + tmp + "]");
-						midNo = MIDUtil.midIdent(package);
-						Utility.logger.log(
-							ColtLogLevel.Debug,
-							MethodBase.GetCurrentMethod(),
-							"read [" + package.Replace('\0', '*') + "]");
-						dataFound = true;
-					}
-				} while (nReadAttempted < 20 && !dataFound);
-			}
-			Utility.logger.log(
-				ColtLogLevel.Debug,
-				MethodBase.GetCurrentMethod(),
-				"nReads=" + nReadAttempted + ", DataFound=" + dataFound + ".");
-		}
-
 		void writeAsCSV(OpenProtocolInterpreter.MIDs.MID mid) {
-			if (_csvGen == null) {
-				_csvTighteningName = Path.Combine(
+			if (_csvGen==null) {
+				_csvTighteningName=Path.Combine(
 					MIDUtil.midLogPath,
-					Assembly.GetEntryAssembly().GetName().Name +
+					Assembly.GetEntryAssembly().GetName().Name+
 					"CurrentTighteningData.log");
 				lock (_csvLock) {
 
-					_csvGen = new CSVGenerator<OpenProtocolInterpreter.MIDs.MIDIdentifier, OpenProtocolInterpreter.MIDs.MID>();
+					_csvGen=new CSVGenerator<OpenProtocolInterpreter.MIDs.MIDIdentifier, OpenProtocolInterpreter.MIDs.MID>();
 
 				}
 			}
 			lock (_csvLock) {
-				if (_csvLogStream == null || _csvLogFile == null) {
+				if (_csvLogStream==null||_csvLogFile==null) {
 					//_csvWroteCSVHeader=false;
 					if (File.Exists(_csvTighteningName))
 						_csvLogStream = new FileStream(_csvTighteningName, FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
@@ -139,7 +83,7 @@ namespace NSAtlasCopcoBreech {
 				_csvGen.writeCSVOutputForLine(
 				mid.HeaderData.Mid,
 				ref _csvWroteCSVHeader,
-				mid.buildPackage()+'\0', _csvLogFile);
+				mid.buildPackage(), _csvLogFile);
 			}
 			lock (_csvLock) {
 				_csvLogFile.Flush();
@@ -150,9 +94,9 @@ namespace NSAtlasCopcoBreech {
 			if (now.Subtract(_TimeOfLastLogicalConnectedToController) > TimeSpan.FromMinutes(5)) {
 				/* */
 				sendMid(new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0010()); // PSET id request;
-				_initialTighteningData = true;
+				_initialTighteningData=true;
 				sendMid(new OpenProtocolInterpreter.MIDs.Tightening.MID_0064()); // old tightening results (0 means: most recent); *** capture this *** _lastTighteningID
-				_initialTighteningData = false;
+				_initialTighteningData=false;
 
 				sendMid(new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0014()); // PSET subscribe, respond with MID_0016
 #warning removed MID_0021
@@ -204,7 +148,18 @@ namespace NSAtlasCopcoBreech {
 				}
 				*/
 			}
+#if true
 			sendMid(new OpenProtocolInterpreter.MIDs.Job.MID_0030());
+#else
+							MID_0030 mid0030 = new MID_0030();
+							package = mid0030.buildPackage() + "\0";
+							command = Encoding.ASCII.GetBytes(package);
+							lock (_writeLock) {
+								_lastMessage = DateTime.Now;
+								_clientStream.Write(command, 0, command.Length);
+								Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "MID0030 Sent");
+							}
+#endif
 		}
 
 		void handleCommandAccepted_0015(string package) {
@@ -213,26 +168,26 @@ namespace NSAtlasCopcoBreech {
 			mid.processPackage(package);
 			Utility.logger.log(MethodBase.GetCurrentMethod());
 			sendMid(new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0016());
-			if (mid.ParameterSetID == 0) {
-				Utility.logger.log(ColtLogLevel.Debug, MethodBase.GetCurrentMethod(), "ParmSet=" + mid.ParameterSetID + ". Creating a new log-file.");
+			if (mid.ParameterSetID==0) {
+				Utility.logger.log(ColtLogLevel.Debug, MethodBase.GetCurrentMethod(), "ParmSet="+mid.ParameterSetID+". Creating a new log-file.");
 				createNewLogFile();
 			}
 		}
 		void sendMid(OpenProtocolInterpreter.MIDs.MID mid) {
 			string tmp,package = (tmp=mid.buildPackage()) + "\0";
 			byte[] command = Encoding.ASCII.GetBytes(package);
-
-			lock (_streamLock) {
-				lock (_writeLock) {
-					_lastMessage = DateTime.Now;
-					if (_clientStream != null)
-						_clientStream.Write(command, 0, command.Length);
-					if (mid.HeaderData.Mid == 9999						) {
-						if (veryVerbose)
-							Utility.logger.log(ColtLogLevel.Debug, "*** SENT: MID="+mid.HeaderData.Mid.ToString("###0")+" [" + tmp + "] (1)");
-					} else
-						Utility.logger.log(ColtLogLevel.Debug, "*** SENT: MID=" + mid.HeaderData.Mid.ToString("###0") + " [" + tmp + "] (0)");
-				}
+			lock (_writeLock) {
+				_lastMessage = DateTime.Now;
+				if (_clientStream!=null)
+					_clientStream.Write(command, 0, command.Length);
+				if (mid.HeaderData.Mid==9999
+					) {
+					if (veryVerbose)
+						Utility.logger.log(ColtLogLevel.Debug, "*** SENT: ["+tmp+"]");
+				} else
+					Utility.logger.log(ColtLogLevel.Debug, "*** SENT: ["+tmp+"]");
+				//if (veryVerbose)
+				//	Utility.logger.log(ColtLogLevel.Info, mid.GetType().Name + " Sent");
 			}
 		}
 		OpenProtocolInterpreter.MIDs.MID createControllerAlarmAcknowledged() { return new OpenProtocolInterpreter.MIDs.Alarm.MID_0075(); }
@@ -275,12 +230,12 @@ namespace NSAtlasCopcoBreech {
 
 			mid.processPackage(package);
 			if (_initialTighteningData)
-				_lastTighteningID = mid.TighteningID;
+				_lastTighteningID=mid.TighteningID;
 			else {
 				// look in the list and capture the data.
 				lock (_tighteningLock) {
-					if (_tighteningMap.ContainsKey(tid = mid.TighteningID)) {
-						_tighteningMap[tid].mid = mid;
+					if (_tighteningMap.ContainsKey(tid=mid.TighteningID)) {
+						_tighteningMap[tid].mid=mid;
 					}
 				}
 			}
@@ -294,6 +249,11 @@ namespace NSAtlasCopcoBreech {
 
 			mid.processPackage(package);
 			MIDUtil.showMidDetail(mid, package);
+			//MIDUtil.showMidDetail()
+			//sb.AppendLine(mid.
+			//mid13.
+			//break;
+			//handleCommandAccepted_0011(package);
 		}
 
 		void handleCommandAccepted_0011(string package) {
@@ -304,10 +264,10 @@ namespace NSAtlasCopcoBreech {
 
 			mid.processPackage(package);
 			//Trace.WriteLine("here");
-			if ((n = mid.TotalParameterSets) > 0) {
-				sb.AppendLine("have " + n + " psets.");
-				for (int i = 0; i < n; i++) {
-					if (i > 0)
+			if ((n=mid.TotalParameterSets)>0) {
+				sb.AppendLine("have "+n+" psets.");
+				for (int i = 0; i<n; i++) {
+					if (i>0)
 						sb.Append(", ");
 					sb.Append(mid.ParameterSets[i]);
 					psets.Add(mid.ParameterSets[i]);
@@ -317,45 +277,35 @@ namespace NSAtlasCopcoBreech {
 				sb.AppendLine("NO PSETS!");
 			}
 			Utility.logger.log(ColtLogLevel.Debug, MethodBase.GetCurrentMethod(), sb.ToString());
+			//if (psets.Count>0) {
+			//	MID_0012 psMid=new MID_0012();
+
+			//	foreach (int aPSet in psets) {
+			//		psMid.ParameterSetID=aPSet;
+			//		//psMid.
+			//		sendMid(psMid);
+			//	}
+			//}
 		}
 
 
 		void handleExternalInputs_0211(string package) {
-#if true
-			MID_0211 mid=new MID_0211();
-#else
 			MyMid_211 mid = new MyMid_211();
-#endif
-			Utility.logger.log(MethodBase.GetCurrentMethod(), "have [" + package + "]");
-			try {
-				mid.processPackage(package);
-			} catch (Exception ex) {
-				Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
-			}
-
-			//mid.processPackage(package);
+			mid.processPackage(package);
+			Utility.logger.log(MethodBase.GetCurrentMethod());
 		}
 		void handleMultiIdentAndParts_0152(string package) {
-#if true
-			MID_0152 mid=new MID_0152();
-#else
 			MyMid_152 mid = new MyMid_152();
-#endif
-			Utility.logger.log(
-				MethodBase.GetCurrentMethod(), 
-				"have [" + package + "], LEN="+package.Length+
-				", MsgLen="+mid.HeaderData.Length+" (DON'T PARSE).");
-			//try {
-			//	mid.processPackage(package);
-			//} catch (Exception ex) {
-			//	Utility.logger.log(MethodBase.GetCurrentMethod(), ex);
-			//}
+			mid.processPackage(package);
+			Utility.logger.log(MethodBase.GetCurrentMethod());
 		}
-
+		//OpenProtocolInterpreter.MIDs.MID createDigitalInput_0220() {
+		//	return new MID_0220();
+		//}
 		static void handleCommandError_0004(string package) {
 			var mid0004 = new OpenProtocolInterpreter.MIDs.Communication.MID_0004();
 			mid0004.processPackage(package);
-			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "Command Error ErrorCode:" + mid0004.ErrorCode + " for MID=" + mid0004.FailedMid + ".");
+			Utility.logger.log(ColtLogLevel.Info, MethodBase.GetCurrentMethod(), "Command Error ErrorCode:" + mid0004.ErrorCode + " for MID="+mid0004.FailedMid+".");
 		}
 		static void handleCommandAccepted_0005(string package) {
 			var mid = new OpenProtocolInterpreter.MIDs.Communication.MID_0005();
@@ -364,9 +314,8 @@ namespace NSAtlasCopcoBreech {
 
 			mid.processPackage(package);
 
-			if (veryVerbose)
-			Utility.logger.log(ColtLogLevel.Info, mb, "accepted MID=" + mid.MIDAccepted + ".");
-			if (mid.MIDAccepted == 3) {
+			Utility.logger.log(ColtLogLevel.Info, mb, "accepted MID="+mid.MIDAccepted+".");
+			if (mid.MIDAccepted== 3) {
 				Utility.logger.log(ColtLogLevel.Debug, mb, "comm-shutdown succeeded.");
 				_mreShutdown.Reset();
 			}
@@ -378,7 +327,12 @@ namespace NSAtlasCopcoBreech {
 			mid.processPackage(package);
 			po(MessageType.AlarmUpload, mid, package);
 		}
-
+		//OpenProtocolInterpreter.MIDs.MID createAlarmSubscription_0070() {
+		//	return new MID_0070();
+		//}
+		//OpenProtocolInterpreter.MIDs.MID createAlarmAcknowledgement() {
+		//	return new MID_0072();
+		//}
 		static void handleControllerAlarmAck(string package, ProcessMidDelegate po, DisplayStatusDelegate ds) {
 			var mid = new OpenProtocolInterpreter.MIDs.Alarm.MID_0074();
 			mid.processPackage(package);
@@ -400,39 +354,53 @@ namespace NSAtlasCopcoBreech {
 			Utility.logger.log(ColtLogLevel.Info, mb, "send " + midName + ".");
 			lock (objLock) {
 				lastMsg = DateTime.Now;
-				lock (_streamLock) {
-					if (clStream == null) {
-						Utility.logger.log(ColtLogLevel.Info, mb, "OHOH  _clientStream is null");
-						if (clTCP == null)
-							Utility.logger.log(ColtLogLevel.Info, mb, "OHOH _tcpClient is null too");
-						Utility.logger.log(ColtLogLevel.Info, mb, "connection in progress finished due to problems");
-						attemptingConnection = false;
-					} else {
-						clStream.Write(command, 0, command.Length);
-						Utility.logger.log(ColtLogLevel.Info, mb, midName + " sent.");
-					}
+				if (clStream == null) {
+					Utility.logger.log(ColtLogLevel.Info, mb, "OHOH  _clientStream is null");
+					if (clTCP == null)
+						Utility.logger.log(ColtLogLevel.Info, mb, "OHOH _tcpClient is null too");
+					Utility.logger.log(ColtLogLevel.Info, mb, "connection in progress finished due to problems");
+					attemptingConnection = false;
+				} else {
+					clStream.Write(command, 0, command.Length);
+					Utility.logger.log(ColtLogLevel.Info, mb, midName + " sent.");
 				}
 			}
 		}
 
 		void sendKeepAlive() {
+#if true
 			sendMid(new OpenProtocolInterpreter.MIDs.KeepAlive.MID_9999());
+#else
+						mid = new MID_9999();
+						command = Encoding.ASCII.GetBytes(package = mid.buildPackage() + "\0");
+						lock (_writeLock) {
+							_lastMessage = DateTime.Now;
+							_clientStream.Write(command, 0, command.Length);
+							if (veryVerbose)
+								Utility.logger.log(ColtLogLevel.Info, mb, mid.GetType().Name + " Sent");
+						}
+#endif
 		}
+
 
 		void unsubscribeFromEvents() {
 			sendMid(new OpenProtocolInterpreter.MIDs.Job.MID_0037()); // unsubscribe job-info
 			sendMid(new OpenProtocolInterpreter.MIDs.VIN.MID_0054()); // unsubscribe vehicle
-																	  // send Communication Stop message.
+									 // send Communication Stop message.
 			sendMid(new OpenProtocolInterpreter.MIDs.Communication.MID_0003());
 		}
 
 		void handlePackage(MethodBase mb, string package) {
 			switch (package.Substring(4, 4)) {
-				case "0002": acknowledgeCommunicationStart(package); break;
+				case "0002":
+					acknowledgeCommunicationStart(package);
+					break;
 				case "0004": handleCommandError_0004(package); break;
 				case "0005": handleCommandAccepted_0005(package); break;
 				case "0011": handleCommandAccepted_0011(package); break;
-				case "0013": handleCommandAccepted_0013(package); /* pset-def */					break;
+				case "0013":
+					handleCommandAccepted_0013(package); // pset-def
+					break;
 				case "0015": handleCommandAccepted_0015(package); break; // show PSET subscribed
 				case "0021": sendMid(new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0023()); break; // notification
 				case "0022": break; // look this up!
@@ -440,9 +408,9 @@ namespace NSAtlasCopcoBreech {
 				case "0031": captureJobNumber(package); break;
 				case "0052": captureVehicleID(package); break;
 				case "0061":
-					var mid0061 = new OpenProtocolInterpreter.MIDs.Tightening.MID_0061();
+					 var mid0061 = new OpenProtocolInterpreter.MIDs.Tightening.MID_0061();
 					mid0061.processPackage(package);
-					_thisTighteningID = mid0061.TighteningID;
+					_thisTighteningID=mid0061.TighteningID;
 					processObject(MessageType.LastTighteningResult, mid0061, package);
 					sendMid(createMid0062()); // ack this item.
 					writeAsCSV(mid0061);
@@ -472,6 +440,10 @@ namespace NSAtlasCopcoBreech {
 			}
 		}
 
+		//private MID MID_0072() {
+		//	throw new NotImplementedException();
+		//}
+
 		void acknowledgeCommunicationStart(string package) {
 			_TryingToConnectInProgress = false;
 			if (veryVerbose)
@@ -484,5 +456,5 @@ namespace NSAtlasCopcoBreech {
 			setupSubscriptions(now);
 		}
 #endif
-		}
+	}
 }

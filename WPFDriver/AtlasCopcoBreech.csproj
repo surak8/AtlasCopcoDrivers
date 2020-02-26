@@ -53,7 +53,7 @@
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\release\</OutputPath>
-    <DefineConstants>TRACE;OTHER_VERSION1</DefineConstants>
+    <DefineConstants>TRACE;OTHER_VERSION</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\release\AtlasCopcoBreech.xml</DocumentationFile>
@@ -146,6 +146,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\OPImplementations\KenDemers_OpenProtocolInterpreter\OpenProtocolInterpreter.csproj">
       <Project>{319224b6-48c6-4787-a98b-f33b774268d0}</Project>

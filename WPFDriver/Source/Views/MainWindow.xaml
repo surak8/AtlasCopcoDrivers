@@ -97,10 +97,9 @@
 
 				<Button Name="btnShowLogData" Click="showLogFileData" Grid.Row="2" Grid.Column="0" Content="Examine log-file(s)."/>
 				<Button Name="btnCondenseLog" Click="condenseToCSV" Grid.Row="2" Grid.Column="1" Content="Condense CSV."/>
-
-				<Button Name="btnTestFunction" Click="testFunction" Grid.Row="3" Grid.Column="0" Content="Test function"/>
-				<Button Name="btnReadPSets" Click="readPSets" Grid.Row="3" Grid.Column="1" Content="Read PSets" Height="22" VerticalAlignment="Bottom"/>
-			</Grid>
+            
+                <Button Name="btnTestFunction" Click="testFunction" Grid.Row="3" Grid.Column="0" Content="Test function"/>
+            </Grid>
 
 		</StackPanel>
 	</Grid>

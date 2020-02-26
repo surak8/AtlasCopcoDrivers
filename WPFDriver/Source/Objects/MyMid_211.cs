@@ -4,7 +4,6 @@ using System.Reflection;
 using OpenProtocolInterpreter.MIDs;
 
 namespace NSAtlasCopcoBreech {
-	[Obsolete("don't use this", true)]
 	class MyMid_211 : MID {
 
 		#region ctor
