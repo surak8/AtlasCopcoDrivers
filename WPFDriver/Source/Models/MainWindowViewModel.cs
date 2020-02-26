@@ -31,7 +31,6 @@ namespace NSAtlasCopcoBreech {
 			BindingFlags.Public | BindingFlags.Static;
 		static readonly object[] nullArgs = new object[] { };
 		#endregion
-	Dictionary<string,AtlasCopcoController> _controllers;
 
 		#region ctor
 		public MainWindowViewModel() {

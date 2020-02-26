@@ -46,14 +46,15 @@
   </PropertyGroup>
   <ItemGroup Label="None">
     <None Include="app.config" />
+    <EmbeddedResource Include="data\IRData.csv" />
   </ItemGroup>
   <ItemGroup Label="AssemblyInfo">
     <None Include="blah.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup Label="IDK">
-    <Compile Include="Source\Logger.cs" />
-    <Compile Include="Source\MyThread.cs" />
+    <Compile Include="Source\MyListenerThread.cs" />
+    <Compile Include="Source\MyTraceLogger.cs" />
     <Compile Include="Source\UI\tcp_listenerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +70,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Source\UI\tcp_listenerForm.resx">
+      <DependentUpon>tcp_listenerForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\NewProjects\ColtUtilities2\ColtUtilities2.csproj">
+      <Project>{31ad9839-84e5-4726-b9b0-34ea62290592}</Project>
+      <Name>ColtUtilities2</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

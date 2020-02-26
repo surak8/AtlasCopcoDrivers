@@ -128,7 +128,7 @@ namespace NSNewDriver {
 
 		bool sendMessage(object mid, MidHandler mh,bool awaitResponse=true) {
 			byte[] data;
-			string package,newPackage=null,msg,tmp;
+			string package,newPackage=null,tmp;
 			object newMid=null;
 			int midNo,newMidNo;
 

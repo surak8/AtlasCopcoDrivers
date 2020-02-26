@@ -7,77 +7,335 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
-//using OpenProtocolInterpreter;
-//using OpenProtocolInterpreter.Communication;
-//using OpenProtocolInterpreter.KeepAlive;
+using Colt.Utility.Logging;
+using Colt.Utility.Registry;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Net;
-using System.Net.Sockets;
+using System.Drawing;
+using System.IO;
 using System.Reflection;
-using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using NSTcp_listener.Threads;
-using OpenProtocolInterpreter;
-using OpenProtocolInterpreter.Communication;
-using OpenProtocolInterpreter.Job;
-using OpenProtocolInterpreter.Job.Advanced;
-using OpenProtocolInterpreter.KeepAlive;
-using OpenProtocolInterpreter.Vin;
 
 namespace NSTcp_listener {
 
-	public partial class tcp_listenerForm {
+	public partial class tcp_listenerForm : INotifyPropertyChanged {
+		#region constants
 		const string DEFAULT_ADDRESSS = "127.0.0.1";
 		//const string DEFAULT_ADDRESSS = "192.168.105.8";
 		const int DEFAULT_PORT = 4545;
-		public tcp_listenerForm() {
-			InitializeComponent();
-		}
-		void exitClick(object sender, EventArgs ea) {
-			CancelEventArgs cea = new CancelEventArgs();
+		const string KEY_IP = "IP Address";
+		const string KEY_PORT = "Port Number";
+		const string KEY = "Desktop location";
 
-			Application.Exit(cea);
-			if (cea.Cancel) {
-				return;
-			}
-			Application.Exit();
+		#endregion
+
+		#region fields
+		/// <summary>backing-store for property ipAddress of type <b>string</b>.</summary>
+		/// <seealso name="ipAddress"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		string _ipAddress;
+		/// <summary>backing-store for property portNumber of type <b>int</b>.</summary>
+		/// <seealso name="portNumber"/>
+		[DebuggerBrowsable(DebuggerBrowsableState.Never)]
+		int _portNumber;
+
+		PropertyChangedEventHandler _pceh;
+		MyListenerThread _mtl;
+		Thread _thread;
+
+		IColtLogger _icl;
+		bool _restoringFrame;
+		#endregion
+
+		#region ctor
+		public tcp_listenerForm() {
+			_restoringFrame=true;
+			_icl=new MyTraceLogger();
+			logger.log(MethodBase.GetCurrentMethod());
+			InitializeComponent();
+			this.tbIPAddress.DataBindings.Add("Text",this,"ipAddress",true);
+			this.tbPort.DataBindings.Add("Text",this,"portNumber",true);
 		}
-		void formLoad(object sender, EventArgs ea) {
+
+		#endregion
+
+		#region INotifyPropertyChanged-implementation
+		event PropertyChangedEventHandler INotifyPropertyChanged.PropertyChanged { add { _pceh+=value; } remove { _pceh-=value; } }
+
+		#endregion
+
+		#region INotifyPropertyChanged handling methods
+		void firePropertyChanged(string propertyName) {
+			if ((this._pceh!=null))
+				this._pceh(this,new PropertyChangedEventArgs(propertyName));
 		}
+
+		void firePropertyChanged(MethodBase mb) {
+			int n;
+
+			if ((n=mb.Name.Length)>4)
+				if (string.Compare(mb.Name.Substring(0,3),"get",true)==0||
+					string.Compare(mb.Name.Substring(0,3),"set",true)==0)
+					firePropertyChanged(mb.Name.Substring(4));
+		}
+		#endregion
+
+		#region properties
+
+		/// <summary>property ipAddress.</summary>
+		/// <seealso name="_ipAddress"/>
+		public string ipAddress {
+			get { return _ipAddress; }
+			set { _ipAddress=value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+
+
+
+
+		/// <summary>property portNumber.</summary>
+		/// <seealso name="_portNumber"/>
+		public int portNumber {
+			get { return _portNumber; }
+			set { _portNumber=value; firePropertyChanged(MethodBase.GetCurrentMethod()); }
+		}
+		IColtLogger logger { get { return _icl; } }
+
+		#endregion
+
+		#region main-line method
 		[STAThread()]
 		public static void Main(string[] args) {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new tcp_listenerForm());
 		}
-		List<MyThread> _threads = new List<MyThread>();
-		void tsmiStartListening_Click(object sender, EventArgs e) {
-			MyThread mt;
-			Logger.log(MethodBase.GetCurrentMethod());
-			Logger.log(MethodBase.GetCurrentMethod(), "creating thread-object");
-			_threads.Add(mt = new MyThread(DEFAULT_ADDRESSS, DEFAULT_PORT));
-			//_threads.Add(mt = new MyThread("192.168.105.8", 4545));
-			Logger.log(MethodBase.GetCurrentMethod(), "starting thread-object");
-			mt.start();
-			//new MyThread().start();
+		#endregion
+
+		//		https://docs.microsoft.com/en-us/dotnet/api/system.net.sockets.tcplistener.beginaccepttcpclient?view=netframework-4.8 
+
+		#region logger methods
+
+		void startLogger() {
+			logger.log(MethodBase.GetCurrentMethod());
+			if (!this.Validate(true))
+				throw new InvalidOperationException("here");
+			_mtl=new MyListenerThread(ipAddress,portNumber,logger,findDataStream("IRData.csv"));
+			_thread=new Thread(_mtl.runThread999);
+			_thread.Start();
+			enableUI(_thread!=null);
+		}
+
+		Stream findDataStream(string resourceSuffix) {
+			Assembly a = Assembly.GetEntryAssembly();
+			string[] names = a.GetManifestResourceNames();
+
+			foreach (string aName in names) {
+				if (aName.EndsWith(resourceSuffix,StringComparison.OrdinalIgnoreCase))
+					return a.GetManifestResourceStream(aName);
+				//Trace.WriteLine("here");
+			}
+			//string[] names=
+			//Assembly.GetEntryAssembly())
+			//throw new NotImplementedException();
+			return null;
+		}
+
+		void stopLogger() {
+			logger.log(MethodBase.GetCurrentMethod());
+
+			if (_mtl!=null) {
+				_mtl.Dispose();
+				_mtl=null;
+				enableUI(_mtl!=null);
+			}
+		}
+		#endregion logger methods
+
+		void enableUI(bool isRunning) {
+			logger.log(MethodBase.GetCurrentMethod());
+
+			this.tbIPAddress.Enabled=!isRunning;
+			this.tbPort.Enabled=!isRunning;
+
+			this.gbSerialNumber.Enabled=isRunning;
+
+			this.btnStart.Enabled=!isRunning;
+			this.btnStop.Enabled=isRunning;
+			this.btnSendIRData.Enabled=isRunning;
+
+			//if(this.tbse)
+		}
+
+		#region utility-methods
+		int readRegistryValue(string regKey,int defValue) {
+			string tmp;
+			int nval;
+
+			tmp=RegistryUtil.readRegistryValue(regKey,defValue.ToString());
+			if (Int32.TryParse(tmp,out nval))
+				return nval;
+
+			return defValue;
+		}
+
+		static Rectangle readDesktopBounds(string regKey) {
+			string regValue;
+			Rectangle ret = Rectangle.Empty;
+
+			if (!string.IsNullOrEmpty(regValue=RegistryUtil.readRegistryValue(regKey,string.Empty)))
+				ret=parseBouunds(regValue);
+			return ret;
+		}
+
+		static Rectangle parseBouunds(string regValue) {
+			Rectangle ret = Rectangle.Empty;
+			Point p = Point.Empty;
+			Size s = Size.Empty;
+			bool errorFound = false;
+			string[] parts, p2;
+
+			if (!string.IsNullOrEmpty(regValue)) {
+				parts=regValue.Replace('{',' ').Replace('}',' ').Trim().Split(',');
+				foreach (string astring in parts) {
+					p2=astring.Split('=');
+					switch (p2[0]) {
+						case "X": p.X=Convert.ToInt32(p2[1]); break;
+						case "Y": p.Y=Convert.ToInt32(p2[1]); break;
+						case "Width": s.Width=Convert.ToInt32(p2[1]); break;
+						case "Height": s.Height=Convert.ToInt32(p2[1]); break;
+						default: errorFound=true; break;
+					}
+				}
+				if (!errorFound)
+					ret=new Rectangle(p,s);
+			}
+			return ret;
+		}
+		void saveFormLocation() {
+			RegistryUtil.saveRegistryValue(KEY,this.DesktopBounds.ToString());
+		}
+		#endregion utility-methods
+
+		#region action-handlers
+		void tsmiStop_Click(object sender,EventArgs e) {
+			stopLogger();
+		}
+		void requestSendIRData(object sender,EventArgs e) {
+			//logger.log(MethodBase.GetCurrentMethod());
+			if (_mtl!=null)
+				_mtl.sendIRData();
+		}
+		void exitClick(object sender,EventArgs ea) {
+			CancelEventArgs cea = new CancelEventArgs();
+
+			logger.log(MethodBase.GetCurrentMethod());
+			Application.Exit(cea);
+			if (cea.Cancel)
+				return;
+			saveFormLocation();
+			RegistryUtil.saveRegistryValue(KEY_IP,this.ipAddress);
+			RegistryUtil.saveRegistryValue(KEY_PORT,this.portNumber.ToString());
+			Application.Exit();
+		}
+
+		void formLoad(object sender,EventArgs ea) {
+			Rectangle r = readDesktopBounds(KEY);
+
+			logger.log(MethodBase.GetCurrentMethod());
+			_restoringFrame=true;
+			if (r!=Rectangle.Empty)
+				this.DesktopBounds=r;
+
+			_restoringFrame=false;
+			this.ipAddress=RegistryUtil.readRegistryValue(KEY_IP,DEFAULT_ADDRESSS);
+			this.portNumber=readRegistryValue(KEY_PORT,DEFAULT_PORT);
+			enableUI(_thread!=null);
 		}
 		protected override void OnFormClosed(FormClosedEventArgs e) {
-			int n;
-			MyThread[] currentThreads;
-			if ((n=_threads.Count)>0) {
-				currentThreads=new MyThread[n];
-				_threads.CopyTo(currentThreads);
-				for (int i = 0; i<n; i++) {
-					currentThreads[i].stop();
-					currentThreads[i].waitHandle.WaitOne();
-				}
-			}
+			logger.log(MethodBase.GetCurrentMethod());
+			if (_mtl!=null)
+				_mtl.Dispose();
+
 			base.OnFormClosed(e);
 		}
+		void tcp_listenerForm_LocationChanged(object sender,EventArgs e) {
+			if (_restoringFrame) return;
+			saveFormLocation();
+		}
+
+		void tcp_listenerForm_SizeChanged(object sender,EventArgs e) {
+			if (_restoringFrame) return;
+			saveFormLocation();
+		}
+
+		void btnStart_Click(object sender,EventArgs e) {
+			startLogger();
+		}
+
+		void btnStop_Click(object sender,EventArgs e) {
+			stopLogger();
+		}
+
+		void btnUseSN_Click(object sender,EventArgs e) {
+			logger.log(MethodBase.GetCurrentMethod());
+			if (!this.Validate(true))
+				throw new InvalidOperationException("here");
+			if (_mtl!=null)
+				_mtl.setSerialNumber(this.tbSerialNumber.Text);
+		}
+		#endregion action-handlers
+
+		#region validation methods
+		void tbIPAddress_Validating(object sender,CancelEventArgs e) {
+			string tmp;
+			//logger.log(MethodBase.GetCurrentMethod());
+
+			this.ep1.SetError(this.tbIPAddress,string.Empty);
+			if (string.IsNullOrEmpty(tmp=tbIPAddress.Text)) {
+				this.ep1.SetError(this.tbIPAddress,"IPAddress cannot be null!");
+			} else {
+				//if (!Regex.IsMatch(tmp,
+				//	"[1-2][0-9][0-9]\\.[1-2][0-9][0-9]\\.[1-2][0-9][0-9]\\.[1-2][0-9][0-9]"))
+				//	this.ep1.SetError(this.tbIPAddress,"IPAddress is invalid!");
+
+			}
+		}
+
+		void tbPort_Validating(object sender,CancelEventArgs e) {
+			string tmp;
+			int pval;
+
+			this.ep1.SetError(this.tbPort,string.Empty);
+			if (string.IsNullOrEmpty(tmp=tbPort.Text)) {
+				this.ep1.SetError(this.tbIPAddress,"Port-number cannot be null!");
+			} else {
+				logger.log(MethodBase.GetCurrentMethod(),"here");
+
+				//if (!Regex.IsMatch(tmp,
+				//	"[1-2][0-9][0-9]\\.[1-2][0-9][0-9]\\.[1-2][0-9][0-9]\\.[1-2][0-9][0-9]"))
+				//	this.ep1.SetError(this.tbIPAddress,"IPAddress is invalid!");
+				if (int.TryParse(tmp,out pval)) {
+					if (pval<=0)
+						this.ep1.SetError(this.tbPort,"Port-number "+pval+" is invalid!");
+				}
+			}
+		}
+		void tbSerialNumber_Validating(object sender,CancelEventArgs e) {
+			string tmp;
+			//logger.log(MethodBase.GetCurrentMethod());
+
+			this.ep1.SetError(this.tbSerialNumber,string.Empty);
+			if (string.IsNullOrEmpty(tmp=tbSerialNumber.Text)) {
+				this.ep1.SetError(this.tbSerialNumber,"serial-number cannot be null!");
+			} else {
+				//if (!Regex.IsMatch(tmp,
+				//	"[1-2][0-9][0-9]\\.[1-2][0-9][0-9]\\.[1-2][0-9][0-9]\\.[1-2][0-9][0-9]"))
+				//	this.ep1.SetError(this.tbIPAddress,"IPAddress is invalid!");
+			}
+		}
+		#endregion validation methods
+
 	}
 }

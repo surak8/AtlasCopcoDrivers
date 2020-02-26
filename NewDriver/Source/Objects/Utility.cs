@@ -16,9 +16,9 @@ namespace NSNewDriver {
 		//		public static IColtLogger logger = new ColtLogger();
 
 		public static IColtLogger _defLogger;
-			public static IColtLogger logger {
+		public static IColtLogger logger {
 			get {
-				if (_defLogger==null)
+				if (_defLogger == null)
 					_defLogger = DefaultColtLogger.createDefault();
 				return _defLogger;
 			}
@@ -125,7 +125,7 @@ namespace NSNewDriver {
 			return ret;
 		}
 
-		internal static bool readRegistryValue(string key,bool bdefValue) {
+		internal static bool readRegistryValue(string key, bool bdefValue) {
 			object ret;
 			bool bret=false;
 			RegistryKey v = openOrCreateKey(  RegistryHive.CurrentUser);

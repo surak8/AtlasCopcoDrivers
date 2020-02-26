@@ -5,8 +5,8 @@ using System.Runtime.InteropServices;
 [assembly:AssemblyTitle("tcp_listener")]
 [assembly:AssemblyProduct("tcp_listener")]
 [assembly:AssemblyDescription("description of tcp_listener.")]
-[assembly:AssemblyCompany("Rik Cousens")]
-[assembly:AssemblyCopyright("Copyright © 2020, Rik Cousens")]
+[assembly:AssemblyCompany("Colt's Manufacturing Company LLC.")]
+[assembly:AssemblyCopyright("Copyright © 2020, Colt's Manufacturing Company LLC.")]
 #if DEBUG
 [assembly:AssemblyConfiguration("Debug version")]
 #else	

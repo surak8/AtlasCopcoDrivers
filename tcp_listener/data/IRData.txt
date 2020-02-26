@@ -1,0 +1,406 @@
+log-file: \\appdeploy\appdeploy\Colt Software\Logs\FMSTracker\RCOUSENS-LT\FMSTracker_0005.log
+25-Feb-20 02:58:33.93428 [Debug] [Info] ********************************************************************************
+25-Feb-20 02:58:33.93527 [Debug] [Info] FMSTracking starts
+25-Feb-20 02:58:33.93627 [Debug] [Info] App.OnStartup:CFGFILE=\\appdeploy\APPDEPLOY\Colt Software\FMSSuite\FMSTracking\ConfigFiles\RCOUSENS-LT\FMSTracking.config
+here
+25-Feb-20 02:58:33.94625 [Debug] FMSTracking [Debug version] 2.0.4.1
+Copyright © 2017-2020, Colt's Manufacturing Company LLC
+Product    : FMSTracker
+Title      : FMSTracker
+Description: description of FMSTracker.
+
+25-Feb-20 02:58:34.06892 [Info] App.OnStartup:setting image-name.
+25-Feb-20 02:58:34.14084 [Info] App.OnStartup:showing the splash-screen
+log-file: C:\Users\RTCOUS~1\AppData\Local\Temp\FMSTracking\RCOUSENS-LT\FMSTracking.log\FMSTracker_0005.log
+25-Feb-20 02:58:41.42724 [Info] MainWindow.logInfo: +FMS Tracking Version: 2.0.4.1
+25-Feb-20 02:58:42.25562 [Info] MainWindow.logInfo: +MainWindow..ctor -5 OK.
+INFO: Open()
+25-Feb-20 02:59:10.66078 [Info] MainWindow.logInfo: +MainWindow.loginUserChanged
+25-Feb-20 02:59:11.11195 [Info] MainWindow.logInfo: +MainWindow.loginUserChanged Talking to Azure OK
+25-Feb-20 02:59:11.17244 [Info] StationSelectionPage.stationSelPageLoaded:stationType:Breech_C
+25-Feb-20 02:59:11.17845 [Info] StationSelectionPage.stationSelPageLoaded:stationSelPageLoaded() Active:True ReadData:True
+25-Feb-20 02:59:11.18461 [Info] BreechStationPage BreechStationPage()
+25-Feb-20 02:59:11.18728 [Info] BreechStationIRViewModel() BreechStationIRViewModel()
+25-Feb-20 02:59:11.20119 [Info] StationSelectionPage.findOperation:looping for 36 keys for station-type:Breech_C
+key=0 FmssGatherType: line=25-Feb-20 02:59:11.23270 [Info] BreechStationPage breechStationPage1_Loaded()
+25-Feb-20 02:59:11.23370 [Info] BreechStationIRViewModel() ResetDataFields()
+25-Feb-20 02:59:11.23875 [Info] BreechStationIRViewModel() gridBarrelMfgIsEnabled() old:False new:False
+25-Feb-20 02:59:11.23975 [Info] BreechStationIRViewModel() pset_3: old value: new value:
+25-Feb-20 02:59:11.24176 [Info] BreechStationIRViewModel() pset_6: old value: new value:
+25-Feb-20 02:59:11.24274 [Info] BreechStationIRViewModel() torqueC3: old value: new value:
+25-Feb-20 02:59:11.24373 [Info] BreechStationIRViewModel() torqueC3: old value: new value:
+25-Feb-20 02:59:11.24473 [Info] BreechStationIRViewModel() torqueC3: old value: new value:
+25-Feb-20 02:59:11.24573 [Info] BreechStationIRViewModel() Message set to: 
+[Info] BasicColtLogger.log:Host:192.168.105.160 Port:1069
+25-Feb-20 02:59:11.24772 [Debug] [Info] BasicColtLogger.log:Host:192.168.105.160 Port:1069
+[Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+25-Feb-20 02:59:11.25072 [Debug] [Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+[Info] BasicColtLogger.log:Connection Sucessful
+25-Feb-20 02:59:11.27943 [Debug] [Info] BasicColtLogger.log:Connection Sucessful
+[Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+25-Feb-20 02:59:11.29763 [Debug] [Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+[Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+25-Feb-20 02:59:16.30190 [Debug] [Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+[Info] BasicColtLogger.log:Connection Sucessful
+25-Feb-20 02:59:16.31296 [Debug] [Info] BasicColtLogger.log:Connection Sucessful
+[Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+25-Feb-20 02:59:16.32992 [Debug] [Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+[Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+25-Feb-20 02:59:21.33860 [Debug] [Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+[Info] BasicColtLogger.log:Connection Sucessful
+25-Feb-20 02:59:21.34758 [Debug] [Info] BasicColtLogger.log:Connection Sucessful
+[Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+25-Feb-20 02:59:21.36454 [Debug] [Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+[Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+25-Feb-20 02:59:26.37340 [Debug] [Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+[Info] BasicColtLogger.log:Connection Sucessful
+25-Feb-20 02:59:26.38245 [Debug] [Info] BasicColtLogger.log:Connection Sucessful
+[Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+25-Feb-20 02:59:26.39941 [Debug] [Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+[Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+25-Feb-20 02:59:31.40618 [Debug] [Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+[Info] BasicColtLogger.log:Connection Sucessful
+25-Feb-20 02:59:31.41509 [Debug] [Info] BasicColtLogger.log:Connection Sucessful
+[Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+25-Feb-20 02:59:31.43305 [Debug] [Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+[Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+25-Feb-20 02:59:36.44022 [Debug] [Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+[Info] BasicColtLogger.log:Connection Sucessful
+25-Feb-20 02:59:36.44905 [Debug] [Info] BasicColtLogger.log:Connection Sucessful
+[Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+25-Feb-20 02:59:36.46600 [Debug] [Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+[Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+25-Feb-20 02:59:41.47325 [Debug] [Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+[Info] BasicColtLogger.log:Connection Sucessful
+25-Feb-20 02:59:41.47825 [Debug] [Info] BasicColtLogger.log:Connection Sucessful
+[Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+25-Feb-20 02:59:41.49620 [Debug] [Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+[Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+25-Feb-20 02:59:46.50056 [Debug] [Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+[Info] BasicColtLogger.log:Connection Sucessful
+25-Feb-20 02:59:46.50953 [Debug] [Info] BasicColtLogger.log:Connection Sucessful
+[Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+25-Feb-20 02:59:46.52748 [Debug] [Info] BasicColtLogger.log:Read Failed - Connection Must Be Closed - Closing Our End
+[Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+25-Feb-20 02:59:51.53254 [Debug] [Info] BasicColtLogger.log:Constructing Tcp Client at 192.168.105.160, 1069
+[Info] BasicColtLogger.log:Connection Sucessful
+25-Feb-20 02:59:51.54143 [Debug] [Info] BasicColtLogger.log:Connection Sucessful
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:11:06.80746 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:11:06.80846 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990646,728377,01,001,02,02/25/2020,15-55-33,P,0030.88,1,P,00002,P,0,3.19,0.29,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:06.81045 [Debug] [Info] BasicColtLogger.log:parsed the string '990646,728377,01,001,02,02/25/2020,15-55-33,P,0030.88,1,P,00002,P,0,3.19,0.29,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:06.81343 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:11:06.81442 [Info] BreechStationIRViewModel() pset_6: old value: new value:0030.88
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:11:07.93275 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:11:07.93375 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990646,728377,01,001,04,02/25/2020,15-55-34,P,0067.00,1,P,00387,P,0,9.87,1.36,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:11:07.93575 [Debug] [Info] BasicColtLogger.log:parsed the string '990646,728377,01,001,04,02/25/2020,15-55-34,P,0067.00,1,P,00387,P,0,9.87,1.36,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:11:07.93575 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:04 Step:02/25/2020
+25-Feb-20 03:11:07.93674 [Info] BreechStationIRViewModel() torqueC3: old value: new value:0067.00
+25-Feb-20 03:11:12.43993 [Info] BreechStationIRViewModel() timer3_Tick
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:11:14.99457 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:11:14.99655 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990647,728378,01,002,05,02/25/2020,15-55-41,P,0031.47,1,P,00006,P,0,3.27,6.54,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:14.99790 [Debug] [Info] BasicColtLogger.log:parsed the string '990647,728378,01,002,05,02/25/2020,15-55-41,P,0031.47,1,P,00006,P,0,3.27,6.54,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:14.99790 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:05 Step:02/25/2020
+25-Feb-20 03:11:14.99890 [Info] BreechStationIRViewModel() torqueC3: old value: new value:0031.47
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:11:16.67044 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:11:16.67143 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990648,728379,01,003,02,02/25/2020,15-55-43,F,0069.85,1,P,00002,P,16,10.24,1.06,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:16.67343 [Debug] [Info] BasicColtLogger.log:parsed the string '990648,728379,01,003,02,02/25/2020,15-55-43,F,0069.85,1,P,00002,P,16,10.24,1.06,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:16.67449 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:11:16.67545 [Info] BreechStationIRViewModel() pset_6: old value:0030.88 new value:0069.85
+25-Feb-20 03:11:21.17346 [Info] BreechStationIRViewModel() timer3_Tick
+25-Feb-20 03:11:21.17487 [Info] BreechStationIRViewModel() timer3_Tick() clearing all radio buttons
+25-Feb-20 03:11:21.17587 [Info] BreechStationIRViewModel() timer3_Tick() Showing all radio buttons
+25-Feb-20 03:11:21.17640 [Info] BreechStationIRViewModel() gridBarrelMfgIsEnabled() old:False new:True
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:11:34.43275 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:11:34.43375 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990649,728380,01,001,02,02/25/2020,15-56-01,P,0030.65,1,P,00002,P,0,2.82,0.29,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:34.43575 [Debug] [Info] BasicColtLogger.log:parsed the string '990649,728380,01,001,02,02/25/2020,15-56-01,P,0030.65,1,P,00002,P,0,2.82,0.29,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:34.43635 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:11:34.43635 [Info] BreechStationIRViewModel() pset_6: old value:0069.85 new value:0030.65
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:11:35.57317 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:11:35.57517 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990649,728380,01,001,04,02/25/2020,15-56-02,P,0064.43,1,P,00388,P,0,9.64,1.36,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:11:35.57617 [Debug] [Info] BasicColtLogger.log:parsed the string '990649,728380,01,001,04,02/25/2020,15-56-02,P,0064.43,1,P,00388,P,0,9.64,1.36,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:11:35.57717 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:04 Step:02/25/2020
+25-Feb-20 03:11:35.57787 [Info] BreechStationIRViewModel() torqueC3: old value:0067.00 new value:0064.43
+25-Feb-20 03:11:40.08154 [Info] BreechStationIRViewModel() timer3_Tick
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:11:42.68287 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:11:42.68487 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990650,728381,01,002,05,02/25/2020,15-56-09,P,0030.96,1,P,00006,P,0,3.13,6.54,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:42.68586 [Debug] [Info] BasicColtLogger.log:parsed the string '990650,728381,01,002,05,02/25/2020,15-56-09,P,0030.96,1,P,00006,P,0,3.13,6.54,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:42.68709 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:05 Step:02/25/2020
+25-Feb-20 03:11:42.70847 [Info] BreechStationIRViewModel() torqueC3: old value:0031.47 new value:0030.96
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:11:44.21501 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:11:44.21912 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990651,728382,01,003,02,02/25/2020,15-56-11,F,0063.14,1,P,00002,P,16,9.81,0.95,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:44.22061 [Debug] [Info] BasicColtLogger.log:parsed the string '990651,728382,01,003,02,02/25/2020,15-56-11,F,0063.14,1,P,00002,P,16,9.81,0.95,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:11:44.22061 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:11:44.22161 [Info] BreechStationIRViewModel() pset_6: old value:0030.65 new value:0063.14
+25-Feb-20 03:11:48.71560 [Info] BreechStationIRViewModel() timer3_Tick
+25-Feb-20 03:11:48.71659 [Info] BreechStationIRViewModel() timer3_Tick() clearing all radio buttons
+25-Feb-20 03:11:48.71759 [Info] BreechStationIRViewModel() timer3_Tick() Showing all radio buttons
+25-Feb-20 03:11:48.71938 [Info] BreechStationIRViewModel() gridBarrelMfgIsEnabled() old:True new:True
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:13:31.84211 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:13:31.84311 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990652,728383,01,001,02,02/25/2020,15-57-58,P,0031.76,1,P,00001,P,0,2.85,0.29,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:13:31.84410 [Debug] [Info] BasicColtLogger.log:parsed the string '990652,728383,01,001,02,02/25/2020,15-57-58,P,0031.76,1,P,00001,P,0,2.85,0.29,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:13:31.84610 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:13:31.84710 [Info] BreechStationIRViewModel() pset_6: old value:0063.14 new value:0031.76
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:13:32.95192 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:13:32.95265 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990652,728383,01,001,04,02/25/2020,15-57-59,P,0058.84,1,P,00387,P,0,8.28,1.36,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:13:32.95465 [Debug] [Info] BasicColtLogger.log:parsed the string '990652,728383,01,001,04,02/25/2020,15-57-59,P,0058.84,1,P,00387,P,0,8.28,1.36,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:13:32.95465 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:04 Step:02/25/2020
+25-Feb-20 03:13:32.95565 [Info] BreechStationIRViewModel() torqueC3: old value:0064.43 new value:0058.84
+25-Feb-20 03:13:37.45781 [Info] BreechStationIRViewModel() timer3_Tick
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:13:40.02994 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:13:40.03118 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990653,728384,01,002,05,02/25/2020,15-58-06,P,0030.06,1,P,00006,P,0,3.30,6.53,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:13:40.03218 [Debug] [Info] BasicColtLogger.log:parsed the string '990653,728384,01,002,05,02/25/2020,15-58-06,P,0030.06,1,P,00006,P,0,3.30,6.53,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:13:40.03318 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:05 Step:02/25/2020
+25-Feb-20 03:13:40.03418 [Info] BreechStationIRViewModel() torqueC3: old value:0030.96 new value:0030.06
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:13:41.50225 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:13:41.50424 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990654,728385,01,003,02,02/25/2020,15-58-08,F,0061.35,1,P,00001,P,16,9.38,0.90,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:13:41.50524 [Debug] [Info] BasicColtLogger.log:parsed the string '990654,728385,01,003,02,02/25/2020,15-58-08,F,0061.35,1,P,00001,P,16,9.38,0.90,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:13:41.50624 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:13:41.50624 [Info] BreechStationIRViewModel() pset_6: old value:0031.76 new value:0061.35
+25-Feb-20 03:13:45.99524 [Info] BreechStationIRViewModel() timer3_Tick
+25-Feb-20 03:13:45.99560 [Info] BreechStationIRViewModel() timer3_Tick() clearing all radio buttons
+25-Feb-20 03:13:45.99660 [Info] BreechStationIRViewModel() timer3_Tick() Showing all radio buttons
+25-Feb-20 03:13:45.99759 [Info] BreechStationIRViewModel() gridBarrelMfgIsEnabled() old:True new:True
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:17:17.53738 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:17:17.53886 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990655,728386,01,001,02,02/25/2020,16-01-44,P,0031.14,1,P,00008,P,0,3.19,0.61,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:17:17.53986 [Debug] [Info] BasicColtLogger.log:parsed the string '990655,728386,01,001,02,02/25/2020,16-01-44,P,0031.14,1,P,00008,P,0,3.19,0.61,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:17:17.54086 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:17:17.54086 [Info] BreechStationIRViewModel() pset_6: old value:0061.35 new value:0031.14
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:17:18.60004 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:17:18.60104 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990655,728386,01,001,04,02/25/2020,16-01-45,P,0026.50,1,P,00388,P,0,4.98,1.67,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:17:18.60242 [Debug] [Info] BasicColtLogger.log:parsed the string '990655,728386,01,001,04,02/25/2020,16-01-45,P,0026.50,1,P,00388,P,0,4.98,1.67,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:17:18.60342 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:04 Step:02/25/2020
+25-Feb-20 03:17:18.60342 [Info] BreechStationIRViewModel() torqueC3: old value:0058.84 new value:0026.50
+25-Feb-20 03:17:23.10165 [Info] BreechStationIRViewModel() timer3_Tick
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:17:25.72527 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:17:25.72659 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990656,728387,01,002,05,02/25/2020,16-01-52,P,0030.97,1,P,00006,P,0,3.39,6.55,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:17:25.72759 [Debug] [Info] BasicColtLogger.log:parsed the string '990656,728387,01,002,05,02/25/2020,16-01-52,P,0030.97,1,P,00006,P,0,3.39,6.55,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:17:25.72859 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:05 Step:02/25/2020
+25-Feb-20 03:17:25.72859 [Info] BreechStationIRViewModel() torqueC3: old value:0030.06 new value:0030.97
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:17:27.41807 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:17:27.42007 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990657,728388,01,003,02,02/25/2020,16-01-54,F,0059.82,1,P,00000,P,33,9.20,0.88,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:17:27.42206 [Debug] [Info] BasicColtLogger.log:parsed the string '990657,728388,01,003,02,02/25/2020,16-01-54,F,0059.82,1,P,00000,P,33,9.20,0.88,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:17:27.42306 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:17:27.42405 [Info] BreechStationIRViewModel() pset_6: old value:0031.14 new value:0059.82
+25-Feb-20 03:17:31.92701 [Info] BreechStationIRViewModel() timer3_Tick
+25-Feb-20 03:17:31.92801 [Info] BreechStationIRViewModel() timer3_Tick() clearing all radio buttons
+25-Feb-20 03:17:31.92901 [Info] BreechStationIRViewModel() timer3_Tick() Showing all radio buttons
+25-Feb-20 03:17:31.92971 [Info] BreechStationIRViewModel() gridBarrelMfgIsEnabled() old:True new:True
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:18:40.44614 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:18:40.44714 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990658,728389,01,001,02,02/25/2020,16-03-07,P,0031.61,1,P,00007,P,0,3.38,0.89,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:18:40.44913 [Debug] [Info] BasicColtLogger.log:parsed the string '990658,728389,01,001,02,02/25/2020,16-03-07,P,0031.61,1,P,00007,P,0,3.38,0.89,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:18:40.45013 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:18:40.45013 [Info] BreechStationIRViewModel() pset_6: old value:0059.82 new value:0031.61
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:18:41.50830 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:18:41.51030 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990658,728389,01,001,04,02/25/2020,16-03-08,P,0029.86,1,P,00387,P,0,4.96,1.96,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:18:41.51130 [Debug] [Info] BasicColtLogger.log:parsed the string '990658,728389,01,001,04,02/25/2020,16-03-08,P,0029.86,1,P,00387,P,0,4.96,1.96,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:18:41.51229 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:04 Step:02/25/2020
+25-Feb-20 03:18:41.53424 [Info] BreechStationIRViewModel() torqueC3: old value:0026.50 new value:0029.86
+25-Feb-20 03:18:46.03520 [Info] BreechStationIRViewModel() timer3_Tick
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:18:46.20176 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:18:46.20275 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990659,728390,01,002,01,02/25/2020,16-03-13,F,0000.00,1,P,00000,P,103,0.00,0.00,0,0.00,0.00,0,0,0.00,                                No BCode' into 23 fields
+25-Feb-20 03:18:46.20375 [Debug] [Info] BasicColtLogger.log:parsed the string '990659,728390,01,002,01,02/25/2020,16-03-13,F,0000.00,1,P,00000,P,103,0.00,0.00,0,0.00,0.00,0,0,0.00,                                No BCode' into 23 fields
+25-Feb-20 03:18:46.20475 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:01 Step:02/25/2020
+25-Feb-20 03:18:46.20574 [Info] BreechStationIRViewModel() pset_3: old value: new value:0000.00
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:18:48.60247 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:18:48.60444 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990659,728390,01,002,05,02/25/2020,16-03-15,P,0031.71,1,P,00007,P,0,3.27,6.56,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:18:48.60517 [Debug] [Info] BasicColtLogger.log:parsed the string '990659,728390,01,002,05,02/25/2020,16-03-15,P,0031.71,1,P,00007,P,0,3.27,6.56,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:18:48.60617 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:05 Step:02/25/2020
+25-Feb-20 03:18:48.60617 [Info] BreechStationIRViewModel() torqueC3: old value:0030.97 new value:0031.71
+25-Feb-20 03:18:53.10717 [Info] BreechStationIRViewModel() timer3_Tick
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:07.25951 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:07.26143 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990660,728391,01,001,02,02/25/2020,16-03-34,P,0031.20,1,P,00002,P,0,2.57,0.29,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:07.26243 [Debug] [Info] BasicColtLogger.log:parsed the string '990660,728391,01,001,02,02/25/2020,16-03-34,P,0031.20,1,P,00002,P,0,2.57,0.29,1,36.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:07.26243 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:07.26343 [Info] BreechStationIRViewModel() pset_6: old value:0031.61 new value:0031.20
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:08.37147 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:08.37246 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990660,728391,01,001,04,02/25/2020,16-03-35,P,0031.57,1,P,00388,P,0,4.94,1.36,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:19:08.37453 [Debug] [Info] BasicColtLogger.log:parsed the string '990660,728391,01,001,04,02/25/2020,16-03-35,P,0031.57,1,P,00388,P,0,4.94,1.36,5,120.00,0.00,0,0,385,                                No BCode' into 23 fields
+25-Feb-20 03:19:08.37531 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:04 Step:02/25/2020
+25-Feb-20 03:19:08.37531 [Info] BreechStationIRViewModel() torqueC3: old value:0029.86 new value:0031.57
+25-Feb-20 03:19:12.88483 [Info] BreechStationIRViewModel() timer3_Tick
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:15.49403 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:15.49548 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990661,728392,01,002,05,02/25/2020,16-03-42,P,0030.46,1,P,00006,P,0,3.30,6.55,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:15.49667 [Debug] [Info] BasicColtLogger.log:parsed the string '990661,728392,01,002,05,02/25/2020,16-03-42,P,0030.46,1,P,00006,P,0,3.30,6.55,1,35.00,29.00,32000,0,30.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:15.49722 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:05 Step:02/25/2020
+25-Feb-20 03:19:15.49722 [Info] BreechStationIRViewModel() torqueC3: old value:0031.71 new value:0030.46
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:17.58685 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:17.58795 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990662,728393,01,003,02,02/25/2020,16-03-44,F,0103.77,1,P,00009,P,16,15.91,1.53,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:17.58895 [Debug] [Info] BasicColtLogger.log:parsed the string '990662,728393,01,003,02,02/25/2020,16-03-44,F,0103.77,1,P,00009,P,16,15.91,1.53,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:17.58995 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:17.58995 [Info] BreechStationIRViewModel() pset_6: old value:0031.20 new value:0103.77
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:18.94728 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:18.94828 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990663,728394,01,003,02,02/25/2020,16-03-45,F,0047.21,1,P,00000,P,33,7.54,0.72,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:18.94927 [Debug] [Info] BasicColtLogger.log:parsed the string '990663,728394,01,003,02,02/25/2020,16-03-45,F,0047.21,1,P,00000,P,33,7.54,0.72,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:18.95027 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:18.97224 [Info] BreechStationIRViewModel() pset_6: old value:0103.77 new value:0047.21
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:19.63887 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:19.63967 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990664,728395,01,003,02,02/25/2020,16-03-46,F,0049.23,1,P,00000,P,33,7.72,0.72,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:19.64179 [Debug] [Info] BasicColtLogger.log:parsed the string '990664,728395,01,003,02,02/25/2020,16-03-46,F,0049.23,1,P,00000,P,33,7.72,0.72,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:19.64179 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:19.64279 [Info] BreechStationIRViewModel() pset_6: old value:0047.21 new value:0049.23
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:21.18519 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:21.18591 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990665,728396,01,003,02,02/25/2020,16-03-48,F,0065.17,1,P,00001,P,16,9.93,0.82,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:21.18691 [Debug] [Info] BasicColtLogger.log:parsed the string '990665,728396,01,003,02,02/25/2020,16-03-48,F,0065.17,1,P,00001,P,16,9.93,0.82,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:21.18791 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:21.18891 [Info] BreechStationIRViewModel() pset_6: old value:0049.23 new value:0065.17
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:22.46545 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:22.46711 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990666,728397,01,003,02,02/25/2020,16-03-49,F,0067.93,1,P,00001,P,16,10.72,0.89,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:22.46846 [Debug] [Info] BasicColtLogger.log:parsed the string '990666,728397,01,003,02,02/25/2020,16-03-49,F,0067.93,1,P,00001,P,16,10.72,0.89,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:22.46901 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:22.46901 [Info] BreechStationIRViewModel() pset_6: old value:0065.17 new value:0067.93
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:23.79347 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:23.79547 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990667,728398,01,003,02,02/25/2020,16-03-50,F,0090.45,1,P,00001,P,16,12.18,0.98,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:23.79846 [Debug] [Info] BasicColtLogger.log:parsed the string '990667,728398,01,003,02,02/25/2020,16-03-50,F,0090.45,1,P,00001,P,16,12.18,0.98,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:23.79951 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:23.80083 [Info] BreechStationIRViewModel() pset_6: old value:0067.93 new value:0090.45
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:24.97668 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:24.97867 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990668,728399,01,003,02,02/25/2020,16-03-51,F,0091.35,1,P,00002,P,16,12.96,1.01,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:24.97963 [Debug] [Info] BasicColtLogger.log:parsed the string '990668,728399,01,003,02,02/25/2020,16-03-51,F,0091.35,1,P,00002,P,16,12.96,1.01,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:24.98063 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:24.98176 [Info] BreechStationIRViewModel() pset_6: old value:0090.45 new value:0091.35
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:26.39874 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:26.40098 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990669,728400,01,003,02,02/25/2020,16-03-53,F,0090.95,1,P,00002,P,16,13.98,1.08,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:26.40250 [Debug] [Info] BasicColtLogger.log:parsed the string '990669,728400,01,003,02,02/25/2020,16-03-53,F,0090.95,1,P,00002,P,16,13.98,1.08,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:26.40307 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:26.40371 [Info] BreechStationIRViewModel() pset_6: old value:0091.35 new value:0090.95
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:28.07688 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:28.08002 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990670,728401,01,003,02,02/25/2020,16-03-54,F,0091.46,1,P,00002,P,16,14.27,1.10,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:28.08125 [Debug] [Info] BasicColtLogger.log:parsed the string '990670,728401,01,003,02,02/25/2020,16-03-54,F,0091.46,1,P,00002,P,16,14.27,1.10,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:28.08196 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:28.08296 [Info] BreechStationIRViewModel() pset_6: old value:0090.95 new value:0091.46
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:29.52810 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:29.53010 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990671,728402,01,003,02,02/25/2020,16-03-56,F,0091.21,1,P,00002,P,16,14.18,1.10,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:29.53082 [Debug] [Info] BasicColtLogger.log:parsed the string '990671,728402,01,003,02,02/25/2020,16-03-56,F,0091.21,1,P,00002,P,16,14.18,1.10,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:29.53182 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:29.53282 [Info] BreechStationIRViewModel() pset_6: old value:0091.46 new value:0091.21
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:31.07370 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:31.07519 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990672,728403,01,003,02,02/25/2020,16-03-57,F,0091.16,1,P,00002,P,16,14.23,1.10,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:31.07668 [Debug] [Info] BasicColtLogger.log:parsed the string '990672,728403,01,003,02,02/25/2020,16-03-57,F,0091.16,1,P,00002,P,16,14.23,1.10,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:31.07742 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:31.07827 [Info] BreechStationIRViewModel() pset_6: old value:0091.21 new value:0091.16
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:32.45320 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:32.45494 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990673,728404,01,003,02,02/25/2020,16-03-59,F,0112.55,1,P,00004,P,16,17.77,1.33,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:32.45609 [Debug] [Info] BasicColtLogger.log:parsed the string '990673,728404,01,003,02,02/25/2020,16-03-59,F,0112.55,1,P,00004,P,16,17.77,1.33,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:32.45609 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:32.45709 [Info] BreechStationIRViewModel() pset_6: old value:0091.16 new value:0112.55
+[Info] BasicColtLogger.log:converting bytes read to ASCII
+25-Feb-20 03:19:33.48253 [Debug] [Info] BasicColtLogger.log:converting bytes read to ASCII
+[Info] BasicColtLogger.log:adding ASCII chars to our string
+25-Feb-20 03:19:33.48352 [Debug] [Info] BasicColtLogger.log:adding ASCII chars to our string
+[Info] BasicColtLogger.log:parsed the string '990674,728405,01,003,02,02/25/2020,16-04-00,F,0048.16,1,P,00000,P,33,7.37,0.72,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:33.48452 [Debug] [Info] BasicColtLogger.log:parsed the string '990674,728405,01,003,02,02/25/2020,16-04-00,F,0048.16,1,P,00000,P,33,7.37,0.72,1,125.00,1.00,32000,0,120.00,                                No BCode' into 23 fields
+25-Feb-20 03:19:33.48552 [Info] BreechStationIRViewModel() ProcessEorData() Configuration:02 Step:02/25/2020
+25-Feb-20 03:19:33.48652 [Info] BreechStationIRViewModel() pset_6: old value:0112.55 new value:0048.16
+25-Feb-20 03:19:37.99652 [Info] BreechStationIRViewModel() timer3_Tick
+25-Feb-20 03:19:37.99752 [Info] BreechStationIRViewModel() timer3_Tick() clearing all radio buttons
+25-Feb-20 03:19:37.99752 [Info] BreechStationIRViewModel() timer3_Tick() Showing all radio buttons
+25-Feb-20 03:19:37.99852 [Info] BreechStationIRViewModel() gridBarrelMfgIsEnabled() old:True new:True
+DefaultColtLogger.flush
+25-Feb-20 03:27:36.03137 [Info] BreechStationPage cleanupPage()
+DefaultColtLogger.flush
+25-Feb-20 03:27:36.06889 [Debug] FMSTracking ends [29m, 2s, 268ms]

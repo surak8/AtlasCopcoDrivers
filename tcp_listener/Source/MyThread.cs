@@ -1,242 +1,242 @@
+using OpenProtocolInterpreter;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading;
-using OpenProtocolInterpreter;
-using OpenProtocolInterpreter.Communication;
-using OpenProtocolInterpreter.Job;
-using OpenProtocolInterpreter.Job.Advanced;
-using OpenProtocolInterpreter.KeepAlive;
-using OpenProtocolInterpreter.Vin;
+using System.Threading.Tasks;
 
 namespace NSTcp_listener.Threads {
-	class MyThread {
-		//private readonly string ipAddress;
+	partial class MyThread {
+		#region fields
 		Thread _thread;
 		TcpListener _server;
 		ManualResetEvent _mre;
-		readonly          MidInterpreter _mi;
+		readonly MidInterpreter _mi;
 		bool _subscribedTightening;
-		private bool _subscribedJobInfo;
-		private string _currentVIN;
+		bool _subscribedJobInfo;
+		string _currentVIN;
+		readonly object _generateIRDataLock = new object();
+		bool _generateIRData = false;
+		#endregion
 
-		//string v1;
-		//int v2;
-
-		public MyThread(string anIPAddress, int nPort) {
+		#region ctor
+		public MyThread(string anIPAddress,int nPort) {
 			Logger.log(MethodBase.GetCurrentMethod());
-			//this.v1 = v1;
-			//this.v2 = v2;
-			this.ipAddress = anIPAddress;
-			this.portNumber = nPort;
+			this.ipAddress=anIPAddress;
+			this.portNumber=nPort;
 			_mi=new MidInterpreter();
 		}
+		#endregion
 
+		#region properties
 		public string ipAddress { get; }
 		public int portNumber { get; }
 
 		public WaitHandle waitHandle { get { return _mre; } }
 
-		//private object runThread;
+		#endregion
 
+		#region start/stop methods
 		internal void start() {
-			Logger.log(MethodBase.GetCurrentMethod(), "creating thread");
-			this._thread = new Thread(this.runThread);
-			Logger.log(MethodBase.GetCurrentMethod(), "starting thread");
+			Logger.log(MethodBase.GetCurrentMethod(),"creating thread");
+			this._thread=new Thread(this.runThread2);
+			Logger.log(MethodBase.GetCurrentMethod(),"starting thread");
 			this._thread.Start(this);
+			isRunning=true;
 		}
-		void runThread(object anObj) {
+
+		private void runThread2() {
+			throw new NotImplementedException();
+		}
+
+		public bool isRunning { get; private set; }
+
+		internal void stop() {
+			Logger.log(MethodBase.GetCurrentMethod(),"starting");
+			//_mre.Set();
+			_mre.Reset();
+			Logger.log(MethodBase.GetCurrentMethod(),"ending");
+		}
+
+		internal void generateIRTransaction() {
+			Logger.log(MethodBase.GetCurrentMethod(),"starting");
+			lock (_generateIRDataLock) {
+				_generateIRData=true;
+			}
+			Logger.log(MethodBase.GetCurrentMethod(),"ending");
+		}
+		#endregion
+
+
+		class MyObj{}
+
+		async void runThread1(object anObj) {
 			bool _exitLoop = false;
-			TcpClient client=null;
-			NetworkStream stream=null;
+			TcpClient client = null;
+			NetworkStream stream = null;
 			byte[] bytes = new byte[1028];
 			string data;
-			int i,amid;
-			bool dataFound=false;
+			int i, amid;
+			bool dataFound = false;
+			StringBuilder sbIRData = null;
 
-			//_mi=new MidInterpreter();
-			//_mi.
+			_mre=new ManualResetEvent(true);
+			Logger.log(MethodBase.GetCurrentMethod(),"ending");
 
-			_mre = new ManualResetEvent(false);
-		 
 			try {
-				_server = new TcpListener(IPAddress.Parse(ipAddress), portNumber);
-				_server.Server.SetSocketOption(SocketOptionLevel.Socket, SocketOptionName.ReuseAddress, 1);
+				_server=new TcpListener(IPAddress.Parse(ipAddress),portNumber);
+				_server.Server.SetSocketOption(SocketOptionLevel.Socket,SocketOptionName.ReuseAddress,1);
+				Logger.log(MethodBase.GetCurrentMethod(),"server on "+ipAddress+":"+portNumber+".");
 				_server.Start();
-				// this needs to be ASYNC connection
-				client = _server.AcceptTcpClient();
-				//client=_server.acceptt
-				stream = client.GetStream();
 				while (!_exitLoop) {
+					Trace.WriteLine("loop-top");
+					//var something = await _server.AcceptTcpClientAsync().ConfigureAwait(false);
+					//var something = await _server.AcceptTcpClientAsync();
+					//var something2 = await _server.AcceptTcpClientAsync().ContinueWith ()
+
+					//await _server.AcceptTcpClientAsync().ContinueWith(t => onAccept(t),TaskScheduler.Default);
+					//await _server.AcceptTcpClientAsync().GetAwaiter()
+					var vvv = _server.BeginAcceptTcpClient(tester,new MyObj());
 					if (_mre.WaitOne(100)) {
-						//Debug.Print("here");
+						Debug.Print("here");
 						_exitLoop=true;
 					}
-					if (stream.DataAvailable) {
-						i = stream.Read(bytes, 0, bytes.Length);
-						if (i < 1) {
-							//_mre.Reset();
-							client.Close();
-						} else {
-							data = Encoding.ASCII.GetString(bytes, 0, i);
+					Trace.WriteLine("create client?");
 
-							if ((amid=readMid(data))!=9999)
-								Trace.WriteLine("read: " + data);
-							handleResponse(data, stream);
-							dataFound=true;
-						}
-
-					} else {
-						// await connection
-						if (dataFound) {
-							Logger.log(MethodBase.GetCurrentMethod(), "no data");
-							dataFound=false;
-						}
-						//_thread.sl
-						Thread.Sleep(100);
-					}
-					//if (_mre.WaitOne()) {
+					//var cw = new ClientWorking(something,true);
+					//cw.DoSomethingWithClientAsync().NoWarning();
+					//if (_mre.WaitOne(100)) {
 					//	Debug.Print("here");
+					//	_exitLoop=true;
 					//}
-					//client.Close
 				}
-				stream.Close();
+
+					//}
+					_server.Stop();
+					//_server.AcceptTcpClientAsync ()
+					// this needs to be ASYNC connection
+					//var avar = _server.AcceptTcpClientAsync();
+					//if (avar.)
+					//client=_server.AcceptTcpClient();
+					//Trace.WriteLine("here");
+					//stream=client.GetStream();
+					//while (!_exitLoop) {
+					//	if (_mre.WaitOne(100)) {
+					//		Debug.Print("here");
+					//		_exitLoop=true;
+					//	}
+					//	if (stream.DataAvailable) {
+					//		i=stream.Read(bytes,0,bytes.Length);
+					//		if (i<1) {
+					//			client.Close();
+					//		} else {
+					//			data=Encoding.ASCII.GetString(bytes,0,i);
+
+					//			if ((amid=readMid(data))!=9999)
+					//				Trace.WriteLine("read: "+data);
+					//			handleResponse(data,stream);
+					//			dataFound=true;
+					//		}
+
+					//	} else {
+					//		lock (_generateIRDataLock) {
+					//			if (_generateIRData) {
+					//				Logger.log(MethodBase.GetCurrentMethod(),"starting");
+					//				// create a line of 23 fields, send out through the stream.
+					//				_generateIRData=false;
+					//				if (sbIRData==null)
+					//					sbIRData=new StringBuilder();
+					//				int MAX_NUMBER_IR_FIELDS = 23;
+					//				for (int fldIdx = 0; fldIdx<MAX_NUMBER_IR_FIELDS; fldIdx++) {
+					//					if (fldIdx>0)
+					//						sbIRData.Append(",");
+					//					sbIRData.Append(fldIdx.ToString("000#"));
+					//					Logger.log(MethodBase.GetCurrentMethod(),"send: ["+sbIRData.ToString()+"]");
+					//				}
+					//				Logger.log(MethodBase.GetCurrentMethod(),"ending");
+
+					//			}
+					//		}
+					//		// await connection
+					//		if (dataFound) {
+					//			Logger.log(MethodBase.GetCurrentMethod(),"no data");
+					//			dataFound=false;
+					//		}
+					//		Thread.Sleep(100);
+					//	}
+					//}
+
+					stream.Close();
 				client.Close();
 			} catch (Exception ex) {
-				Logger.log(MethodBase.GetCurrentMethod(), ex);
+				Logger.log(MethodBase.GetCurrentMethod(),ex);
 			} finally {
 				stream.Close();
 				client.Close();
 			}
-			Logger.log(MethodBase.GetCurrentMethod(), "exiting");
+			Logger.log(MethodBase.GetCurrentMethod(),"exiting");
 		}
 
-		void handleResponse(string data, NetworkStream stream) {
-			int mid;
-			//string replyData;
-			//byte[] bytes;
-			//OpenProtocolInterpreter.Mid opmid;
+		  void tester(IAsyncResult ar) {
+			bool exitLoop = false;
+			Logger.log(MethodBase.GetCurrentMethod(),"starts");
 
-			Logger.log(MethodBase.GetCurrentMethod(), "Data=[" + data + "]");
-			switch (mid = readMid(data)) {
-				case 1:
-					// respond with 2 or 4;
-					sendReply(stream, new Mid0002(), mid);
-					break;
-				case 34: handleJobInfoSubscription(stream, data); break;
-				case 38: handleSelectJob(stream, data); break;
-				case 50: handleVehicleDownloadRequest(stream, data); break;
-				case 60: sendTighteningSubscriptionReply(stream, data); break;
-				case 127: handleAbortJob(stream, data); break;
-				case 9999:
-					sendReply(stream, new Mid9999(), mid, false);
-					//replyData = (opmid = new OpenProtocolInterpreter.KeepAlive.Mid9999()).Pack();
-					//Logger.log(MethodBase.GetCurrentMethod(), "Replying with " + opmid.GetType().Name + " in response.");
-					//bytes = Encoding.ASCII.GetBytes(replyData+'\0');
-					//stream.Write(bytes, 0, bytes.Length);
-					break;
-				default:
-					Logger.log(MethodBase.GetCurrentMethod(), "unhandled MID=" + mid + ".");
-					break;
+			while (!exitLoop) {
+				Logger.log(MethodBase.GetCurrentMethod());
+			}
+			Logger.log(MethodBase.GetCurrentMethod(),"ends");
+		}
+
+		void onAccept(Task t) {
+			bool exitLoop = false;
+
+			while (!exitLoop) {
+				Logger.log(MethodBase.GetCurrentMethod());
 			}
 		}
+	}
 
-		void handleAbortJob(NetworkStream stream, string package) {
-			Mid0127 m127=MidInterpreterMessagesExtensions.UseAllMessages(_mi).Parse<Mid0127>(package);
-			//Logger.log(MethodBase.GetCurrentMethod());
-			sendReply(stream, new Mid0005(m127.HeaderData.Mid), m127.HeaderData.Mid);
+
+	class ClientWorking {
+		TcpClient _client;
+		bool _ownsClient;
+
+		public ClientWorking(TcpClient client,bool ownsClient) {
+			_client=client;
+			_ownsClient=ownsClient;
 		}
 
-		void handleVehicleDownloadRequest(NetworkStream stream, string package) {
-			Mid0050 m50=MidInterpreterMessagesExtensions.UseAllMessages(_mi).Parse<Mid0050>(package);
+		public async Task DoSomethingWithClientAsync() {
+			try {
+				using (var stream = _client.GetStream()) {
+					using (var sr = new StreamReader(stream))
+					using (var sw = new StreamWriter(stream)) {
+						await sw.WriteLineAsync("Hi. This is x2 TCP/IP easy-to-use server").ConfigureAwait(false);
+						await sw.FlushAsync().ConfigureAwait(false);
+						var data = default(string);
+						while (!((data=await sr.ReadLineAsync().ConfigureAwait(false)).Equals("exit",StringComparison.OrdinalIgnoreCase))) {
+							await sw.WriteLineAsync(data).ConfigureAwait(false);
+							await sw.FlushAsync().ConfigureAwait(false);
+						}
+					}
 
-			_currentVIN=m50.VinNumber;
-			sendReply(stream, new Mid0005(m50.HeaderData.Mid), m50.HeaderData.Mid);
-		}
-
-		void handleSelectJob(NetworkStream stream, string package) {
-			// 0005 if accepted, 0004 if invalid job, or invalid data.
-			//Mid oldMid=MidInterpreterMessagesExtensions.UseAllMessages(_mi).Parse(package);
-			Mid0038 m38=MidInterpreterMessagesExtensions.UseAllMessages(_mi).Parse<Mid0038>(package);
-			int jobId;
-			//Logger.log(MethodBase.GetCurrentMethod());
-			//var avar1=new Mid0038().p
-			//jobId=oldMid.
-			//Mid0038 m38=MidInterpreterMessagesExtensions.UseAllMessages(_mi).Parse<Mid0038>(package);
-			//var avar=new Mid0038().Parse(package);
-			//var vvv=new Mid0038().Parse<Mid0038>(package);
-			jobId=m38.JobId;
-			sendReply(stream, new Mid0005(m38.HeaderData.Mid), m38.HeaderData.Mid);
-		}
-
-		void handleJobInfoSubscription(NetworkStream stream, string package) {
-			// 0005 if accepted, 0004 if already exists.
-			// reply with 0005 for accepted, 0004 for error.
-			Mid oldMid=MidInterpreterMessagesExtensions.UseAllMessages(_mi).Parse(package);
-			Mid mid;
-			Mid0004 m4;
-			Mid0005 m5;
-			if (_subscribedJobInfo) {
-				Logger.log(MethodBase.GetCurrentMethod(), "already subscribed");
-				mid=m4=new Mid0004(oldMid.HeaderData.Mid, Error.JOB_INFO_SUBSCRIPTION_ALREADY_EXISTS);
-			} else {
-				Logger.log(MethodBase.GetCurrentMethod(), "new subscription");
-				mid=m5=new Mid0005(oldMid.HeaderData.Mid);
-				_subscribedJobInfo=true;
-			}
-			sendReply(stream, mid, oldMid.HeaderData.Mid);
-		}
-
-		void sendTighteningSubscriptionReply(NetworkStream stream, string package) {
-			// reply with 0005 for accepted, 0004 for error.
-			Mid oldMid=MidInterpreterMessagesExtensions.UseAllMessages(_mi).Parse(package);
-			Mid mid;
-			Mid0004 m4;
-			Mid0005 m5;
-			if (_subscribedTightening) {
-				Logger.log(MethodBase.GetCurrentMethod(), "already subscribed");
-				mid=m4=new Mid0004(oldMid.HeaderData.Mid, Error.SUBSCRIPTION_ALREADY_EXISTS);
-			} else {
-				Logger.log(MethodBase.GetCurrentMethod(), "new subscription");
-				mid=m5=new Mid0005(oldMid.HeaderData.Mid);
-				_subscribedTightening=true;
-			}
-			sendReply(stream, mid, oldMid.HeaderData.Mid);
-		}
-
-		void sendReply(NetworkStream stream, Mid amid, int midNo, bool logSend = true) {
-			byte[] bytes;
-			string replyData ;
-
-			if (amid != null) {
-				replyData = amid.Pack() + '\0';
-				if (logSend)
-					Logger.log(MethodBase.GetCurrentMethod(), "Replying with " + amid.GetType().Name + " to Mid" + midNo.ToString("000#") + ".");
-				bytes = Encoding.ASCII.GetBytes(replyData);
-				stream.Write(bytes, 0, bytes.Length);
+				}
+			} finally {
+				if (_ownsClient&&_client!=null) {
+					(_client as IDisposable).Dispose();
+					_client=null;
+				}
 			}
 		}
+	}
 
-		int readMid(string data) {
-			int len, ntmp;
-			string tmp;
-
-			if (!string.IsNullOrEmpty(data) && (len = data.Length) > 8) {
-				if (int.TryParse(tmp = data.Substring(4, 4), out ntmp))
-					if (ntmp >= 0)
-						return ntmp;
-			}
-			return -1;
-		}
-
-		internal void stop() {
-			Logger.log(MethodBase.GetCurrentMethod(), "starting");
-			_mre.Set();
-			//_mre.Reset();
-			Logger.log(MethodBase.GetCurrentMethod(), "ending");
-		}
+	static class TaskExtensions {
+		[MethodImpl(MethodImplOptions.AggressiveInlining)]
+		public static void NoWarning(this Task t) { }
 	}
 }

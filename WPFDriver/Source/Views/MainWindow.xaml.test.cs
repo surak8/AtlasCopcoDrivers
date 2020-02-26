@@ -264,7 +264,7 @@ namespace NSAtlasCopcoBreech {
 			CodeStatementCollection testStatements = new CodeStatementCollection();
 			//code
 			CodeVariableReferenceExpression vrMB, vrEx;
-			CodeExpression ce;
+			//CodeExpression ce;
 #if OTHER_VERSION
 			const string EXTRACT_METHOD_NAME="Pack";
 #else
