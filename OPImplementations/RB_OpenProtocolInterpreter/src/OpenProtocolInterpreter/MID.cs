@@ -124,20 +124,21 @@ namespace OpenProtocolInterpreter
                 dataField.Value = GetValue(dataField, package);
         }
 
-        protected string GetValue(DataField field, string package)
-        {
-            try
-            {
-                return field.HasPrefix ? package.Substring(2 + field.Index, field.Size) : package.Substring(field.Index, field.Size);
-            }
-            catch (ArgumentOutOfRangeException aore)
-            {
+        protected string GetValue(DataField field,string package) {
+            try {
+                return field.HasPrefix ? package.Substring(2+field.Index,field.Size) : package.Substring(field.Index,field.Size);
+            } catch (ArgumentOutOfRangeException aore) {
                 MethodBase mb = MethodBase.GetCurrentMethod();
 
                 StringBuilder sb = new StringBuilder();
-                Exception ex0=ex
-                
-                return null;
+                Exception ex0 = aore;
+                while (ex0!=null) {
+                    sb.AppendLine(ex0.Message);
+                    ex0=ex0.InnerException;
+                }
+
+
+                return sb.ToString();
             }
         }
 

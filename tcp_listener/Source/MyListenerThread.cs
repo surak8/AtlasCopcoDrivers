@@ -16,10 +16,10 @@ namespace NSTcp_listener {
 		#endregion
 
 		#region fields
-		TcpListener _listener;
-		ManualResetEvent _mre;
-		Queue<string> _dataQueue;
-		List<string> _fileData;
+		readonly TcpListener _listener;
+		readonly ManualResetEvent _mre;
+		readonly Queue<string> _dataQueue;
+		readonly List<string> _fileData;
 		readonly object _generateIRDataLock = new object();
 		bool _generateIRData = false;
 

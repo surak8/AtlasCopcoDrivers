@@ -99,7 +99,7 @@ namespace NSAtlasCopcoBreech {
 				_initialTighteningData=false;
 
 				sendMid(new OpenProtocolInterpreter.MIDs.ParameterSet.MID_0014()); // PSET subscribe, respond with MID_0016
-#warning removed MID_0021
+//#warning removed MID_0021
 				//sendMid(new MID_0021()); // lock-at-batch-done
 				sendMid(new OpenProtocolInterpreter.MIDs.Job.MID_0034());    // Job info subscribe, 
 
@@ -110,7 +110,7 @@ namespace NSAtlasCopcoBreech {
 				// Command Error ErrorCode:CONTROLLER_IS_NOT_A_SYNC_MASTER_OR_STATION_CONTROLLER for MID=90.
 				//sendMid(new MID_0090());    // MultiSpindle status subscribe
 
-#warning MID_0100 is missing?
+//#warning MID_0100 is missing?
 				//sendMid(new MID_0100());    // MultiSpindle result subscribe
 
 				// Command Error ErrorCode:UNKNOWN_MID for MID=105.
