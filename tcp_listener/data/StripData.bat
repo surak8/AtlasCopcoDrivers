@@ -9,5 +9,6 @@ set CSV0=%~dp0%FNAME%.0.csv
 set CSV=%~dp0%FNAME%.csv
 findstr -a:c -c:"parsed the string" %ORIG% > %TMP%
 sed -f %SED% %TMP% > %CSV0%
-sort %CSV0% | uniq | sed -f %SED2% > %CSV%
+REM sort %CSV0% | uniq | sed -f %SED2% > %CSV%
+copy /y %CSV0% %CSV%
 del /q %TMP% %CSV0% 

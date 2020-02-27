@@ -223,7 +223,7 @@ namespace NSAtlasCopcoBreech {
 			CodeVariableReferenceExpression vrPkg = new CodeVariableReferenceExpression("package");
 			ctd.Members.Add(m=new CodeMemberMethod());
 			m.Name="testRevision"+revision;
-			m.Attributes=default;
+			m.Attributes=MemberAttributes.Public;
 			mm.Statements.Add(new CodeExpressionStatement(new CodeMethodInvokeExpression(null,m.Name)));
 			if (v)
 				m.Statements.Add(new CodeCommentStatement("HAVE multiple revisions"));

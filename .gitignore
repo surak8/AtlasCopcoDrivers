@@ -3,3 +3,8 @@ bin
 .vs
 *.csproj.user
 packages
+DebugVersion
+docheckout.bat
+ReleaseVersion
+tcp_listener.xml
+zzz.dat
